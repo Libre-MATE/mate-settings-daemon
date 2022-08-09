@@ -26,16 +26,17 @@
 
 G_BEGIN_DECLS
 
-#define MSD_TYPE_BACKGROUND_MANAGER         (msd_background_manager_get_type())
+#define MSD_TYPE_BACKGROUND_MANAGER (msd_background_manager_get_type())
 
-G_DECLARE_FINAL_TYPE (MsdBackgroundManager, msd_background_manager, MSD, BACKGROUND_MANAGER, GObject)
+G_DECLARE_FINAL_TYPE(MsdBackgroundManager, msd_background_manager, MSD,
+                     BACKGROUND_MANAGER, GObject)
 
-MsdBackgroundManager * msd_background_manager_new   (void);
+MsdBackgroundManager *msd_background_manager_new(void);
 
-gboolean               msd_background_manager_start (MsdBackgroundManager  *manager,
-                                                     GError               **error);
+gboolean msd_background_manager_start(MsdBackgroundManager *manager,
+                                      GError **error);
 
-void                   msd_background_manager_stop  (MsdBackgroundManager  *manager);
+void msd_background_manager_stop(MsdBackgroundManager *manager);
 
 G_END_DECLS
 

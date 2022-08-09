@@ -27,7 +27,7 @@
 extern "C" {
 #endif
 
-void            msd_delayed_show_dialog (GtkWidget *dialog);
+void msd_delayed_show_dialog(GtkWidget *dialog);
 
 #ifdef __cplusplus
 }

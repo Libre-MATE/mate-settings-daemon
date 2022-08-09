@@ -2,23 +2,23 @@
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-settings-daemon package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # abuyop <abuyop@gmail.com>, 2021
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-settings-daemon 1.25.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2021-06-23 22:04+0200\n"
+"POT-Creation-Date: 2022-08-09 15:31+0200\n"
 "PO-Revision-Date: 2018-03-12 08:16+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>, 2021\n"
 "Language-Team: Malay (https://www.transifex.com/mate/teams/13566/ms/)\n"
+"Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ms\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/50-accessibility.xml.in:2
@@ -110,10 +110,10 @@ msgstr "Tertib RGBA"
 
 #: data/org.mate.font-rendering.gschema.xml.in:38
 msgid ""
-"The order of subpixel elements on an LCD screen; only used when antialiasing"
-" is set to \"rgba\". Possible values are: \"rgb\" for red on left (most "
-"common), \"bgr\" for blue on left, \"vrgb\" for red on top, \"vbgr\" for red"
-" on bottom."
+"The order of subpixel elements on an LCD screen; only used when antialiasing "
+"is set to \"rgba\". Possible values are: \"rgb\" for red on left (most "
+"common), \"bgr\" for blue on left, \"vrgb\" for red on top, \"vbgr\" for red "
+"on bottom."
 msgstr ""
 "Tertib unsur subpiksel bagi skrin LCD; hanya digunakan bila antialias "
 "ditetapkan ke \"rgba\". Nilai yang mungkin adalah: \"rgb\" untuk merah "
@@ -282,11 +282,11 @@ msgstr "Lumpuhkan pad sentuh semasa menaip"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:16
 msgid ""
-"Set this to TRUE if you have problems with accidentally hitting the touchpad"
-" while typing."
+"Set this to TRUE if you have problems with accidentally hitting the touchpad "
+"while typing."
 msgstr ""
-"Tetapkan ini kepada BENAR jika anda mempunyai masalah dengan pembayangan pad"
-" sentuh semasa menaip."
+"Tetapkan ini kepada BENAR jika anda mempunyai masalah dengan pembayangan pad "
+"sentuh semasa menaip."
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:20
 msgid "Enable mouse clicks with touchpad"
@@ -415,8 +415,7 @@ msgid ""
 "Acceleration multiplier for touchpad motion. A value of -1 is the system "
 "default."
 msgstr ""
-"Pengganda pemecutan bagi pergerakan pad sentih. Nilai -1 adalah lalai "
-"sistem."
+"Pengganda pemecutan bagi pergerakan pad sentih. Nilai -1 adalah lalai sistem."
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:91
 msgid ""
@@ -438,9 +437,9 @@ msgid ""
 msgstr ""
 "Profil pemecutan yang digunakan untuk pad sentuh. Profil pemecutan boleh "
 "ditetapkan sama ada lalai ('default') yang menggunakan profil pemecutan "
-"lalai bagi setiap peranti, rata ('flat'), memecut dengan faktor malar khusus"
-" peranti yang dipacu daripada kelajuan penuding terkonfigur, atau boleh suai"
-" ('adaptive') menyesuaikan pemecutan yang bergantung pada pergerakan pad "
+"lalai bagi setiap peranti, rata ('flat'), memecut dengan faktor malar khusus "
+"peranti yang dipacu daripada kelajuan penuding terkonfigur, atau boleh suai "
+"('adaptive') menyesuaikan pemecutan yang bergantung pada pergerakan pad "
 "sentuh. Sekiranya pad sentuh tidak menyokong profil terkonfigur, 'lalai' "
 "akan digunakan."
 
@@ -852,8 +851,8 @@ msgid ""
 msgstr ""
 "Biasanya, mate-settings-daemon konfigur monitor dalaman dan luaran "
 "berdasarkan pada tetapan turn_on_external_monitors_at_startup dan "
-"turn_on_laptop_monitor_at_startup serta tentukan mod pengklonan/sisi-ke-sisi"
-" yang sesuai. Menetap kekunci ini kepada Benar lumpuhkannya, dan tetapan "
+"turn_on_laptop_monitor_at_startup serta tentukan mod pengklonan/sisi-ke-sisi "
+"yang sesuai. Menetap kekunci ini kepada Benar lumpuhkannya, dan tetapan "
 "monitor tidak disentuh langsung (melainkan terdapa konfigurasi pengguna "
 "eksplisit)."
 
@@ -863,11 +862,11 @@ msgstr "Hidupkan monitor luar selepas but sistem"
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:26
 msgid ""
-"Turn on external monitor after system boot if user plugs in external monitor"
-" on system boot."
+"Turn on external monitor after system boot if user plugs in external monitor "
+"on system boot."
 msgstr ""
-"Hidupkan monitor luar selepas but sistem jika pengguna palamkan monitor luar"
-" semasa but sistem."
+"Hidupkan monitor luar selepas but sistem jika pengguna palamkan monitor luar "
+"semasa but sistem."
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:30
 msgid "Turn on laptop monitor after system boot"
@@ -895,27 +894,27 @@ msgid ""
 msgstr ""
 "Palam XRandR akan cari konfigurasi lalai di dalam fail yang dinyatakan oleh "
 "kunci ini. Ia seupa dengan ~/.config/monitors.xml yang biasanya disimpan "
-"dalam direktori rumah pengguna. Jika pengguna tidak mempunyai fail tersebut,"
-" atau mempunyainya tetapi tidak sepadan dengan persediaan monitor pengguna, "
+"dalam direktori rumah pengguna. Jika pengguna tidak mempunyai fail tersebut, "
+"atau mempunyainya tetapi tidak sepadan dengan persediaan monitor pengguna, "
 "maka fail yang dinyatakan oleh kunci ini akan digunakan sebagai ganti."
 
 #: data/mate-settings-daemon.desktop.in.in:4
 msgid "MATE Settings Daemon"
 msgstr "Daemon Tetapan MATE"
 
-#: mate-settings-daemon/main.c:66
+#: mate-settings-daemon/main.c:65
 msgid "Enable debugging code"
 msgstr "Benarkan kod penyahpepijatan"
 
-#: mate-settings-daemon/main.c:67
+#: mate-settings-daemon/main.c:68
 msgid "Replace the current daemon"
 msgstr "Ganti daemon semasa"
 
-#: mate-settings-daemon/main.c:68
+#: mate-settings-daemon/main.c:70
 msgid "Don't become a daemon"
 msgstr "Jangan jadi daemon"
 
-#: mate-settings-daemon/main.c:69
+#: mate-settings-daemon/main.c:72
 msgid "Exit after a time (for debugging)"
 msgstr "Keluar selepas suatu masat (untuk penyahpijatan)"
 
@@ -927,23 +926,23 @@ msgstr "Papan Kekunci Kebolehcapaian"
 msgid "Accessibility keyboard plugin"
 msgstr "Palam papan kekunci kebolehcapaian"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:460
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:407
 #, c-format
 msgid "There was an error displaying help: %s"
 msgstr "Terdapat ralat memapar bantuan: %s"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:588
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:652
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:515
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:572
 msgid "Do you want to activate Slow Keys?"
 msgstr "Anda ingin mengaktifkan Kekunci Lambat?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:589
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:653
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:516
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:573
 msgid "Do you want to deactivate Slow Keys?"
 msgstr "Anda hendak nyahaktif Kekunci Lambat?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:590
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:654
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:518
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:575
 msgid ""
 "You just held down the Shift key for 8 seconds.  This is the shortcut for "
 "the Slow Keys feature, which affects the way your keyboard works."
@@ -952,62 +951,62 @@ msgstr ""
 "untuk fitur Kekunci Lambat, yang mempengaruhi cara papan kekunci anda "
 "berfungsi."
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:613
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:750
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:542
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:663
 msgid "Don't activate"
 msgstr "Jangan aktifkan"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:613
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:750
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:542
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:663
 msgid "Don't deactivate"
 msgstr "Jangan nyahaktifkan"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:619
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:756
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:545
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:666
 msgid "Activate"
 msgstr "Aktifkan"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:619
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:756
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:545
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:666
 msgid "Deactivate"
 msgstr "Nyahaktifkan"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:592
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:718
 msgid "Do_n't activate"
 msgstr "Ja_ngan aktifkan"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:592
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:718
 msgid "Do_n't deactivate"
 msgstr "Ja_ngan nyahaktifkan"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:595
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:721
 msgid "_Activate"
 msgstr "_Aktifkan"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:595
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:721
 msgid "_Deactivate"
 msgstr "_Nyahaktifkan"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:682
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:599
 msgid "Slow Keys Alert"
 msgstr "Amaran Kekunci Lambat"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:722
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:788
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:631
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:693
 msgid "Do you want to activate Sticky Keys?"
 msgstr "Anda ingin mengaktifkan Kekunci Lekat?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:723
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:789
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:632
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:694
 msgid "Do you want to deactivate Sticky Keys?"
 msgstr "Adakah anda ingin menyahaktifkan Kekunci Lekat?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:725
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:791
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:633
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:695
 msgid ""
 "You just pressed the Shift key 5 times in a row.  This is the shortcut for "
 "the Sticky Keys feature, which affects the way your keyboard works."
@@ -1016,8 +1015,8 @@ msgstr ""
 "merupakan pintasan untuk fitur Kekunci Lekat, yang mempengaruhi cara papan "
 "kekunci anda berfungsi."
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:727
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:793
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:637
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:699
 msgid ""
 "You just pressed two keys at once, or pressed the Shift key 5 times in a "
 "row.  This turns off the Sticky Keys feature, which affects the way your "
@@ -1027,11 +1026,11 @@ msgstr ""
 "kali secara berturutan. Ia merupakan pintasan untuk fitur Kekunci Lekat, "
 "yang mempengaruhi cara papan kekunci anda berfungsi."
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:821
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:725
 msgid "Sticky Keys Alert"
 msgstr "Amaran Kekunci Lekat"
 
-#: plugins/a11y-keyboard/msd-a11y-preferences-dialog.c:830
+#: plugins/a11y-keyboard/msd-a11y-preferences-dialog.c:762
 #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:14
 msgid "Universal Access Preferences"
 msgstr "Keutamaan Capaian Universal"
@@ -1142,25 +1141,25 @@ msgstr ""
 "Pangkas cache lakaran kenit dan lain-lain fail sementara secara automatik, "
 "dan beri amaran berkenaan kapasiti ruang cakera yang rendah"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:61
+#: plugins/housekeeping/msd-ldsm-dialog.c:58
 msgid "Don't show any warnings again for this file system"
 msgstr "Jangan tunjuk sebarang amaran terhadap sistem fail ini"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:63
+#: plugins/housekeeping/msd-ldsm-dialog.c:60
 msgid "Don't show any warnings again"
 msgstr "Jangan tunjuk sebarang amaran lagi"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:76
+#: plugins/housekeeping/msd-ldsm-dialog.c:72
 #, c-format
 msgid "The volume \"%s\" has only %s disk space remaining."
 msgstr "Volum \"%s\" hanya mempunyai %s ruang cakera berbaki."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:79
+#: plugins/housekeeping/msd-ldsm-dialog.c:76
 #, c-format
 msgid "This computer has only %s disk space remaining."
 msgstr "Komputer ini hanya mempunyai %s ruang cakera berbaki."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:95
+#: plugins/housekeeping/msd-ldsm-dialog.c:90
 msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to another disk or partition."
@@ -1169,7 +1168,7 @@ msgstr ""
 "program atau fail yang tidak diguna, atau mengalih fail ke cakera atau "
 "sekatan lain."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:98
+#: plugins/housekeeping/msd-ldsm-dialog.c:95
 msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to another disk or partition."
@@ -1177,7 +1176,7 @@ msgstr ""
 "Anda boleh bebaskan ruang cakera dengan membuang fail yang tidak diguna, "
 "atau mengalih fail ke cakera atau sekatan lain."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:103
+#: plugins/housekeeping/msd-ldsm-dialog.c:101
 msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to an external disk."
@@ -1185,7 +1184,7 @@ msgstr ""
 "Anda boleh bebaskan ruang cakera dengan mengosongkan Tong Sampah, membuang "
 "program atau fail yang tidak diguna, atau mengalih fail ke cakera luaran."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:106
+#: plugins/housekeeping/msd-ldsm-dialog.c:105
 msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to an external disk."
@@ -1194,51 +1193,51 @@ msgstr ""
 "tidak diguna, atau mengalih fail ke cakera luaran."
 
 #. Set up all the window stuff here
-#: plugins/housekeeping/msd-ldsm-dialog.c:201
+#: plugins/housekeeping/msd-ldsm-dialog.c:192
 msgid "Low Disk Space"
 msgstr "Ruang Cakera Rendah"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:436
+#: plugins/housekeeping/msd-ldsm-dialog.c:411
 msgid "Empty Trash"
 msgstr "Kosongkan Tong Sampah"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:444
+#: plugins/housekeeping/msd-ldsm-dialog.c:419
 msgid "Examine…"
 msgstr "Periksa.."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:451
+#: plugins/housekeeping/msd-ldsm-dialog.c:426
 msgid "Ignore"
 msgstr "Abai"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:98
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:94
 #, c-format
 msgid "Removing item %lu of %lu"
 msgstr "Membuang item %lu dari %lu"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:118
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:113
 #, c-format
 msgid "Removing: %s"
 msgstr "Membuang: %s"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:248
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:301
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:223
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:281
 msgid "Emptying the trash"
 msgstr "Mengosongkan tong sampah"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:277
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:253
 msgid "Preparing to empty trash…"
 msgstr "Menyediakan tong sampah kosong..."
 
 #. Translators: "Emptying trash from <device>"
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:304
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:284
 msgid "From: "
 msgstr "Dari:"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:356
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:328
 msgid "Empty all of the items from the trash?"
 msgstr "Kosongkan semua item dari tong sampah?"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:359
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:332
 msgid ""
 "If you choose to empty the trash, all items in it will be permanently lost. "
 "Please note that you can also delete them separately."
@@ -1246,7 +1245,7 @@ msgstr ""
 "Jika anda pilih hendak mengosongkan tong sampah, semua item didalamnya akan "
 "kekal hilang. Perhatian, anda juga boleh memadamnya secara berasingan."
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:366
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:339
 msgid "_Empty Trash"
 msgstr "_Kosongkan Tong Sampah"
 
@@ -1258,17 +1257,17 @@ msgstr "Pengikatan Kunci"
 msgid "Keybindings plugin"
 msgstr "Palam pengikatan kunci"
 
-#: plugins/keybindings/msd-keybindings-manager.c:109
+#: plugins/keybindings/msd-keybindings-manager.c:100
 #, c-format
 msgid "Key binding (%s) is invalid"
 msgstr "Pengikatan kunci (%s) tidak sah"
 
-#: plugins/keybindings/msd-keybindings-manager.c:145
+#: plugins/keybindings/msd-keybindings-manager.c:131
 #, c-format
 msgid "Key binding (%s) is incomplete"
 msgstr "Pengikatan kunci (%s) tidak lengkap"
 
-#: plugins/keybindings/msd-keybindings-manager.c:487
+#: plugins/keybindings/msd-keybindings-manager.c:443
 #, c-format
 msgid ""
 "Error while trying to run (%s)\n"
@@ -1285,7 +1284,7 @@ msgstr "Papan Kekunci"
 msgid "Keyboard plugin"
 msgstr "Palam papan kekunci"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:120
+#: plugins/keyboard/msd-keyboard-xkb.c:104
 #, c-format
 msgid ""
 "Error activating XKB configuration.\n"
@@ -1314,15 +1313,15 @@ msgstr ""
 " • Keputusan <b>%s</b>\n"
 " • Keputusan <b>%s</b>"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:286
+#: plugins/keyboard/msd-keyboard-xkb.c:240
 msgid "_Layouts"
 msgstr "B_entangan"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:293
+#: plugins/keyboard/msd-keyboard-xkb.c:245
 msgid "Keyboard _Preferences"
 msgstr "K_eutamaan Papan Kekunci"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:299
+#: plugins/keyboard/msd-keyboard-xkb.c:251
 msgid "Show _Current Layout"
 msgstr "Tunjuk Bentangan _Semasa"
 
@@ -1334,15 +1333,15 @@ msgstr "Kekunci media"
 msgid "Media keys plugin"
 msgstr "Palam kekunci media"
 
-#: plugins/media-keys/msd-media-keys-manager.c:185
+#: plugins/media-keys/msd-media-keys-manager.c:165
 msgid ""
-"Could not get default terminal. Verify that your default terminal command is"
-" set and points to a valid application."
+"Could not get default terminal. Verify that your default terminal command is "
+"set and points to a valid application."
 msgstr ""
 "Tidak dapatkan terminal lalai. Sahkan sama ada perintah terminal lalai anda "
 "ditetapkan dan menuju ke aplikasi yang sah."
 
-#: plugins/media-keys/msd-media-keys-manager.c:225
+#: plugins/media-keys/msd-media-keys-manager.c:191
 #, c-format
 msgid ""
 "Couldn't execute command: %s\n"
@@ -1351,47 +1350,47 @@ msgstr ""
 "Tidak dapat lakukan perintah: %s⏎\n"
 "Sahkan sama ada ia merupakan perintah yang sah."
 
-#: plugins/media-keys/msd-media-keys-manager.c:638
-#: plugins/media-keys/test-media-window.c:82
+#: plugins/media-keys/msd-media-keys-manager.c:556
+#: plugins/media-keys/test-media-window.c:76
 msgid "Touchpad enabled"
 msgstr "Pad sentuh dibenarkan"
 
-#: plugins/media-keys/msd-media-keys-manager.c:638
-#: plugins/media-keys/test-media-window.c:75
+#: plugins/media-keys/msd-media-keys-manager.c:556
+#: plugins/media-keys/test-media-window.c:69
 msgid "Touchpad disabled"
 msgstr "Pad sentuh dilumpuhkan"
 
-#: plugins/media-keys/msd-media-keys-manager.c:956
-#: plugins/media-keys/test-media-window.c:89
+#: plugins/media-keys/msd-media-keys-manager.c:834
+#: plugins/media-keys/test-media-window.c:83
 msgid "Bluetooth disabled"
 msgstr "Bluetooth dilumpuhkan"
 
-#: plugins/media-keys/msd-media-keys-manager.c:959
-#: plugins/media-keys/test-media-window.c:96
+#: plugins/media-keys/msd-media-keys-manager.c:838
+#: plugins/media-keys/test-media-window.c:90
 msgid "Bluetooth enabled"
 msgstr "Bluetooth dibenarkan"
 
-#: plugins/media-keys/msd-media-keys-manager.c:963
-#: plugins/media-keys/test-media-window.c:103
+#: plugins/media-keys/msd-media-keys-manager.c:843
+#: plugins/media-keys/test-media-window.c:97
 msgid "Airplane mode enabled"
 msgstr "Mod kapal terbang dibenarkan"
 
-#: plugins/media-keys/msd-media-keys-manager.c:966
-#: plugins/media-keys/test-media-window.c:110
+#: plugins/media-keys/msd-media-keys-manager.c:848
+#: plugins/media-keys/test-media-window.c:105
 msgid "Airplane mode disabled"
 msgstr "Mod kapal terbang dilumpuhkan"
 
-#: plugins/media-keys/msd-media-keys-manager.c:997
+#: plugins/media-keys/msd-media-keys-manager.c:875
 msgid "Hardware Airplane Mode"
 msgstr "Mod Kapal Terbang Perkakasan"
 
-#: plugins/media-keys/msd-media-keys-manager.c:1035
-#: plugins/media-keys/test-media-window.c:124
+#: plugins/media-keys/msd-media-keys-manager.c:908
+#: plugins/media-keys/test-media-window.c:119
 msgid "Changing Screen Layout"
 msgstr "Mengubah Bentangan Skrin"
 
-#: plugins/media-keys/msd-media-keys-manager.c:1039
-#: plugins/media-keys/test-media-window.c:117
+#: plugins/media-keys/msd-media-keys-manager.c:912
+#: plugins/media-keys/test-media-window.c:112
 msgid "No External Display"
 msgstr "Tiada Paparan Luar"
 
@@ -1403,18 +1402,18 @@ msgstr "Tetikus"
 msgid "Mouse plugin"
 msgstr "Palam tetikus"
 
-#: plugins/mouse/msd-mouse-manager.c:1651
+#: plugins/mouse/msd-mouse-manager.c:1518
 msgid "Could not enable mouse accessibility features"
 msgstr "Tidak dapat benarkan fitur kebolehcapaian tetikus"
 
-#: plugins/mouse/msd-mouse-manager.c:1653
+#: plugins/mouse/msd-mouse-manager.c:1520
 msgid ""
 "Mouse accessibility requires Mousetweaks to be installed on your system."
 msgstr ""
 "Kebolehcapaian tetikus memerlukan Mousetweaks untuk dipasang pada sistem "
 "anda."
 
-#: plugins/mouse/msd-mouse-manager.c:1656
+#: plugins/mouse/msd-mouse-manager.c:1523
 msgid "Mouse Preferences"
 msgstr "Keutamaan Tetikus"
 
@@ -1436,65 +1435,65 @@ msgstr "Rfkill"
 msgid "Rfkill plugin"
 msgstr "Palam Rfkill"
 
-#: plugins/smartcard/msd-smartcard-manager.c:165
+#: plugins/smartcard/msd-smartcard-manager.c:153
 msgid "Module Path"
 msgstr "Laluan Modul"
 
-#: plugins/smartcard/msd-smartcard-manager.c:166
+#: plugins/smartcard/msd-smartcard-manager.c:154
 msgid "path to smartcard PKCS #11 driver"
 msgstr "laluan ke pemacu kad pintar PKCS #11"
 
-#: plugins/smartcard/msd-smartcard-manager.c:492
+#: plugins/smartcard/msd-smartcard-manager.c:431
 msgid "received error or hang up from event source"
 msgstr "ralat diterima atau tangguh dari sumber peristiwa"
 
-#: plugins/smartcard/msd-smartcard-manager.c:581
+#: plugins/smartcard/msd-smartcard-manager.c:511
 msgid "NSS security system could not be initialized"
 msgstr "Sistem keselamatan NSS tidak dapat diawalkan"
 
-#: plugins/smartcard/msd-smartcard-manager.c:650
+#: plugins/smartcard/msd-smartcard-manager.c:570
 msgid "no suitable smartcard driver could be found"
 msgstr "tiada pemacu kad pintar yang sesuai ditemui"
 
-#: plugins/smartcard/msd-smartcard-manager.c:670
+#: plugins/smartcard/msd-smartcard-manager.c:587
 #, c-format
 msgid "smartcard driver '%s' could not be loaded"
 msgstr "pemacu kad pintar '%s' tidak dapat dimuatkan"
 
-#: plugins/smartcard/msd-smartcard-manager.c:754
+#: plugins/smartcard/msd-smartcard-manager.c:665
 #, c-format
 msgid "could not watch for incoming card events - %s"
 msgstr "tidak dapat pantau peristiwa kad masuk - %s"
 
-#: plugins/smartcard/msd-smartcard-manager.c:1101
+#: plugins/smartcard/msd-smartcard-manager.c:971
 msgid "encountered unexpected error while waiting for smartcard events"
 msgstr "ralat tidak dijangka dihadapi semasa menunggu peristiwa kad pintar"
 
-#: plugins/smartcard/msd-smartcard.c:149
+#: plugins/smartcard/msd-smartcard.c:125
 msgid "Slot ID"
 msgstr "ID Slot"
 
-#: plugins/smartcard/msd-smartcard.c:150
+#: plugins/smartcard/msd-smartcard.c:125
 msgid "The slot the card is in"
 msgstr "Slot kad dimasukkan"
 
-#: plugins/smartcard/msd-smartcard.c:156
+#: plugins/smartcard/msd-smartcard.c:130
 msgid "Slot Series"
 msgstr "Siri Slot"
 
-#: plugins/smartcard/msd-smartcard.c:157
+#: plugins/smartcard/msd-smartcard.c:131
 msgid "per-slot card identifier"
 msgstr "pengenalpasti kad per-slot"
 
-#: plugins/smartcard/msd-smartcard.c:163 plugins/smartcard/msd-smartcard.c:164
+#: plugins/smartcard/msd-smartcard.c:136
 msgid "name"
 msgstr "nama"
 
-#: plugins/smartcard/msd-smartcard.c:168
+#: plugins/smartcard/msd-smartcard.c:141
 msgid "Module"
 msgstr "Modul"
 
-#: plugins/smartcard/msd-smartcard.c:169
+#: plugins/smartcard/msd-smartcard.c:141
 msgid "smartcard driver"
 msgstr "pemacu kad pintar"
 
@@ -1522,19 +1521,19 @@ msgstr "Hentian Menaip"
 msgid "Typing break plugin"
 msgstr "Palam hentian menaip"
 
-#: plugins/xrandr/msd-xrandr-manager.c:370
+#: plugins/xrandr/msd-xrandr-manager.c:343
 msgid "Could not switch the monitor configuration"
 msgstr "Tidak dapat tukar konfigurasi monitor"
 
-#: plugins/xrandr/msd-xrandr-manager.c:394
+#: plugins/xrandr/msd-xrandr-manager.c:369
 msgid "Could not restore the display's configuration"
 msgstr "Tidak dapat pulihkan konfigurasi paparan"
 
-#: plugins/xrandr/msd-xrandr-manager.c:419
+#: plugins/xrandr/msd-xrandr-manager.c:394
 msgid "Could not restore the display's configuration from a backup"
 msgstr "Tidak dapat pulihkan konfigurasi paparan dari sandar"
 
-#: plugins/xrandr/msd-xrandr-manager.c:440
+#: plugins/xrandr/msd-xrandr-manager.c:413
 #, c-format
 msgid "The display will be reset to its previous configuration in %d second"
 msgid_plural ""
@@ -1542,97 +1541,98 @@ msgid_plural ""
 msgstr[0] ""
 "Paparan akan ditetap semula ke konfigurasi terdahulu dalam tempoh %d saat"
 
-#: plugins/xrandr/msd-xrandr-manager.c:491
+#: plugins/xrandr/msd-xrandr-manager.c:458
 msgid "Does the display look OK?"
 msgstr "Adakah paparan kelihatan OK?"
 
-#: plugins/xrandr/msd-xrandr-manager.c:498
+#: plugins/xrandr/msd-xrandr-manager.c:467
 msgid "_Restore Previous Configuration"
 msgstr "_Pulih Konfigurasi Terdahulu"
 
-#: plugins/xrandr/msd-xrandr-manager.c:499
+#: plugins/xrandr/msd-xrandr-manager.c:470
 msgid "_Keep This Configuration"
 msgstr "_Kekalkan Konfigurasi Ini"
 
-#: plugins/xrandr/msd-xrandr-manager.c:580
+#: plugins/xrandr/msd-xrandr-manager.c:555
 msgid "The selected configuration for displays could not be applied"
 msgstr "Konfigurasi terpilih untuk paparan tidak dapat dilaksanakan"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1177
+#: plugins/xrandr/msd-xrandr-manager.c:1125
 #, c-format
 msgid "Could not refresh the screen information: %s"
 msgstr "Tidak dapat segar semula maklumat skrin: %s"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1181
+#: plugins/xrandr/msd-xrandr-manager.c:1131
 msgid "Trying to switch the monitor configuration anyway."
 msgstr "Cuba menukar konfigurasi monitor jua."
 
-#: plugins/xrandr/msd-xrandr-manager.c:1938
+#: plugins/xrandr/msd-xrandr-manager.c:1901
 msgid "Rotation not supported"
 msgstr "Putaran tidak disokong"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2003
-#: plugins/xrandr/msd-xrandr-manager.c:2035
+#: plugins/xrandr/msd-xrandr-manager.c:1961
+#: plugins/xrandr/msd-xrandr-manager.c:1992
 msgid "Could not save monitor configuration"
 msgstr "Tidak dapat simpan konfigurasi monitor"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2056
+#: plugins/xrandr/msd-xrandr-manager.c:2012
 msgid "Mirroring outputs not supported"
 msgstr "Pencerminan output tidak disokong"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2087
+#: plugins/xrandr/msd-xrandr-manager.c:2042
 msgid "Normal"
 msgstr "Biasa"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2088
+#: plugins/xrandr/msd-xrandr-manager.c:2043
 msgid "Left"
 msgstr "Kiri"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2089
+#: plugins/xrandr/msd-xrandr-manager.c:2044
 msgid "Right"
 msgstr "Kanan"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2090
+#: plugins/xrandr/msd-xrandr-manager.c:2045
 msgid "Upside Down"
 msgstr "Terbalik"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2179
+#: plugins/xrandr/msd-xrandr-manager.c:2135
 msgid "ON"
 msgstr "HIDUP"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2180
+#: plugins/xrandr/msd-xrandr-manager.c:2136
 msgid "Turn this monitor off"
 msgstr "Matikan monitor ini"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2183
+#: plugins/xrandr/msd-xrandr-manager.c:2138
 msgid "OFF"
 msgstr "MATI"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2184
+#: plugins/xrandr/msd-xrandr-manager.c:2139
 msgid "Turn this monitor on"
 msgstr "Hidupkan monitor ini"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2244
-msgid "Same output all monitors"
+#: plugins/xrandr/msd-xrandr-manager.c:2193
+#, fuzzy
+msgid "Same output on all monitors"
 msgstr "Sama output untuk semua monitor"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2245
+#: plugins/xrandr/msd-xrandr-manager.c:2195
 msgid "Mirror same output to all monitors and turn them on"
 msgstr "Cermikan output yang serupa kepada semua monitor dan hidupkannya"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2292
+#: plugins/xrandr/msd-xrandr-manager.c:2241
 msgid "_Configure Display Settings…"
 msgstr "_Konfigur Tetapan Paparan..."
 
-#: plugins/xrandr/msd-xrandr-manager.c:2302
+#: plugins/xrandr/msd-xrandr-manager.c:2252
 msgid "Open the display configuration dialog (all settings)"
 msgstr "Buka dialog konfigurasi paparan (semua tetapan)"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2359
+#: plugins/xrandr/msd-xrandr-manager.c:2306
 msgid "Configure display settings"
 msgstr "Konfigur tetapan paparan"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2419
+#: plugins/xrandr/msd-xrandr-manager.c:2362
 msgid "Could not apply the stored configuration for monitors"
 msgstr "Tidak dapat laksana konfigurasi tersimpan untuk monitor"
 
@@ -1644,7 +1644,7 @@ msgstr "XRandR"
 msgid "Set up screen size and rotation settings"
 msgstr "Pasang tetapan saiz dan putaran skrin"
 
-#: plugins/xrdb/msd-xrdb-manager.c:249 plugins/xrdb/msd-xrdb-manager.c:318
+#: plugins/xrdb/msd-xrdb-manager.c:211 plugins/xrdb/msd-xrdb-manager.c:273
 msgid "Cannot determine user's home directory"
 msgstr "Tidak dapat tentukan direktori rumah pengguna"
 

@@ -28,54 +28,65 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-#define MATE_TYPE_SETTINGS_PLUGIN_INFO              (mate_settings_plugin_info_get_type())
-#define MATE_SETTINGS_PLUGIN_INFO(obj)              (G_TYPE_CHECK_INSTANCE_CAST((obj), MATE_TYPE_SETTINGS_PLUGIN_INFO, MateSettingsPluginInfo))
-#define MATE_SETTINGS_PLUGIN_INFO_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST((klass),  MATE_TYPE_SETTINGS_PLUGIN_INFO, MateSettingsPluginInfoClass))
-#define MATE_IS_SETTINGS_PLUGIN_INFO(obj)           (G_TYPE_CHECK_INSTANCE_TYPE((obj), MATE_TYPE_SETTINGS_PLUGIN_INFO))
-#define MATE_IS_SETTINGS_PLUGIN_INFO_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_SETTINGS_PLUGIN_INFO))
-#define MATE_SETTINGS_PLUGIN_INFO_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS((obj),  MATE_TYPE_SETTINGS_PLUGIN_INFO, MateSettingsPluginInfoClass))
+#define MATE_TYPE_SETTINGS_PLUGIN_INFO (mate_settings_plugin_info_get_type())
+#define MATE_SETTINGS_PLUGIN_INFO(obj)                               \
+  (G_TYPE_CHECK_INSTANCE_CAST((obj), MATE_TYPE_SETTINGS_PLUGIN_INFO, \
+                              MateSettingsPluginInfo))
+#define MATE_SETTINGS_PLUGIN_INFO_CLASS(klass)                      \
+  (G_TYPE_CHECK_CLASS_CAST((klass), MATE_TYPE_SETTINGS_PLUGIN_INFO, \
+                           MateSettingsPluginInfoClass))
+#define MATE_IS_SETTINGS_PLUGIN_INFO(obj) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((obj), MATE_TYPE_SETTINGS_PLUGIN_INFO))
+#define MATE_IS_SETTINGS_PLUGIN_INFO_CLASS(klass) \
+  (G_TYPE_CHECK_CLASS_TYPE((klass), MATE_TYPE_SETTINGS_PLUGIN_INFO))
+#define MATE_SETTINGS_PLUGIN_INFO_GET_CLASS(obj)                    \
+  (G_TYPE_INSTANCE_GET_CLASS((obj), MATE_TYPE_SETTINGS_PLUGIN_INFO, \
+                             MateSettingsPluginInfoClass))
 
 typedef struct MateSettingsPluginInfoPrivate MateSettingsPluginInfoPrivate;
 
-typedef struct
-{
-        GObject                         parent;
-        MateSettingsPluginInfoPrivate *priv;
+typedef struct {
+  GObject parent;
+  MateSettingsPluginInfoPrivate *priv;
 } MateSettingsPluginInfo;
 
-typedef struct
-{
-        GObjectClass parent_class;
+typedef struct {
+  GObjectClass parent_class;
 
-        void          (* activated)         (MateSettingsPluginInfo *info);
-        void          (* deactivated)       (MateSettingsPluginInfo *info);
+  void (*activated)(MateSettingsPluginInfo *info);
+  void (*deactivated)(MateSettingsPluginInfo *info);
 } MateSettingsPluginInfoClass;
 
-GType            mate_settings_plugin_info_get_type           (void) G_GNUC_CONST;
+GType mate_settings_plugin_info_get_type(void) G_GNUC_CONST;
 
-MateSettingsPluginInfo *mate_settings_plugin_info_new_from_file (const char *filename);
+MateSettingsPluginInfo *mate_settings_plugin_info_new_from_file(
+    const char *filename);
 
-gboolean         mate_settings_plugin_info_activate        (MateSettingsPluginInfo *info);
-gboolean         mate_settings_plugin_info_deactivate      (MateSettingsPluginInfo *info);
+gboolean mate_settings_plugin_info_activate(MateSettingsPluginInfo *info);
+gboolean mate_settings_plugin_info_deactivate(MateSettingsPluginInfo *info);
 
-gboolean         mate_settings_plugin_info_is_active       (MateSettingsPluginInfo *info);
-gboolean         mate_settings_plugin_info_get_enabled     (MateSettingsPluginInfo *info);
-gboolean         mate_settings_plugin_info_is_available    (MateSettingsPluginInfo *info);
+gboolean mate_settings_plugin_info_is_active(MateSettingsPluginInfo *info);
+gboolean mate_settings_plugin_info_get_enabled(MateSettingsPluginInfo *info);
+gboolean mate_settings_plugin_info_is_available(MateSettingsPluginInfo *info);
 
-const char      *mate_settings_plugin_info_get_name        (MateSettingsPluginInfo *info);
-const char      *mate_settings_plugin_info_get_description (MateSettingsPluginInfo *info);
-const char     **mate_settings_plugin_info_get_authors     (MateSettingsPluginInfo *info);
-const char      *mate_settings_plugin_info_get_website     (MateSettingsPluginInfo *info);
-const char      *mate_settings_plugin_info_get_copyright   (MateSettingsPluginInfo *info);
-const char      *mate_settings_plugin_info_get_location    (MateSettingsPluginInfo *info);
-int              mate_settings_plugin_info_get_priority    (MateSettingsPluginInfo *info);
+const char *mate_settings_plugin_info_get_name(MateSettingsPluginInfo *info);
+const char *mate_settings_plugin_info_get_description(
+    MateSettingsPluginInfo *info);
+const char **mate_settings_plugin_info_get_authors(
+    MateSettingsPluginInfo *info);
+const char *mate_settings_plugin_info_get_website(MateSettingsPluginInfo *info);
+const char *mate_settings_plugin_info_get_copyright(
+    MateSettingsPluginInfo *info);
+const char *mate_settings_plugin_info_get_location(
+    MateSettingsPluginInfo *info);
+int mate_settings_plugin_info_get_priority(MateSettingsPluginInfo *info);
 
-void             mate_settings_plugin_info_set_priority    (MateSettingsPluginInfo *info,
-                                                            int                     priority);
-void             mate_settings_plugin_info_set_schema      (MateSettingsPluginInfo *info,
-                                                            gchar                  *schema);
+void mate_settings_plugin_info_set_priority(MateSettingsPluginInfo *info,
+                                            int priority);
+void mate_settings_plugin_info_set_schema(MateSettingsPluginInfo *info,
+                                          gchar *schema);
 #ifdef __cplusplus
 }
 #endif
 
-#endif  /* __MATE_SETTINGS_PLUGIN_INFO_H__ */
+#endif /* __MATE_SETTINGS_PLUGIN_INFO_H__ */

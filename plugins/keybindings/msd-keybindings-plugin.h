@@ -22,8 +22,8 @@
 #ifndef __MSD_KEYBINDINGS_PLUGIN_H__
 #define __MSD_KEYBINDINGS_PLUGIN_H__
 
-#include <glib.h>
 #include <glib-object.h>
+#include <glib.h>
 #include <gmodule.h>
 
 #include "mate-settings-plugin.h"
@@ -32,30 +32,36 @@
 extern "C" {
 #endif
 
-#define MSD_TYPE_KEYBINDINGS_PLUGIN                (msd_keybindings_plugin_get_type ())
-#define MSD_KEYBINDINGS_PLUGIN(o)                  (G_TYPE_CHECK_INSTANCE_CAST ((o), MSD_TYPE_KEYBINDINGS_PLUGIN, MsdKeybindingsPlugin))
-#define MSD_KEYBINDINGS_PLUGIN_CLASS(k)            (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_KEYBINDINGS_PLUGIN, MsdKeybindingsPluginClass))
-#define MSD_IS_KEYBINDINGS_PLUGIN(o)               (G_TYPE_CHECK_INSTANCE_TYPE ((o), MSD_TYPE_KEYBINDINGS_PLUGIN))
-#define MSD_IS_KEYBINDINGS_PLUGIN_CLASS(k)         (G_TYPE_CHECK_CLASS_TYPE ((k), MSD_TYPE_KEYBINDINGS_PLUGIN))
-#define MSD_KEYBINDINGS_PLUGIN_GET_CLASS(o)        (G_TYPE_INSTANCE_GET_CLASS ((o), MSD_TYPE_KEYBINDINGS_PLUGIN, MsdKeybindingsPluginClass))
+#define MSD_TYPE_KEYBINDINGS_PLUGIN (msd_keybindings_plugin_get_type())
+#define MSD_KEYBINDINGS_PLUGIN(o)                               \
+  (G_TYPE_CHECK_INSTANCE_CAST((o), MSD_TYPE_KEYBINDINGS_PLUGIN, \
+                              MsdKeybindingsPlugin))
+#define MSD_KEYBINDINGS_PLUGIN_CLASS(k)                      \
+  (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_KEYBINDINGS_PLUGIN, \
+                           MsdKeybindingsPluginClass))
+#define MSD_IS_KEYBINDINGS_PLUGIN(o) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((o), MSD_TYPE_KEYBINDINGS_PLUGIN))
+#define MSD_IS_KEYBINDINGS_PLUGIN_CLASS(k) \
+  (G_TYPE_CHECK_CLASS_TYPE((k), MSD_TYPE_KEYBINDINGS_PLUGIN))
+#define MSD_KEYBINDINGS_PLUGIN_GET_CLASS(o)                    \
+  (G_TYPE_INSTANCE_GET_CLASS((o), MSD_TYPE_KEYBINDINGS_PLUGIN, \
+                             MsdKeybindingsPluginClass))
 
 typedef struct MsdKeybindingsPluginPrivate MsdKeybindingsPluginPrivate;
 
-typedef struct
-{
-        MateSettingsPlugin    parent;
-        MsdKeybindingsPluginPrivate *priv;
+typedef struct {
+  MateSettingsPlugin parent;
+  MsdKeybindingsPluginPrivate *priv;
 } MsdKeybindingsPlugin;
 
-typedef struct
-{
-        MateSettingsPluginClass parent_class;
+typedef struct {
+  MateSettingsPluginClass parent_class;
 } MsdKeybindingsPluginClass;
 
-GType   msd_keybindings_plugin_get_type            (void) G_GNUC_CONST;
+GType msd_keybindings_plugin_get_type(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_mate_settings_plugin (GTypeModule *module);
+G_MODULE_EXPORT GType register_mate_settings_plugin(GTypeModule *module);
 
 #ifdef __cplusplus
 }

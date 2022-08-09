@@ -21,46 +21,43 @@
  *
  */
 
-#include "config.h"
-
-#include <stdio.h>
-#include <string.h>
-#include <stdarg.h>
-#include <signal.h>
-#include <time.h>
-#include <unistd.h>
-
-#include <glib.h>
-#include <glib/gstdio.h>
+#include <config.h>
 
 #include "mate-settings-profile.h"
 
-void
-_mate_settings_profile_log (const char *func,
-                             const char *note,
-                             const char *format,
-                             ...)
-{
-        va_list args;
-        char   *str;
-        char   *formatted;
+#include <glib.h>
+#include <glib/gstdio.h>
+#include <signal.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
 
-        if (format == NULL) {
-                formatted = g_strdup ("");
-        } else {
-                va_start (args, format);
-                formatted = g_strdup_vprintf (format, args);
-                va_end (args);
-        }
+void _mate_settings_profile_log(const char *func, const char *note,
+                                const char *format, ...) {
+  va_list args;
+  char *str;
+  char *formatted;
 
-        if (func != NULL) {
-                str = g_strdup_printf ("MARK: %s %s: %s %s", g_get_prgname(), func, note ? note : "", formatted);
-        } else {
-                str = g_strdup_printf ("MARK: %s: %s %s", g_get_prgname(), note ? note : "", formatted);
-        }
+  if (format == NULL) {
+    formatted = g_strdup("");
+  } else {
+    va_start(args, format);
+    formatted = g_strdup_vprintf(format, args);
+    va_end(args);
+  }
 
-        g_free (formatted);
+  if (func != NULL) {
+    str = g_strdup_printf("MARK: %s %s: %s %s", g_get_prgname(), func,
+                          note ? note : "", formatted);
+  } else {
+    str = g_strdup_printf("MARK: %s: %s %s", g_get_prgname(), note ? note : "",
+                          formatted);
+  }
 
-        g_access (str, F_OK);
-        g_free (str);
+  g_free(formatted);
+
+  g_access(str, F_OK);
+  g_free(str);
 }

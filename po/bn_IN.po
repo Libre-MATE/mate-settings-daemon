@@ -2,22 +2,23 @@
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-settings-daemon package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-settings-daemon 1.25.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2021-06-23 22:04+0200\n"
+"POT-Creation-Date: 2022-08-09 15:31+0200\n"
 "PO-Revision-Date: 2018-03-12 08:16+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
-"Language-Team: Bengali (India) (https://www.transifex.com/mate/teams/13566/bn_IN/)\n"
+"Language-Team: Bengali (India) (https://www.transifex.com/mate/teams/13566/"
+"bn_IN/)\n"
+"Language: bn_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: bn_IN\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/50-accessibility.xml.in:2
@@ -72,8 +73,8 @@ msgid ""
 "The resolution used for converting font sizes to pixel sizes, in dots per "
 "inch."
 msgstr ""
-"ফন্টের মাপকে পিক্সেলের মাপে পরিবর্তনের জন্য ব্যবহৃত রেসোলিউশন, প্রতি ইঞ্চে "
-"বিন্দুর সংখ্যা অনুযায়ী গণনা করা হয়েছে।"
+"ফন্টের মাপকে পিক্সেলের মাপে পরিবর্তনের জন্য ব্যবহৃত রেসোলিউশন, প্রতি ইঞ্চে বিন্দুর "
+"সংখ্যা অনুযায়ী গণনা করা হয়েছে।"
 
 #: data/org.mate.font-rendering.gschema.xml.in:27
 msgid "Antialiasing"
@@ -85,10 +86,10 @@ msgid ""
 "\"none\" for no antialiasing, \"grayscale\" for standard grayscale "
 "antialiasing, and \"rgba\" for subpixel antialiasing (LCD screens only)."
 msgstr ""
-"ফন্ট রেন্ডার করার সময় ব্যবহারযোগ্য অ্যান্টি-অ্যালায়েসিংয়ের ধরন। সম্ভাব্য "
-"মানগুলি হল: অ্যান্টি-অ্যালয়েসিং ব্যবহার না করার জন্য \"none\", সাধারণ "
-"সাদা-কালো অ্যান্টি-অ্যালায়েসিংয়ের জন্য \"grayscale\", ও সাব-পিক্সেল "
-"অ্যান্টি-অ্যালায়েসিংয়ের জন্য (শুধুমাত্র LCD পর্দায় প্রযোজ্য) \"rgba\"।"
+"ফন্ট রেন্ডার করার সময় ব্যবহারযোগ্য অ্যান্টি-অ্যালায়েসিংয়ের ধরন। সম্ভাব্য মানগুলি হল: "
+"অ্যান্টি-অ্যালয়েসিং ব্যবহার না করার জন্য \"none\", সাধারণ সাদা-কালো অ্যান্টি-"
+"অ্যালায়েসিংয়ের জন্য \"grayscale\", ও সাব-পিক্সেল অ্যান্টি-অ্যালায়েসিংয়ের জন্য "
+"(শুধুমাত্র LCD পর্দায় প্রযোজ্য) \"rgba\"।"
 
 #: data/org.mate.font-rendering.gschema.xml.in:32
 msgid "Hinting"
@@ -100,10 +101,10 @@ msgid ""
 "\"none\" for no hinting, \"slight\" for basic, \"medium\" for moderate, and "
 "\"full\" for maximum hinting (may cause distortion of letter forms)."
 msgstr ""
-"ফন্ট রেন্ডার করার সময় ব্যবহারযোগ্য হিন্টিংয়ের ধরন। সম্ভাব্য মানগুলি হল: "
-"অ্যান্টি-অ্যালয়েসিং ব্যবহার না করার জন্য \"none\", সাধারণ সাদা-কালো "
-"অ্যান্টি-অ্যালায়েসিংয়ের জন্য \"grayscale\", ও সাব-পিক্সেল "
-"অ্যান্টি-অ্যালায়েসিংয়ের জন্য (শুধুমাত্র LCD পর্দায় প্রযোজ্য) \"rgba\"।"
+"ফন্ট রেন্ডার করার সময় ব্যবহারযোগ্য হিন্টিংয়ের ধরন। সম্ভাব্য মানগুলি হল: অ্যান্টি-"
+"অ্যালয়েসিং ব্যবহার না করার জন্য \"none\", সাধারণ সাদা-কালো অ্যান্টি-অ্যালায়েসিংয়ের "
+"জন্য \"grayscale\", ও সাব-পিক্সেল অ্যান্টি-অ্যালায়েসিংয়ের জন্য (শুধুমাত্র LCD পর্দায় "
+"প্রযোজ্য) \"rgba\"।"
 
 #: data/org.mate.font-rendering.gschema.xml.in:37
 msgid "RGBA order"
@@ -111,16 +112,15 @@ msgstr "RGBA ক্রম"
 
 #: data/org.mate.font-rendering.gschema.xml.in:38
 msgid ""
-"The order of subpixel elements on an LCD screen; only used when antialiasing"
-" is set to \"rgba\". Possible values are: \"rgb\" for red on left (most "
-"common), \"bgr\" for blue on left, \"vrgb\" for red on top, \"vbgr\" for red"
-" on bottom."
+"The order of subpixel elements on an LCD screen; only used when antialiasing "
+"is set to \"rgba\". Possible values are: \"rgb\" for red on left (most "
+"common), \"bgr\" for blue on left, \"vrgb\" for red on top, \"vbgr\" for red "
+"on bottom."
 msgstr ""
-"LCD পর্দায় উপস্থিত সাব-পিক্সেল বস্তুর অনুক্রম; অ্যান্টি-অ্যালায়েসিংয়ের মান "
-"\"rgba\" নির্ধারিত হলে এটি ব্যবহার করা হবে। সম্ভাব্য মান হল: বাঁদিকে লাল "
-"ব্যবহারের জন্য \"rgb\" (সবচেয়ে বেশি ব্যবহৃত মান), বাঁদিকে নীল ব্যবহারের জন্য"
-" \"bgr\", উপরে লাল ব্যবহারের জন্য \"vrgb\", নীচে লাল ব্যবহারের জন্য "
-"\"vbgr\"।"
+"LCD পর্দায় উপস্থিত সাব-পিক্সেল বস্তুর অনুক্রম; অ্যান্টি-অ্যালায়েসিংয়ের মান \"rgba\" "
+"নির্ধারিত হলে এটি ব্যবহার করা হবে। সম্ভাব্য মান হল: বাঁদিকে লাল ব্যবহারের জন্য "
+"\"rgb\" (সবচেয়ে বেশি ব্যবহৃত মান), বাঁদিকে নীল ব্যবহারের জন্য \"bgr\", উপরে লাল "
+"ব্যবহারের জন্য \"vrgb\", নীচে লাল ব্যবহারের জন্য \"vbgr\"।"
 
 #: data/org.mate.peripherals-keyboard.gschema.xml.in:25
 msgid "possible values are \"on\", \"off\", and \"custom\"."
@@ -143,8 +143,8 @@ msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
 msgstr ""
-"মান true (সত্য) হলে, MATE'র দ্বারা বিভিন্ন সেশানে NumLock LED'র সর্বশেষ "
-"অবস্থা সংরক্ষিত হবে।"
+"মান true (সত্য) হলে, MATE'র দ্বারা বিভিন্ন সেশানে NumLock LED'র সর্বশেষ অবস্থা "
+"সংরক্ষিত হবে।"
 
 #: data/org.mate.peripherals-keyboard.gschema.xml.in:45
 msgid "NumLock state"
@@ -172,8 +172,7 @@ msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
 msgstr ""
-"মাউসের গতিবিধির ক্ষেত্রে প্রযোজ্য গতিবর্ধকের গুণক। সিস্টেমের ডিফল্ট মান -1 "
-"(-১)।"
+"মাউসের গতিবিধির ক্ষেত্রে প্রযোজ্য গতিবর্ধকের গুণক। সিস্টেমের ডিফল্ট মান -1 (-১)।"
 
 #: data/org.mate.peripherals-mouse.gschema.xml.in:20
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:90
@@ -185,8 +184,8 @@ msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
 msgstr ""
-"গতিবর্ধিত মাউস গতিবিধি সক্রিয় করার পূর্বে মাউস নির্দেশক স্থানান্তরণের "
-"ন্যূনতম দুরত্ব, পিক্সেল অনুসারে ব্যক্ত। সিস্টেমের ডিফল্ট মান -1 (-১)।"
+"গতিবর্ধিত মাউস গতিবিধি সক্রিয় করার পূর্বে মাউস নির্দেশক স্থানান্তরণের ন্যূনতম দুরত্ব, "
+"পিক্সেল অনুসারে ব্যক্ত। সিস্টেমের ডিফল্ট মান -1 (-১)।"
 
 #: data/org.mate.peripherals-mouse.gschema.xml.in:25
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:95
@@ -239,8 +238,7 @@ msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
 msgstr ""
-"কন্ট্রোল-কি চেপে, ছেড়ে দেওয়ার পরে মিউস নির্দেশকের বর্তমান অবস্থান উজ্জ্বল "
-"করা হয়।"
+"কন্ট্রোল-কি চেপে, ছেড়ে দেওয়ার পরে মিউস নির্দেশকের বর্তমান অবস্থান উজ্জ্বল করা হয়।"
 
 #: data/org.mate.peripherals-mouse.gschema.xml.in:50
 msgid "Cursor theme"
@@ -274,11 +272,11 @@ msgstr "টাইপ করার সময় টাচ-প্যাড নিষ�
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:16
 msgid ""
-"Set this to TRUE if you have problems with accidentally hitting the touchpad"
-" while typing."
+"Set this to TRUE if you have problems with accidentally hitting the touchpad "
+"while typing."
 msgstr ""
-"টাইপ করার সময় ভুলবসত টাচ-প্যাড ছুঁয়ে ফেলার সমস্যা থাকলে এই মান TRUE (সত্য) "
-"ধার্য করুন।"
+"টাইপ করার সময় ভুলবসত টাচ-প্যাড ছুঁয়ে ফেলার সমস্যা থাকলে এই মান TRUE (সত্য) ধার্য "
+"করুন।"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:20
 msgid "Enable mouse clicks with touchpad"
@@ -288,8 +286,8 @@ msgstr "টাচ-প্যাডের সাথে মাউস ক্লি�
 msgid ""
 "Set this to TRUE to be able to send mouse clicks by tapping on the touchpad."
 msgstr ""
-"টাচ-প্যাডের মধ্যে টোকা মেরে মাউসের ক্লিকের অনুকরণের জন্য এই মান TRUE (সত্য) "
-"ধার্য করুন।"
+"টাচ-প্যাডের মধ্যে টোকা মেরে মাউসের ক্লিকের অনুকরণের জন্য এই মান TRUE (সত্য) ধার্য "
+"করুন।"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:25
 msgid "Enable vertical edge scrolling"
@@ -502,8 +500,7 @@ msgstr ""
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:15
 msgid "Free percentage notify threshold"
 msgstr ""
-"সতর্কতামূলক সূচনা উৎপন্ন করার জন্য চিহ্নিত অবশিষ্ট শতাংশের পরিমাণের "
-"প্রান্তিক মাপ"
+"সতর্কতামূলক সূচনা উৎপন্ন করার জন্য চিহ্নিত অবশিষ্ট শতাংশের পরিমাণের প্রান্তিক মাপ"
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:16
 msgid ""
@@ -513,8 +510,7 @@ msgstr ""
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:20
 msgid "Subsequent free percentage notify threshold"
-msgstr ""
-"পরবর্তী সূচনাবার্তার ক্ষেত্রে প্রযোজ্য ফাঁকা স্থানের শতাংশের প্রান্তিক মাপ"
+msgstr "পরবর্তী সূচনাবার্তার ক্ষেত্রে প্রযোজ্য ফাঁকা স্থানের শতাংশের প্রান্তিক মাপ"
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:21
 msgid ""
@@ -525,8 +521,7 @@ msgstr ""
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:25
 msgid "Free space no notify threshold"
 msgstr ""
-"সতর্কতামূলক সূচনা উৎপন্ন না করার জন্য চিহ্নিত অবশিষ্ট শতাংশের পরিমাণের "
-"প্রান্তিক মাপ"
+"সতর্কতামূলক সূচনা উৎপন্ন না করার জন্য চিহ্নিত অবশিষ্ট শতাংশের পরিমাণের প্রান্তিক মাপ"
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:26
 msgid ""
@@ -543,8 +538,8 @@ msgid ""
 "Specify a time in minutes. Subsequent warnings for a volume will not appear "
 "more often than this period."
 msgstr ""
-"মিনিট অনুযায়ী সময় ধার্য করুন। কোনো ভলিউম সম্পর্কে সতর্কতামূলক বার্তাগুলি "
-"প্রদর্শন এই সময়ের অবকাল অবধি সীমিত রাখা হবে।"
+"মিনিট অনুযায়ী সময় ধার্য করুন। কোনো ভলিউম সম্পর্কে সতর্কতামূলক বার্তাগুলি প্রদর্শন এই "
+"সময়ের অবকাল অবধি সীমিত রাখা হবে।"
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:35
 msgid "Mount paths to ignore"
@@ -552,8 +547,7 @@ msgstr "উপেক্ষা করার জন্য চিহ্নিত �
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:36
 msgid "Specify a list of mount paths to ignore when they run low on space."
-msgstr ""
-"অবশিষ্ট স্থান হ্রাস হলে, উপেক্ষা করার জন্য চিহ্নিত মাউন্ট পয়েন্টের তালিকা।"
+msgstr "অবশিষ্ট স্থান হ্রাস হলে, উপেক্ষা করার জন্য চিহ্নিত মাউন্ট পয়েন্টের তালিকা।"
 
 #: data/org.mate.SettingsDaemon.plugins.media-keys.gschema.xml.in:10
 msgid "Show OSD notification"
@@ -746,8 +740,8 @@ msgstr "বাজাও (বা বাজাও/বিরতি)"
 #: data/org.mate.SettingsDaemon.plugins.media-keys.gschema.xml.in:131
 msgid "Binding to start playback (or toggle play/pause)."
 msgstr ""
-"প্লে-ব্যাক অর্থাৎ চালনার আরম্ভের জন্য বাইন্ড করুন (অথবা চালনা/স্থগিত কর্মের "
-"মধ্যে পরিবর্তন)।"
+"প্লে-ব্যাক অর্থাৎ চালনার আরম্ভের জন্য বাইন্ড করুন (অথবা চালনা/স্থগিত কর্মের মধ্যে "
+"পরিবর্তন)।"
 
 #: data/org.mate.SettingsDaemon.plugins.media-keys.gschema.xml.in:135
 msgid "Pause playback"
@@ -823,8 +817,8 @@ msgstr ""
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:26
 msgid ""
-"Turn on external monitor after system boot if user plugs in external monitor"
-" on system boot."
+"Turn on external monitor after system boot if user plugs in external monitor "
+"on system boot."
 msgstr ""
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:30
@@ -854,19 +848,19 @@ msgstr ""
 msgid "MATE Settings Daemon"
 msgstr "MATE Settings ডেমন"
 
-#: mate-settings-daemon/main.c:66
+#: mate-settings-daemon/main.c:65
 msgid "Enable debugging code"
 msgstr "কোড ডিবাগের ব্যবস্থা সক্রিয় করা হবে"
 
-#: mate-settings-daemon/main.c:67
+#: mate-settings-daemon/main.c:68
 msgid "Replace the current daemon"
 msgstr ""
 
-#: mate-settings-daemon/main.c:68
+#: mate-settings-daemon/main.c:70
 msgid "Don't become a daemon"
 msgstr "ডেমন তৈরি করা হবে না"
 
-#: mate-settings-daemon/main.c:69
+#: mate-settings-daemon/main.c:72
 msgid "Exit after a time (for debugging)"
 msgstr ""
 
@@ -878,111 +872,109 @@ msgstr "সহায়ক প্রযুক্তি বিশিষ্ট কি
 msgid "Accessibility keyboard plugin"
 msgstr "সহায়ক প্রযুক্তি বিশিষ্ট কি-বোর্ডের প্লাগ-ইন"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:460
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:407
 #, c-format
 msgid "There was an error displaying help: %s"
 msgstr "সহায়িকা প্রদর্শনের সময় একটি সমস্যা হয়েছে: %s"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:588
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:652
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:515
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:572
 msgid "Do you want to activate Slow Keys?"
 msgstr "আপনি কি ধীর কী (Key) সক্রিয় করতে চান?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:589
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:653
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:516
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:573
 msgid "Do you want to deactivate Slow Keys?"
 msgstr "আপনি কি ধীর কী (Key) নিষ্ক্রিয় করতে চান?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:590
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:654
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:518
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:575
 msgid ""
 "You just held down the Shift key for 8 seconds.  This is the shortcut for "
 "the Slow Keys feature, which affects the way your keyboard works."
 msgstr ""
-"আপনি এইমাত্র শিফ্‌ট কী-কে ৮ সেকেন্ড যাবত চেপে রেখেছিলেন।  এটি হল ধীর কী "
-"(Key) সক্রিয়কারক শর্টকাট যা সম্পূর্ণ কীবোর্ড ব্যবস্থা কীভাবে কাজ করবে তা "
-"নির্ধারণ করে।"
+"আপনি এইমাত্র শিফ্‌ট কী-কে ৮ সেকেন্ড যাবত চেপে রেখেছিলেন।  এটি হল ধীর কী (Key) "
+"সক্রিয়কারক শর্টকাট যা সম্পূর্ণ কীবোর্ড ব্যবস্থা কীভাবে কাজ করবে তা নির্ধারণ করে।"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:613
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:750
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:542
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:663
 msgid "Don't activate"
 msgstr "সক্রিয় করা হবে না"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:613
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:750
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:542
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:663
 msgid "Don't deactivate"
 msgstr "নিষ্ক্রিয় করা হবে না"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:619
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:756
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:545
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:666
 msgid "Activate"
 msgstr "সক্রিয় করুন"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:619
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:756
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:545
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:666
 msgid "Deactivate"
 msgstr "নিষ্ক্রিয় করুন"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:592
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:718
 msgid "Do_n't activate"
 msgstr "সক্রিয় করো না (_n)"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:592
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:718
 msgid "Do_n't deactivate"
 msgstr "নিষ্ক্রিয় করো না (_n)"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:595
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:721
 msgid "_Activate"
 msgstr "সক্রিয় করুন (_A)"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:595
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:721
 msgid "_Deactivate"
 msgstr "নিষ্ক্রিয় করুন (_D)"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:682
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:599
 msgid "Slow Keys Alert"
 msgstr "ধীর কী (Key) সম্পর্কিত সতর্কবাণী"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:722
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:788
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:631
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:693
 msgid "Do you want to activate Sticky Keys?"
 msgstr "আপনি কি স্টিকি কী (Key) সক্রিয় করতে চান?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:723
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:789
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:632
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:694
 msgid "Do you want to deactivate Sticky Keys?"
 msgstr "আপনি কি স্টিকি কী (Key) নিষ্ক্রিয় করতে চান?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:725
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:791
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:633
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:695
 msgid ""
 "You just pressed the Shift key 5 times in a row.  This is the shortcut for "
 "the Sticky Keys feature, which affects the way your keyboard works."
 msgstr ""
-"আপনি এইমাত্র শিফ্‌ট কী-কে ৫ সেকেন্ড যাবত চেপে রেখেছিলেন।  এটি হল স্টিকি কী "
-"(Key) সক্রিয়কারক শর্টকাট যা সম্পূর্ণ কীবোর্ড ব্যবস্থা কীভাবে কাজ করবে তা "
-"নির্ধারণ করে।"
+"আপনি এইমাত্র শিফ্‌ট কী-কে ৫ সেকেন্ড যাবত চেপে রেখেছিলেন।  এটি হল স্টিকি কী (Key) "
+"সক্রিয়কারক শর্টকাট যা সম্পূর্ণ কীবোর্ড ব্যবস্থা কীভাবে কাজ করবে তা নির্ধারণ করে।"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:727
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:793
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:637
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:699
 msgid ""
 "You just pressed two keys at once, or pressed the Shift key 5 times in a "
 "row.  This turns off the Sticky Keys feature, which affects the way your "
 "keyboard works."
 msgstr ""
 "আপনি এইমাত্র দুটি কীকে একত্রে চেপে রেখেছিলেন কিংবা শিফ্‌ট কীকে পরপর ৫ বার "
-"চেপেছেন।  এর ফলে স্টিকি কী (Key) নিষ্ক্রিয় হয়ে যায় যা সম্পূর্ণ কীবোর্ড "
-"ব্যবস্থা কীভাবে কাজ করবে তা নির্ধারণ করে।"
+"চেপেছেন।  এর ফলে স্টিকি কী (Key) নিষ্ক্রিয় হয়ে যায় যা সম্পূর্ণ কীবোর্ড ব্যবস্থা "
+"কীভাবে কাজ করবে তা নির্ধারণ করে।"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:821
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:725
 msgid "Sticky Keys Alert"
 msgstr "স্টিকি কী (Key) সম্পর্কিত সতর্কবাণী"
 
-#: plugins/a11y-keyboard/msd-a11y-preferences-dialog.c:830
+#: plugins/a11y-keyboard/msd-a11y-preferences-dialog.c:762
 #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:14
 msgid "Universal Access Preferences"
 msgstr "সার্বজনীন ব্যবহার সংক্রান্ত পছন্দ"
@@ -1089,112 +1081,111 @@ msgid ""
 "about low disk space"
 msgstr ""
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:61
+#: plugins/housekeeping/msd-ldsm-dialog.c:58
 msgid "Don't show any warnings again for this file system"
 msgstr ""
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:63
+#: plugins/housekeeping/msd-ldsm-dialog.c:60
 msgid "Don't show any warnings again"
 msgstr "পুনরায় সতর্কবার্তা প্রদর্শন করা হবে না"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:76
+#: plugins/housekeeping/msd-ldsm-dialog.c:72
 #, c-format
 msgid "The volume \"%s\" has only %s disk space remaining."
 msgstr "\"%s\" ভলিউমের মধ্যে শুধুমাত্র %s স্থান ডিস্কে অবশিষ্ট রয়েছে।"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:79
+#: plugins/housekeeping/msd-ldsm-dialog.c:76
 #, c-format
 msgid "This computer has only %s disk space remaining."
 msgstr "এই কম্পিউটারের মধ্যে শুধুমাত্র %s স্থান ডিস্কে অবশিষ্ট রয়েছে।"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:95
+#: plugins/housekeeping/msd-ldsm-dialog.c:90
 msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to another disk or partition."
 msgstr ""
-"আবর্জনার বাক্স ফাঁকা করে আপনি ডিস্কের স্থান বৃদ্ধি করতে করতে পারেন। অব্যবহৃত"
-" প্রোগ্রাম, ফাইল মুছে ফেলে ও অন্য কোনো ডিস্ক অথবা পার্টিশনে ফাইল সরিয়েও "
-"ডিস্কের স্থান বৃদ্ধি করা যাবে।"
+"আবর্জনার বাক্স ফাঁকা করে আপনি ডিস্কের স্থান বৃদ্ধি করতে করতে পারেন। অব্যবহৃত প্রোগ্রাম, "
+"ফাইল মুছে ফেলে ও অন্য কোনো ডিস্ক অথবা পার্টিশনে ফাইল সরিয়েও ডিস্কের স্থান বৃদ্ধি করা "
+"যাবে।"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:98
+#: plugins/housekeeping/msd-ldsm-dialog.c:95
 msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to another disk or partition."
 msgstr ""
-"অব্যবহৃত প্রোগ্রাম, ফাইল মুছে ফেলে ও অন্য কোনো ডিস্ক অথবা পার্টিশনে ফাইল "
-"সরিয়ে ডিস্কের স্থান বৃদ্ধি করা যাবে।"
+"অব্যবহৃত প্রোগ্রাম, ফাইল মুছে ফেলে ও অন্য কোনো ডিস্ক অথবা পার্টিশনে ফাইল সরিয়ে "
+"ডিস্কের স্থান বৃদ্ধি করা যাবে।"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:103
+#: plugins/housekeeping/msd-ldsm-dialog.c:101
 msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to an external disk."
 msgstr ""
-"আবর্জনার বাক্স ফাঁকা করে আপনি ডিস্কের স্থান বৃদ্ধি করতে করতে পারেন। অব্যবহৃত"
-" প্রোগ্রাম, ফাইল মুছে ফেলে ও কোনো বহিস্থিত ডিস্কে ফাইল সরিয়েও ডিস্কের স্থান "
-"বৃদ্ধি করা যাবে।"
+"আবর্জনার বাক্স ফাঁকা করে আপনি ডিস্কের স্থান বৃদ্ধি করতে করতে পারেন। অব্যবহৃত প্রোগ্রাম, "
+"ফাইল মুছে ফেলে ও কোনো বহিস্থিত ডিস্কে ফাইল সরিয়েও ডিস্কের স্থান বৃদ্ধি করা যাবে।"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:106
+#: plugins/housekeeping/msd-ldsm-dialog.c:105
 msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to an external disk."
 msgstr ""
-"অব্যবহৃত প্রোগ্রাম, ফাইল মুছে ফেলে ও কোনো বহিস্থিত ডিস্কে ফাইল সরিয়ে ডিস্কের"
-" স্থান বৃদ্ধি করা যাবে।"
+"অব্যবহৃত প্রোগ্রাম, ফাইল মুছে ফেলে ও কোনো বহিস্থিত ডিস্কে ফাইল সরিয়ে ডিস্কের স্থান "
+"বৃদ্ধি করা যাবে।"
 
 #. Set up all the window stuff here
-#: plugins/housekeeping/msd-ldsm-dialog.c:201
+#: plugins/housekeeping/msd-ldsm-dialog.c:192
 msgid "Low Disk Space"
 msgstr "ডিস্কে উপস্থিত স্থানের পরিমাণ কম"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:436
+#: plugins/housekeeping/msd-ldsm-dialog.c:411
 msgid "Empty Trash"
 msgstr "আবর্জনার বাক্স ফাঁকা করুন"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:444
+#: plugins/housekeeping/msd-ldsm-dialog.c:419
 msgid "Examine…"
 msgstr ""
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:451
+#: plugins/housekeeping/msd-ldsm-dialog.c:426
 msgid "Ignore"
 msgstr "উপেক্ষা করা হবে"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:98
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:94
 #, c-format
 msgid "Removing item %lu of %lu"
 msgstr "%lu বস্তুটি মুছে ফেলা হচ্ছে, সর্বমোট %lu"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:118
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:113
 #, c-format
 msgid "Removing: %s"
 msgstr "মুছে ফেলা হচ্ছে: %s"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:248
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:301
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:223
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:281
 msgid "Emptying the trash"
 msgstr "আবর্জনার বাক্স ফাঁকা করা হচ্ছে"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:277
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:253
 msgid "Preparing to empty trash…"
 msgstr ""
 
 #. Translators: "Emptying trash from <device>"
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:304
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:284
 msgid "From: "
 msgstr "উৎস: "
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:356
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:328
 msgid "Empty all of the items from the trash?"
 msgstr "আবর্জনার বাক্সের সমস্ত বস্তু মুছে ফেলা হবে কি?"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:359
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:332
 msgid ""
 "If you choose to empty the trash, all items in it will be permanently lost. "
 "Please note that you can also delete them separately."
 msgstr ""
-"আবর্জনার বাক্স ফাঁকা করা হলে সমস্ত বস্তু স্থায়ীরূপে মুছে ফেলা হবে। অনুগ্রহ "
-"করে প্রতিটি বস্তু পৃথকরূপে অপসারণ করুন।"
+"আবর্জনার বাক্স ফাঁকা করা হলে সমস্ত বস্তু স্থায়ীরূপে মুছে ফেলা হবে। অনুগ্রহ করে প্রতিটি "
+"বস্তু পৃথকরূপে অপসারণ করুন।"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:366
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:339
 msgid "_Empty Trash"
 msgstr "আবর্জনার বাক্স ফাঁকা করুন (_E)"
 
@@ -1206,17 +1197,17 @@ msgstr "কি-বাইন্ডিং"
 msgid "Keybindings plugin"
 msgstr "কি-বাইন্ডিং প্লাগ-ইন"
 
-#: plugins/keybindings/msd-keybindings-manager.c:109
+#: plugins/keybindings/msd-keybindings-manager.c:100
 #, c-format
 msgid "Key binding (%s) is invalid"
 msgstr "কি-বাইন্ডিং (%s) বৈধ নয়"
 
-#: plugins/keybindings/msd-keybindings-manager.c:145
+#: plugins/keybindings/msd-keybindings-manager.c:131
 #, c-format
 msgid "Key binding (%s) is incomplete"
 msgstr "কি-বাইন্ডিং (%s) অসম্পূর্ণ"
 
-#: plugins/keybindings/msd-keybindings-manager.c:487
+#: plugins/keybindings/msd-keybindings-manager.c:443
 #, c-format
 msgid ""
 "Error while trying to run (%s)\n"
@@ -1233,7 +1224,7 @@ msgstr "কি-বোর্ড"
 msgid "Keyboard plugin"
 msgstr "কি-বোর্ড প্লাগ-ইন"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:120
+#: plugins/keyboard/msd-keyboard-xkb.c:104
 #, c-format
 msgid ""
 "Error activating XKB configuration.\n"
@@ -1250,15 +1241,15 @@ msgid ""
 " • The result of <b>%s</b>"
 msgstr ""
 
-#: plugins/keyboard/msd-keyboard-xkb.c:286
+#: plugins/keyboard/msd-keyboard-xkb.c:240
 msgid "_Layouts"
 msgstr ""
 
-#: plugins/keyboard/msd-keyboard-xkb.c:293
+#: plugins/keyboard/msd-keyboard-xkb.c:245
 msgid "Keyboard _Preferences"
 msgstr ""
 
-#: plugins/keyboard/msd-keyboard-xkb.c:299
+#: plugins/keyboard/msd-keyboard-xkb.c:251
 msgid "Show _Current Layout"
 msgstr ""
 
@@ -1270,16 +1261,15 @@ msgstr "মিডিয়া কি"
 msgid "Media keys plugin"
 msgstr "মিডিয়া-কি প্লাগ-ইন"
 
-#: plugins/media-keys/msd-media-keys-manager.c:185
+#: plugins/media-keys/msd-media-keys-manager.c:165
 msgid ""
-"Could not get default terminal. Verify that your default terminal command is"
-" set and points to a valid application."
+"Could not get default terminal. Verify that your default terminal command is "
+"set and points to a valid application."
 msgstr ""
-"ডিফল্ট টার্মিনাল প্রাপ্ত করতে ব্যর্থ। অনুগ্রহ করে পরীক্ষা করুন যে ডিফল্ট "
-"টার্মিনালের কমান্ড ধার্য করে তা একটি বৈধ অ্যাপ্লিকেশনের প্রতি নির্দেশ করা "
-"হয়েছে কি না।"
+"ডিফল্ট টার্মিনাল প্রাপ্ত করতে ব্যর্থ। অনুগ্রহ করে পরীক্ষা করুন যে ডিফল্ট টার্মিনালের "
+"কমান্ড ধার্য করে তা একটি বৈধ অ্যাপ্লিকেশনের প্রতি নির্দেশ করা হয়েছে কি না।"
 
-#: plugins/media-keys/msd-media-keys-manager.c:225
+#: plugins/media-keys/msd-media-keys-manager.c:191
 #, c-format
 msgid ""
 "Couldn't execute command: %s\n"
@@ -1288,47 +1278,47 @@ msgstr ""
 "চিহ্নিত কমান্ডটি চালানো যায়নি: %s\n"
 "কমান্ডের বৈধতা নিশ্চিত করুন।"
 
-#: plugins/media-keys/msd-media-keys-manager.c:638
-#: plugins/media-keys/test-media-window.c:82
+#: plugins/media-keys/msd-media-keys-manager.c:556
+#: plugins/media-keys/test-media-window.c:76
 msgid "Touchpad enabled"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:638
-#: plugins/media-keys/test-media-window.c:75
+#: plugins/media-keys/msd-media-keys-manager.c:556
+#: plugins/media-keys/test-media-window.c:69
 msgid "Touchpad disabled"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:956
-#: plugins/media-keys/test-media-window.c:89
+#: plugins/media-keys/msd-media-keys-manager.c:834
+#: plugins/media-keys/test-media-window.c:83
 msgid "Bluetooth disabled"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:959
-#: plugins/media-keys/test-media-window.c:96
+#: plugins/media-keys/msd-media-keys-manager.c:838
+#: plugins/media-keys/test-media-window.c:90
 msgid "Bluetooth enabled"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:963
-#: plugins/media-keys/test-media-window.c:103
+#: plugins/media-keys/msd-media-keys-manager.c:843
+#: plugins/media-keys/test-media-window.c:97
 msgid "Airplane mode enabled"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:966
-#: plugins/media-keys/test-media-window.c:110
+#: plugins/media-keys/msd-media-keys-manager.c:848
+#: plugins/media-keys/test-media-window.c:105
 msgid "Airplane mode disabled"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:997
+#: plugins/media-keys/msd-media-keys-manager.c:875
 msgid "Hardware Airplane Mode"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:1035
-#: plugins/media-keys/test-media-window.c:124
+#: plugins/media-keys/msd-media-keys-manager.c:908
+#: plugins/media-keys/test-media-window.c:119
 msgid "Changing Screen Layout"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:1039
-#: plugins/media-keys/test-media-window.c:117
+#: plugins/media-keys/msd-media-keys-manager.c:912
+#: plugins/media-keys/test-media-window.c:112
 msgid "No External Display"
 msgstr ""
 
@@ -1340,16 +1330,16 @@ msgstr "মাউস"
 msgid "Mouse plugin"
 msgstr "মাউজ প্লাগ-ইন"
 
-#: plugins/mouse/msd-mouse-manager.c:1651
+#: plugins/mouse/msd-mouse-manager.c:1518
 msgid "Could not enable mouse accessibility features"
 msgstr "মাউস ব্যবহারের বিশেষ সহায়ক বৈশিষ্ট্য সক্রিয় করতে ব্যর্থ"
 
-#: plugins/mouse/msd-mouse-manager.c:1653
+#: plugins/mouse/msd-mouse-manager.c:1520
 msgid ""
 "Mouse accessibility requires Mousetweaks to be installed on your system."
 msgstr ""
 
-#: plugins/mouse/msd-mouse-manager.c:1656
+#: plugins/mouse/msd-mouse-manager.c:1523
 msgid "Mouse Preferences"
 msgstr "মাউস সম্পর্কিত পছন্দ"
 
@@ -1371,65 +1361,65 @@ msgstr ""
 msgid "Rfkill plugin"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard-manager.c:165
+#: plugins/smartcard/msd-smartcard-manager.c:153
 msgid "Module Path"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard-manager.c:166
+#: plugins/smartcard/msd-smartcard-manager.c:154
 msgid "path to smartcard PKCS #11 driver"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard-manager.c:492
+#: plugins/smartcard/msd-smartcard-manager.c:431
 msgid "received error or hang up from event source"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard-manager.c:581
+#: plugins/smartcard/msd-smartcard-manager.c:511
 msgid "NSS security system could not be initialized"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard-manager.c:650
+#: plugins/smartcard/msd-smartcard-manager.c:570
 msgid "no suitable smartcard driver could be found"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard-manager.c:670
+#: plugins/smartcard/msd-smartcard-manager.c:587
 #, c-format
 msgid "smartcard driver '%s' could not be loaded"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard-manager.c:754
+#: plugins/smartcard/msd-smartcard-manager.c:665
 #, c-format
 msgid "could not watch for incoming card events - %s"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard-manager.c:1101
+#: plugins/smartcard/msd-smartcard-manager.c:971
 msgid "encountered unexpected error while waiting for smartcard events"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard.c:149
+#: plugins/smartcard/msd-smartcard.c:125
 msgid "Slot ID"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard.c:150
+#: plugins/smartcard/msd-smartcard.c:125
 msgid "The slot the card is in"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard.c:156
+#: plugins/smartcard/msd-smartcard.c:130
 msgid "Slot Series"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard.c:157
+#: plugins/smartcard/msd-smartcard.c:131
 msgid "per-slot card identifier"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard.c:163 plugins/smartcard/msd-smartcard.c:164
+#: plugins/smartcard/msd-smartcard.c:136
 msgid "name"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard.c:168
+#: plugins/smartcard/msd-smartcard.c:141
 msgid "Module"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard.c:169
+#: plugins/smartcard/msd-smartcard.c:141
 msgid "smartcard driver"
 msgstr ""
 
@@ -1457,19 +1447,19 @@ msgstr "টাইপিং বিরতি"
 msgid "Typing break plugin"
 msgstr "টাইপিং বিরতির প্লাগ-ইন"
 
-#: plugins/xrandr/msd-xrandr-manager.c:370
+#: plugins/xrandr/msd-xrandr-manager.c:343
 msgid "Could not switch the monitor configuration"
 msgstr "মনিটরের কনফিগারেশন পরিবর্তন করতে ব্যর্থ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:394
+#: plugins/xrandr/msd-xrandr-manager.c:369
 msgid "Could not restore the display's configuration"
 msgstr "ডিসপ্লের কনফিগারেশন পুনরুদ্ধার করতে ব্যর্থ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:419
+#: plugins/xrandr/msd-xrandr-manager.c:394
 msgid "Could not restore the display's configuration from a backup"
 msgstr "ব্যাক-আপ থেকে ডিসপ্লের কনফিগারেশন পুনরুদ্ধার করতে ব্যর্থ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:440
+#: plugins/xrandr/msd-xrandr-manager.c:413
 #, c-format
 msgid "The display will be reset to its previous configuration in %d second"
 msgid_plural ""
@@ -1477,97 +1467,97 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:491
+#: plugins/xrandr/msd-xrandr-manager.c:458
 msgid "Does the display look OK?"
 msgstr "ডিসপ্লে কি ঠিক ভাবে প্রদর্শিত হচ্ছে?"
 
-#: plugins/xrandr/msd-xrandr-manager.c:498
+#: plugins/xrandr/msd-xrandr-manager.c:467
 msgid "_Restore Previous Configuration"
 msgstr "পূর্ববর্তী কনফিগারেশন পুনরুদ্ধার করা হবে (_R)"
 
-#: plugins/xrandr/msd-xrandr-manager.c:499
+#: plugins/xrandr/msd-xrandr-manager.c:470
 msgid "_Keep This Configuration"
 msgstr "এই কনফিগারেশন প্রয়োগ করা হবে (_K)"
 
-#: plugins/xrandr/msd-xrandr-manager.c:580
+#: plugins/xrandr/msd-xrandr-manager.c:555
 msgid "The selected configuration for displays could not be applied"
 msgstr "ডিসপ্লের জন্য নির্বাচিত কনফিগারেশন প্রয়োগ করতে ব্যর্থ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1177
+#: plugins/xrandr/msd-xrandr-manager.c:1125
 #, c-format
 msgid "Could not refresh the screen information: %s"
 msgstr "পর্দা সংক্রান্ত তথ্য নতুন করে প্রদর্শন করতে ব্যর্থ: %s"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1181
+#: plugins/xrandr/msd-xrandr-manager.c:1131
 msgid "Trying to switch the monitor configuration anyway."
 msgstr "তথাপি মনিটর সংক্রান্ত কনফিগারেশন পরিবর্তনের প্রয়াস করা হবে।"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1938
+#: plugins/xrandr/msd-xrandr-manager.c:1901
 msgid "Rotation not supported"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2003
-#: plugins/xrandr/msd-xrandr-manager.c:2035
+#: plugins/xrandr/msd-xrandr-manager.c:1961
+#: plugins/xrandr/msd-xrandr-manager.c:1992
 msgid "Could not save monitor configuration"
 msgstr "মনিটর সংক্রান্ত কনফিগারেশন সংরক্ষণ করতে ব্যর্থ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2056
+#: plugins/xrandr/msd-xrandr-manager.c:2012
 msgid "Mirroring outputs not supported"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2087
+#: plugins/xrandr/msd-xrandr-manager.c:2042
 msgid "Normal"
 msgstr "স্বাভাবিক"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2088
+#: plugins/xrandr/msd-xrandr-manager.c:2043
 msgid "Left"
 msgstr "বাঁদিকে"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2089
+#: plugins/xrandr/msd-xrandr-manager.c:2044
 msgid "Right"
 msgstr "ডানদিকে"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2090
+#: plugins/xrandr/msd-xrandr-manager.c:2045
 msgid "Upside Down"
 msgstr "উলটো"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2179
+#: plugins/xrandr/msd-xrandr-manager.c:2135
 msgid "ON"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2180
+#: plugins/xrandr/msd-xrandr-manager.c:2136
 msgid "Turn this monitor off"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2183
+#: plugins/xrandr/msd-xrandr-manager.c:2138
 msgid "OFF"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2184
+#: plugins/xrandr/msd-xrandr-manager.c:2139
 msgid "Turn this monitor on"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2244
-msgid "Same output all monitors"
+#: plugins/xrandr/msd-xrandr-manager.c:2193
+msgid "Same output on all monitors"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2245
+#: plugins/xrandr/msd-xrandr-manager.c:2195
 msgid "Mirror same output to all monitors and turn them on"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2292
+#: plugins/xrandr/msd-xrandr-manager.c:2241
 msgid "_Configure Display Settings…"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2302
+#: plugins/xrandr/msd-xrandr-manager.c:2252
 msgid "Open the display configuration dialog (all settings)"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2359
+#: plugins/xrandr/msd-xrandr-manager.c:2306
 msgid "Configure display settings"
 msgstr "পর্দা সংক্রান্ত বৈশিষ্ট্য পরিবর্তন করুন"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2419
+#: plugins/xrandr/msd-xrandr-manager.c:2362
 msgid "Could not apply the stored configuration for monitors"
 msgstr "মনিটরের জন্য সংরক্ষিত কনফিগারেশন প্রয়োগ করতে ব্যর্থ"
 
@@ -1579,7 +1569,7 @@ msgstr "XRandR"
 msgid "Set up screen size and rotation settings"
 msgstr "পর্দার মাপ ও আবর্তন সংক্রান্ত বৈশিষ্ট্য নির্ধারণ করুন"
 
-#: plugins/xrdb/msd-xrdb-manager.c:249 plugins/xrdb/msd-xrdb-manager.c:318
+#: plugins/xrdb/msd-xrdb-manager.c:211 plugins/xrdb/msd-xrdb-manager.c:273
 msgid "Cannot determine user's home directory"
 msgstr "ব্যবহারকারীর ব্যক্তিগত ডিরেক্টরি (Home) খুঁজে পাওয়া যাচ্ছে না"
 

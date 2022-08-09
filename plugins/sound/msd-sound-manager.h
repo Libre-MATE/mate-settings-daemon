@@ -22,22 +22,21 @@
 #ifndef MSD_SOUND_MANAGER_H
 #define MSD_SOUND_MANAGER_H
 
-#include <glib.h>
 #include <glib-object.h>
+#include <glib.h>
 
 G_BEGIN_DECLS
 
-#define MSD_TYPE_SOUND_MANAGER (msd_sound_manager_get_type ())
+#define MSD_TYPE_SOUND_MANAGER (msd_sound_manager_get_type())
 
-G_DECLARE_FINAL_TYPE (MsdSoundManager, msd_sound_manager,
-                      MSD, SOUND_MANAGER, GObject)
+G_DECLARE_FINAL_TYPE(MsdSoundManager, msd_sound_manager, MSD, SOUND_MANAGER,
+                     GObject)
 
-MsdSoundManager * msd_sound_manager_new   (void);
+MsdSoundManager *msd_sound_manager_new(void);
 
-gboolean          msd_sound_manager_start (MsdSoundManager  *manager,
-                                           GError          **error);
+gboolean msd_sound_manager_start(MsdSoundManager *manager, GError **error);
 
-void              msd_sound_manager_stop  (MsdSoundManager *manager);
+void msd_sound_manager_stop(MsdSoundManager *manager);
 
 G_END_DECLS
 

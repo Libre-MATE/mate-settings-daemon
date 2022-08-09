@@ -28,15 +28,14 @@
 extern "C" {
 #endif
 
-void fontconfig_cache_init (void);
-gboolean fontconfig_cache_update (void);
+void fontconfig_cache_init(void);
+gboolean fontconfig_cache_update(void);
 
 typedef struct _fontconfig_monitor_handle fontconfig_monitor_handle_t;
 
-fontconfig_monitor_handle_t *
-fontconfig_monitor_start (GFunc    notify_callback,
-                          gpointer notify_data);
-void fontconfig_monitor_stop  (fontconfig_monitor_handle_t *handle);
+fontconfig_monitor_handle_t *fontconfig_monitor_start(GFunc notify_callback,
+                                                      gpointer notify_data);
+void fontconfig_monitor_stop(fontconfig_monitor_handle_t *handle);
 
 #ifdef __cplusplus
 }

@@ -22,129 +22,100 @@
  * Author:  Matthias Clasen, Red Hat, Inc.
  */
 
-#include <stdlib.h>
 #include <list.h>
+#include <stdlib.h>
 
-void
-list_foreach (List     *list,
-	      Callback  func,
-	      void     *user_data)
-{
-  while (list)
-    {
-      func (list->data, user_data);
+void list_foreach(List *list, Callback func, void *user_data) {
+  while (list) {
+    func(list->data, user_data);
 
-      list = list->next;
-    }
+    list = list->next;
+  }
 }
 
-List *
-list_prepend (List *list,
-	      void *data)
-{
+List *list_prepend(List *list, void *data) {
   List *link;
 
-  link = (List *) malloc (sizeof (List));
+  link = (List *)malloc(sizeof(List));
   link->next = list;
   link->data = data;
 
   return link;
 }
 
-void
-list_free (List *list)
-{
-  while (list)
-    {
-      List *next = list->next;
+void list_free(List *list) {
+  while (list) {
+    List *next = list->next;
 
-      free (list);
+    free(list);
 
-      list = next;
-    }
+    list = next;
+  }
 }
 
-List *
-list_find (List         *list,
-	   ListFindFunc  func,
-	   void         *user_data)
-{
+List *list_find(List *list, ListFindFunc func, void *user_data) {
   List *tmp;
 
-  for (tmp = list; tmp; tmp = tmp->next)
-    {
-      if ((*func) (tmp->data, user_data))
-	break;
-    }
+  for (tmp = list; tmp; tmp = tmp->next) {
+    if ((*func)(tmp->data, user_data)) break;
+  }
 
   return tmp;
 }
 
-List *
-list_remove  (List *list,
-              const void *data)
-{
+List *list_remove(List *list, const void *data) {
   List *tmp, *prev;
 
   prev = NULL;
-  for (tmp = list; tmp; tmp = tmp->next)
-    {
-      if (tmp->data == data)
-	{
-	  if (prev)
-	    prev->next = tmp->next;
-	  else
-	    list = tmp->next;
+  for (tmp = list; tmp; tmp = tmp->next) {
+    if (tmp->data == data) {
+      if (prev)
+        prev->next = tmp->next;
+      else
+        list = tmp->next;
 
-	  free (tmp);
-	  break;
-	}
-
-      prev = tmp;
+      free(tmp);
+      break;
     }
+
+    prev = tmp;
+  }
 
   return list;
 }
 
-int
-list_length (List *list)
-{
+int list_length(List *list) {
   List *tmp;
   int length;
 
   length = 0;
-  for (tmp = list; tmp; tmp = tmp->next)
-    length++;
+  for (tmp = list; tmp; tmp = tmp->next) length++;
 
   return length;
 }
 
-List *
-list_copy (List *list)
-{
+List *list_copy(List *list) {
   List *new_list = NULL;
 
-  if (list)
-    {
-      List *last;
+  if (list) {
+    List *last;
 
-      new_list = (List *) malloc (sizeof (List));
-      new_list->data = list->data;
-      new_list->next = NULL;
+    new_list = (List *)malloc(sizeof(List));
+    new_list->data = list->data;
+    new_list->next = NULL;
 
-      last = new_list;
+    last = new_list;
+    list = list->next;
+
+    while (list) {
+      last->next = (List *)malloc(sizeof(List));
+      last = last->next;
+      last->data = list->data;
       list = list->next;
-
-      while (list)
-	{
-	  last->next = (List *) malloc (sizeof (List));
-	  last = last->next;
-	  last->data = list->data;
-	  list = list->next;
-	}
-
-      last->next = NULL;
     }
+
+    last->next = NULL;
+  }
 
   return new_list;
 }

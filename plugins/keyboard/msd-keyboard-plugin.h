@@ -22,8 +22,8 @@
 #ifndef __MSD_KEYBOARD_PLUGIN_H__
 #define __MSD_KEYBOARD_PLUGIN_H__
 
-#include <glib.h>
 #include <glib-object.h>
+#include <glib.h>
 #include <gmodule.h>
 
 #include "mate-settings-plugin.h"
@@ -32,30 +32,35 @@
 extern "C" {
 #endif
 
-#define MSD_TYPE_KEYBOARD_PLUGIN                (msd_keyboard_plugin_get_type ())
-#define MSD_KEYBOARD_PLUGIN(o)                  (G_TYPE_CHECK_INSTANCE_CAST ((o), MSD_TYPE_KEYBOARD_PLUGIN, MsdKeyboardPlugin))
-#define MSD_KEYBOARD_PLUGIN_CLASS(k)            (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_KEYBOARD_PLUGIN, MsdKeyboardPluginClass))
-#define MSD_IS_KEYBOARD_PLUGIN(o)               (G_TYPE_CHECK_INSTANCE_TYPE ((o), MSD_TYPE_KEYBOARD_PLUGIN))
-#define MSD_IS_KEYBOARD_PLUGIN_CLASS(k)         (G_TYPE_CHECK_CLASS_TYPE ((k), MSD_TYPE_KEYBOARD_PLUGIN))
-#define MSD_KEYBOARD_PLUGIN_GET_CLASS(o)        (G_TYPE_INSTANCE_GET_CLASS ((o), MSD_TYPE_KEYBOARD_PLUGIN, MsdKeyboardPluginClass))
+#define MSD_TYPE_KEYBOARD_PLUGIN (msd_keyboard_plugin_get_type())
+#define MSD_KEYBOARD_PLUGIN(o) \
+  (G_TYPE_CHECK_INSTANCE_CAST((o), MSD_TYPE_KEYBOARD_PLUGIN, MsdKeyboardPlugin))
+#define MSD_KEYBOARD_PLUGIN_CLASS(k)                      \
+  (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_KEYBOARD_PLUGIN, \
+                           MsdKeyboardPluginClass))
+#define MSD_IS_KEYBOARD_PLUGIN(o) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((o), MSD_TYPE_KEYBOARD_PLUGIN))
+#define MSD_IS_KEYBOARD_PLUGIN_CLASS(k) \
+  (G_TYPE_CHECK_CLASS_TYPE((k), MSD_TYPE_KEYBOARD_PLUGIN))
+#define MSD_KEYBOARD_PLUGIN_GET_CLASS(o)                    \
+  (G_TYPE_INSTANCE_GET_CLASS((o), MSD_TYPE_KEYBOARD_PLUGIN, \
+                             MsdKeyboardPluginClass))
 
 typedef struct MsdKeyboardPluginPrivate MsdKeyboardPluginPrivate;
 
-typedef struct
-{
-        MateSettingsPlugin    parent;
-        MsdKeyboardPluginPrivate *priv;
+typedef struct {
+  MateSettingsPlugin parent;
+  MsdKeyboardPluginPrivate *priv;
 } MsdKeyboardPlugin;
 
-typedef struct
-{
-        MateSettingsPluginClass parent_class;
+typedef struct {
+  MateSettingsPluginClass parent_class;
 } MsdKeyboardPluginClass;
 
-GType   msd_keyboard_plugin_get_type            (void) G_GNUC_CONST;
+GType msd_keyboard_plugin_get_type(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_mate_settings_plugin (GTypeModule *module);
+G_MODULE_EXPORT GType register_mate_settings_plugin(GTypeModule *module);
 
 #ifdef __cplusplus
 }

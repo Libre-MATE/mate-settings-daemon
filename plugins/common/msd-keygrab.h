@@ -25,24 +25,20 @@
 extern "C" {
 #endif
 
-#include <glib.h>
 #include <X11/keysym.h>
+#include <glib.h>
 
 typedef struct {
-        guint keysym;
-        guint state;
-        guint *keycodes;
+  guint keysym;
+  guint state;
+  guint *keycodes;
 } Key;
 
-void	        grab_key_unsafe	(Key     *key,
-		        	 gboolean grab,
-			         GSList  *screens);
+void grab_key_unsafe(Key *key, gboolean grab, GSList *screens);
 
-gboolean        match_key       (Key     *key,
-                                 XEvent  *event);
+gboolean match_key(Key *key, XEvent *event);
 
-gboolean        key_uses_keycode (const Key *key,
-                                  guint keycode);
+gboolean key_uses_keycode(const Key *key, guint keycode);
 
 #ifdef __cplusplus
 }

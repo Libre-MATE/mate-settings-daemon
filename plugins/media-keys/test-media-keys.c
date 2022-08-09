@@ -21,43 +21,38 @@
  *
  */
 
-#include "config.h"
-
-#include <stdlib.h>
-
+#include <config.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
+#include <stdlib.h>
 
 #include "msd-media-keys-manager.h"
 
 static MsdMediaKeysManager *manager = NULL;
 
-int
-main (int    argc,
-      char **argv)
-{
-        GError  *error = NULL;
+int main(int argc, char **argv) {
+  GError *error = NULL;
 
 #ifdef ENABLE_NLS
-        bindtextdomain (GETTEXT_PACKAGE, MATE_SETTINGS_LOCALEDIR);
-# ifdef HAVE_BIND_TEXTDOMAIN_CODESET
-        bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-# endif
-        textdomain (GETTEXT_PACKAGE);
+  bindtextdomain(GETTEXT_PACKAGE, MATE_SETTINGS_LOCALEDIR);
+#ifdef HAVE_BIND_TEXTDOMAIN_CODESET
+  bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
+#endif
+  textdomain(GETTEXT_PACKAGE);
 #endif
 
-        if (! gtk_init_with_args (&argc, &argv, NULL, NULL, NULL, &error)) {
-                fprintf (stderr, "%s", error->message);
-                g_error_free (error);
-                exit (1);
-        }
+  if (!gtk_init_with_args(&argc, &argv, NULL, NULL, NULL, &error)) {
+    fprintf(stderr, "%s", error->message);
+    g_error_free(error);
+    exit(1);
+  }
 
-        manager = msd_media_keys_manager_new ();
+  manager = msd_media_keys_manager_new();
 
-        error = NULL;
-        msd_media_keys_manager_start (manager, &error);
+  error = NULL;
+  msd_media_keys_manager_start(manager, &error);
 
-        gtk_main ();
+  gtk_main();
 
-        return 0;
+  return 0;
 }

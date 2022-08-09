@@ -23,8 +23,8 @@
 #ifndef __SYSTEM_TIMEZONE_H__
 #define __SYSTEM_TIMEZONE_H__
 
-#include <glib.h>
 #include <glib-object.h>
+#include <glib.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -36,52 +36,51 @@ extern "C" {
 #define SYSTEM_ZONEINFODIR "/usr/share/zoneinfo"
 #endif
 
-#define SYSTEM_TIMEZONE_TYPE         (system_timezone_get_type ())
-#define SYSTEM_TIMEZONE(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), SYSTEM_TIMEZONE_TYPE, SystemTimezone))
-#define SYSTEM_TIMEZONE_CLASS(c)     (G_TYPE_CHECK_CLASS_CAST ((c), SYSTEM_TIMEZONE_TYPE, SystemTimezoneClass))
-#define IS_SYSTEM_TIMEZONE(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), SYSTEM_TIMEZONE_TYPE))
-#define IS_SYSTEM_TIMEZONE_CLASS(c)  (G_TYPE_CHECK_CLASS_TYPE ((c), SYSTEM_TIMEZONE_TYPE))
-#define SYSTEM_TIMEZONE_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), SYSTEM_TIMEZONE_TYPE, SystemTimezoneClass))
+#define SYSTEM_TIMEZONE_TYPE (system_timezone_get_type())
+#define SYSTEM_TIMEZONE(o) \
+  (G_TYPE_CHECK_INSTANCE_CAST((o), SYSTEM_TIMEZONE_TYPE, SystemTimezone))
+#define SYSTEM_TIMEZONE_CLASS(c) \
+  (G_TYPE_CHECK_CLASS_CAST((c), SYSTEM_TIMEZONE_TYPE, SystemTimezoneClass))
+#define IS_SYSTEM_TIMEZONE(o) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((o), SYSTEM_TIMEZONE_TYPE))
+#define IS_SYSTEM_TIMEZONE_CLASS(c) \
+  (G_TYPE_CHECK_CLASS_TYPE((c), SYSTEM_TIMEZONE_TYPE))
+#define SYSTEM_TIMEZONE_GET_CLASS(o) \
+  (G_TYPE_INSTANCE_GET_CLASS((o), SYSTEM_TIMEZONE_TYPE, SystemTimezoneClass))
 
-typedef struct
-{
-        GObject g_object;
+typedef struct {
+  GObject g_object;
 } SystemTimezone;
 
-typedef struct
-{
-        GObjectClass g_object_class;
+typedef struct {
+  GObjectClass g_object_class;
 
-	void (* changed) (SystemTimezone *systz,
-			  const char     *tz);
+  void (*changed)(SystemTimezone *systz, const char *tz);
 } SystemTimezoneClass;
 
-GType system_timezone_get_type (void);
+GType system_timezone_get_type(void);
 
-SystemTimezone *system_timezone_new (void);
+SystemTimezone *system_timezone_new(void);
 
-const char *system_timezone_get (SystemTimezone *systz);
-const char *system_timezone_get_env (SystemTimezone *systz);
+const char *system_timezone_get(SystemTimezone *systz);
+const char *system_timezone_get_env(SystemTimezone *systz);
 
 /* Functions to set the timezone. They won't be used by the applet, but
  * by a program with more privileges */
 
-#define SYSTEM_TIMEZONE_ERROR system_timezone_error_quark ()
-GQuark system_timezone_error_quark (void);
+#define SYSTEM_TIMEZONE_ERROR system_timezone_error_quark()
+GQuark system_timezone_error_quark(void);
 
-typedef enum
-{
-        SYSTEM_TIMEZONE_ERROR_GENERAL,
-        SYSTEM_TIMEZONE_ERROR_INVALID_TIMEZONE_FILE,
-        SYSTEM_TIMEZONE_NUM_ERRORS
+typedef enum {
+  SYSTEM_TIMEZONE_ERROR_GENERAL,
+  SYSTEM_TIMEZONE_ERROR_INVALID_TIMEZONE_FILE,
+  SYSTEM_TIMEZONE_NUM_ERRORS
 } SystemTimezoneError;
 
-char *system_timezone_find (void);
+char *system_timezone_find(void);
 
-gboolean system_timezone_set_from_file (const char  *zone_file,
-                                        GError     **error);
-gboolean system_timezone_set (const char  *tz,
-                              GError     **error);
+gboolean system_timezone_set_from_file(const char *zone_file, GError **error);
+gboolean system_timezone_set(const char *tz, GError **error);
 
 #ifdef __cplusplus
 }

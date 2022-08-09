@@ -28,75 +28,61 @@
 #include <config.h>
 #endif
 
-#include <string.h>
-
 #include <dconf.h>
+#include <string.h>
 
 #include "dconf-util.h"
 
-static DConfClient *
-dconf_util_client_get (void)
-{
-    return dconf_client_new ();
+static DConfClient *dconf_util_client_get(void) { return dconf_client_new(); }
+
+gboolean dconf_util_write_sync(const gchar *key, GVariant *value,
+                               GError **error) {
+  gboolean ret;
+  DConfClient *client = dconf_util_client_get();
+
+  ret = dconf_client_write_sync(client, key, value, NULL, NULL, error);
+
+  g_object_unref(client);
+
+  return ret;
 }
 
-gboolean
-dconf_util_write_sync (const gchar  *key,
-                       GVariant     *value,
-                       GError      **error)
-{
-    gboolean     ret;
-    DConfClient *client = dconf_util_client_get ();
+gboolean dconf_util_recursive_reset(const gchar *dir, GError **error) {
+  gboolean ret;
+  DConfClient *client = dconf_util_client_get();
 
-    ret = dconf_client_write_sync (client, key, value, NULL, NULL, error);
+  ret = dconf_client_write_sync(client, dir, NULL, NULL, NULL, error);
 
-    g_object_unref (client);
+  g_object_unref(client);
 
-    return ret;
+  return ret;
 }
 
-gboolean
-dconf_util_recursive_reset (const gchar  *dir,
-                            GError      **error)
-{
-    gboolean     ret;
-    DConfClient *client = dconf_util_client_get ();
+gchar **dconf_util_list_subdirs(const gchar *dir,
+                                gboolean remove_trailing_slash) {
+  GArray *array;
+  gchar **children;
+  int len;
+  int i;
+  DConfClient *client = dconf_util_client_get();
 
-    ret = dconf_client_write_sync (client, dir, NULL, NULL, NULL, error);
+  array = g_array_new(TRUE, TRUE, sizeof(gchar *));
 
-    g_object_unref (client);
+  children = dconf_client_list(client, dir, &len);
 
-    return ret;
-}
+  g_object_unref(client);
 
-gchar **
-dconf_util_list_subdirs (const gchar *dir,
-                         gboolean     remove_trailing_slash)
-{
-    GArray       *array;
-    gchar       **children;
-    int       len;
-    int       i;
-    DConfClient  *client = dconf_util_client_get ();
+  for (i = 0; children[i] != NULL; i++) {
+    if (dconf_is_rel_dir(children[i], NULL)) {
+      char *val = g_strdup(children[i]);
 
-    array = g_array_new (TRUE, TRUE, sizeof (gchar *));
+      if (remove_trailing_slash) val[strlen(val) - 1] = '\0';
 
-    children = dconf_client_list (client, dir, &len);
-
-    g_object_unref (client);
-
-    for (i = 0; children[i] != NULL; i++) {
-        if (dconf_is_rel_dir (children[i], NULL)) {
-            char *val = g_strdup (children[i]);
-
-            if (remove_trailing_slash)
-                val[strlen (val) - 1] = '\0';
-
-            array = g_array_append_val (array, val);
-        }
+      array = g_array_append_val(array, val);
     }
+  }
 
-    g_strfreev (children);
+  g_strfreev(children);
 
-    return (gchar **) g_array_free (array, FALSE);
+  return (gchar **)g_array_free(array, FALSE);
 }

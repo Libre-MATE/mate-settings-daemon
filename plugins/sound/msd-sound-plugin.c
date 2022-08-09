@@ -19,85 +19,71 @@
  *
  */
 
-#include "config.h"
+#include <config.h>
+#include "msd-sound-plugin.h"
 
 #include <glib/gi18n-lib.h>
 #include <gmodule.h>
 
 #include "mate-settings-plugin.h"
-#include "msd-sound-plugin.h"
 #include "msd-sound-manager.h"
 
 struct MsdSoundPluginPrivate {
-        MsdSoundManager *manager;
+  MsdSoundManager *manager;
 };
 
-MATE_SETTINGS_PLUGIN_REGISTER_WITH_PRIVATE (MsdSoundPlugin, msd_sound_plugin)
+MATE_SETTINGS_PLUGIN_REGISTER_WITH_PRIVATE(MsdSoundPlugin, msd_sound_plugin)
 
-static void
-msd_sound_plugin_init (MsdSoundPlugin *plugin)
-{
-        plugin->priv = msd_sound_plugin_get_instance_private (plugin);
+static void msd_sound_plugin_init(MsdSoundPlugin *plugin) {
+  plugin->priv = msd_sound_plugin_get_instance_private(plugin);
 
-        g_debug ("MsdSoundPlugin initializing");
+  g_debug("MsdSoundPlugin initializing");
 
-        plugin->priv->manager = msd_sound_manager_new ();
+  plugin->priv->manager = msd_sound_manager_new();
 }
 
-static void
-msd_sound_plugin_finalize (GObject *object)
-{
-        MsdSoundPlugin *plugin;
+static void msd_sound_plugin_finalize(GObject *object) {
+  MsdSoundPlugin *plugin;
 
-        g_return_if_fail (object != NULL);
-        g_return_if_fail (MSD_IS_SOUND_PLUGIN (object));
+  g_return_if_fail(object != NULL);
+  g_return_if_fail(MSD_IS_SOUND_PLUGIN(object));
 
-        g_debug ("MsdSoundPlugin finalizing");
+  g_debug("MsdSoundPlugin finalizing");
 
-        plugin = MSD_SOUND_PLUGIN (object);
+  plugin = MSD_SOUND_PLUGIN(object);
 
-        g_return_if_fail (plugin->priv != NULL);
+  g_return_if_fail(plugin->priv != NULL);
 
-        if (plugin->priv->manager != NULL)
-                g_object_unref (plugin->priv->manager);
+  if (plugin->priv->manager != NULL) g_object_unref(plugin->priv->manager);
 
-        G_OBJECT_CLASS (msd_sound_plugin_parent_class)->finalize (object);
+  G_OBJECT_CLASS(msd_sound_plugin_parent_class)->finalize(object);
 }
 
-static void
-impl_activate (MateSettingsPlugin *plugin)
-{
-        GError *error = NULL;
+static void impl_activate(MateSettingsPlugin *plugin) {
+  GError *error = NULL;
 
-        g_debug ("Activating sound plugin");
+  g_debug("Activating sound plugin");
 
-        if (!msd_sound_manager_start (MSD_SOUND_PLUGIN (plugin)->priv->manager, &error)) {
-                g_warning ("Unable to start sound manager: %s", error->message);
-                g_error_free (error);
-        }
+  if (!msd_sound_manager_start(MSD_SOUND_PLUGIN(plugin)->priv->manager,
+                               &error)) {
+    g_warning("Unable to start sound manager: %s", error->message);
+    g_error_free(error);
+  }
 }
 
-static void
-impl_deactivate (MateSettingsPlugin *plugin)
-{
-        g_debug ("Deactivating sound plugin");
-        msd_sound_manager_stop (MSD_SOUND_PLUGIN (plugin)->priv->manager);
+static void impl_deactivate(MateSettingsPlugin *plugin) {
+  g_debug("Deactivating sound plugin");
+  msd_sound_manager_stop(MSD_SOUND_PLUGIN(plugin)->priv->manager);
 }
 
-static void
-msd_sound_plugin_class_init (MsdSoundPluginClass *klass)
-{
-        GObjectClass *object_class = G_OBJECT_CLASS (klass);
-        MateSettingsPluginClass *plugin_class = MATE_SETTINGS_PLUGIN_CLASS (klass);
+static void msd_sound_plugin_class_init(MsdSoundPluginClass *klass) {
+  GObjectClass *object_class = G_OBJECT_CLASS(klass);
+  MateSettingsPluginClass *plugin_class = MATE_SETTINGS_PLUGIN_CLASS(klass);
 
-        object_class->finalize = msd_sound_plugin_finalize;
+  object_class->finalize = msd_sound_plugin_finalize;
 
-        plugin_class->activate = impl_activate;
-        plugin_class->deactivate = impl_deactivate;
+  plugin_class->activate = impl_activate;
+  plugin_class->deactivate = impl_deactivate;
 }
 
-static void
-msd_sound_plugin_class_finalize (MsdSoundPluginClass *klass)
-{
-}
-
+static void msd_sound_plugin_class_finalize(MsdSoundPluginClass *klass) {}

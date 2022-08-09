@@ -42,9 +42,8 @@ extern Atom XA_TIMESTAMP;
 
 extern unsigned long SELECTION_MAX_SIZE;
 
-void init_atoms      (Display *display);
+void init_atoms(Display *display);
 
-Time get_server_time (Display *display,
-		      Window   window);
+Time get_server_time(Display *display, Window window);
 
 #endif /* X_UTILS_H */

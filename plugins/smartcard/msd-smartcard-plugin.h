@@ -22,8 +22,8 @@
 #ifndef __MSD_SMARTCARD_PLUGIN_H__
 #define __MSD_SMARTCARD_PLUGIN_H__
 
-#include <glib.h>
 #include <glib-object.h>
+#include <glib.h>
 #include <gmodule.h>
 
 #include "mate-settings-plugin.h"
@@ -32,30 +32,36 @@
 extern "C" {
 #endif
 
-#define MSD_TYPE_SMARTCARD_PLUGIN                (msd_smartcard_plugin_get_type ())
-#define MSD_SMARTCARD_PLUGIN(o)                  (G_TYPE_CHECK_INSTANCE_CAST ((o), MSD_TYPE_SMARTCARD_PLUGIN, MsdSmartcardPlugin))
-#define MSD_SMARTCARD_PLUGIN_CLASS(k)            (G_TYPE_CHECK_CLASS_CAST ((k), MSD_TYPE_SMARTCARD_PLUGIN, MsdSmartcardPluginClass))
-#define MSD_IS_SMARTCARD_PLUGIN(o)               (G_TYPE_CHECK_INSTANCE_TYPE ((o), MSD_TYPE_SMARTCARD_PLUGIN))
-#define MSD_IS_SMARTCARD_PLUGIN_CLASS(k)         (G_TYPE_CHECK_CLASS_TYPE ((k), MSD_TYPE_SMARTCARD_PLUGIN))
-#define MSD_SMARTCARD_PLUGIN_GET_CLASS(o)        (G_TYPE_INSTANCE_GET_CLASS ((o), MSD_TYPE_SMARTCARD_PLUGIN, MsdSmartcardPluginClass))
+#define MSD_TYPE_SMARTCARD_PLUGIN (msd_smartcard_plugin_get_type())
+#define MSD_SMARTCARD_PLUGIN(o)                               \
+  (G_TYPE_CHECK_INSTANCE_CAST((o), MSD_TYPE_SMARTCARD_PLUGIN, \
+                              MsdSmartcardPlugin))
+#define MSD_SMARTCARD_PLUGIN_CLASS(k)                      \
+  (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_SMARTCARD_PLUGIN, \
+                           MsdSmartcardPluginClass))
+#define MSD_IS_SMARTCARD_PLUGIN(o) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((o), MSD_TYPE_SMARTCARD_PLUGIN))
+#define MSD_IS_SMARTCARD_PLUGIN_CLASS(k) \
+  (G_TYPE_CHECK_CLASS_TYPE((k), MSD_TYPE_SMARTCARD_PLUGIN))
+#define MSD_SMARTCARD_PLUGIN_GET_CLASS(o)                    \
+  (G_TYPE_INSTANCE_GET_CLASS((o), MSD_TYPE_SMARTCARD_PLUGIN, \
+                             MsdSmartcardPluginClass))
 
 typedef struct MsdSmartcardPluginPrivate MsdSmartcardPluginPrivate;
 
-typedef struct
-{
-        MateSettingsPlugin parent;
-        MsdSmartcardPluginPrivate *priv;
+typedef struct {
+  MateSettingsPlugin parent;
+  MsdSmartcardPluginPrivate *priv;
 } MsdSmartcardPlugin;
 
-typedef struct
-{
-        MateSettingsPluginClass parent_class;
+typedef struct {
+  MateSettingsPluginClass parent_class;
 } MsdSmartcardPluginClass;
 
-GType msd_smartcard_plugin_get_type (void) G_GNUC_CONST;
+GType msd_smartcard_plugin_get_type(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_mate_settings_plugin (GTypeModule *module);
+G_MODULE_EXPORT GType register_mate_settings_plugin(GTypeModule *module);
 
 #ifdef __cplusplus
 }

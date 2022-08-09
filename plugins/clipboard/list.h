@@ -24,33 +24,24 @@
 #ifndef LIST_H
 #define LIST_H
 
-typedef struct _List      List;
-typedef void (*Callback) (void *data,
-			  void *user_data);
+typedef struct _List List;
+typedef void (*Callback)(void *data, void *user_data);
 
-struct _List
-{
+struct _List {
   void *data;
 
   List *next;
 };
 
-typedef int (*ListFindFunc) (void *data,
-			     void *user_data);
+typedef int (*ListFindFunc)(void *data, void *user_data);
 
-void  list_foreach (List         *list,
-		    Callback      func,
-		    void         *user_data);
-List *list_prepend (List         *list,
-		    void         *data);
-void  list_free    (List         *list);
-List *list_find    (List         *list,
-		    ListFindFunc  func,
-		    void         *user_data);
-List *list_remove  (List         *list,
-                    const void   *data);
-int   list_length  (List         *list);
+void list_foreach(List *list, Callback func, void *user_data);
+List *list_prepend(List *list, void *data);
+void list_free(List *list);
+List *list_find(List *list, ListFindFunc func, void *user_data);
+List *list_remove(List *list, const void *data);
+int list_length(List *list);
 
-List *list_copy    (List         *list);
+List *list_copy(List *list);
 
 #endif /* LIST_H */

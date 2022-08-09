@@ -20,43 +20,30 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include "config.h"
-
+#include <config.h>
 #include "mate-settings-plugin.h"
 
-G_DEFINE_TYPE (MateSettingsPlugin, mate_settings_plugin, G_TYPE_OBJECT)
+G_DEFINE_TYPE(MateSettingsPlugin, mate_settings_plugin, G_TYPE_OBJECT)
 
-static void
-dummy (MateSettingsPlugin *plugin)
-{
-        /* Empty */
+static void dummy(MateSettingsPlugin *plugin) { /* Empty */ }
+
+static void mate_settings_plugin_class_init(MateSettingsPluginClass *klass) {
+  klass->activate = dummy;
+  klass->deactivate = dummy;
 }
 
-static void
-mate_settings_plugin_class_init (MateSettingsPluginClass *klass)
-{
-        klass->activate = dummy;
-        klass->deactivate = dummy;
+static void mate_settings_plugin_init(MateSettingsPlugin *plugin) {
+  /* Empty */
 }
 
-static void
-mate_settings_plugin_init (MateSettingsPlugin *plugin)
-{
-        /* Empty */
+void mate_settings_plugin_activate(MateSettingsPlugin *plugin) {
+  g_return_if_fail(MATE_IS_SETTINGS_PLUGIN(plugin));
+
+  MATE_SETTINGS_PLUGIN_GET_CLASS(plugin)->activate(plugin);
 }
 
-void
-mate_settings_plugin_activate (MateSettingsPlugin *plugin)
-{
-        g_return_if_fail (MATE_IS_SETTINGS_PLUGIN (plugin));
+void mate_settings_plugin_deactivate(MateSettingsPlugin *plugin) {
+  g_return_if_fail(MATE_IS_SETTINGS_PLUGIN(plugin));
 
-        MATE_SETTINGS_PLUGIN_GET_CLASS (plugin)->activate (plugin);
-}
-
-void
-mate_settings_plugin_deactivate  (MateSettingsPlugin *plugin)
-{
-        g_return_if_fail (MATE_IS_SETTINGS_PLUGIN (plugin));
-
-        MATE_SETTINGS_PLUGIN_GET_CLASS (plugin)->deactivate (plugin);
+  MATE_SETTINGS_PLUGIN_GET_CLASS(plugin)->deactivate(plugin);
 }

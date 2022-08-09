@@ -23,40 +23,43 @@
 #ifndef __MSD_RFKILL_PLUGIN_H__
 #define __MSD_RFKILL_PLUGIN_H__
 
-#include <glib.h>
 #include <glib-object.h>
+#include <glib.h>
 #include <gmodule.h>
 
 #include "mate-settings-plugin.h"
 
 G_BEGIN_DECLS
 
-#define MSD_TYPE_RFKILL_PLUGIN                (msd_rfkill_plugin_get_type ())
-#define MSD_RFKILL_PLUGIN(o)                  (G_TYPE_CHECK_INSTANCE_CAST ((o), MSD_TYPE_RFKILL_PLUGIN, MsdRfkillPlugin))
-#define MSD_RFKILL_PLUGIN_CLASS(k)            (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_RFKILL_PLUGIN, MsdRfkillPluginClass))
-#define MSD_IS_RFKILL_PLUGIN(o)               (G_TYPE_CHECK_INSTANCE_TYPE ((o), MSD_TYPE_RFKILL_PLUGIN))
-#define MSD_IS_RFKILL_PLUGIN_CLASS(k)         (G_TYPE_CHECK_CLASS_TYPE ((k), MSD_TYPE_RFKILL_PLUGIN))
-#define MSD_RFKILL_PLUGIN_GET_CLASS(o)        (G_TYPE_INSTANCE_GET_CLASS ((o), MSD_TYPE_RFKILL_PLUGIN, MsdRfkillPluginClass))
+#define MSD_TYPE_RFKILL_PLUGIN (msd_rfkill_plugin_get_type())
+#define MSD_RFKILL_PLUGIN(o) \
+  (G_TYPE_CHECK_INSTANCE_CAST((o), MSD_TYPE_RFKILL_PLUGIN, MsdRfkillPlugin))
+#define MSD_RFKILL_PLUGIN_CLASS(k) \
+  (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_RFKILL_PLUGIN, MsdRfkillPluginClass))
+#define MSD_IS_RFKILL_PLUGIN(o) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((o), MSD_TYPE_RFKILL_PLUGIN))
+#define MSD_IS_RFKILL_PLUGIN_CLASS(k) \
+  (G_TYPE_CHECK_CLASS_TYPE((k), MSD_TYPE_RFKILL_PLUGIN))
+#define MSD_RFKILL_PLUGIN_GET_CLASS(o) \
+  (G_TYPE_INSTANCE_GET_CLASS((o), MSD_TYPE_RFKILL_PLUGIN, MsdRfkillPluginClass))
 
-typedef struct _MsdRfkillPlugin         MsdRfkillPlugin;
-typedef struct _MsdRfkillPluginClass    MsdRfkillPluginClass;
-typedef struct _MsdRfkillPluginPrivate  MsdRfkillPluginPrivate;
+typedef struct _MsdRfkillPlugin MsdRfkillPlugin;
+typedef struct _MsdRfkillPluginClass MsdRfkillPluginClass;
+typedef struct _MsdRfkillPluginPrivate MsdRfkillPluginPrivate;
 
-struct _MsdRfkillPlugin
-{
-        MateSettingsPlugin          parent;
-        MsdRfkillPluginPrivate  *priv;
+struct _MsdRfkillPlugin {
+  MateSettingsPlugin parent;
+  MsdRfkillPluginPrivate *priv;
 };
 
-struct _MsdRfkillPluginClass
-{
-        MateSettingsPluginClass     parent_class;
+struct _MsdRfkillPluginClass {
+  MateSettingsPluginClass parent_class;
 };
 
-GType msd_rfkill_plugin_get_type (void) G_GNUC_CONST;
+GType msd_rfkill_plugin_get_type(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_mate_settings_plugin (GTypeModule *module);
+G_MODULE_EXPORT GType register_mate_settings_plugin(GTypeModule *module);
 
 G_END_DECLS
 

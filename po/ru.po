@@ -2,7 +2,7 @@
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-settings-daemon package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Alexei Sorokin, 2018
 # Dmitriy Kulikov <kulikov@dima.perm.ru>, 2018
@@ -14,20 +14,22 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Anna Vyalkova <cybertailor@gmail.com>, 2020
 # Norbert X, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-settings-daemon 1.25.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2021-06-23 22:04+0200\n"
+"POT-Creation-Date: 2022-08-09 15:31+0200\n"
 "PO-Revision-Date: 2018-03-12 08:16+0000\n"
 "Last-Translator: Norbert X, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: data/50-accessibility.xml.in:2
 msgid "Accessibility"
@@ -95,8 +97,8 @@ msgid ""
 "antialiasing, and \"rgba\" for subpixel antialiasing (LCD screens only)."
 msgstr ""
 "Тип сглаживания, используемый при растеризации шрифтов. Возможные значения: "
-"«none» - без сглаживания, «grayscale» - стандартное черно-белое сглаживание,"
-" «rgba» - субпиксельное сглаживание (только для ЖК-мониторов)."
+"«none» - без сглаживания, «grayscale» - стандартное черно-белое сглаживание, "
+"«rgba» - субпиксельное сглаживание (только для ЖК-мониторов)."
 
 #: data/org.mate.font-rendering.gschema.xml.in:32
 msgid "Hinting"
@@ -118,15 +120,14 @@ msgstr "Порядок RGBA"
 
 #: data/org.mate.font-rendering.gschema.xml.in:38
 msgid ""
-"The order of subpixel elements on an LCD screen; only used when antialiasing"
-" is set to \"rgba\". Possible values are: \"rgb\" for red on left (most "
-"common), \"bgr\" for blue on left, \"vrgb\" for red on top, \"vbgr\" for red"
-" on bottom."
+"The order of subpixel elements on an LCD screen; only used when antialiasing "
+"is set to \"rgba\". Possible values are: \"rgb\" for red on left (most "
+"common), \"bgr\" for blue on left, \"vrgb\" for red on top, \"vbgr\" for red "
+"on bottom."
 msgstr ""
 "Порядок субпиксельных элементов на ЖК экране; только если установлен тип "
 "сглаживания «rgba». Возможные значения: «rgb» (красный слева, наиболее "
-"часто), «bgr» (синий слева), «vrgb» (красный сверху), «vbgr» (красный "
-"снизу)."
+"часто), «bgr» (синий слева), «vrgb» (красный сверху), «vbgr» (красный снизу)."
 
 #: data/org.mate.peripherals-keyboard.gschema.xml.in:25
 msgid "possible values are \"on\", \"off\", and \"custom\"."
@@ -149,8 +150,8 @@ msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
 msgstr ""
-"Если этот ключ установлен, MATE будет сохранять состояние индикатора NumLock"
-" между сеансами."
+"Если этот ключ установлен, MATE будет сохранять состояние индикатора NumLock "
+"между сеансами."
 
 #: data/org.mate.peripherals-keyboard.gschema.xml.in:45
 msgid "NumLock state"
@@ -210,8 +211,8 @@ msgid ""
 "movement. If a mouse doesn't support the configured profile, 'default' will "
 "be used."
 msgstr ""
-"Профиль ускорения для подсоединённой мыши. Профиль ускорения может принимать"
-" следующие значения: по умолчанию ('default'), то есть использовать профиль "
+"Профиль ускорения для подсоединённой мыши. Профиль ускорения может принимать "
+"следующие значения: по умолчанию ('default'), то есть использовать профиль "
 "по умолчанию для каждого устройства; плоский ('flat'), то есть ускорять на "
 "постоянную величину, взятую для каждого устройства из настроек скорости "
 "курсора; адаптивный ('adaptive'), то есть подстраивать ускорение в "
@@ -243,8 +244,8 @@ msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
 msgstr ""
-"Включает эмуляцию средней кнопки мыши через одновременное нажатие на левую и"
-" правую клавиши."
+"Включает эмуляцию средней кнопки мыши через одновременное нажатие на левую и "
+"правую клавиши."
 
 #: data/org.mate.peripherals-mouse.gschema.xml.in:45
 msgid "Locate Pointer"
@@ -292,11 +293,11 @@ msgstr "Отключать сенсорную панель при наборе"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:16
 msgid ""
-"Set this to TRUE if you have problems with accidentally hitting the touchpad"
-" while typing."
+"Set this to TRUE if you have problems with accidentally hitting the touchpad "
+"while typing."
 msgstr ""
-"Установите в TRUE если у вас проблемы со срабатыванием touchpad'а при наборе"
-" текста."
+"Установите в TRUE если у вас проблемы со срабатыванием touchpad'а при наборе "
+"текста."
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:20
 msgid "Enable mouse clicks with touchpad"
@@ -554,8 +555,8 @@ msgid ""
 "Percentage free space threshold for initial warning of low disk space. If "
 "the percentage free space drops below this, a warning will be shown."
 msgstr ""
-"Порог (в процентах) для отображения первого оповещения о нехватке свободного"
-" места. Если процент свободного места на диске опускается ниже этого "
+"Порог (в процентах) для отображения первого оповещения о нехватке свободного "
+"места. Если процент свободного места на диске опускается ниже этого "
 "значения, то будет показано предупреждение."
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:20
@@ -579,8 +580,8 @@ msgid ""
 "Specify an amount in GB. If the amount of free space is more than this, no "
 "warning will be shown."
 msgstr ""
-"Укажите объём в ГБ. Если объём свободного места больше, то предупреждение не"
-" будет показано."
+"Укажите объём в ГБ. Если объём свободного места больше, то предупреждение не "
+"будет показано."
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:30
 msgid "Minimum notify period for repeated warnings"
@@ -867,9 +868,9 @@ msgid ""
 msgstr ""
 "Обычно mate-settings-daemon настраивает внутренние и внешние мониторы судя "
 "по turn_on_external_monitors_at_startup и turn_on_laptop_monitor_at_startup "
-"settings и определяет подходящий режим cloning/side-by-side. Включение этого"
-" ключа отключает это, и настройки монитора не трогаются вовсе (если нет "
-"явной пользовательской настройки)."
+"settings и определяет подходящий режим cloning/side-by-side. Включение этого "
+"ключа отключает это, и настройки монитора не трогаются вовсе (если нет явной "
+"пользовательской настройки)."
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:25
 msgid "Turn on external monitor after system boot"
@@ -877,11 +878,11 @@ msgstr "Включать внешний монитор после загрузк
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:26
 msgid ""
-"Turn on external monitor after system boot if user plugs in external monitor"
-" on system boot."
+"Turn on external monitor after system boot if user plugs in external monitor "
+"on system boot."
 msgstr ""
-"Включать внешний монитор после загрузки системы, если пользователь подключил"
-" его во время загрузки."
+"Включать внешний монитор после загрузки системы, если пользователь подключил "
+"его во время загрузки."
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:30
 msgid "Turn on laptop monitor after system boot"
@@ -909,27 +910,27 @@ msgid ""
 msgstr ""
 "Модуль XRandR будет искать конфигурацию по умолчанию в указанном в этом "
 "ключе файле. Он похож на файл ~/.config/monitors.xml, который обычно "
-"находится в домашних каталогах пользователей. Если у пользователя нет такого"
-" файла, или имеющийся файл не соответствует конфигурации мониторов, то тогда"
-" будет использоваться указанный в данном ключе файл."
+"находится в домашних каталогах пользователей. Если у пользователя нет такого "
+"файла, или имеющийся файл не соответствует конфигурации мониторов, то тогда "
+"будет использоваться указанный в данном ключе файл."
 
 #: data/mate-settings-daemon.desktop.in.in:4
 msgid "MATE Settings Daemon"
 msgstr "Демон параметров MATE"
 
-#: mate-settings-daemon/main.c:66
+#: mate-settings-daemon/main.c:65
 msgid "Enable debugging code"
 msgstr "Включить режим отладки"
 
-#: mate-settings-daemon/main.c:67
+#: mate-settings-daemon/main.c:68
 msgid "Replace the current daemon"
 msgstr "Заменить текущую службу"
 
-#: mate-settings-daemon/main.c:68
+#: mate-settings-daemon/main.c:70
 msgid "Don't become a daemon"
 msgstr "Не становиться демоном"
 
-#: mate-settings-daemon/main.c:69
+#: mate-settings-daemon/main.c:72
 msgid "Exit after a time (for debugging)"
 msgstr "Выйти через время (для отладки)"
 
@@ -941,23 +942,23 @@ msgstr "Вспомогательные технологии клавиатуры
 msgid "Accessibility keyboard plugin"
 msgstr "Модуль вспомогательных технологий клавиатуры"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:460
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:407
 #, c-format
 msgid "There was an error displaying help: %s"
 msgstr "Произошла ошибка при отображении справки: %s"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:588
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:652
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:515
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:572
 msgid "Do you want to activate Slow Keys?"
 msgstr "Активировать функцию «Медленные клавиши»?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:589
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:653
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:516
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:573
 msgid "Do you want to deactivate Slow Keys?"
 msgstr "Отключить функцию «Медленные клавиши»?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:590
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:654
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:518
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:575
 msgid ""
 "You just held down the Shift key for 8 seconds.  This is the shortcut for "
 "the Slow Keys feature, which affects the way your keyboard works."
@@ -966,62 +967,62 @@ msgstr ""
 "функции «Медленные клавиши», которая влияет на способ работы вашей "
 "клавиатуры."
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:613
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:750
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:542
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:663
 msgid "Don't activate"
 msgstr "Не запускать"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:613
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:750
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:542
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:663
 msgid "Don't deactivate"
 msgstr "Не выключать"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:619
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:756
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:545
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:666
 msgid "Activate"
 msgstr "Включить"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:619
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:756
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:545
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:666
 msgid "Deactivate"
 msgstr "Выключить"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:592
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:718
 msgid "Do_n't activate"
 msgstr "Не _запускать"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:592
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:718
 msgid "Do_n't deactivate"
 msgstr "_Не выключать"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:595
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:721
 msgid "_Activate"
 msgstr "_Активировать"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:595
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:721
 msgid "_Deactivate"
 msgstr "_Деактивировать"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:682
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:599
 msgid "Slow Keys Alert"
 msgstr "Предупреждение функции «Медленные клавиши»"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:722
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:788
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:631
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:693
 msgid "Do you want to activate Sticky Keys?"
 msgstr "Активировать функцию «Залипающие клавиши»?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:723
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:789
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:632
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:694
 msgid "Do you want to deactivate Sticky Keys?"
 msgstr "Отключить функцию «Залипающие клавиши»?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:725
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:791
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:633
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:695
 msgid ""
 "You just pressed the Shift key 5 times in a row.  This is the shortcut for "
 "the Sticky Keys feature, which affects the way your keyboard works."
@@ -1030,8 +1031,8 @@ msgstr ""
 "включения функции «Залипающие клавиши», которая влияет на способ работы "
 "клавиатуры."
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:727
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:793
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:637
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:699
 msgid ""
 "You just pressed two keys at once, or pressed the Shift key 5 times in a "
 "row.  This turns off the Sticky Keys feature, which affects the way your "
@@ -1041,11 +1042,11 @@ msgstr ""
 "раз подряд.  Это включает функцию «Залипающие клавиши«», которая влияет на "
 "способ работы вашей клавиатуры."
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:821
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:725
 msgid "Sticky Keys Alert"
 msgstr "Предупреждение функции «Залипающие клавиши»"
 
-#: plugins/a11y-keyboard/msd-a11y-preferences-dialog.c:830
+#: plugins/a11y-keyboard/msd-a11y-preferences-dialog.c:762
 #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:14
 msgid "Universal Access Preferences"
 msgstr "Параметры вспомогательных технологий"
@@ -1155,34 +1156,34 @@ msgstr ""
 "Автоматически удаляет кеш предпросмотра и другие временные файлы, а также "
 "предупреждает, когда остаётся мало места на диске"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:61
+#: plugins/housekeeping/msd-ldsm-dialog.c:58
 msgid "Don't show any warnings again for this file system"
 msgstr "Больше не показывать предупреждения для этой файловой системы"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:63
+#: plugins/housekeeping/msd-ldsm-dialog.c:60
 msgid "Don't show any warnings again"
 msgstr "Не показывать больше это сообщение"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:76
+#: plugins/housekeeping/msd-ldsm-dialog.c:72
 #, c-format
 msgid "The volume \"%s\" has only %s disk space remaining."
 msgstr "На разделе \"%s\" осталось всего %s свободного места."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:79
+#: plugins/housekeeping/msd-ldsm-dialog.c:76
 #, c-format
 msgid "This computer has only %s disk space remaining."
 msgstr "На компьютере осталось всего %s свободного места."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:95
+#: plugins/housekeeping/msd-ldsm-dialog.c:90
 msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to another disk or partition."
 msgstr ""
 "Можно освободить дисковое пространство очистив корзину, удалив "
-"неиспользуемые приложения или файлы, или переместив файлы на другой диск или"
-" раздел."
+"неиспользуемые приложения или файлы, или переместив файлы на другой диск или "
+"раздел."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:98
+#: plugins/housekeeping/msd-ldsm-dialog.c:95
 msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to another disk or partition."
@@ -1190,7 +1191,7 @@ msgstr ""
 "Можно освободить дисковое пространство удалив неиспользуемые приложения или "
 "файлы, или переместив файлы на другой диск или раздел."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:103
+#: plugins/housekeeping/msd-ldsm-dialog.c:101
 msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to an external disk."
@@ -1198,7 +1199,7 @@ msgstr ""
 "Можно освободить дисковое пространство очистив корзину, удалив "
 "неиспользуемые приложения или файлы, или переместив файлы на внешний диск."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:106
+#: plugins/housekeeping/msd-ldsm-dialog.c:105
 msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to an external disk."
@@ -1207,51 +1208,51 @@ msgstr ""
 "файлы, или переместив файлы на внешний диск."
 
 #. Set up all the window stuff here
-#: plugins/housekeeping/msd-ldsm-dialog.c:201
+#: plugins/housekeeping/msd-ldsm-dialog.c:192
 msgid "Low Disk Space"
 msgstr "Недостаточно места на диске"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:436
+#: plugins/housekeeping/msd-ldsm-dialog.c:411
 msgid "Empty Trash"
 msgstr "Очистить корзину"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:444
+#: plugins/housekeeping/msd-ldsm-dialog.c:419
 msgid "Examine…"
 msgstr "Запустить анализатор использования дисков…"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:451
+#: plugins/housekeeping/msd-ldsm-dialog.c:426
 msgid "Ignore"
 msgstr "Игнорировать"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:98
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:94
 #, c-format
 msgid "Removing item %lu of %lu"
 msgstr "Удаляется файл %lu из %lu"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:118
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:113
 #, c-format
 msgid "Removing: %s"
 msgstr "Удаляется: %s"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:248
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:301
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:223
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:281
 msgid "Emptying the trash"
 msgstr "Очистка корзины"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:277
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:253
 msgid "Preparing to empty trash…"
 msgstr "Подготовка к очистке корзины…"
 
 #. Translators: "Emptying trash from <device>"
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:304
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:284
 msgid "From: "
 msgstr "Из: "
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:356
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:328
 msgid "Empty all of the items from the trash?"
 msgstr "Очистить все элементы из корзины?"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:359
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:332
 msgid ""
 "If you choose to empty the trash, all items in it will be permanently lost. "
 "Please note that you can also delete them separately."
@@ -1259,7 +1260,7 @@ msgstr ""
 "Если вы очистите корзину, элементы будут окончательно удалены. Учтите, что "
 "их также можно удалять по одному."
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:366
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:339
 msgid "_Empty Trash"
 msgstr "_Очистить корзину"
 
@@ -1271,17 +1272,17 @@ msgstr "Комбинации клавиш клавиатуры"
 msgid "Keybindings plugin"
 msgstr "Модуль комбинаций клавиш клавиатуры"
 
-#: plugins/keybindings/msd-keybindings-manager.c:109
+#: plugins/keybindings/msd-keybindings-manager.c:100
 #, c-format
 msgid "Key binding (%s) is invalid"
 msgstr "Комбинация клавиш (%s) недопустима"
 
-#: plugins/keybindings/msd-keybindings-manager.c:145
+#: plugins/keybindings/msd-keybindings-manager.c:131
 #, c-format
 msgid "Key binding (%s) is incomplete"
 msgstr "Комбинация клавиш (%s) не полна"
 
-#: plugins/keybindings/msd-keybindings-manager.c:487
+#: plugins/keybindings/msd-keybindings-manager.c:443
 #, c-format
 msgid ""
 "Error while trying to run (%s)\n"
@@ -1298,7 +1299,7 @@ msgstr "Клавиатура"
 msgid "Keyboard plugin"
 msgstr "Модуль клавиатуры"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:120
+#: plugins/keyboard/msd-keyboard-xkb.c:104
 #, c-format
 msgid ""
 "Error activating XKB configuration.\n"
@@ -1327,15 +1328,15 @@ msgstr ""
 " • Результат <b>%s</b>\n"
 " • Результат <b>%s</b>"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:286
+#: plugins/keyboard/msd-keyboard-xkb.c:240
 msgid "_Layouts"
 msgstr "_Раскладки"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:293
+#: plugins/keyboard/msd-keyboard-xkb.c:245
 msgid "Keyboard _Preferences"
 msgstr "_Параметры клавиатуры"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:299
+#: plugins/keyboard/msd-keyboard-xkb.c:251
 msgid "Show _Current Layout"
 msgstr "Показать _текущую раскладку"
 
@@ -1347,15 +1348,15 @@ msgstr "Мультимедийные клавиши"
 msgid "Media keys plugin"
 msgstr "Модуль мультимедийных клавиш"
 
-#: plugins/media-keys/msd-media-keys-manager.c:185
+#: plugins/media-keys/msd-media-keys-manager.c:165
 msgid ""
-"Could not get default terminal. Verify that your default terminal command is"
-" set and points to a valid application."
+"Could not get default terminal. Verify that your default terminal command is "
+"set and points to a valid application."
 msgstr ""
-"Не удалось установить команду запуска терминала по умолчанию. Проверьте, что"
-" терминал по умолчанию выбран и является исправным приложением."
+"Не удалось установить команду запуска терминала по умолчанию. Проверьте, что "
+"терминал по умолчанию выбран и является исправным приложением."
 
-#: plugins/media-keys/msd-media-keys-manager.c:225
+#: plugins/media-keys/msd-media-keys-manager.c:191
 #, c-format
 msgid ""
 "Couldn't execute command: %s\n"
@@ -1364,47 +1365,47 @@ msgstr ""
 "Не удалось выполнить команду: %s\n"
 "Убедитесь, что это правильная команда."
 
-#: plugins/media-keys/msd-media-keys-manager.c:638
-#: plugins/media-keys/test-media-window.c:82
+#: plugins/media-keys/msd-media-keys-manager.c:556
+#: plugins/media-keys/test-media-window.c:76
 msgid "Touchpad enabled"
 msgstr "Тачпад включен"
 
-#: plugins/media-keys/msd-media-keys-manager.c:638
-#: plugins/media-keys/test-media-window.c:75
+#: plugins/media-keys/msd-media-keys-manager.c:556
+#: plugins/media-keys/test-media-window.c:69
 msgid "Touchpad disabled"
 msgstr "Тачпад выключен"
 
-#: plugins/media-keys/msd-media-keys-manager.c:956
-#: plugins/media-keys/test-media-window.c:89
+#: plugins/media-keys/msd-media-keys-manager.c:834
+#: plugins/media-keys/test-media-window.c:83
 msgid "Bluetooth disabled"
 msgstr "Bluetooth выключен"
 
-#: plugins/media-keys/msd-media-keys-manager.c:959
-#: plugins/media-keys/test-media-window.c:96
+#: plugins/media-keys/msd-media-keys-manager.c:838
+#: plugins/media-keys/test-media-window.c:90
 msgid "Bluetooth enabled"
 msgstr "Bluetooth включен"
 
-#: plugins/media-keys/msd-media-keys-manager.c:963
-#: plugins/media-keys/test-media-window.c:103
+#: plugins/media-keys/msd-media-keys-manager.c:843
+#: plugins/media-keys/test-media-window.c:97
 msgid "Airplane mode enabled"
 msgstr "Режим полёта включен"
 
-#: plugins/media-keys/msd-media-keys-manager.c:966
-#: plugins/media-keys/test-media-window.c:110
+#: plugins/media-keys/msd-media-keys-manager.c:848
+#: plugins/media-keys/test-media-window.c:105
 msgid "Airplane mode disabled"
 msgstr "Режим полёта выключен"
 
-#: plugins/media-keys/msd-media-keys-manager.c:997
+#: plugins/media-keys/msd-media-keys-manager.c:875
 msgid "Hardware Airplane Mode"
 msgstr "Аппаратный режим полёта"
 
-#: plugins/media-keys/msd-media-keys-manager.c:1035
-#: plugins/media-keys/test-media-window.c:124
+#: plugins/media-keys/msd-media-keys-manager.c:908
+#: plugins/media-keys/test-media-window.c:119
 msgid "Changing Screen Layout"
 msgstr "Изменение макета экрана"
 
-#: plugins/media-keys/msd-media-keys-manager.c:1039
-#: plugins/media-keys/test-media-window.c:117
+#: plugins/media-keys/msd-media-keys-manager.c:912
+#: plugins/media-keys/test-media-window.c:112
 msgid "No External Display"
 msgstr "Внешний монитор отсутствует"
 
@@ -1416,18 +1417,18 @@ msgstr "Мышь"
 msgid "Mouse plugin"
 msgstr "Модуль мыши"
 
-#: plugins/mouse/msd-mouse-manager.c:1651
+#: plugins/mouse/msd-mouse-manager.c:1518
 msgid "Could not enable mouse accessibility features"
 msgstr "Не удаётся включить специальные возможности мыши"
 
-#: plugins/mouse/msd-mouse-manager.c:1653
+#: plugins/mouse/msd-mouse-manager.c:1520
 msgid ""
 "Mouse accessibility requires Mousetweaks to be installed on your system."
 msgstr ""
 "Чтобы активировать специальные возможности мыши, необходимо установить "
 "службу Mousetweaks."
 
-#: plugins/mouse/msd-mouse-manager.c:1656
+#: plugins/mouse/msd-mouse-manager.c:1523
 msgid "Mouse Preferences"
 msgstr "Параметры мыши"
 
@@ -1449,65 +1450,65 @@ msgstr "Rfkill"
 msgid "Rfkill plugin"
 msgstr "Плагин Rfkill"
 
-#: plugins/smartcard/msd-smartcard-manager.c:165
+#: plugins/smartcard/msd-smartcard-manager.c:153
 msgid "Module Path"
 msgstr "Путь к модулю"
 
-#: plugins/smartcard/msd-smartcard-manager.c:166
+#: plugins/smartcard/msd-smartcard-manager.c:154
 msgid "path to smartcard PKCS #11 driver"
 msgstr "путь к драйверу PKCS #11 смарт-карты"
 
-#: plugins/smartcard/msd-smartcard-manager.c:492
+#: plugins/smartcard/msd-smartcard-manager.c:431
 msgid "received error or hang up from event source"
 msgstr "получена ошибка или сигнал отмены от источника"
 
-#: plugins/smartcard/msd-smartcard-manager.c:581
+#: plugins/smartcard/msd-smartcard-manager.c:511
 msgid "NSS security system could not be initialized"
 msgstr "Не удалось инициализировать систему безопасности NSS"
 
-#: plugins/smartcard/msd-smartcard-manager.c:650
+#: plugins/smartcard/msd-smartcard-manager.c:570
 msgid "no suitable smartcard driver could be found"
 msgstr "подходящий драйвер для смарт-карты не найден"
 
-#: plugins/smartcard/msd-smartcard-manager.c:670
+#: plugins/smartcard/msd-smartcard-manager.c:587
 #, c-format
 msgid "smartcard driver '%s' could not be loaded"
 msgstr "не удалось загрузить драйвер «%s» для смарт-карты"
 
-#: plugins/smartcard/msd-smartcard-manager.c:754
+#: plugins/smartcard/msd-smartcard-manager.c:665
 #, c-format
 msgid "could not watch for incoming card events - %s"
 msgstr "не удалось получить входящие события от карты — %s"
 
-#: plugins/smartcard/msd-smartcard-manager.c:1101
+#: plugins/smartcard/msd-smartcard-manager.c:971
 msgid "encountered unexpected error while waiting for smartcard events"
 msgstr "произошла непредвиденная ошибка при ожидании событий от смарт-карты"
 
-#: plugins/smartcard/msd-smartcard.c:149
+#: plugins/smartcard/msd-smartcard.c:125
 msgid "Slot ID"
 msgstr "Идентификатор слота"
 
-#: plugins/smartcard/msd-smartcard.c:150
+#: plugins/smartcard/msd-smartcard.c:125
 msgid "The slot the card is in"
 msgstr "Слот, в котором находится карта"
 
-#: plugins/smartcard/msd-smartcard.c:156
+#: plugins/smartcard/msd-smartcard.c:130
 msgid "Slot Series"
 msgstr "Серия слота"
 
-#: plugins/smartcard/msd-smartcard.c:157
+#: plugins/smartcard/msd-smartcard.c:131
 msgid "per-slot card identifier"
 msgstr "идентификатор карты в слоте"
 
-#: plugins/smartcard/msd-smartcard.c:163 plugins/smartcard/msd-smartcard.c:164
+#: plugins/smartcard/msd-smartcard.c:136
 msgid "name"
 msgstr "имя"
 
-#: plugins/smartcard/msd-smartcard.c:168
+#: plugins/smartcard/msd-smartcard.c:141
 msgid "Module"
 msgstr "Модуль"
 
-#: plugins/smartcard/msd-smartcard.c:169
+#: plugins/smartcard/msd-smartcard.c:141
 msgid "smartcard driver"
 msgstr "драйвер смарт-карты"
 
@@ -1535,19 +1536,19 @@ msgstr "Перерыв в работе"
 msgid "Typing break plugin"
 msgstr "Модуль перерыва в работе"
 
-#: plugins/xrandr/msd-xrandr-manager.c:370
+#: plugins/xrandr/msd-xrandr-manager.c:343
 msgid "Could not switch the monitor configuration"
 msgstr "Не удалось изменить конфигурацию мониторов"
 
-#: plugins/xrandr/msd-xrandr-manager.c:394
+#: plugins/xrandr/msd-xrandr-manager.c:369
 msgid "Could not restore the display's configuration"
 msgstr "Не удалось восстановить конфигурацию мониторов"
 
-#: plugins/xrandr/msd-xrandr-manager.c:419
+#: plugins/xrandr/msd-xrandr-manager.c:394
 msgid "Could not restore the display's configuration from a backup"
 msgstr "Не удалось воcстановить конфигурацию мониторов из резервной копии"
 
-#: plugins/xrandr/msd-xrandr-manager.c:440
+#: plugins/xrandr/msd-xrandr-manager.c:413
 #, c-format
 msgid "The display will be reset to its previous configuration in %d second"
 msgid_plural ""
@@ -1557,97 +1558,98 @@ msgstr[1] "Конфигурация мониторов будет восстан
 msgstr[2] "Конфигурация мониторов будет восстановлена через %d секунд"
 msgstr[3] "Конфигурация мониторов будет восстановлена через %d секунд"
 
-#: plugins/xrandr/msd-xrandr-manager.c:491
+#: plugins/xrandr/msd-xrandr-manager.c:458
 msgid "Does the display look OK?"
 msgstr "Вас устраивает текущая конфигурация?"
 
-#: plugins/xrandr/msd-xrandr-manager.c:498
+#: plugins/xrandr/msd-xrandr-manager.c:467
 msgid "_Restore Previous Configuration"
 msgstr "_Восстановить предыдущую конфигурацию"
 
-#: plugins/xrandr/msd-xrandr-manager.c:499
+#: plugins/xrandr/msd-xrandr-manager.c:470
 msgid "_Keep This Configuration"
 msgstr "_Применить текущую конфигурацию"
 
-#: plugins/xrandr/msd-xrandr-manager.c:580
+#: plugins/xrandr/msd-xrandr-manager.c:555
 msgid "The selected configuration for displays could not be applied"
 msgstr "Не удалось применить выбранную конфигурацию мониторов"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1177
+#: plugins/xrandr/msd-xrandr-manager.c:1125
 #, c-format
 msgid "Could not refresh the screen information: %s"
 msgstr "Не удалось обновить информацию об экране: %s"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1181
+#: plugins/xrandr/msd-xrandr-manager.c:1131
 msgid "Trying to switch the monitor configuration anyway."
 msgstr "Конфигурация мониторов применяется принудительно."
 
-#: plugins/xrandr/msd-xrandr-manager.c:1938
+#: plugins/xrandr/msd-xrandr-manager.c:1901
 msgid "Rotation not supported"
 msgstr "Поворот экрана не поддерживается"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2003
-#: plugins/xrandr/msd-xrandr-manager.c:2035
+#: plugins/xrandr/msd-xrandr-manager.c:1961
+#: plugins/xrandr/msd-xrandr-manager.c:1992
 msgid "Could not save monitor configuration"
 msgstr "Не удалось сохранить конфигурацию мониторов"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2056
+#: plugins/xrandr/msd-xrandr-manager.c:2012
 msgid "Mirroring outputs not supported"
 msgstr "Зеркалирование выходов не поддерживается"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2087
+#: plugins/xrandr/msd-xrandr-manager.c:2042
 msgid "Normal"
 msgstr "Нормальный"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2088
+#: plugins/xrandr/msd-xrandr-manager.c:2043
 msgid "Left"
 msgstr "Левый"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2089
+#: plugins/xrandr/msd-xrandr-manager.c:2044
 msgid "Right"
 msgstr "Правый"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2090
+#: plugins/xrandr/msd-xrandr-manager.c:2045
 msgid "Upside Down"
 msgstr "сверху вниз"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2179
+#: plugins/xrandr/msd-xrandr-manager.c:2135
 msgid "ON"
 msgstr "ВКЛ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2180
+#: plugins/xrandr/msd-xrandr-manager.c:2136
 msgid "Turn this monitor off"
 msgstr "Выключить этот монитор"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2183
+#: plugins/xrandr/msd-xrandr-manager.c:2138
 msgid "OFF"
 msgstr "ВЫКЛ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2184
+#: plugins/xrandr/msd-xrandr-manager.c:2139
 msgid "Turn this monitor on"
 msgstr "Включить этот монитор"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2244
-msgid "Same output all monitors"
+#: plugins/xrandr/msd-xrandr-manager.c:2193
+#, fuzzy
+msgid "Same output on all monitors"
 msgstr "Одинаковое изображение на всех мониторах"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2245
+#: plugins/xrandr/msd-xrandr-manager.c:2195
 msgid "Mirror same output to all monitors and turn them on"
 msgstr "Включить все мониторы и показывать на них одинаковое изображение"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2292
+#: plugins/xrandr/msd-xrandr-manager.c:2241
 msgid "_Configure Display Settings…"
 msgstr "_Настроить параметры дисплея…"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2302
+#: plugins/xrandr/msd-xrandr-manager.c:2252
 msgid "Open the display configuration dialog (all settings)"
 msgstr "Открыть диалог конфигурации монитора (все настройки)"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2359
+#: plugins/xrandr/msd-xrandr-manager.c:2306
 msgid "Configure display settings"
 msgstr "Настроить параметры "
 
-#: plugins/xrandr/msd-xrandr-manager.c:2419
+#: plugins/xrandr/msd-xrandr-manager.c:2362
 msgid "Could not apply the stored configuration for monitors"
 msgstr "Не удалось применить сохранённую конфигурацию мониторов"
 
@@ -1659,7 +1661,7 @@ msgstr "XRandR"
 msgid "Set up screen size and rotation settings"
 msgstr "Установить размер экрана и параметры поворота"
 
-#: plugins/xrdb/msd-xrdb-manager.c:249 plugins/xrdb/msd-xrdb-manager.c:318
+#: plugins/xrdb/msd-xrdb-manager.c:211 plugins/xrdb/msd-xrdb-manager.c:273
 msgid "Cannot determine user's home directory"
 msgstr "Не удалось определить домашний каталог пользователя"
 

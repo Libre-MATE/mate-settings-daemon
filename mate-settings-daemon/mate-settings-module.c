@@ -19,7 +19,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include "config.h"
+#include <config.h>
 
 #include "mate-settings-module.h"
 
@@ -27,141 +27,124 @@
 
 typedef struct _MateSettingsModuleClass MateSettingsModuleClass;
 
-struct _MateSettingsModuleClass
-{
-        GTypeModuleClass parent_class;
+struct _MateSettingsModuleClass {
+  GTypeModuleClass parent_class;
 };
 
-struct _MateSettingsModule
-{
-        GTypeModule parent_instance;
+struct _MateSettingsModule {
+  GTypeModule parent_instance;
 
-        GModule    *library;
+  GModule *library;
 
-        char       *path;
-        GType       type;
+  char *path;
+  GType type;
 };
 
-typedef GType (*MateSettingsModuleRegisterFunc) (GTypeModule *);
+typedef GType (*MateSettingsModuleRegisterFunc)(GTypeModule *);
 
-G_DEFINE_TYPE (MateSettingsModule, mate_settings_module, G_TYPE_TYPE_MODULE)
+G_DEFINE_TYPE(MateSettingsModule, mate_settings_module, G_TYPE_TYPE_MODULE)
 
-static gboolean
-mate_settings_module_load (GTypeModule *gmodule)
-{
-        MateSettingsModule            *module;
-        MateSettingsModuleRegisterFunc register_func;
-        gboolean                        res;
+static gboolean mate_settings_module_load(GTypeModule *gmodule) {
+  MateSettingsModule *module;
+  MateSettingsModuleRegisterFunc register_func;
+  gboolean res;
 
-        module = MATE_SETTINGS_MODULE (gmodule);
+  module = MATE_SETTINGS_MODULE(gmodule);
 
-        g_debug ("Loading %s", module->path);
+  g_debug("Loading %s", module->path);
 
-        module->library = g_module_open (module->path, 0);
+  module->library = g_module_open(module->path, 0);
 
-        if (module->library == NULL) {
-                g_warning ("%s", g_module_error ());
+  if (module->library == NULL) {
+    g_warning("%s", g_module_error());
 
-                return FALSE;
-        }
+    return FALSE;
+  }
 
-        /* extract symbols from the lib */
-        res = g_module_symbol (module->library, "register_mate_settings_plugin", (void *) &register_func);
-        if (! res) {
-                g_warning ("%s", g_module_error ());
-                g_module_close (module->library);
+  /* extract symbols from the lib */
+  res = g_module_symbol(module->library, "register_mate_settings_plugin",
+                        (void *)&register_func);
+  if (!res) {
+    g_warning("%s", g_module_error());
+    g_module_close(module->library);
 
-                return FALSE;
-        }
+    return FALSE;
+  }
 
-        g_assert (register_func);
+  g_assert(register_func);
 
-        module->type = register_func (gmodule);
+  module->type = register_func(gmodule);
 
-        if (module->type == 0) {
-                g_warning ("Invalid mate settings plugin in module %s", module->path);
-                return FALSE;
-        }
+  if (module->type == 0) {
+    g_warning("Invalid mate settings plugin in module %s", module->path);
+    return FALSE;
+  }
 
-        return TRUE;
+  return TRUE;
 }
 
-static void
-mate_settings_module_unload (GTypeModule *gmodule)
-{
-        MateSettingsModule *module = MATE_SETTINGS_MODULE (gmodule);
+static void mate_settings_module_unload(GTypeModule *gmodule) {
+  MateSettingsModule *module = MATE_SETTINGS_MODULE(gmodule);
 
-        g_debug ("Unloading %s", module->path);
+  g_debug("Unloading %s", module->path);
 
-        g_module_close (module->library);
+  g_module_close(module->library);
 
-        module->library = NULL;
-        module->type = 0;
+  module->library = NULL;
+  module->type = 0;
 }
 
-const gchar *
-mate_settings_module_get_path (MateSettingsModule *module)
-{
-        g_return_val_if_fail (MATE_IS_SETTINGS_MODULE (module), NULL);
+const gchar *mate_settings_module_get_path(MateSettingsModule *module) {
+  g_return_val_if_fail(MATE_IS_SETTINGS_MODULE(module), NULL);
 
-        return module->path;
+  return module->path;
 }
 
-GObject *
-mate_settings_module_new_object (MateSettingsModule *module)
-{
-        g_debug ("Creating object of type %s", g_type_name (module->type));
+GObject *mate_settings_module_new_object(MateSettingsModule *module) {
+  g_debug("Creating object of type %s", g_type_name(module->type));
 
-        if (module->type == 0) {
-                return NULL;
-        }
+  if (module->type == 0) {
+    return NULL;
+  }
 
-        return g_object_new (module->type, NULL);
+  return g_object_new(module->type, NULL);
 }
 
-static void
-mate_settings_module_init (MateSettingsModule *module)
-{
-        g_debug ("MateSettingsModule %p initialising", module);
+static void mate_settings_module_init(MateSettingsModule *module) {
+  g_debug("MateSettingsModule %p initialising", module);
 }
 
-static void
-mate_settings_module_finalize (GObject *object)
-{
-        MateSettingsModule *module = MATE_SETTINGS_MODULE (object);
+static void mate_settings_module_finalize(GObject *object) {
+  MateSettingsModule *module = MATE_SETTINGS_MODULE(object);
 
-        g_debug ("MateSettingsModule %p finalizing", module);
+  g_debug("MateSettingsModule %p finalizing", module);
 
-        g_free (module->path);
+  g_free(module->path);
 
-        G_OBJECT_CLASS (mate_settings_module_parent_class)->finalize (object);
+  G_OBJECT_CLASS(mate_settings_module_parent_class)->finalize(object);
 }
 
-static void
-mate_settings_module_class_init (MateSettingsModuleClass *class)
-{
-        GObjectClass *object_class = G_OBJECT_CLASS (class);
-        GTypeModuleClass *module_class = G_TYPE_MODULE_CLASS (class);
+static void mate_settings_module_class_init(MateSettingsModuleClass *class) {
+  GObjectClass *object_class = G_OBJECT_CLASS(class);
+  GTypeModuleClass *module_class = G_TYPE_MODULE_CLASS(class);
 
-        object_class->finalize = mate_settings_module_finalize;
+  object_class->finalize = mate_settings_module_finalize;
 
-        module_class->load = mate_settings_module_load;
-        module_class->unload = mate_settings_module_unload;
+  module_class->load = mate_settings_module_load;
+  module_class->unload = mate_settings_module_unload;
 }
 
-MateSettingsModule *
-mate_settings_module_new (const char *path)
-{
-        MateSettingsModule *result;
+MateSettingsModule *mate_settings_module_new(const char *path) {
+  MateSettingsModule *result;
 
-        if (path == NULL || path[0] == '\0') {
-                return NULL;
-        }
+  if (path == NULL || path[0] == '\0') {
+    return NULL;
+  }
 
-        result = g_object_new (MATE_TYPE_SETTINGS_MODULE, NULL);
+  result = g_object_new(MATE_TYPE_SETTINGS_MODULE, NULL);
 
-        g_type_module_set_name (G_TYPE_MODULE (result), path);
-        result->path = g_strdup (path);
+  g_type_module_set_name(G_TYPE_MODULE(result), path);
+  result->path = g_strdup(path);
 
-        return result;
+  return result;
 }

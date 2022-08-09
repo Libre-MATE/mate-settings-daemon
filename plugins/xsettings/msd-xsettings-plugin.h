@@ -22,8 +22,8 @@
 #ifndef __MATE_XSETTINGS_PLUGIN_H__
 #define __MATE_XSETTINGS_PLUGIN_H__
 
-#include <glib.h>
 #include <glib-object.h>
+#include <glib.h>
 #include <gmodule.h>
 
 #include "mate-settings-plugin.h"
@@ -32,30 +32,36 @@
 extern "C" {
 #endif
 
-#define MATE_TYPE_XSETTINGS_PLUGIN                (mate_xsettings_plugin_get_type ())
-#define MATE_XSETTINGS_PLUGIN(o)                  (G_TYPE_CHECK_INSTANCE_CAST ((o), MATE_TYPE_XSETTINGS_PLUGIN, MateXSettingsPlugin))
-#define MATE_XSETTINGS_PLUGIN_CLASS(k)            (G_TYPE_CHECK_CLASS_CAST((k), MATE_TYPE_XSETTINGS_PLUGIN, MateXSettingsPluginClass))
-#define MATE_IS_XSETTINGS_PLUGIN(o)               (G_TYPE_CHECK_INSTANCE_TYPE ((o), MATE_TYPE_XSETTINGS_PLUGIN))
-#define MATE_IS_XSETTINGS_PLUGIN_CLASS(k)         (G_TYPE_CHECK_CLASS_TYPE ((k), MATE_TYPE_XSETTINGS_PLUGIN))
-#define MATE_XSETTINGS_PLUGIN_GET_CLASS(o)        (G_TYPE_INSTANCE_GET_CLASS ((o), MATE_TYPE_XSETTINGS_PLUGIN, MateXSettingsPluginClass))
+#define MATE_TYPE_XSETTINGS_PLUGIN (mate_xsettings_plugin_get_type())
+#define MATE_XSETTINGS_PLUGIN(o)                               \
+  (G_TYPE_CHECK_INSTANCE_CAST((o), MATE_TYPE_XSETTINGS_PLUGIN, \
+                              MateXSettingsPlugin))
+#define MATE_XSETTINGS_PLUGIN_CLASS(k)                      \
+  (G_TYPE_CHECK_CLASS_CAST((k), MATE_TYPE_XSETTINGS_PLUGIN, \
+                           MateXSettingsPluginClass))
+#define MATE_IS_XSETTINGS_PLUGIN(o) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((o), MATE_TYPE_XSETTINGS_PLUGIN))
+#define MATE_IS_XSETTINGS_PLUGIN_CLASS(k) \
+  (G_TYPE_CHECK_CLASS_TYPE((k), MATE_TYPE_XSETTINGS_PLUGIN))
+#define MATE_XSETTINGS_PLUGIN_GET_CLASS(o)                    \
+  (G_TYPE_INSTANCE_GET_CLASS((o), MATE_TYPE_XSETTINGS_PLUGIN, \
+                             MateXSettingsPluginClass))
 
 typedef struct MateXSettingsPluginPrivate MateXSettingsPluginPrivate;
 
-typedef struct
-{
-        MateSettingsPlugin          parent;
-        MateXSettingsPluginPrivate *priv;
+typedef struct {
+  MateSettingsPlugin parent;
+  MateXSettingsPluginPrivate *priv;
 } MateXSettingsPlugin;
 
-typedef struct
-{
-        MateSettingsPluginClass parent_class;
+typedef struct {
+  MateSettingsPluginClass parent_class;
 } MateXSettingsPluginClass;
 
-GType   mate_xsettings_plugin_get_type            (void) G_GNUC_CONST;
+GType mate_xsettings_plugin_get_type(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_mate_settings_plugin (GTypeModule *module);
+G_MODULE_EXPORT GType register_mate_settings_plugin(GTypeModule *module);
 
 #ifdef __cplusplus
 }

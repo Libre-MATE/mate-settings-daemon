@@ -20,6 +20,6 @@
 
 #include <gdk/gdk.h>
 
-void msd_locate_pointer (GdkDisplay *display);
+void msd_locate_pointer(GdkDisplay *display);
 
 #endif

@@ -2,7 +2,7 @@
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-settings-daemon package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # ebray187 <ebray187@gmail.com>, 2018
 # Emiliano Fascetti, 2018
@@ -15,19 +15,19 @@
 # Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Toni Estévez <toni.estevez@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-settings-daemon 1.25.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2021-06-23 22:04+0200\n"
+"POT-Creation-Date: 2022-08-09 15:31+0200\n"
 "PO-Revision-Date: 2018-03-12 08:16+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/50-accessibility.xml.in:2
@@ -122,10 +122,10 @@ msgstr "Orden RGBA"
 
 #: data/org.mate.font-rendering.gschema.xml.in:38
 msgid ""
-"The order of subpixel elements on an LCD screen; only used when antialiasing"
-" is set to \"rgba\". Possible values are: \"rgb\" for red on left (most "
-"common), \"bgr\" for blue on left, \"vrgb\" for red on top, \"vbgr\" for red"
-" on bottom."
+"The order of subpixel elements on an LCD screen; only used when antialiasing "
+"is set to \"rgba\". Possible values are: \"rgb\" for red on left (most "
+"common), \"bgr\" for blue on left, \"vrgb\" for red on top, \"vbgr\" for red "
+"on bottom."
 msgstr ""
 "El orden de los subpíxeles en una pantalla LCD; solo se usa cuando el "
 "suavizado de contorno se configura en «rgba». Los valores posibles son: "
@@ -184,8 +184,8 @@ msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
 msgstr ""
-"Multiplicador de aceleración para el movimiento del ratón. Un valor de -1 es"
-" el predeterminado del sistema."
+"Multiplicador de aceleración para el movimiento del ratón. Un valor de -1 es "
+"el predeterminado del sistema."
 
 #: data/org.mate.peripherals-mouse.gschema.xml.in:20
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:90
@@ -218,12 +218,12 @@ msgid ""
 msgstr ""
 "El perfil de aceleración usado para los ratones conectados. El perfil de "
 "aceleración se puede configurar como predeterminado («default»), que usa el "
-"perfil de aceleración predeterminado para todos los dispositivos, como plano"
-" («flat»), que acelera con un factor constante específico de cada "
+"perfil de aceleración predeterminado para todos los dispositivos, como plano "
+"(«flat»), que acelera con un factor constante específico de cada "
 "dispositivo, derivado de la velocidad del puntero configurada, o como "
 "adaptativo («adaptative»), que adapta la aceleración en función del "
-"movimiento del ratón. Si un ratón no soporta el perfil configurado, se usará"
-" el perfil «default»."
+"movimiento del ratón. Si un ratón no soporta el perfil configurado, se usará "
+"el perfil «default»."
 
 #: data/org.mate.peripherals-mouse.gschema.xml.in:30
 msgid "Drag Threshold"
@@ -262,8 +262,8 @@ msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
 msgstr ""
-"Resalta la ubicación actual del puntero cuando se pulsa y se suelta la tecla"
-" Control."
+"Resalta la ubicación actual del puntero cuando se pulsa y se suelta la tecla "
+"Control."
 
 #: data/org.mate.peripherals-mouse.gschema.xml.in:50
 msgid "Cursor theme"
@@ -290,10 +290,10 @@ msgid ""
 "Set this to one of \"none\", \"lock_screen\", or \"force_logout\". The "
 "action will get performed when the smartcard used for log in is removed."
 msgstr ""
-"Establecer esto a una de las siguientes: «none» (ninguna), «lock_screen» "
-"(bloquear la pantalla) o «force_logout» (forzar la salida). La acción se "
-"realizará cuando se elimine la tarjeta inteligente usada para iniciar "
-"sesión."
+"Establecer esto a una de las siguientes: «none» (ninguna), "
+"«lock_screen» (bloquear la pantalla) o «force_logout» (forzar la salida). La "
+"acción se realizará cuando se elimine la tarjeta inteligente usada para "
+"iniciar sesión."
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:15
 msgid "Disable touchpad while typing"
@@ -301,8 +301,8 @@ msgstr "Desactivar el panel táctil al escribir"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:16
 msgid ""
-"Set this to TRUE if you have problems with accidentally hitting the touchpad"
-" while typing."
+"Set this to TRUE if you have problems with accidentally hitting the touchpad "
+"while typing."
 msgstr ""
 "Activar esta clave si tiene problemas tocando accidentalmente el panel "
 "táctil al escribir."
@@ -315,8 +315,8 @@ msgstr "Activar clics del ratón con el panel táctil"
 msgid ""
 "Set this to TRUE to be able to send mouse clicks by tapping on the touchpad."
 msgstr ""
-"Activar esta clave para poder enviar clics de ratón al pulsar sobre el panel"
-" táctil."
+"Activar esta clave para poder enviar clics de ratón al pulsar sobre el panel "
+"táctil."
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:25
 msgid "Enable vertical edge scrolling"
@@ -394,8 +394,8 @@ msgid ""
 "Select the button mapping for one-finger tap. Supported values are: 1: left "
 "mouse button 2: middle mouse button 3: right mouse button"
 msgstr ""
-"Seleccionar el boton de pulsacion de un solo dedo. Los valores validos son :"
-" 1: boton izquierdo 2: boton del centro 3: boton derecho"
+"Seleccionar el boton de pulsacion de un solo dedo. Los valores validos son : "
+"1: boton izquierdo 2: boton del centro 3: boton derecho"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:70
 msgid "Two finger tap button"
@@ -406,8 +406,8 @@ msgid ""
 "Select the button mapping for two-finger tap. Supported values are: 1: left "
 "mouse button 2: middle mouse button 3: right mouse button"
 msgstr ""
-"Seleccionar el boton de pulsacion de dos dedos. Los valores validos son : 1:"
-" boton izquierdo 2: boton del centro 3: boton derecho"
+"Seleccionar el boton de pulsacion de dos dedos. Los valores validos son : 1: "
+"boton izquierdo 2: boton del centro 3: boton derecho"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:75
 msgid "Three finger tap button"
@@ -431,8 +431,8 @@ msgid ""
 "for right-handed, 'mouse' to follow the mouse setting."
 msgstr ""
 "Intercambia los botones iquierdo y dereho del panel táctil con 'izquierda' "
-"para los zurdos, 'derecha' para los diestros y 'ratón' para seguir el ajuste"
-" del ratón."
+"para los zurdos, 'derecha' para los diestros y 'ratón' para seguir el ajuste "
+"del ratón."
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:86
 msgid ""
@@ -448,8 +448,8 @@ msgid ""
 "is activated. A value of -1 is the system default."
 msgstr ""
 "Distancia en píxeles a la cual el puntero debe moverse antes de que se "
-"active el movimiento acelerado del panel táctil. El valor predeterminado del"
-" sistema es -1."
+"active el movimiento acelerado del panel táctil. El valor predeterminado del "
+"sistema es -1."
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:96
 msgid ""
@@ -463,8 +463,8 @@ msgid ""
 msgstr ""
 "El perfil de aceleración usado para el panel táctil. El perfil de "
 "aceleración se puede configurar como predeterminado («default»), que usa el "
-"perfil de aceleración predeterminado para todos los dispositivos, como plano"
-" («flat»), que acelera con un factor constante específico de cada "
+"perfil de aceleración predeterminado para todos los dispositivos, como plano "
+"(«flat»), que acelera con un factor constante específico de cada "
 "dispositivo, derivado de la velocidad del puntero configurada, o como "
 "adaptativo («adaptative»), que adapta la aceleración en función del "
 "movimiento del panel táctil. Si un panel táctil no soporta el perfil "
@@ -602,8 +602,8 @@ msgid ""
 "Specify a time in minutes. Subsequent warnings for a volume will not appear "
 "more often than this period."
 msgstr ""
-"Especificar tiempo en minutos. Las subsecuentes advertencias para un volumen"
-" no aparecerán más a menudo que este periodo."
+"Especificar tiempo en minutos. Las subsecuentes advertencias para un volumen "
+"no aparecerán más a menudo que este periodo."
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:35
 msgid "Mount paths to ignore"
@@ -880,8 +880,8 @@ msgid ""
 "monitor settings are not touched at all (unless there is an explicit user "
 "configuration)."
 msgstr ""
-"Por lo general, mate-settings-daemon configura monitores internos y externos"
-" de acuerdo con los ajustes turn_on_external_monitors_at_startup y "
+"Por lo general, mate-settings-daemon configura monitores internos y externos "
+"de acuerdo con los ajustes turn_on_external_monitors_at_startup y "
 "turn_on_laptop_monitor_at_startup y determina el modo de clonación o de "
 "visualización lado a lado. Activar esta clave desactiva este comportamiento "
 "y los ajustes del monitor no se tocan en absoluto (a menos que haya una "
@@ -893,8 +893,8 @@ msgstr "Encender el monitor externo después de arrancar el sistema"
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:26
 msgid ""
-"Turn on external monitor after system boot if user plugs in external monitor"
-" on system boot."
+"Turn on external monitor after system boot if user plugs in external monitor "
+"on system boot."
 msgstr ""
 "Encender el monitor externo después de arrancar el sistema si el usuario "
 "conecta el monitor externo al arrancar el sistema."
@@ -924,29 +924,29 @@ msgid ""
 "then the file specified by this key will be used instead."
 msgstr ""
 "El complemento XRandR buscará para esta clave una configuración "
-"predeterminada en el archivo especificado. Es similar a "
-"~/.config/monitors.xml que por lo general se almacena en las carpetas "
-"personales de los usuarios. Si un usuario no tiene tal archivo o tiene uno "
-"que no coincide con la configuración de monitores del usuario,  se usa en su"
-" lugar el archivo especificado por esta clave."
+"predeterminada en el archivo especificado. Es similar a ~/.config/monitors."
+"xml que por lo general se almacena en las carpetas personales de los "
+"usuarios. Si un usuario no tiene tal archivo o tiene uno que no coincide con "
+"la configuración de monitores del usuario,  se usa en su lugar el archivo "
+"especificado por esta clave."
 
 #: data/mate-settings-daemon.desktop.in.in:4
 msgid "MATE Settings Daemon"
 msgstr "Servicio de los ajustes de MATE"
 
-#: mate-settings-daemon/main.c:66
+#: mate-settings-daemon/main.c:65
 msgid "Enable debugging code"
 msgstr "Activar código de depuración"
 
-#: mate-settings-daemon/main.c:67
+#: mate-settings-daemon/main.c:68
 msgid "Replace the current daemon"
 msgstr "Reemplazar el servicio actual"
 
-#: mate-settings-daemon/main.c:68
+#: mate-settings-daemon/main.c:70
 msgid "Don't become a daemon"
 msgstr "No convertirse en un servicio"
 
-#: mate-settings-daemon/main.c:69
+#: mate-settings-daemon/main.c:72
 msgid "Exit after a time (for debugging)"
 msgstr "Salir después de un tiempo (para depuración)"
 
@@ -958,23 +958,23 @@ msgstr "Accesibilidad del teclado"
 msgid "Accessibility keyboard plugin"
 msgstr "Complemento de accesibilidad del teclado"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:460
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:407
 #, c-format
 msgid "There was an error displaying help: %s"
 msgstr "Se ha producido un error al mostrar ayuda: %s"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:588
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:652
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:515
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:572
 msgid "Do you want to activate Slow Keys?"
 msgstr "¿Quiere activar las «Teclas lentas»?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:589
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:653
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:516
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:573
 msgid "Do you want to deactivate Slow Keys?"
 msgstr "¿Quiere desactivar las «Teclas lentas»?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:590
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:654
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:518
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:575
 msgid ""
 "You just held down the Shift key for 8 seconds.  This is the shortcut for "
 "the Slow Keys feature, which affects the way your keyboard works."
@@ -983,62 +983,62 @@ msgstr ""
 "la característica «Teclas lentas», que afecta la forma en que funciona el "
 "teclado."
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:613
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:750
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:542
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:663
 msgid "Don't activate"
 msgstr "No activar"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:613
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:750
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:542
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:663
 msgid "Don't deactivate"
 msgstr "No desactivar"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:619
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:756
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:545
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:666
 msgid "Activate"
 msgstr "Activar"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:619
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:756
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:545
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:666
 msgid "Deactivate"
 msgstr "Desactivar"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:592
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:718
 msgid "Do_n't activate"
 msgstr "_No activar"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:592
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:718
 msgid "Do_n't deactivate"
 msgstr "_No desactivar"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:595
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:721
 msgid "_Activate"
 msgstr "_Activar"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:595
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:721
 msgid "_Deactivate"
 msgstr "_Desactivar"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:682
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:599
 msgid "Slow Keys Alert"
 msgstr "Alerta de teclas lentas"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:722
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:788
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:631
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:693
 msgid "Do you want to activate Sticky Keys?"
 msgstr "¿Quiere activar las teclas persistentes?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:723
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:789
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:632
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:694
 msgid "Do you want to deactivate Sticky Keys?"
 msgstr "¿Quiere desactivar las teclas persistentes?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:725
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:791
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:633
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:695
 msgid ""
 "You just pressed the Shift key 5 times in a row.  This is the shortcut for "
 "the Sticky Keys feature, which affects the way your keyboard works."
@@ -1047,8 +1047,8 @@ msgstr ""
 "característica «Teclas persistentes», que afecta la manera en que funciona "
 "el teclado."
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:727
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:793
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:637
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:699
 msgid ""
 "You just pressed two keys at once, or pressed the Shift key 5 times in a "
 "row.  This turns off the Sticky Keys feature, which affects the way your "
@@ -1058,11 +1058,11 @@ msgstr ""
 "veces seguidas. Esto desactiva la característica de «Teclas persistentes», "
 "lo cual afecta a la forma en que funciona su teclado."
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:821
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:725
 msgid "Sticky Keys Alert"
 msgstr "Alerta de teclas persistentes"
 
-#: plugins/a11y-keyboard/msd-a11y-preferences-dialog.c:830
+#: plugins/a11y-keyboard/msd-a11y-preferences-dialog.c:762
 #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:14
 msgid "Universal Access Preferences"
 msgstr "Preferencias de acceso universal"
@@ -1172,25 +1172,25 @@ msgstr ""
 "Elimina automáticamente las miniaturas y otros archivos temporales, y "
 "advierte sobre la falta de espacio en el disco."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:61
+#: plugins/housekeeping/msd-ldsm-dialog.c:58
 msgid "Don't show any warnings again for this file system"
 msgstr "No mostrar ninguna advertencia de nuevo para este sistema de archivos"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:63
+#: plugins/housekeeping/msd-ldsm-dialog.c:60
 msgid "Don't show any warnings again"
 msgstr "No mostrar ninguna advertencia de nuevo."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:76
+#: plugins/housekeeping/msd-ldsm-dialog.c:72
 #, c-format
 msgid "The volume \"%s\" has only %s disk space remaining."
 msgstr "Al volumen «%s» solo le quedan %s de espacio en el disco."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:79
+#: plugins/housekeeping/msd-ldsm-dialog.c:76
 #, c-format
 msgid "This computer has only %s disk space remaining."
 msgstr "A este equipo solo le queda %s de espacio en el disco."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:95
+#: plugins/housekeeping/msd-ldsm-dialog.c:90
 msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to another disk or partition."
@@ -1198,7 +1198,7 @@ msgstr ""
 "Puede liberar espacio vaciando la papelera, eliminando programas o archivos "
 "que no usa o moviendo archivos a otro disco o partición."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:98
+#: plugins/housekeeping/msd-ldsm-dialog.c:95
 msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to another disk or partition."
@@ -1206,7 +1206,7 @@ msgstr ""
 "Puede liberar espacio eliminando programas o archivos sin usar o moviendo "
 "archivos a otro disco o partición."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:103
+#: plugins/housekeeping/msd-ldsm-dialog.c:101
 msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to an external disk."
@@ -1214,7 +1214,7 @@ msgstr ""
 "Puede liberar espacio vaciando la papelera, eliminando programas que no usa "
 "o moviendo archivos a un disco externo."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:106
+#: plugins/housekeeping/msd-ldsm-dialog.c:105
 msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to an external disk."
@@ -1223,51 +1223,51 @@ msgstr ""
 "archivos a un disco externo."
 
 #. Set up all the window stuff here
-#: plugins/housekeeping/msd-ldsm-dialog.c:201
+#: plugins/housekeeping/msd-ldsm-dialog.c:192
 msgid "Low Disk Space"
 msgstr "Poco espacio en el disco"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:436
+#: plugins/housekeeping/msd-ldsm-dialog.c:411
 msgid "Empty Trash"
 msgstr "Vacía la papelera"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:444
+#: plugins/housekeeping/msd-ldsm-dialog.c:419
 msgid "Examine…"
 msgstr "Examinar…"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:451
+#: plugins/housekeeping/msd-ldsm-dialog.c:426
 msgid "Ignore"
 msgstr "Ignorar"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:98
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:94
 #, c-format
 msgid "Removing item %lu of %lu"
 msgstr "Eliminando el elemento %lu de %lu"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:118
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:113
 #, c-format
 msgid "Removing: %s"
 msgstr "Eliminando: %s"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:248
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:301
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:223
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:281
 msgid "Emptying the trash"
 msgstr "Vaciando la papelera"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:277
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:253
 msgid "Preparing to empty trash…"
 msgstr "Preparándose para vaciar la papelera…"
 
 #. Translators: "Emptying trash from <device>"
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:304
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:284
 msgid "From: "
 msgstr "Desde:"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:356
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:328
 msgid "Empty all of the items from the trash?"
 msgstr "¿Seguro que quiere vaciar todos los elementos de la papelera?"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:359
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:332
 msgid ""
 "If you choose to empty the trash, all items in it will be permanently lost. "
 "Please note that you can also delete them separately."
@@ -1275,7 +1275,7 @@ msgstr ""
 "Si elije vaciar la papelera, todos elementos que contiene se perderán para "
 "siempre. Tenga en cuenta que también puede eliminarlos por separado."
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:366
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:339
 msgid "_Empty Trash"
 msgstr "_Vaciar papelera"
 
@@ -1287,17 +1287,17 @@ msgstr "Combinaciones de teclas"
 msgid "Keybindings plugin"
 msgstr "Complemento de combinaciones de teclas"
 
-#: plugins/keybindings/msd-keybindings-manager.c:109
+#: plugins/keybindings/msd-keybindings-manager.c:100
 #, c-format
 msgid "Key binding (%s) is invalid"
 msgstr "La combinación de teclas (%s) no es válida"
 
-#: plugins/keybindings/msd-keybindings-manager.c:145
+#: plugins/keybindings/msd-keybindings-manager.c:131
 #, c-format
 msgid "Key binding (%s) is incomplete"
 msgstr "La combinación de teclas (%s) está incompleta"
 
-#: plugins/keybindings/msd-keybindings-manager.c:487
+#: plugins/keybindings/msd-keybindings-manager.c:443
 #, c-format
 msgid ""
 "Error while trying to run (%s)\n"
@@ -1314,7 +1314,7 @@ msgstr "Teclado"
 msgid "Keyboard plugin"
 msgstr "Complemento de teclado"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:120
+#: plugins/keyboard/msd-keyboard-xkb.c:104
 #, c-format
 msgid ""
 "Error activating XKB configuration.\n"
@@ -1343,15 +1343,15 @@ msgstr ""
 " • El resultado de <b>%s</b>\n"
 " • El resultado de <b>%s</b> "
 
-#: plugins/keyboard/msd-keyboard-xkb.c:286
+#: plugins/keyboard/msd-keyboard-xkb.c:240
 msgid "_Layouts"
 msgstr "_Distribuciones"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:293
+#: plugins/keyboard/msd-keyboard-xkb.c:245
 msgid "Keyboard _Preferences"
 msgstr "Prefere_ncias del teclado"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:299
+#: plugins/keyboard/msd-keyboard-xkb.c:251
 msgid "Show _Current Layout"
 msgstr "Mostrar la distribución _actual"
 
@@ -1363,16 +1363,16 @@ msgstr "Teclas multimedia"
 msgid "Media keys plugin"
 msgstr "Complemento de teclas multimedia"
 
-#: plugins/media-keys/msd-media-keys-manager.c:185
+#: plugins/media-keys/msd-media-keys-manager.c:165
 msgid ""
-"Could not get default terminal. Verify that your default terminal command is"
-" set and points to a valid application."
+"Could not get default terminal. Verify that your default terminal command is "
+"set and points to a valid application."
 msgstr ""
 "No se ha podido obtener el terminal predeterminado. Compruebe que la orden "
 "del terminal predeterminada esté configurada y apunte a una aplicación "
 "válida."
 
-#: plugins/media-keys/msd-media-keys-manager.c:225
+#: plugins/media-keys/msd-media-keys-manager.c:191
 #, c-format
 msgid ""
 "Couldn't execute command: %s\n"
@@ -1381,47 +1381,47 @@ msgstr ""
 "No se ha podido ejecutar la orden: %s\n"
 "Compruebe que es una orden válida."
 
-#: plugins/media-keys/msd-media-keys-manager.c:638
-#: plugins/media-keys/test-media-window.c:82
+#: plugins/media-keys/msd-media-keys-manager.c:556
+#: plugins/media-keys/test-media-window.c:76
 msgid "Touchpad enabled"
 msgstr "Panel táctil activado"
 
-#: plugins/media-keys/msd-media-keys-manager.c:638
-#: plugins/media-keys/test-media-window.c:75
+#: plugins/media-keys/msd-media-keys-manager.c:556
+#: plugins/media-keys/test-media-window.c:69
 msgid "Touchpad disabled"
 msgstr "Panel táctil desactivado"
 
-#: plugins/media-keys/msd-media-keys-manager.c:956
-#: plugins/media-keys/test-media-window.c:89
+#: plugins/media-keys/msd-media-keys-manager.c:834
+#: plugins/media-keys/test-media-window.c:83
 msgid "Bluetooth disabled"
 msgstr "Bluetooth desactivado"
 
-#: plugins/media-keys/msd-media-keys-manager.c:959
-#: plugins/media-keys/test-media-window.c:96
+#: plugins/media-keys/msd-media-keys-manager.c:838
+#: plugins/media-keys/test-media-window.c:90
 msgid "Bluetooth enabled"
 msgstr "Bluetooth activado"
 
-#: plugins/media-keys/msd-media-keys-manager.c:963
-#: plugins/media-keys/test-media-window.c:103
+#: plugins/media-keys/msd-media-keys-manager.c:843
+#: plugins/media-keys/test-media-window.c:97
 msgid "Airplane mode enabled"
 msgstr "Modo avión activado"
 
-#: plugins/media-keys/msd-media-keys-manager.c:966
-#: plugins/media-keys/test-media-window.c:110
+#: plugins/media-keys/msd-media-keys-manager.c:848
+#: plugins/media-keys/test-media-window.c:105
 msgid "Airplane mode disabled"
 msgstr "Modo avión desactivado"
 
-#: plugins/media-keys/msd-media-keys-manager.c:997
+#: plugins/media-keys/msd-media-keys-manager.c:875
 msgid "Hardware Airplane Mode"
 msgstr "Modo Avión por Hardware"
 
-#: plugins/media-keys/msd-media-keys-manager.c:1035
-#: plugins/media-keys/test-media-window.c:124
+#: plugins/media-keys/msd-media-keys-manager.c:908
+#: plugins/media-keys/test-media-window.c:119
 msgid "Changing Screen Layout"
 msgstr "Cambiar la distribución de la pantalla"
 
-#: plugins/media-keys/msd-media-keys-manager.c:1039
-#: plugins/media-keys/test-media-window.c:117
+#: plugins/media-keys/msd-media-keys-manager.c:912
+#: plugins/media-keys/test-media-window.c:112
 msgid "No External Display"
 msgstr "Sin Pantalla Externa"
 
@@ -1433,19 +1433,19 @@ msgstr "Ratón"
 msgid "Mouse plugin"
 msgstr "Complemento del ratón"
 
-#: plugins/mouse/msd-mouse-manager.c:1651
+#: plugins/mouse/msd-mouse-manager.c:1518
 msgid "Could not enable mouse accessibility features"
 msgstr ""
 "No se han podido activar las características de accesibilidad del ratón"
 
-#: plugins/mouse/msd-mouse-manager.c:1653
+#: plugins/mouse/msd-mouse-manager.c:1520
 msgid ""
 "Mouse accessibility requires Mousetweaks to be installed on your system."
 msgstr ""
 "La accesibilidad del ratón requiere que se instale el servicio mousetweaks "
 "en el sistema."
 
-#: plugins/mouse/msd-mouse-manager.c:1656
+#: plugins/mouse/msd-mouse-manager.c:1523
 msgid "Mouse Preferences"
 msgstr "Preferencias del ratón"
 
@@ -1467,68 +1467,68 @@ msgstr "Rfkill"
 msgid "Rfkill plugin"
 msgstr "Complemento Rfkill"
 
-#: plugins/smartcard/msd-smartcard-manager.c:165
+#: plugins/smartcard/msd-smartcard-manager.c:153
 msgid "Module Path"
 msgstr "Ruta del módulo"
 
-#: plugins/smartcard/msd-smartcard-manager.c:166
+#: plugins/smartcard/msd-smartcard-manager.c:154
 msgid "path to smartcard PKCS #11 driver"
 msgstr "ruta al controlador de tarjetas inteligentes PKCS #11"
 
-#: plugins/smartcard/msd-smartcard-manager.c:492
+#: plugins/smartcard/msd-smartcard-manager.c:431
 msgid "received error or hang up from event source"
 msgstr "se ha recibido un error o un cuelgue desde el origen de eventos"
 
-#: plugins/smartcard/msd-smartcard-manager.c:581
+#: plugins/smartcard/msd-smartcard-manager.c:511
 msgid "NSS security system could not be initialized"
 msgstr "No se ha podido inicializar el sistema de seguridad NSS"
 
-#: plugins/smartcard/msd-smartcard-manager.c:650
+#: plugins/smartcard/msd-smartcard-manager.c:570
 msgid "no suitable smartcard driver could be found"
 msgstr ""
 "no se ha podido encontrar un controlador de tarjeta inteligente adecuado"
 
-#: plugins/smartcard/msd-smartcard-manager.c:670
+#: plugins/smartcard/msd-smartcard-manager.c:587
 #, c-format
 msgid "smartcard driver '%s' could not be loaded"
 msgstr "no se ha podido cargar el controlador de tarjeta inteligente «%s»"
 
-#: plugins/smartcard/msd-smartcard-manager.c:754
+#: plugins/smartcard/msd-smartcard-manager.c:665
 #, c-format
 msgid "could not watch for incoming card events - %s"
 msgstr "no se ha podido vigilar los eventos entrantes de la tarjeta: %s"
 
-#: plugins/smartcard/msd-smartcard-manager.c:1101
+#: plugins/smartcard/msd-smartcard-manager.c:971
 msgid "encountered unexpected error while waiting for smartcard events"
 msgstr ""
 "se ha encontrado un error inesperado al esperar los eventos de la tarjeta "
 "inteligente"
 
-#: plugins/smartcard/msd-smartcard.c:149
+#: plugins/smartcard/msd-smartcard.c:125
 msgid "Slot ID"
 msgstr "Id. de la ranura"
 
-#: plugins/smartcard/msd-smartcard.c:150
+#: plugins/smartcard/msd-smartcard.c:125
 msgid "The slot the card is in"
 msgstr "La ranura en la que está la tarjeta"
 
-#: plugins/smartcard/msd-smartcard.c:156
+#: plugins/smartcard/msd-smartcard.c:130
 msgid "Slot Series"
 msgstr "Serie de la ranura"
 
-#: plugins/smartcard/msd-smartcard.c:157
+#: plugins/smartcard/msd-smartcard.c:131
 msgid "per-slot card identifier"
 msgstr "Identificador de tarjetas por ranura"
 
-#: plugins/smartcard/msd-smartcard.c:163 plugins/smartcard/msd-smartcard.c:164
+#: plugins/smartcard/msd-smartcard.c:136
 msgid "name"
 msgstr "nombre"
 
-#: plugins/smartcard/msd-smartcard.c:168
+#: plugins/smartcard/msd-smartcard.c:141
 msgid "Module"
 msgstr "Módulo"
 
-#: plugins/smartcard/msd-smartcard.c:169
+#: plugins/smartcard/msd-smartcard.c:141
 msgid "smartcard driver"
 msgstr "controlador de tarjeta inteligente"
 
@@ -1556,21 +1556,21 @@ msgstr "Descanso de escritura"
 msgid "Typing break plugin"
 msgstr "Complemento de descanso de escritura"
 
-#: plugins/xrandr/msd-xrandr-manager.c:370
+#: plugins/xrandr/msd-xrandr-manager.c:343
 msgid "Could not switch the monitor configuration"
 msgstr "No se ha podido cambiar la configuración del monitor"
 
-#: plugins/xrandr/msd-xrandr-manager.c:394
+#: plugins/xrandr/msd-xrandr-manager.c:369
 msgid "Could not restore the display's configuration"
 msgstr "No se ha podido restaurar la configuración del monitor"
 
-#: plugins/xrandr/msd-xrandr-manager.c:419
+#: plugins/xrandr/msd-xrandr-manager.c:394
 msgid "Could not restore the display's configuration from a backup"
 msgstr ""
 "No se ha podido restaurar la configuración del monitor desde una copia de "
 "seguridad"
 
-#: plugins/xrandr/msd-xrandr-manager.c:440
+#: plugins/xrandr/msd-xrandr-manager.c:413
 #, c-format
 msgid "The display will be reset to its previous configuration in %d second"
 msgid_plural ""
@@ -1580,102 +1580,101 @@ msgstr[0] ""
 msgstr[1] ""
 "Se restablecerá la configuración anterior de la pantalla en %d segundos"
 
-#: plugins/xrandr/msd-xrandr-manager.c:491
+#: plugins/xrandr/msd-xrandr-manager.c:458
 msgid "Does the display look OK?"
 msgstr "¿Se ve correctamente la pantalla?"
 
-#: plugins/xrandr/msd-xrandr-manager.c:498
+#: plugins/xrandr/msd-xrandr-manager.c:467
 msgid "_Restore Previous Configuration"
 msgstr "_Restaurar la configuración anterior"
 
-#: plugins/xrandr/msd-xrandr-manager.c:499
+#: plugins/xrandr/msd-xrandr-manager.c:470
 msgid "_Keep This Configuration"
 msgstr "_Mantener esta configuración"
 
-#: plugins/xrandr/msd-xrandr-manager.c:580
+#: plugins/xrandr/msd-xrandr-manager.c:555
 msgid "The selected configuration for displays could not be applied"
 msgstr ""
 "No se ha podido aplicar la configuración seleccionada para las pantallas"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1177
+#: plugins/xrandr/msd-xrandr-manager.c:1125
 #, c-format
 msgid "Could not refresh the screen information: %s"
 msgstr "No se ha podido refrescar la información de la pantalla: %s"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1181
+#: plugins/xrandr/msd-xrandr-manager.c:1131
 msgid "Trying to switch the monitor configuration anyway."
 msgstr "Intentando cambiar la configuración del monitor de todas formas."
 
-#: plugins/xrandr/msd-xrandr-manager.c:1938
+#: plugins/xrandr/msd-xrandr-manager.c:1901
 msgid "Rotation not supported"
 msgstr "La rotación no es compatible"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2003
-#: plugins/xrandr/msd-xrandr-manager.c:2035
+#: plugins/xrandr/msd-xrandr-manager.c:1961
+#: plugins/xrandr/msd-xrandr-manager.c:1992
 msgid "Could not save monitor configuration"
 msgstr "No se ha podido guardar la configuración del monitor"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2056
+#: plugins/xrandr/msd-xrandr-manager.c:2012
 msgid "Mirroring outputs not supported"
 msgstr "La duplicación de salidas no es compatible"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2087
+#: plugins/xrandr/msd-xrandr-manager.c:2042
 msgid "Normal"
 msgstr "Normal"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2088
+#: plugins/xrandr/msd-xrandr-manager.c:2043
 msgid "Left"
 msgstr "Izquierda"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2089
+#: plugins/xrandr/msd-xrandr-manager.c:2044
 msgid "Right"
 msgstr "Derecha"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2090
+#: plugins/xrandr/msd-xrandr-manager.c:2045
 msgid "Upside Down"
 msgstr "Boca abajo"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2179
+#: plugins/xrandr/msd-xrandr-manager.c:2135
 msgid "ON"
 msgstr "ENCENDER"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2180
+#: plugins/xrandr/msd-xrandr-manager.c:2136
 msgid "Turn this monitor off"
 msgstr "Encender este monitor"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2183
+#: plugins/xrandr/msd-xrandr-manager.c:2138
 msgid "OFF"
 msgstr "APAGAR"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2184
+#: plugins/xrandr/msd-xrandr-manager.c:2139
 msgid "Turn this monitor on"
 msgstr "Apagar este monitor"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2244
-msgid "Same output all monitors"
+#: plugins/xrandr/msd-xrandr-manager.c:2193
+#, fuzzy
+msgid "Same output on all monitors"
 msgstr "La misma salida en todos los monitores"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2245
+#: plugins/xrandr/msd-xrandr-manager.c:2195
 msgid "Mirror same output to all monitors and turn them on"
-msgstr ""
-"Encender todos los monitores y replicar la misma salida en todos ellos"
+msgstr "Encender todos los monitores y replicar la misma salida en todos ellos"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2292
+#: plugins/xrandr/msd-xrandr-manager.c:2241
 msgid "_Configure Display Settings…"
 msgstr "_Configurar los ajustes de pantalla…"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2302
+#: plugins/xrandr/msd-xrandr-manager.c:2252
 msgid "Open the display configuration dialog (all settings)"
 msgstr "Abrir el diálogo de configuración de la pantalla (todos los ajustes)"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2359
+#: plugins/xrandr/msd-xrandr-manager.c:2306
 msgid "Configure display settings"
 msgstr "Configurar los ajustes de la pantalla"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2419
+#: plugins/xrandr/msd-xrandr-manager.c:2362
 msgid "Could not apply the stored configuration for monitors"
-msgstr ""
-"No se ha podido aplicar la configuración almacenada para los monitores"
+msgstr "No se ha podido aplicar la configuración almacenada para los monitores"
 
 #: plugins/xrandr/xrandr.mate-settings-plugin.desktop.in:5
 msgid "XRandR"
@@ -1685,7 +1684,7 @@ msgstr "XRandR"
 msgid "Set up screen size and rotation settings"
 msgstr "Establecer los ajustes de tamaño y rotación de la pantalla"
 
-#: plugins/xrdb/msd-xrdb-manager.c:249 plugins/xrdb/msd-xrdb-manager.c:318
+#: plugins/xrdb/msd-xrdb-manager.c:211 plugins/xrdb/msd-xrdb-manager.c:273
 msgid "Cannot determine user's home directory"
 msgstr "No se puede determinar la carpeta personal del usuario"
 

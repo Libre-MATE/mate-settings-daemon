@@ -28,33 +28,39 @@
 extern "C" {
 #endif
 
-#define MSD_TYPE_KEYBOARD_MANAGER         (msd_keyboard_manager_get_type ())
-#define MSD_KEYBOARD_MANAGER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), MSD_TYPE_KEYBOARD_MANAGER, MsdKeyboardManager))
-#define MSD_KEYBOARD_MANAGER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_KEYBOARD_MANAGER, MsdKeyboardManagerClass))
-#define MSD_IS_KEYBOARD_MANAGER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), MSD_TYPE_KEYBOARD_MANAGER))
-#define MSD_IS_KEYBOARD_MANAGER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), MSD_TYPE_KEYBOARD_MANAGER))
-#define MSD_KEYBOARD_MANAGER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MSD_TYPE_KEYBOARD_MANAGER, MsdKeyboardManagerClass))
+#define MSD_TYPE_KEYBOARD_MANAGER (msd_keyboard_manager_get_type())
+#define MSD_KEYBOARD_MANAGER(o)                               \
+  (G_TYPE_CHECK_INSTANCE_CAST((o), MSD_TYPE_KEYBOARD_MANAGER, \
+                              MsdKeyboardManager))
+#define MSD_KEYBOARD_MANAGER_CLASS(k)                      \
+  (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_KEYBOARD_MANAGER, \
+                           MsdKeyboardManagerClass))
+#define MSD_IS_KEYBOARD_MANAGER(o) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((o), MSD_TYPE_KEYBOARD_MANAGER))
+#define MSD_IS_KEYBOARD_MANAGER_CLASS(k) \
+  (G_TYPE_CHECK_CLASS_TYPE((k), MSD_TYPE_KEYBOARD_MANAGER))
+#define MSD_KEYBOARD_MANAGER_GET_CLASS(o)                    \
+  (G_TYPE_INSTANCE_GET_CLASS((o), MSD_TYPE_KEYBOARD_MANAGER, \
+                             MsdKeyboardManagerClass))
 
 typedef struct MsdKeyboardManagerPrivate MsdKeyboardManagerPrivate;
 
-typedef struct
-{
-        GObject                     parent;
-        MsdKeyboardManagerPrivate *priv;
+typedef struct {
+  GObject parent;
+  MsdKeyboardManagerPrivate *priv;
 } MsdKeyboardManager;
 
-typedef struct
-{
-        GObjectClass   parent_class;
+typedef struct {
+  GObjectClass parent_class;
 } MsdKeyboardManagerClass;
 
-GType                   msd_keyboard_manager_get_type            (void);
+GType msd_keyboard_manager_get_type(void);
 
-MsdKeyboardManager *       msd_keyboard_manager_new                 (void);
-gboolean                msd_keyboard_manager_start               (MsdKeyboardManager *manager,
-                                                               GError         **error);
-void                    msd_keyboard_manager_stop                (MsdKeyboardManager *manager);
-void                    msd_keyboard_manager_apply_settings      (MsdKeyboardManager *manager);
+MsdKeyboardManager *msd_keyboard_manager_new(void);
+gboolean msd_keyboard_manager_start(MsdKeyboardManager *manager,
+                                    GError **error);
+void msd_keyboard_manager_stop(MsdKeyboardManager *manager);
+void msd_keyboard_manager_apply_settings(MsdKeyboardManager *manager);
 
 #ifdef __cplusplus
 }

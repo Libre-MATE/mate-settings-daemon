@@ -2,7 +2,7 @@
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-settings-daemon package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Alan Lee <bkrhlim@aol.com>, 2018
 # D.K Kim <pepct84@gmail.com>, 2018
@@ -10,19 +10,19 @@
 # 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # JungHee Lee <daemul72@gmail.com>, 2021
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-settings-daemon 1.25.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2021-06-23 22:04+0200\n"
+"POT-Creation-Date: 2022-08-09 15:31+0200\n"
 "PO-Revision-Date: 2018-03-12 08:16+0000\n"
 "Last-Translator: JungHee Lee <daemul72@gmail.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/50-accessibility.xml.in:2
@@ -76,7 +76,8 @@ msgstr "DPI"
 msgid ""
 "The resolution used for converting font sizes to pixel sizes, in dots per "
 "inch."
-msgstr "글꼴 크기를 픽셀 크기로 변환할 때 사용할 해상도. 인치 당 점 개수 (DPI) 단위."
+msgstr ""
+"글꼴 크기를 픽셀 크기로 변환할 때 사용할 해상도. 인치 당 점 개수 (DPI) 단위."
 
 #: data/org.mate.font-rendering.gschema.xml.in:27
 msgid "Antialiasing"
@@ -88,8 +89,9 @@ msgid ""
 "\"none\" for no antialiasing, \"grayscale\" for standard grayscale "
 "antialiasing, and \"rgba\" for subpixel antialiasing (LCD screens only)."
 msgstr ""
-"글꼴을 렌더링할 때 사용할 안티알리아싱 방법. 사용 가능한 값은: \"none\"이면 안티알리아싱 없음, \"grayscale\"이면 "
-"표준 그레이스케일 안티알리아싱, \"rgba\"이면 서브픽셀 안티알리아싱 (LCD 화면 전용)."
+"글꼴을 렌더링할 때 사용할 안티알리아싱 방법. 사용 가능한 값은: \"none\"이면 "
+"안티알리아싱 없음, \"grayscale\"이면 표준 그레이스케일 안티알리아싱, "
+"\"rgba\"이면 서브픽셀 안티알리아싱 (LCD 화면 전용)."
 
 #: data/org.mate.font-rendering.gschema.xml.in:32
 msgid "Hinting"
@@ -101,8 +103,9 @@ msgid ""
 "\"none\" for no hinting, \"slight\" for basic, \"medium\" for moderate, and "
 "\"full\" for maximum hinting (may cause distortion of letter forms)."
 msgstr ""
-"글꼴을 렌더링할 때 사용할 힌팅 방법. 사용 가능한 값은: \"none\"이면 힌팅 없음, \"slight\"이면 기초적인 방법, "
-"\"medium\"이면 중간, \"full\"이면 최대 힌팅 (글자 모양이 왜곡될 수도 있습니다)."
+"글꼴을 렌더링할 때 사용할 힌팅 방법. 사용 가능한 값은: \"none\"이면 힌팅 없"
+"음, \"slight\"이면 기초적인 방법, \"medium\"이면 중간, \"full\"이면 최대 힌"
+"팅 (글자 모양이 왜곡될 수도 있습니다)."
 
 #: data/org.mate.font-rendering.gschema.xml.in:37
 msgid "RGBA order"
@@ -110,13 +113,14 @@ msgstr "RGBA 순서"
 
 #: data/org.mate.font-rendering.gschema.xml.in:38
 msgid ""
-"The order of subpixel elements on an LCD screen; only used when antialiasing"
-" is set to \"rgba\". Possible values are: \"rgb\" for red on left (most "
-"common), \"bgr\" for blue on left, \"vrgb\" for red on top, \"vbgr\" for red"
-" on bottom."
+"The order of subpixel elements on an LCD screen; only used when antialiasing "
+"is set to \"rgba\". Possible values are: \"rgb\" for red on left (most "
+"common), \"bgr\" for blue on left, \"vrgb\" for red on top, \"vbgr\" for red "
+"on bottom."
 msgstr ""
-"LCD 화면에서 서브픽셀의 순서. 안티알리아싱이 \"rgba\"일 경우에만 사용합니다. 사용 가능한 값은: \"rgb\"이면 빨강이 왼쪽"
-" (대부분 사용하는 값), \"bgr\"이면 파랑이 왼쪽, \"vrgb\"이면 빨강이 맨 위, \"vbgr\"이면 빨강이 맨 아래."
+"LCD 화면에서 서브픽셀의 순서. 안티알리아싱이 \"rgba\"일 경우에만 사용합니다. "
+"사용 가능한 값은: \"rgb\"이면 빨강이 왼쪽 (대부분 사용하는 값), \"bgr\"이면 "
+"파랑이 왼쪽, \"vrgb\"이면 빨강이 맨 위, \"vbgr\"이면 빨강이 맨 아래."
 
 #: data/org.mate.peripherals-keyboard.gschema.xml.in:25
 msgid "possible values are \"on\", \"off\", and \"custom\"."
@@ -138,7 +142,8 @@ msgstr "NumLock 상태 기억"
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr "참으로 설정하면, MATE에서 세션이 바뀌어도 NumLock 표시등의 상태를 기억합니다."
+msgstr ""
+"참으로 설정하면, MATE에서 세션이 바뀌어도 NumLock 표시등의 상태를 기억합니다."
 
 #: data/org.mate.peripherals-keyboard.gschema.xml.in:45
 msgid "NumLock state"
@@ -165,7 +170,8 @@ msgstr "동작 가속"
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
-msgstr "마우스 움직임을 배로 가속합니다. -1을 설정하면 시스템 기본값을 사용합니다."
+msgstr ""
+"마우스 움직임을 배로 가속합니다. -1을 설정하면 시스템 기본값을 사용합니다."
 
 #: data/org.mate.peripherals-mouse.gschema.xml.in:20
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:90
@@ -177,7 +183,8 @@ msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
 msgstr ""
-"마우스 가속 움직임을 활성화 하기 전 마우스 포인터가 움직일 픽셀 단위 거리입니다. -1을 설정하면 시스템 기본값을 사용합니다."
+"마우스 가속 움직임을 활성화 하기 전 마우스 포인터가 움직일 픽셀 단위 거리입니"
+"다. -1을 설정하면 시스템 기본값을 사용합니다."
 
 #: data/org.mate.peripherals-mouse.gschema.xml.in:25
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:95
@@ -219,7 +226,9 @@ msgstr "가운데 버튼 흉내"
 msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
-msgstr "왼쪽 버튼과 오른쪽 버튼을 동시에 누르는 가운데 마우스 버튼 흉내를 활성화합니다."
+msgstr ""
+"왼쪽 버튼과 오른쪽 버튼을 동시에 누르는 가운데 마우스 버튼 흉내를 활성화합니"
+"다."
 
 #: data/org.mate.peripherals-mouse.gschema.xml.in:45
 msgid "Locate Pointer"
@@ -256,8 +265,8 @@ msgid ""
 "Set this to one of \"none\", \"lock_screen\", or \"force_logout\". The "
 "action will get performed when the smartcard used for log in is removed."
 msgstr ""
-"\"none\", \"lock_screen\", \"force_logout\" 중 하나로 설정하십시오. 이 동작은 로그인 할 때 사용하느"
-" 스마트 카드가 제거되었을 때 수행합니다."
+"\"none\", \"lock_screen\", \"force_logout\" 중 하나로 설정하십시오. 이 동작"
+"은 로그인 할 때 사용하느 스마트 카드가 제거되었을 때 수행합니다."
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:15
 msgid "Disable touchpad while typing"
@@ -265,9 +274,10 @@ msgstr "타이핑할 때 터치패드 사용 않기"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:16
 msgid ""
-"Set this to TRUE if you have problems with accidentally hitting the touchpad"
-" while typing."
-msgstr "타이핑할 때 터치패드를 실수로 건드리는 문제가 있을 경우 참으로 설정하십시오."
+"Set this to TRUE if you have problems with accidentally hitting the touchpad "
+"while typing."
+msgstr ""
+"타이핑할 때 터치패드를 실수로 건드리는 문제가 있을 경우 참으로 설정하십시오."
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:20
 msgid "Enable mouse clicks with touchpad"
@@ -348,7 +358,8 @@ msgid ""
 "Select the button mapping for one-finger tap. Supported values are: 1: left "
 "mouse button 2: middle mouse button 3: right mouse button"
 msgstr ""
-"한 손가락 탭에 사용할 버튼 매핑을 설정합니다. 사용 가능한 값은: 1:마우스 왼쪽 버튼 2:마우스 가운데 버튼 3:마우스 오른쪽 버튼"
+"한 손가락 탭에 사용할 버튼 매핑을 설정합니다. 사용 가능한 값은: 1:마우스 왼"
+"쪽 버튼 2:마우스 가운데 버튼 3:마우스 오른쪽 버튼"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:70
 msgid "Two finger tap button"
@@ -359,7 +370,8 @@ msgid ""
 "Select the button mapping for two-finger tap. Supported values are: 1: left "
 "mouse button 2: middle mouse button 3: right mouse button"
 msgstr ""
-"두 손가락 탭에 사용할 버튼 매핑을 설정합니다. 사용 가능한 값은: 1:마우스 왼쪽 버튼 2:마우스 가운데 버튼 3:마우스 오른쪽 버튼"
+"두 손가락 탭에 사용할 버튼 매핑을 설정합니다. 사용 가능한 값은: 1:마우스 왼"
+"쪽 버튼 2:마우스 가운데 버튼 3:마우스 오른쪽 버튼"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:75
 msgid "Three finger tap button"
@@ -370,7 +382,8 @@ msgid ""
 "Select the button mapping for three-finger tap. Supported values are: 1: "
 "left mouse button 2: middle mouse button 3: right mouse button"
 msgstr ""
-"세 손가락 탭에 사용할 버튼 매핑을 설정합니다. 사용 가능한 값은: 1:마우스 왼쪽 버튼 2:마우스 가운데 버튼 3:마우스 오른쪽 버튼"
+"세 손가락 탭에 사용할 버튼 매핑을 설정합니다. 사용 가능한 값은: 1:마우스 왼"
+"쪽 버튼 2:마우스 가운데 버튼 3:마우스 오른쪽 버튼"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:80
 msgid "Touchpad button orientation"
@@ -381,7 +394,8 @@ msgid ""
 "Swap left and right buttons for left-handed touchpads with 'left', 'right' "
 "for right-handed, 'mouse' to follow the mouse setting."
 msgstr ""
-"왼손잡이용 '왼쪽', '오른쪽' 터치패드버튼을 오른손잡이용 왼쪽 오른쪽 버튼으로 전환, '마우스'는 마우스 설정값을 따릅니다."
+"왼손잡이용 '왼쪽', '오른쪽' 터치패드버튼을 오른손잡이용 왼쪽 오른쪽 버튼으로 "
+"전환, '마우스'는 마우스 설정값을 따릅니다."
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:86
 msgid ""
@@ -393,7 +407,9 @@ msgstr "터치패드 동작에 대한 가속 배율. 시스템 기본 값은 -1�
 msgid ""
 "Distance in pixels the pointer must move before accelerated touchpad motion "
 "is activated. A value of -1 is the system default."
-msgstr "터치패드 동작이 작동되기 위한 포인터의 픽셀 단위의 이동 거리. 시스템 기본 값은 -1입니다."
+msgstr ""
+"터치패드 동작이 작동되기 위한 포인터의 픽셀 단위의 이동 거리. 시스템 기본 값"
+"은 -1입니다."
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:96
 msgid ""
@@ -499,8 +515,8 @@ msgid ""
 "Percentage free space threshold for initial warning of low disk space. If "
 "the percentage free space drops below this, a warning will be shown."
 msgstr ""
-"디스크 공간 부족시 초기에 경고할 남은 공간의 임계치 백분율입니다. 남은 공간 백분율이 이 값 이하로 떨어지면, 경고 메시지를 "
-"표시합니다."
+"디스크 공간 부족시 초기에 경고할 남은 공간의 임계치 백분율입니다. 남은 공간 "
+"백분율이 이 값 이하로 떨어지면, 경고 메시지를 표시합니다."
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:20
 msgid "Subsequent free percentage notify threshold"
@@ -510,7 +526,9 @@ msgstr "다음 남은 공간 퍼센트 알림 값"
 msgid ""
 "Specify the percentage that the free disk space should reduce by before "
 "issuing a subsequent warning."
-msgstr "반복적으로 경고 메시지를 표시하기 전에 줄어들어 있어야 할 남은 공간 용량의 백분율을 지정하십시오."
+msgstr ""
+"반복적으로 경고 메시지를 표시하기 전에 줄어들어 있어야 할 남은 공간 용량의 백"
+"분율을 지정하십시오."
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:25
 msgid "Free space no notify threshold"
@@ -520,7 +538,9 @@ msgstr "남은 용량 알리지 않음 값"
 msgid ""
 "Specify an amount in GB. If the amount of free space is more than this, no "
 "warning will be shown."
-msgstr "GB 단위로 용량을 지정하십시오. 남은 공간이 이 값보다 크면 경고 메시지가 나타나지 않습니다."
+msgstr ""
+"GB 단위로 용량을 지정하십시오. 남은 공간이 이 값보다 크면 경고 메시지가 나타"
+"나지 않습니다."
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:30
 msgid "Minimum notify period for repeated warnings"
@@ -530,7 +550,9 @@ msgstr "반복된 경고를 알리는 최소 간격"
 msgid ""
 "Specify a time in minutes. Subsequent warnings for a volume will not appear "
 "more often than this period."
-msgstr "시간을 분 단위로 지정합니다. 이 시간만큼 지나기 전에는 볼륨에 대해 같은 경고가 나타나지 않습니다."
+msgstr ""
+"시간을 분 단위로 지정합니다. 이 시간만큼 지나기 전에는 볼륨에 대해 같은 경고"
+"가 나타나지 않습니다."
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:35
 msgid "Mount paths to ignore"
@@ -800,8 +822,9 @@ msgid ""
 "configuration)."
 msgstr ""
 "mate-settings-daemon은 turn_on_external_monitors_at_startup과 "
-"turn_on_laptop_monitor_at_startup 설정에 따라 내외부 모니터를 설정하며, 적당한 복제/화면 분할 모드를 "
-"선택합니다. 이 키를 참으로 설정하면 비활성화하며, 모든 모니터 설정을(분명한 사용자 설정이 있기까지는) 건드리지 않습니다."
+"turn_on_laptop_monitor_at_startup 설정에 따라 내외부 모니터를 설정하며, 적당"
+"한 복제/화면 분할 모드를 선택합니다. 이 키를 참으로 설정하면 비활성화하며, 모"
+"든 모니터 설정을(분명한 사용자 설정이 있기까지는) 건드리지 않습니다."
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:25
 msgid "Turn on external monitor after system boot"
@@ -809,9 +832,11 @@ msgstr "시스템을 부팅한 다음 외부 모니터 켜기"
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:26
 msgid ""
-"Turn on external monitor after system boot if user plugs in external monitor"
-" on system boot."
-msgstr "시스템을 부팅할 때 사용자가 외부 모니터를 연결했을 경우 시스템을 부팅한 다음 외부 모니터를 켭니다."
+"Turn on external monitor after system boot if user plugs in external monitor "
+"on system boot."
+msgstr ""
+"시스템을 부팅할 때 사용자가 외부 모니터를 연결했을 경우 시스템을 부팅한 다음 "
+"외부 모니터를 켭니다."
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:30
 msgid "Turn on laptop monitor after system boot"
@@ -821,7 +846,9 @@ msgstr "시스템을 부팅한 후 랩톱 모니터를 켭니다"
 msgid ""
 "Turn on laptop monitor after system boot if user plugs in external monitor "
 "on system boot."
-msgstr "시스템을 부팅할대 외부 모니터를 연결하면 시스템을 부팅한 다음 랩톱 모니터를 켭니다."
+msgstr ""
+"시스템을 부팅할대 외부 모니터를 연결하면 시스템을 부팅한 다음 랩톱 모니터를 "
+"켭니다."
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:35
 msgid "File for default configuration for RandR"
@@ -835,27 +862,28 @@ msgid ""
 "such a file, or has one that does not match the user's setup of monitors, "
 "then the file specified by this key will be used instead."
 msgstr ""
-"XRandR 플러그인은 이 키로 정의한 파일의 기본 설정을 찾습니다. 보통 사용자의 홈 티렉터리에 저장된 "
-"~/.config/monitors.xml과 비슷합니다. 사용자가 이런 파일을 보유하고 있지 않거나, 사용자 모니터 설정과 일치하지 "
-"않으면, 이 키로 지정한 파일을 대신 사용합니다."
+"XRandR 플러그인은 이 키로 정의한 파일의 기본 설정을 찾습니다. 보통 사용자의 "
+"홈 티렉터리에 저장된 ~/.config/monitors.xml과 비슷합니다. 사용자가 이런 파일"
+"을 보유하고 있지 않거나, 사용자 모니터 설정과 일치하지 않으면, 이 키로 지정"
+"한 파일을 대신 사용합니다."
 
 #: data/mate-settings-daemon.desktop.in.in:4
 msgid "MATE Settings Daemon"
 msgstr "MATE 설정 데몬"
 
-#: mate-settings-daemon/main.c:66
+#: mate-settings-daemon/main.c:65
 msgid "Enable debugging code"
 msgstr "디버깅 코드 사용"
 
-#: mate-settings-daemon/main.c:67
+#: mate-settings-daemon/main.c:68
 msgid "Replace the current daemon"
 msgstr "현재 데몬 대체"
 
-#: mate-settings-daemon/main.c:68
+#: mate-settings-daemon/main.c:70
 msgid "Don't become a daemon"
 msgstr "데몬이 되지 않았습니다"
 
-#: mate-settings-daemon/main.c:69
+#: mate-settings-daemon/main.c:72
 msgid "Exit after a time (for debugging)"
 msgstr "다음 시간 후 나가기(디버깅용)"
 
@@ -867,108 +895,109 @@ msgstr "접근성 키보드"
 msgid "Accessibility keyboard plugin"
 msgstr "접근성 키보드 플러그인"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:460
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:407
 #, c-format
 msgid "There was an error displaying help: %s"
 msgstr "도움말을 보여주는 데 오류가 발생했습니다: %s"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:588
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:652
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:515
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:572
 msgid "Do you want to activate Slow Keys?"
 msgstr "느린 키를 사용하시겠습니까?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:589
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:653
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:516
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:573
 msgid "Do you want to deactivate Slow Keys?"
 msgstr "느린 키를 해제하시겠습니까?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:590
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:654
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:518
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:575
 msgid ""
 "You just held down the Shift key for 8 seconds.  This is the shortcut for "
 "the Slow Keys feature, which affects the way your keyboard works."
 msgstr ""
-"<Shift> 키를 8초 동안 누르고 있었습니다.  느린 키 기능을 사용하게 됩니다.  느린 키를 사용하면 키보드가 동작하는 방식이 "
-"달라집니다."
+"<Shift> 키를 8초 동안 누르고 있었습니다.  느린 키 기능을 사용하게 됩니다.  느"
+"린 키를 사용하면 키보드가 동작하는 방식이 달라집니다."
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:613
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:750
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:542
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:663
 msgid "Don't activate"
 msgstr "활성하지 않기"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:613
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:750
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:542
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:663
 msgid "Don't deactivate"
 msgstr "비활성하지 않기"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:619
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:756
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:545
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:666
 msgid "Activate"
 msgstr "활성"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:619
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:756
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:545
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:666
 msgid "Deactivate"
 msgstr "비활성"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:592
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:718
 msgid "Do_n't activate"
 msgstr "활성하지 않기(_N)"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:592
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:718
 msgid "Do_n't deactivate"
 msgstr "비활성하지 않기(_N)"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:595
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:721
 msgid "_Activate"
 msgstr "연결(_A)"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:595
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:721
 msgid "_Deactivate"
 msgstr "끊기(_D)"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:682
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:599
 msgid "Slow Keys Alert"
 msgstr "느린 키 알림"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:722
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:788
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:631
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:693
 msgid "Do you want to activate Sticky Keys?"
 msgstr "고정 키를 사용하시겠습니까?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:723
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:789
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:632
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:694
 msgid "Do you want to deactivate Sticky Keys?"
 msgstr "고정 키를 해제하시겠습니까?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:725
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:791
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:633
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:695
 msgid ""
 "You just pressed the Shift key 5 times in a row.  This is the shortcut for "
 "the Sticky Keys feature, which affects the way your keyboard works."
 msgstr ""
-"<Shift> 키를 5번 연속해서 눌렀습니다.  고정 키 기능을 사용하게 됩니다.  고정 키를 사용하면 키보드가 동작하는 방식이 "
-"달라집니다."
+"<Shift> 키를 5번 연속해서 눌렀습니다.  고정 키 기능을 사용하게 됩니다.  고정 "
+"키를 사용하면 키보드가 동작하는 방식이 달라집니다."
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:727
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:793
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:637
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:699
 msgid ""
 "You just pressed two keys at once, or pressed the Shift key 5 times in a "
 "row.  This turns off the Sticky Keys feature, which affects the way your "
 "keyboard works."
 msgstr ""
-"키 두 개를 동시에 눌렀거나, <Shift> 키를 5번 연속해서 눌렀습니다.  고정 키 기능을 해제하게 됩니다.  고정 키를 해제하면 "
-"키보드가 동작하는 방식이 달라집니다."
+"키 두 개를 동시에 눌렀거나, <Shift> 키를 5번 연속해서 눌렀습니다.  고정 키 기"
+"능을 해제하게 됩니다.  고정 키를 해제하면 키보드가 동작하는 방식이 달라집니"
+"다."
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:821
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:725
 msgid "Sticky Keys Alert"
 msgstr "고정 키 알림"
 
-#: plugins/a11y-keyboard/msd-a11y-preferences-dialog.c:830
+#: plugins/a11y-keyboard/msd-a11y-preferences-dialog.c:762
 #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:14
 msgid "Universal Access Preferences"
 msgstr "보편적 접근성 기본 설정"
@@ -1075,103 +1104,110 @@ msgid ""
 "about low disk space"
 msgstr ""
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:61
+#: plugins/housekeeping/msd-ldsm-dialog.c:58
 msgid "Don't show any warnings again for this file system"
 msgstr "이 파일 시스템에 경고를 더 이상 표시하지 않음"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:63
+#: plugins/housekeeping/msd-ldsm-dialog.c:60
 msgid "Don't show any warnings again"
 msgstr "경고를 다시 표시하지 않기"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:76
+#: plugins/housekeeping/msd-ldsm-dialog.c:72
 #, c-format
 msgid "The volume \"%s\" has only %s disk space remaining."
 msgstr "\"%s\" 볼륨에 디스크 공간이 %s 밖에 남지 않았습니다."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:79
+#: plugins/housekeeping/msd-ldsm-dialog.c:76
 #, c-format
 msgid "This computer has only %s disk space remaining."
 msgstr "이 컴퓨터에 디스크 공간이 %s 밖에 남지 않았습니다."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:95
+#: plugins/housekeeping/msd-ldsm-dialog.c:90
 msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to another disk or partition."
 msgstr ""
-"휴지통을 비우거나, 사용하지 않는 프로그램이나 파일을 지우거나, 파일을 다른 디스크나 파티션으로 옮기는 방법으로 디스크 공간을 확보할 수"
-" 있습니다."
+"휴지통을 비우거나, 사용하지 않는 프로그램이나 파일을 지우거나, 파일을 다른 디"
+"스크나 파티션으로 옮기는 방법으로 디스크 공간을 확보할 수 있습니다."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:98
+#: plugins/housekeeping/msd-ldsm-dialog.c:95
 msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to another disk or partition."
 msgstr ""
-"사용하지 않는 프로그램이나 파일을 지우거나, 파일을 다른 디스크나 파티션으로 옮기는 방법으로 디스크 공간을 확보할 수 있습니다."
+"사용하지 않는 프로그램이나 파일을 지우거나, 파일을 다른 디스크나 파티션으로 "
+"옮기는 방법으로 디스크 공간을 확보할 수 있습니다."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:103
+#: plugins/housekeeping/msd-ldsm-dialog.c:101
 msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to an external disk."
-msgstr "휴지통을 비우거나, 파일을 외장 디스크로 옮기는 방법으로 디스크 공간을 확보할 수 있습니다."
+msgstr ""
+"휴지통을 비우거나, 파일을 외장 디스크로 옮기는 방법으로 디스크 공간을 확보할 "
+"수 있습니다."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:106
+#: plugins/housekeeping/msd-ldsm-dialog.c:105
 msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to an external disk."
-msgstr "사용하지 않는 프로그램이나 파일을 지우거나, 파일을 외장 디스크로 옮기는 방법으로 디스크 공간을 확보할 수 있습니다."
+msgstr ""
+"사용하지 않는 프로그램이나 파일을 지우거나, 파일을 외장 디스크로 옮기는 방법"
+"으로 디스크 공간을 확보할 수 있습니다."
 
 #. Set up all the window stuff here
-#: plugins/housekeeping/msd-ldsm-dialog.c:201
+#: plugins/housekeeping/msd-ldsm-dialog.c:192
 msgid "Low Disk Space"
 msgstr "디스크 공간 부족"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:436
+#: plugins/housekeeping/msd-ldsm-dialog.c:411
 msgid "Empty Trash"
 msgstr "휴지통 비우기"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:444
+#: plugins/housekeeping/msd-ldsm-dialog.c:419
 msgid "Examine…"
 msgstr "시험..."
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:451
+#: plugins/housekeeping/msd-ldsm-dialog.c:426
 msgid "Ignore"
 msgstr "무시"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:98
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:94
 #, c-format
 msgid "Removing item %lu of %lu"
 msgstr "%lu개 항목 제거하는 중, 전체 %lu개"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:118
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:113
 #, c-format
 msgid "Removing: %s"
 msgstr "제거중: %s"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:248
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:301
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:223
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:281
 msgid "Emptying the trash"
 msgstr "휴지통을 비우는 중"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:277
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:253
 msgid "Preparing to empty trash…"
 msgstr "휴지통 비우는 중..."
 
 #. Translators: "Emptying trash from <device>"
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:304
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:284
 msgid "From: "
 msgstr "원본: "
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:356
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:328
 msgid "Empty all of the items from the trash?"
 msgstr "휴지통에 들어 있는 항목을 모두 비우시겠습니까?"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:359
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:332
 msgid ""
 "If you choose to empty the trash, all items in it will be permanently lost. "
 "Please note that you can also delete them separately."
-msgstr "휴지통을 비우면, 그 안의 항목은 완전히 지워집니다. 휴지통을 비우지 않고 따로 따로 삭제할 수도 있습니다."
+msgstr ""
+"휴지통을 비우면, 그 안의 항목은 완전히 지워집니다. 휴지통을 비우지 않고 따로 "
+"따로 삭제할 수도 있습니다."
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:366
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:339
 msgid "_Empty Trash"
 msgstr "휴지통 비우기(_E)"
 
@@ -1183,17 +1219,17 @@ msgstr "키바인딩"
 msgid "Keybindings plugin"
 msgstr "키바인딩 플러그인"
 
-#: plugins/keybindings/msd-keybindings-manager.c:109
+#: plugins/keybindings/msd-keybindings-manager.c:100
 #, c-format
 msgid "Key binding (%s) is invalid"
 msgstr "키 바인딩이 (%s) 잘못되었습니다"
 
-#: plugins/keybindings/msd-keybindings-manager.c:145
+#: plugins/keybindings/msd-keybindings-manager.c:131
 #, c-format
 msgid "Key binding (%s) is incomplete"
 msgstr "키 바인딩이 (%s) 불완전합니다"
 
-#: plugins/keybindings/msd-keybindings-manager.c:487
+#: plugins/keybindings/msd-keybindings-manager.c:443
 #, c-format
 msgid ""
 "Error while trying to run (%s)\n"
@@ -1210,7 +1246,7 @@ msgstr "키보드"
 msgid "Keyboard plugin"
 msgstr "키보드 플러그인"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:120
+#: plugins/keyboard/msd-keyboard-xkb.c:104
 #, c-format
 msgid ""
 "Error activating XKB configuration.\n"
@@ -1239,15 +1275,15 @@ msgstr ""
 " • <b>%s</b>의 결과\n"
 " • <b>%s</b>의 결과"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:286
+#: plugins/keyboard/msd-keyboard-xkb.c:240
 msgid "_Layouts"
 msgstr "배치(_L)"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:293
+#: plugins/keyboard/msd-keyboard-xkb.c:245
 msgid "Keyboard _Preferences"
 msgstr "키보드 기본 설정(_P)"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:299
+#: plugins/keyboard/msd-keyboard-xkb.c:251
 msgid "Show _Current Layout"
 msgstr "현재 배치 표시(_C)"
 
@@ -1259,13 +1295,15 @@ msgstr "미디어 키"
 msgid "Media keys plugin"
 msgstr "미디어 키 플러그인"
 
-#: plugins/media-keys/msd-media-keys-manager.c:185
+#: plugins/media-keys/msd-media-keys-manager.c:165
 msgid ""
-"Could not get default terminal. Verify that your default terminal command is"
-" set and points to a valid application."
-msgstr "기본 터미널을 얻을 수 없습니다. 기본 터미널 명령이 설정되어 있고 올바른 프로그램인지 확인해보시기 바랍니다."
+"Could not get default terminal. Verify that your default terminal command is "
+"set and points to a valid application."
+msgstr ""
+"기본 터미널을 얻을 수 없습니다. 기본 터미널 명령이 설정되어 있고 올바른 프로"
+"그램인지 확인해보시기 바랍니다."
 
-#: plugins/media-keys/msd-media-keys-manager.c:225
+#: plugins/media-keys/msd-media-keys-manager.c:191
 #, c-format
 msgid ""
 "Couldn't execute command: %s\n"
@@ -1274,47 +1312,47 @@ msgstr ""
 "명령을 실행할 수 없습니다: %s\n"
 "명령이 있는지 확인해보십시오."
 
-#: plugins/media-keys/msd-media-keys-manager.c:638
-#: plugins/media-keys/test-media-window.c:82
+#: plugins/media-keys/msd-media-keys-manager.c:556
+#: plugins/media-keys/test-media-window.c:76
 msgid "Touchpad enabled"
 msgstr "터치패드 사용"
 
-#: plugins/media-keys/msd-media-keys-manager.c:638
-#: plugins/media-keys/test-media-window.c:75
+#: plugins/media-keys/msd-media-keys-manager.c:556
+#: plugins/media-keys/test-media-window.c:69
 msgid "Touchpad disabled"
 msgstr "터치패드 사용 안 함"
 
-#: plugins/media-keys/msd-media-keys-manager.c:956
-#: plugins/media-keys/test-media-window.c:89
+#: plugins/media-keys/msd-media-keys-manager.c:834
+#: plugins/media-keys/test-media-window.c:83
 msgid "Bluetooth disabled"
 msgstr "블루투스 사용 안 함"
 
-#: plugins/media-keys/msd-media-keys-manager.c:959
-#: plugins/media-keys/test-media-window.c:96
+#: plugins/media-keys/msd-media-keys-manager.c:838
+#: plugins/media-keys/test-media-window.c:90
 msgid "Bluetooth enabled"
 msgstr "블루투스 사용"
 
-#: plugins/media-keys/msd-media-keys-manager.c:963
-#: plugins/media-keys/test-media-window.c:103
+#: plugins/media-keys/msd-media-keys-manager.c:843
+#: plugins/media-keys/test-media-window.c:97
 msgid "Airplane mode enabled"
 msgstr "비행기 모드 사용"
 
-#: plugins/media-keys/msd-media-keys-manager.c:966
-#: plugins/media-keys/test-media-window.c:110
+#: plugins/media-keys/msd-media-keys-manager.c:848
+#: plugins/media-keys/test-media-window.c:105
 msgid "Airplane mode disabled"
 msgstr "비행기 모드 사용 안 함"
 
-#: plugins/media-keys/msd-media-keys-manager.c:997
+#: plugins/media-keys/msd-media-keys-manager.c:875
 msgid "Hardware Airplane Mode"
 msgstr "하드웨어 비행기 모드"
 
-#: plugins/media-keys/msd-media-keys-manager.c:1035
-#: plugins/media-keys/test-media-window.c:124
+#: plugins/media-keys/msd-media-keys-manager.c:908
+#: plugins/media-keys/test-media-window.c:119
 msgid "Changing Screen Layout"
 msgstr "화면 배치 바꾸기"
 
-#: plugins/media-keys/msd-media-keys-manager.c:1039
-#: plugins/media-keys/test-media-window.c:117
+#: plugins/media-keys/msd-media-keys-manager.c:912
+#: plugins/media-keys/test-media-window.c:112
 msgid "No External Display"
 msgstr "외부 모니터 없음"
 
@@ -1326,16 +1364,17 @@ msgstr "마우스"
 msgid "Mouse plugin"
 msgstr "마우스 플러그인"
 
-#: plugins/mouse/msd-mouse-manager.c:1651
+#: plugins/mouse/msd-mouse-manager.c:1518
 msgid "Could not enable mouse accessibility features"
 msgstr "마우스 접근성 기능을 사용할 수 없습니다"
 
-#: plugins/mouse/msd-mouse-manager.c:1653
+#: plugins/mouse/msd-mouse-manager.c:1520
 msgid ""
 "Mouse accessibility requires Mousetweaks to be installed on your system."
-msgstr "마우스 접근성 기능을 사용하려면 시스템에 마우스트윅스를 설치해야 합니다."
+msgstr ""
+"마우스 접근성 기능을 사용하려면 시스템에 마우스트윅스를 설치해야 합니다."
 
-#: plugins/mouse/msd-mouse-manager.c:1656
+#: plugins/mouse/msd-mouse-manager.c:1523
 msgid "Mouse Preferences"
 msgstr "마우스 기본 설정"
 
@@ -1357,65 +1396,66 @@ msgstr "Rfkill"
 msgid "Rfkill plugin"
 msgstr "Rfkill 플러그인"
 
-#: plugins/smartcard/msd-smartcard-manager.c:165
+#: plugins/smartcard/msd-smartcard-manager.c:153
 msgid "Module Path"
 msgstr "모듈 경로"
 
-#: plugins/smartcard/msd-smartcard-manager.c:166
+#: plugins/smartcard/msd-smartcard-manager.c:154
 msgid "path to smartcard PKCS #11 driver"
 msgstr "스마트카드 PKCS #11 드라이버 경로"
 
-#: plugins/smartcard/msd-smartcard-manager.c:492
+#: plugins/smartcard/msd-smartcard-manager.c:431
 msgid "received error or hang up from event source"
 msgstr "이벤트 소스에서 오류 또는 끊김 신호를 받았습니다"
 
-#: plugins/smartcard/msd-smartcard-manager.c:581
+#: plugins/smartcard/msd-smartcard-manager.c:511
 msgid "NSS security system could not be initialized"
 msgstr "NSS 보안 시스템을 초기화 할 수 없습니다"
 
-#: plugins/smartcard/msd-smartcard-manager.c:650
+#: plugins/smartcard/msd-smartcard-manager.c:570
 msgid "no suitable smartcard driver could be found"
 msgstr "적당한 스마트카드 드라이버를 찾을 수 없습니다"
 
-#: plugins/smartcard/msd-smartcard-manager.c:670
+#: plugins/smartcard/msd-smartcard-manager.c:587
 #, c-format
 msgid "smartcard driver '%s' could not be loaded"
 msgstr "'%s' 스마트카드 드라이버를 불러올 수 없습니다"
 
-#: plugins/smartcard/msd-smartcard-manager.c:754
+#: plugins/smartcard/msd-smartcard-manager.c:665
 #, c-format
 msgid "could not watch for incoming card events - %s"
 msgstr "카드 이벤트 수신을 볼 수 없습니다 - %s"
 
-#: plugins/smartcard/msd-smartcard-manager.c:1101
+#: plugins/smartcard/msd-smartcard-manager.c:971
 msgid "encountered unexpected error while waiting for smartcard events"
-msgstr "스마트카드 이벤트를 기다리는 동안 예상치 못한 몇가지 오류가 발생했습니다"
+msgstr ""
+"스마트카드 이벤트를 기다리는 동안 예상치 못한 몇가지 오류가 발생했습니다"
 
-#: plugins/smartcard/msd-smartcard.c:149
+#: plugins/smartcard/msd-smartcard.c:125
 msgid "Slot ID"
 msgstr "슬롯 ID"
 
-#: plugins/smartcard/msd-smartcard.c:150
+#: plugins/smartcard/msd-smartcard.c:125
 msgid "The slot the card is in"
 msgstr "카드가 들어간 슬롯"
 
-#: plugins/smartcard/msd-smartcard.c:156
+#: plugins/smartcard/msd-smartcard.c:130
 msgid "Slot Series"
 msgstr "슬롯 종류"
 
-#: plugins/smartcard/msd-smartcard.c:157
+#: plugins/smartcard/msd-smartcard.c:131
 msgid "per-slot card identifier"
 msgstr "슬롯당 카드 식별자"
 
-#: plugins/smartcard/msd-smartcard.c:163 plugins/smartcard/msd-smartcard.c:164
+#: plugins/smartcard/msd-smartcard.c:136
 msgid "name"
 msgstr "이름"
 
-#: plugins/smartcard/msd-smartcard.c:168
+#: plugins/smartcard/msd-smartcard.c:141
 msgid "Module"
 msgstr "모듈"
 
-#: plugins/smartcard/msd-smartcard.c:169
+#: plugins/smartcard/msd-smartcard.c:141
 msgid "smartcard driver"
 msgstr "스마트카드 드라이버"
 
@@ -1443,116 +1483,116 @@ msgstr "입력 휴식 시간"
 msgid "Typing break plugin"
 msgstr "타이핑 휴식 시간 플러그인"
 
-#: plugins/xrandr/msd-xrandr-manager.c:370
+#: plugins/xrandr/msd-xrandr-manager.c:343
 msgid "Could not switch the monitor configuration"
 msgstr "모니터 설정을 전환할 수 없습니다."
 
-#: plugins/xrandr/msd-xrandr-manager.c:394
+#: plugins/xrandr/msd-xrandr-manager.c:369
 msgid "Could not restore the display's configuration"
 msgstr "화면 설정을 복원할 수 없습니다"
 
-#: plugins/xrandr/msd-xrandr-manager.c:419
+#: plugins/xrandr/msd-xrandr-manager.c:394
 msgid "Could not restore the display's configuration from a backup"
 msgstr "백업에서 화면 설정을 복원할 수 없습니다"
 
-#: plugins/xrandr/msd-xrandr-manager.c:440
+#: plugins/xrandr/msd-xrandr-manager.c:413
 #, c-format
 msgid "The display will be reset to its previous configuration in %d second"
 msgid_plural ""
 "The display will be reset to its previous configuration in %d seconds"
 msgstr[0] "%d초 후에 이전 화면 설정으로 되돌아갑니다"
 
-#: plugins/xrandr/msd-xrandr-manager.c:491
+#: plugins/xrandr/msd-xrandr-manager.c:458
 msgid "Does the display look OK?"
 msgstr "화면이 올바르게 보입니까?"
 
-#: plugins/xrandr/msd-xrandr-manager.c:498
+#: plugins/xrandr/msd-xrandr-manager.c:467
 msgid "_Restore Previous Configuration"
 msgstr "이전 설정 복구(_R)"
 
-#: plugins/xrandr/msd-xrandr-manager.c:499
+#: plugins/xrandr/msd-xrandr-manager.c:470
 msgid "_Keep This Configuration"
 msgstr "이 설정 유지(_K)"
 
-#: plugins/xrandr/msd-xrandr-manager.c:580
+#: plugins/xrandr/msd-xrandr-manager.c:555
 msgid "The selected configuration for displays could not be applied"
 msgstr "선택한 화면 설정을 적용할 수 없습니다"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1177
+#: plugins/xrandr/msd-xrandr-manager.c:1125
 #, c-format
 msgid "Could not refresh the screen information: %s"
 msgstr "화면 정보를 새로 읽어 올 수 없습니다: %s"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1181
+#: plugins/xrandr/msd-xrandr-manager.c:1131
 msgid "Trying to switch the monitor configuration anyway."
 msgstr "그래도 모니터 설정을 전환합니다."
 
-#: plugins/xrandr/msd-xrandr-manager.c:1938
+#: plugins/xrandr/msd-xrandr-manager.c:1901
 msgid "Rotation not supported"
 msgstr "화면 회전을 지원하지 않습니다"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2003
-#: plugins/xrandr/msd-xrandr-manager.c:2035
+#: plugins/xrandr/msd-xrandr-manager.c:1961
+#: plugins/xrandr/msd-xrandr-manager.c:1992
 msgid "Could not save monitor configuration"
 msgstr "모니터 설정을 저장할 수 없습니다"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2056
+#: plugins/xrandr/msd-xrandr-manager.c:2012
 msgid "Mirroring outputs not supported"
 msgstr "미러링 출력을 지원하지 않습니다"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2087
+#: plugins/xrandr/msd-xrandr-manager.c:2042
 msgid "Normal"
 msgstr "보통"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2088
+#: plugins/xrandr/msd-xrandr-manager.c:2043
 msgid "Left"
 msgstr "왼쪽"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2089
+#: plugins/xrandr/msd-xrandr-manager.c:2044
 msgid "Right"
 msgstr "오른쪽"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2090
+#: plugins/xrandr/msd-xrandr-manager.c:2045
 msgid "Upside Down"
 msgstr "위 아래"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2179
+#: plugins/xrandr/msd-xrandr-manager.c:2135
 msgid "ON"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2180
+#: plugins/xrandr/msd-xrandr-manager.c:2136
 msgid "Turn this monitor off"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2183
+#: plugins/xrandr/msd-xrandr-manager.c:2138
 msgid "OFF"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2184
+#: plugins/xrandr/msd-xrandr-manager.c:2139
 msgid "Turn this monitor on"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2244
-msgid "Same output all monitors"
+#: plugins/xrandr/msd-xrandr-manager.c:2193
+msgid "Same output on all monitors"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2245
+#: plugins/xrandr/msd-xrandr-manager.c:2195
 msgid "Mirror same output to all monitors and turn them on"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2292
+#: plugins/xrandr/msd-xrandr-manager.c:2241
 msgid "_Configure Display Settings…"
 msgstr "디스플레이 설정 구성(_C)..."
 
-#: plugins/xrandr/msd-xrandr-manager.c:2302
+#: plugins/xrandr/msd-xrandr-manager.c:2252
 msgid "Open the display configuration dialog (all settings)"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2359
+#: plugins/xrandr/msd-xrandr-manager.c:2306
 msgid "Configure display settings"
 msgstr "디스플레이를 설정합니다"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2419
+#: plugins/xrandr/msd-xrandr-manager.c:2362
 msgid "Could not apply the stored configuration for monitors"
 msgstr "저장한 모니터 설정을 적용할 수 없습니다"
 
@@ -1564,7 +1604,7 @@ msgstr "XRandR"
 msgid "Set up screen size and rotation settings"
 msgstr "화면 크기 및 회전 설정을 합니다"
 
-#: plugins/xrdb/msd-xrdb-manager.c:249 plugins/xrdb/msd-xrdb-manager.c:318
+#: plugins/xrdb/msd-xrdb-manager.c:211 plugins/xrdb/msd-xrdb-manager.c:273
 msgid "Cannot determine user's home directory"
 msgstr "사용자의 홈 디렉터리를 알 수 없습니다"
 

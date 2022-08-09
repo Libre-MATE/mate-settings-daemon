@@ -28,43 +28,45 @@
 extern "C" {
 #endif
 
-#define MSD_TYPE_LDSM_DIALOG             (msd_ldsm_dialog_get_type ())
-#define MSD_LDSM_DIALOG(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), MSD_TYPE_LDSM_DIALOG, MsdLdsmDialog))
-#define MSD_LDSM_DIALOG_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), MSD_TYPE_LDSM_DIALOG, MsdLdsmDialogClass))
-#define MSD_IS_LDSM_DIALOG(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MSD_TYPE_LDSM_DIALOG))
-#define MSD_IS_LDSM_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), MSD_TYPE_LDSM_DIALOG))
-#define MSD_LDSM_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), MSD_TYPE_LDSM_DIALOG, MsdLdsmDialogClass))
+#define MSD_TYPE_LDSM_DIALOG (msd_ldsm_dialog_get_type())
+#define MSD_LDSM_DIALOG(obj) \
+  (G_TYPE_CHECK_INSTANCE_CAST((obj), MSD_TYPE_LDSM_DIALOG, MsdLdsmDialog))
+#define MSD_LDSM_DIALOG_CLASS(klass) \
+  (G_TYPE_CHECK_CLASS_CAST((klass), MSD_TYPE_LDSM_DIALOG, MsdLdsmDialogClass))
+#define MSD_IS_LDSM_DIALOG(obj) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((obj), MSD_TYPE_LDSM_DIALOG))
+#define MSD_IS_LDSM_DIALOG_CLASS(klass) \
+  (G_TYPE_CHECK_CLASS_TYPE((klass), MSD_TYPE_LDSM_DIALOG))
+#define MSD_LDSM_DIALOG_GET_CLASS(obj) \
+  (G_TYPE_INSTANCE_GET_CLASS((obj), MSD_TYPE_LDSM_DIALOG, MsdLdsmDialogClass))
 
-enum
-{
-        MSD_LDSM_DIALOG_RESPONSE_EMPTY_TRASH = -20,
-        MSD_LDSM_DIALOG_RESPONSE_ANALYZE = -21
+enum {
+  MSD_LDSM_DIALOG_RESPONSE_EMPTY_TRASH = -20,
+  MSD_LDSM_DIALOG_RESPONSE_ANALYZE = -21
 };
 
 typedef struct MsdLdsmDialogPrivate MsdLdsmDialogPrivate;
 typedef struct _MsdLdsmDialogClass MsdLdsmDialogClass;
 typedef struct _MsdLdsmDialog MsdLdsmDialog;
 
-struct _MsdLdsmDialogClass
-{
-        GtkDialogClass parent_class;
+struct _MsdLdsmDialogClass {
+  GtkDialogClass parent_class;
 };
 
-struct _MsdLdsmDialog
-{
-        GtkDialog parent_instance;
-        MsdLdsmDialogPrivate *priv;
+struct _MsdLdsmDialog {
+  GtkDialog parent_instance;
+  MsdLdsmDialogPrivate *priv;
 };
 
-GType msd_ldsm_dialog_get_type (void) G_GNUC_CONST;
+GType msd_ldsm_dialog_get_type(void) G_GNUC_CONST;
 
-MsdLdsmDialog * msd_ldsm_dialog_new (gboolean other_usable_partitions,
-                                     gboolean other_partitions,
-                                     gboolean display_baobab,
-                                     gboolean display_empty_trash,
-                                     gint64 space_remaining,
-                                     const gchar *partition_name,
-                                     const gchar *mount_path);
+MsdLdsmDialog *msd_ldsm_dialog_new(gboolean other_usable_partitions,
+                                   gboolean other_partitions,
+                                   gboolean display_baobab,
+                                   gboolean display_empty_trash,
+                                   gint64 space_remaining,
+                                   const gchar *partition_name,
+                                   const gchar *mount_path);
 
 #ifdef __cplusplus
 }

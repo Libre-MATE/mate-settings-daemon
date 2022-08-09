@@ -28,22 +28,30 @@
 extern "C" {
 #endif
 
-#define MATE_TYPE_SETTINGS_MODULE               (mate_settings_module_get_type ())
-#define MATE_SETTINGS_MODULE(obj)               (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_SETTINGS_MODULE, MateSettingsModule))
-#define MATE_SETTINGS_MODULE_CLASS(klass)       (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_SETTINGS_MODULE, MateSettingsModuleClass))
-#define MATE_IS_SETTINGS_MODULE(obj)            (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_SETTINGS_MODULE))
-#define MATE_IS_SETTINGS_MODULE_CLASS(klass)    (G_TYPE_CHECK_CLASS_TYPE ((obj), MATE_TYPE_SETTINGS_MODULE))
-#define MATE_SETTINGS_MODULE_GET_CLASS(obj)     (G_TYPE_INSTANCE_GET_CLASS((obj), MATE_TYPE_SETTINGS_MODULE, MateSettingsModuleClass))
+#define MATE_TYPE_SETTINGS_MODULE (mate_settings_module_get_type())
+#define MATE_SETTINGS_MODULE(obj)                               \
+  (G_TYPE_CHECK_INSTANCE_CAST((obj), MATE_TYPE_SETTINGS_MODULE, \
+                              MateSettingsModule))
+#define MATE_SETTINGS_MODULE_CLASS(klass)                      \
+  (G_TYPE_CHECK_CLASS_CAST((klass), MATE_TYPE_SETTINGS_MODULE, \
+                           MateSettingsModuleClass))
+#define MATE_IS_SETTINGS_MODULE(obj) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((obj), MATE_TYPE_SETTINGS_MODULE))
+#define MATE_IS_SETTINGS_MODULE_CLASS(klass) \
+  (G_TYPE_CHECK_CLASS_TYPE((obj), MATE_TYPE_SETTINGS_MODULE))
+#define MATE_SETTINGS_MODULE_GET_CLASS(obj)                    \
+  (G_TYPE_INSTANCE_GET_CLASS((obj), MATE_TYPE_SETTINGS_MODULE, \
+                             MateSettingsModuleClass))
 
 typedef struct _MateSettingsModule MateSettingsModule;
 
-GType                    mate_settings_module_get_type          (void) G_GNUC_CONST;
+GType mate_settings_module_get_type(void) G_GNUC_CONST;
 
-MateSettingsModule     *mate_settings_module_new               (const gchar *path);
+MateSettingsModule *mate_settings_module_new(const gchar *path);
 
-const char              *mate_settings_module_get_path          (MateSettingsModule *module);
+const char *mate_settings_module_get_path(MateSettingsModule *module);
 
-GObject                 *mate_settings_module_new_object        (MateSettingsModule *module);
+GObject *mate_settings_module_new_object(MateSettingsModule *module);
 
 #ifdef __cplusplus
 }

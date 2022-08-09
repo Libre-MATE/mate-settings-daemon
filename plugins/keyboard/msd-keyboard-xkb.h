@@ -26,13 +26,15 @@
 #define __MSD_KEYBOARD_XKB_H
 
 #include <libxklavier/xklavier.h>
+
 #include "msd-keyboard-manager.h"
 
 void msd_keyboard_xkb_init(MsdKeyboardManager* manager);
 void msd_keyboard_xkb_shutdown(void);
 
-typedef void (*PostActivationCallback) (void* userData);
+typedef void (*PostActivationCallback)(void* userData);
 
-void msd_keyboard_xkb_set_post_activation_callback(PostActivationCallback fun, void* userData);
+void msd_keyboard_xkb_set_post_activation_callback(PostActivationCallback fun,
+                                                   void* userData);
 
 #endif

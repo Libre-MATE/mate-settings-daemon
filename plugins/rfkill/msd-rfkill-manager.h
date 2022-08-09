@@ -27,32 +27,35 @@
 
 G_BEGIN_DECLS
 
-#define MSD_TYPE_RFKILL_MANAGER         (msd_rfkill_manager_get_type ())
-#define MSD_RFKILL_MANAGER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), MSD_TYPE_RFKILL_MANAGER, MsdRfkillManager))
-#define MSD_RFKILL_MANAGER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_RFKILL_MANAGER, MsdRfkillManagerClass))
-#define MSD_IS_RFKILL_MANAGER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), MSD_TYPE_RFKILL_MANAGER))
-#define MSD_IS_RFKILL_MANAGER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), MSD_TYPE_RFKILL_MANAGER))
-#define MSD_RFKILL_MANAGER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MSD_TYPE_RFKILL_MANAGER, MsdRfkillManagerClass))
+#define MSD_TYPE_RFKILL_MANAGER (msd_rfkill_manager_get_type())
+#define MSD_RFKILL_MANAGER(o) \
+  (G_TYPE_CHECK_INSTANCE_CAST((o), MSD_TYPE_RFKILL_MANAGER, MsdRfkillManager))
+#define MSD_RFKILL_MANAGER_CLASS(k) \
+  (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_RFKILL_MANAGER, MsdRfkillManagerClass))
+#define MSD_IS_RFKILL_MANAGER(o) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((o), MSD_TYPE_RFKILL_MANAGER))
+#define MSD_IS_RFKILL_MANAGER_CLASS(k) \
+  (G_TYPE_CHECK_CLASS_TYPE((k), MSD_TYPE_RFKILL_MANAGER))
+#define MSD_RFKILL_MANAGER_GET_CLASS(o)                    \
+  (G_TYPE_INSTANCE_GET_CLASS((o), MSD_TYPE_RFKILL_MANAGER, \
+                             MsdRfkillManagerClass))
 
 typedef struct MsdRfkillManagerPrivate MsdRfkillManagerPrivate;
 
-typedef struct
-{
-        GObject                     parent;
-        MsdRfkillManagerPrivate *priv;
+typedef struct {
+  GObject parent;
+  MsdRfkillManagerPrivate *priv;
 } MsdRfkillManager;
 
-typedef struct
-{
-        GObjectClass   parent_class;
+typedef struct {
+  GObjectClass parent_class;
 } MsdRfkillManagerClass;
 
-GType                   msd_rfkill_manager_get_type            (void);
+GType msd_rfkill_manager_get_type(void);
 
-MsdRfkillManager *       msd_rfkill_manager_new                 (void);
-gboolean                msd_rfkill_manager_start               (MsdRfkillManager *manager,
-                                                               GError         **error);
-void                    msd_rfkill_manager_stop                (MsdRfkillManager *manager);
+MsdRfkillManager *msd_rfkill_manager_new(void);
+gboolean msd_rfkill_manager_start(MsdRfkillManager *manager, GError **error);
+void msd_rfkill_manager_stop(MsdRfkillManager *manager);
 
 G_END_DECLS
 

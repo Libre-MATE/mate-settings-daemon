@@ -28,57 +28,52 @@
 extern "C" {
 #endif
 
-#define MATE_TYPE_SETTINGS_MANAGER         (mate_settings_manager_get_type ())
-#define MATE_SETTINGS_MANAGER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), MATE_TYPE_SETTINGS_MANAGER, MateSettingsManager))
-#define MATE_SETTINGS_MANAGER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), MATE_TYPE_SETTINGS_MANAGER, MateSettingsManagerClass))
-#define MATE_IS_SETTINGS_MANAGER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), MATE_TYPE_SETTINGS_MANAGER))
-#define MATE_IS_SETTINGS_MANAGER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), MATE_TYPE_SETTINGS_MANAGER))
-#define MATE_SETTINGS_MANAGER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MATE_TYPE_SETTINGS_MANAGER, MateSettingsManagerClass))
+#define MATE_TYPE_SETTINGS_MANAGER (mate_settings_manager_get_type())
+#define MATE_SETTINGS_MANAGER(o)                               \
+  (G_TYPE_CHECK_INSTANCE_CAST((o), MATE_TYPE_SETTINGS_MANAGER, \
+                              MateSettingsManager))
+#define MATE_SETTINGS_MANAGER_CLASS(k)                      \
+  (G_TYPE_CHECK_CLASS_CAST((k), MATE_TYPE_SETTINGS_MANAGER, \
+                           MateSettingsManagerClass))
+#define MATE_IS_SETTINGS_MANAGER(o) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((o), MATE_TYPE_SETTINGS_MANAGER))
+#define MATE_IS_SETTINGS_MANAGER_CLASS(k) \
+  (G_TYPE_CHECK_CLASS_TYPE((k), MATE_TYPE_SETTINGS_MANAGER))
+#define MATE_SETTINGS_MANAGER_GET_CLASS(o)                    \
+  (G_TYPE_INSTANCE_GET_CLASS((o), MATE_TYPE_SETTINGS_MANAGER, \
+                             MateSettingsManagerClass))
 
 typedef struct MateSettingsManagerPrivate MateSettingsManagerPrivate;
 
-typedef struct
-{
-        GObject                      parent;
-        MateSettingsManagerPrivate  *priv;
+typedef struct {
+  GObject parent;
+  MateSettingsManagerPrivate *priv;
 } MateSettingsManager;
 
-typedef struct
-{
-        GObjectClass   parent_class;
+typedef struct {
+  GObjectClass parent_class;
 
-        void          (* plugin_activated)         (MateSettingsManager *manager,
-                                                    const char           *name);
-        void          (* plugin_deactivated)       (MateSettingsManager *manager,
-                                                    const char           *name);
+  void (*plugin_activated)(MateSettingsManager *manager, const char *name);
+  void (*plugin_deactivated)(MateSettingsManager *manager, const char *name);
 } MateSettingsManagerClass;
 
-typedef enum
-{
-        MATE_SETTINGS_MANAGER_ERROR_GENERAL
-} MateSettingsManagerError;
+typedef enum { MATE_SETTINGS_MANAGER_ERROR_GENERAL } MateSettingsManagerError;
 
-enum
-{
-        PLUGIN_LOAD_ALL,
-        PLUGIN_LOAD_INIT,
-        PLUGIN_LOAD_DEFER
-};
+enum { PLUGIN_LOAD_ALL, PLUGIN_LOAD_INIT, PLUGIN_LOAD_DEFER };
 
-#define MATE_SETTINGS_MANAGER_ERROR mate_settings_manager_error_quark ()
+#define MATE_SETTINGS_MANAGER_ERROR mate_settings_manager_error_quark()
 
-GQuark                 mate_settings_manager_error_quark         (void);
-GType                  mate_settings_manager_get_type   (void);
+GQuark mate_settings_manager_error_quark(void);
+GType mate_settings_manager_get_type(void);
 
-MateSettingsManager * mate_settings_manager_new        (void);
+MateSettingsManager *mate_settings_manager_new(void);
 
-gboolean               mate_settings_manager_start      (MateSettingsManager *manager,
-                                                          gint                load_init_flag,
-                                                          GError            **error);
-void                   mate_settings_manager_stop       (MateSettingsManager *manager);
+gboolean mate_settings_manager_start(MateSettingsManager *manager,
+                                     gint load_init_flag, GError **error);
+void mate_settings_manager_stop(MateSettingsManager *manager);
 
-gboolean               mate_settings_manager_awake      (MateSettingsManager *manager,
-                                                          GError              **error);
+gboolean mate_settings_manager_awake(MateSettingsManager *manager,
+                                     GError **error);
 
 #ifdef __cplusplus
 }

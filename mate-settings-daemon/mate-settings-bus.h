@@ -27,7 +27,7 @@
 
 G_BEGIN_DECLS
 
-char *                    mate_settings_get_chassis_type            (void);
+char* mate_settings_get_chassis_type(void);
 
 G_END_DECLS
 

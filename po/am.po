@@ -2,22 +2,22 @@
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the mate-settings-daemon package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # samson <sambelet@yahoo.com>, 2019
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-settings-daemon 1.25.1\n"
 "Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
-"POT-Creation-Date: 2021-06-23 22:04+0200\n"
+"POT-Creation-Date: 2022-08-09 15:31+0200\n"
 "PO-Revision-Date: 2018-03-12 08:16+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>, 2019\n"
 "Language-Team: Amharic (https://www.transifex.com/mate/teams/13566/am/)\n"
+"Language: am\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: am\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/50-accessibility.xml.in:2
@@ -107,14 +107,14 @@ msgstr "የ RGBA ቅደም ተከተል"
 
 #: data/org.mate.font-rendering.gschema.xml.in:38
 msgid ""
-"The order of subpixel elements on an LCD screen; only used when antialiasing"
-" is set to \"rgba\". Possible values are: \"rgb\" for red on left (most "
-"common), \"bgr\" for blue on left, \"vrgb\" for red on top, \"vbgr\" for red"
-" on bottom."
+"The order of subpixel elements on an LCD screen; only used when antialiasing "
+"is set to \"rgba\". Possible values are: \"rgb\" for red on left (most "
+"common), \"bgr\" for blue on left, \"vrgb\" for red on top, \"vbgr\" for red "
+"on bottom."
 msgstr ""
-"የ ንዑስ ፒክስል አካላቶች ቅደም ተከተል ለ LCD መመልከቻ; ይህን ብቻ ይጠቀሙ ለ ማስተካከያ ማሰናጃ ለ \"rgba\"."
-" የሚቻሉት ዋጋዎች እነዚህ ናቸው: \"rgb\" ለ ቀይ በ ግራ በኩል (በጣም የ ተለመደ), \"bgr\" ለ ሰማያዊ በ "
-"ግራ በኩል:  \"vrgb\" ለ ቀይ ከ ላይ በኩል: \"vbgr\" ለ ቀይ ከ ታች በኩል"
+"የ ንዑስ ፒክስል አካላቶች ቅደም ተከተል ለ LCD መመልከቻ; ይህን ብቻ ይጠቀሙ ለ ማስተካከያ ማሰናጃ ለ \"rgba\". "
+"የሚቻሉት ዋጋዎች እነዚህ ናቸው: \"rgb\" ለ ቀይ በ ግራ በኩል (በጣም የ ተለመደ), \"bgr\" ለ ሰማያዊ በ ግራ "
+"በኩል:  \"vrgb\" ለ ቀይ ከ ላይ በኩል: \"vbgr\" ለ ቀይ ከ ታች በኩል"
 
 #: data/org.mate.peripherals-keyboard.gschema.xml.in:25
 msgid "possible values are \"on\", \"off\", and \"custom\"."
@@ -253,8 +253,8 @@ msgid ""
 "Set this to one of \"none\", \"lock_screen\", or \"force_logout\". The "
 "action will get performed when the smartcard used for log in is removed."
 msgstr ""
-"ከ እነዚህ አንዱን ያሰናዱ \"ምንም\", \"መመልከቻ_መቆለፊያ\": ወይንም \"አስገድዶ_መውጫ\". ይህ ተግባር ይፈጸማል"
-" ይህን የ smartcard ሲጠቀሙ መግቢያ ሲያስወግዱ"
+"ከ እነዚህ አንዱን ያሰናዱ \"ምንም\", \"መመልከቻ_መቆለፊያ\": ወይንም \"አስገድዶ_መውጫ\". ይህ ተግባር ይፈጸማል "
+"ይህን የ smartcard ሲጠቀሙ መግቢያ ሲያስወግዱ"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:15
 msgid "Disable touchpad while typing"
@@ -262,8 +262,8 @@ msgstr "በምጽፍ ጊዜ ተችፓድ ማሰናከያ"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:16
 msgid ""
-"Set this to TRUE if you have problems with accidentally hitting the touchpad"
-" while typing."
+"Set this to TRUE if you have problems with accidentally hitting the touchpad "
+"while typing."
 msgstr "ይህን ወደ እውነት ያሰናዱ: እርስዎ ችግር ከ ገጠምዎት በ ስህተት ተችፓድ የሚነኩ ከሆነ በሚጽፉ ጊዜ"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:20
@@ -381,8 +381,8 @@ msgid ""
 "Swap left and right buttons for left-handed touchpads with 'left', 'right' "
 "for right-handed, 'mouse' to follow the mouse setting."
 msgstr ""
-"ይጥረጉ ወደ ግራ እና ቀኝ ቁልፍ በ ግራ-እጅ ተጠቃሚዎች ተችፓድ በ  'ግራ', 'ቀኝ' በ ቀኝ-እጅ ተጠቃሚዎች, 'አይጥ'"
-" የ አይጥ ማሰናጃ እንዲከተል"
+"ይጥረጉ ወደ ግራ እና ቀኝ ቁልፍ በ ግራ-እጅ ተጠቃሚዎች ተችፓድ በ  'ግራ', 'ቀኝ' በ ቀኝ-እጅ ተጠቃሚዎች, 'አይጥ' "
+"የ አይጥ ማሰናጃ እንዲከተል"
 
 #: data/org.mate.peripherals-touchpad.gschema.xml.in:86
 msgid ""
@@ -501,8 +501,8 @@ msgid ""
 "Percentage free space threshold for initial warning of low disk space. If "
 "the percentage free space drops below this, a warning will be shown."
 msgstr ""
-"ነፃ የ ቀረው ባዶ ቦታ በ ፐርሰንት የ መጀመሪያውን ማስጠንቀቂያ ለማስጀመር:  በ ፐርሰንት ነፃ የ ቀረው ባዶ ቦታ ከዚህ"
-" በታች ሲሆን ማስጠንቀቂያ ይታያል"
+"ነፃ የ ቀረው ባዶ ቦታ በ ፐርሰንት የ መጀመሪያውን ማስጠንቀቂያ ለማስጀመር:  በ ፐርሰንት ነፃ የ ቀረው ባዶ ቦታ ከዚህ "
+"በታች ሲሆን ማስጠንቀቂያ ይታያል"
 
 #: data/org.mate.SettingsDaemon.plugins.housekeeping.gschema.xml.in:20
 msgid "Subsequent free percentage notify threshold"
@@ -808,8 +808,8 @@ msgstr "የ ውጪ መመልከቻ ማብሪያ ስርአቱ ከ ጀመረ በ�
 
 #: data/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml.in:26
 msgid ""
-"Turn on external monitor after system boot if user plugs in external monitor"
-" on system boot."
+"Turn on external monitor after system boot if user plugs in external monitor "
+"on system boot."
 msgstr ""
 "ስርአቱ ከ ተነሳ በኋላ የ ውጪ መመልከቻውን ማብሪያ: ተጠቃሚው የ ውጪ መመልከቻ ከ ስርአቱ ማስጀመሪያ ጋር ካያያዘ"
 
@@ -841,19 +841,19 @@ msgstr ""
 msgid "MATE Settings Daemon"
 msgstr "የ ሜት ማሰናጃ ረዳት"
 
-#: mate-settings-daemon/main.c:66
+#: mate-settings-daemon/main.c:65
 msgid "Enable debugging code"
 msgstr "ኮድ ማስተካከያ ማስቻያ"
 
-#: mate-settings-daemon/main.c:67
+#: mate-settings-daemon/main.c:68
 msgid "Replace the current daemon"
 msgstr "የ አሁኑን ረዳት መቀየሪያ"
 
-#: mate-settings-daemon/main.c:68
+#: mate-settings-daemon/main.c:70
 msgid "Don't become a daemon"
 msgstr "እረዳት አትሁን"
 
-#: mate-settings-daemon/main.c:69
+#: mate-settings-daemon/main.c:72
 msgid "Exit after a time (for debugging)"
 msgstr "ከ ተወሰነ ጊዜ በኋላ መውጫ (ለ ማስተካከያ)"
 
@@ -865,23 +865,23 @@ msgstr "የ ፊደል ገበታ ጋር መድረሻ"
 msgid "Accessibility keyboard plugin"
 msgstr "የ ፊደል ገበታ ተሰኪ ጋር መድረሻ"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:460
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:407
 #, c-format
 msgid "There was an error displaying help: %s"
 msgstr "እርዳታ በ ማሳየት ላይ እንዳለ ስህተት ተፈጥሯል: %s"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:588
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:652
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:515
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:572
 msgid "Do you want to activate Slow Keys?"
 msgstr "ዝግተኛ ቁልፎችን ማስጀመር ይፈልጋሉ?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:589
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:653
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:516
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:573
 msgid "Do you want to deactivate Slow Keys?"
 msgstr "ዝግተኛ ቁልፎችን ማስጀመር ይፈልጋሉ?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:590
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:654
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:518
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:575
 msgid ""
 "You just held down the Shift key for 8 seconds.  This is the shortcut for "
 "the Slow Keys feature, which affects the way your keyboard works."
@@ -889,71 +889,71 @@ msgstr ""
 "እርስዎ ተጭነው ይዘዋል የ Shift ቁልፍ ለ 8 ሰከንዶች: ይህ አቋራጭ ነው ለ ማዘግያ ቁልፍ ገጽታ: ይህ የ እርስዎን "
 "የ ፊደል ገበታ አሰራር ይቀይረዋል"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:613
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:750
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:542
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:663
 msgid "Don't activate"
 msgstr "አታስጀምር"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:613
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:750
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:542
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:663
 msgid "Don't deactivate"
 msgstr "አታስጀምር መተው"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:619
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:756
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:545
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:666
 msgid "Activate"
 msgstr "ማስጀመሪያ"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:619
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:756
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:545
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:666
 msgid "Deactivate"
 msgstr "አታስጀምር"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:592
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:718
 msgid "Do_n't activate"
 msgstr "አታስጀምር"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:592
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:718
 msgid "Do_n't deactivate"
 msgstr "አታስጀምር መተው"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:595
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:721
 msgid "_Activate"
 msgstr "_ማስጀመሪያ"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:595
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:721
 msgid "_Deactivate"
 msgstr "_አታስጀምር"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:682
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:599
 msgid "Slow Keys Alert"
 msgstr "የ ዝግተኛ ቁልፍ ማስጠንቀቂያ"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:722
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:788
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:631
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:693
 msgid "Do you want to activate Sticky Keys?"
 msgstr "ተጣባቂ ቁልፎችን ማስጀመር ይፈልጋሉ?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:723
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:789
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:632
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:694
 msgid "Do you want to deactivate Sticky Keys?"
 msgstr "ተጣባቂ ቁልፎችን ማቦዘን ይፈልጋሉ?"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:725
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:791
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:633
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:695
 msgid ""
 "You just pressed the Shift key 5 times in a row.  This is the shortcut for "
 "the Sticky Keys feature, which affects the way your keyboard works."
 msgstr ""
-"እርስዎ የ Shift ቁልፍ 5 ጊዜ ተጭነዋል በ ተከታታይ: ይህ አቋራጭ ነው ለ ተጣባቂ ቁልፎች ገጽታ: ይህ በ እርስዎ የ"
-" ፊደል ገበታ አሰራር ላይ ተጽእኖ ይፈጥራል"
+"እርስዎ የ Shift ቁልፍ 5 ጊዜ ተጭነዋል በ ተከታታይ: ይህ አቋራጭ ነው ለ ተጣባቂ ቁልፎች ገጽታ: ይህ በ እርስዎ የ "
+"ፊደል ገበታ አሰራር ላይ ተጽእኖ ይፈጥራል"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:727
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:793
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:637
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:699
 msgid ""
 "You just pressed two keys at once, or pressed the Shift key 5 times in a "
 "row.  This turns off the Sticky Keys feature, which affects the way your "
@@ -962,11 +962,11 @@ msgstr ""
 "እርስዎ አሁን ሁለት ቁልፎች በ አንድ ጊዜ ተጭነዋል: ወይንም የ Shift ቁልፍ 5 ጊዜ በ ተከታታይ ተጭነዋል: ይህ "
 "ተጣባቂ ቁልፍ ገጽታን ያጠፋዋል: ይህ የ እርስዎን የ ፊደል ገበታ አሰራር ይቀይረዋል"
 
-#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:821
+#: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:725
 msgid "Sticky Keys Alert"
 msgstr "የ ተጣባቂ ቁልፍ ማስጠንቀቂያ"
 
-#: plugins/a11y-keyboard/msd-a11y-preferences-dialog.c:830
+#: plugins/a11y-keyboard/msd-a11y-preferences-dialog.c:762
 #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:14
 msgid "Universal Access Preferences"
 msgstr "የ አለም አቀፍ መድረሻ ምርጫዎች"
@@ -1073,25 +1073,25 @@ msgid ""
 "about low disk space"
 msgstr ""
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:61
+#: plugins/housekeeping/msd-ldsm-dialog.c:58
 msgid "Don't show any warnings again for this file system"
 msgstr "ስለዚህ የ ፋይል ስርአት ምንም ማስጠንቀቂያ አታሳየኝ"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:63
+#: plugins/housekeeping/msd-ldsm-dialog.c:60
 msgid "Don't show any warnings again"
 msgstr "ምንም አይነት ማስጠንቀቂያ አታሳየኝ "
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:76
+#: plugins/housekeeping/msd-ldsm-dialog.c:72
 #, c-format
 msgid "The volume \"%s\" has only %s disk space remaining."
 msgstr "ይህ መጠን \"%s\" ያለው %s ባዶ ቦታ ነው"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:79
+#: plugins/housekeeping/msd-ldsm-dialog.c:76
 #, c-format
 msgid "This computer has only %s disk space remaining."
 msgstr "ይህ መጠን ያለው %s ባዶ ቦታ ነው"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:95
+#: plugins/housekeeping/msd-ldsm-dialog.c:90
 msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to another disk or partition."
@@ -1099,7 +1099,7 @@ msgstr ""
 "እርስዎ ነፃ ቦታ መፍጠር ይችላሉ ቆሻሻውን ቦዳ በማድረግ: የማይጠቀሙበትን ፕሮግራም  ወይንም ፋይሎች በማስወገድ ወይንም "
 "ፋይሎችን ወደ ሌላ ዲስክ ውስጥ በማስተላለፍ "
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:98
+#: plugins/housekeeping/msd-ldsm-dialog.c:95
 msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to another disk or partition."
@@ -1107,7 +1107,7 @@ msgstr ""
 "እርስዎ ነፃ ቦታ መፍጠር ይችላሉ የማይጠቀሙበትን ፕሮግራም  ወይንም ፋይሎች በማስወገድ ወይንም ፋይሎችን ወደ ሌላ ዲስክ "
 "ውስጥ በማስተላለፍ"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:103
+#: plugins/housekeeping/msd-ldsm-dialog.c:101
 msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to an external disk."
@@ -1115,7 +1115,7 @@ msgstr ""
 "እርስዎ ነፃ ቦታ መፍጠር ይችላሉ ቆሻሻውን ቦዳ በማድረግ: የማይጠቀሙበትን ፕሮግራም  ወይንም ፋይሎች በማስወገድ ወይንም "
 "ፋይሎችን ወደ ሌላ ዲስክ ውስጥ በማስተላለፍ"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:106
+#: plugins/housekeeping/msd-ldsm-dialog.c:105
 msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to an external disk."
@@ -1124,51 +1124,51 @@ msgstr ""
 "ውስጥ በማስተላለፍ"
 
 #. Set up all the window stuff here
-#: plugins/housekeeping/msd-ldsm-dialog.c:201
+#: plugins/housekeeping/msd-ldsm-dialog.c:192
 msgid "Low Disk Space"
 msgstr "አነስተኛ የዲስክ ቦታ"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:436
+#: plugins/housekeeping/msd-ldsm-dialog.c:411
 msgid "Empty Trash"
 msgstr "ቆሻሻውን ባዶ ማድረጊያ"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:444
+#: plugins/housekeeping/msd-ldsm-dialog.c:419
 msgid "Examine…"
 msgstr "መመርመሪያ…"
 
-#: plugins/housekeeping/msd-ldsm-dialog.c:451
+#: plugins/housekeeping/msd-ldsm-dialog.c:426
 msgid "Ignore"
 msgstr "መተው "
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:98
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:94
 #, c-format
 msgid "Removing item %lu of %lu"
 msgstr "እቃዎችን በማስወገድ ላይ %lu ከ %lu"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:118
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:113
 #, c-format
 msgid "Removing: %s"
 msgstr "በማስወገድ ላይ: %s"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:248
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:301
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:223
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:281
 msgid "Emptying the trash"
 msgstr "ቆሻሻውን ባዶ በማድረግ ላይ "
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:277
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:253
 msgid "Preparing to empty trash…"
 msgstr "ቆሻሻውን ባዶ ለማድረግ በማሰናዳት ላይ "
 
 #. Translators: "Emptying trash from <device>"
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:304
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:284
 msgid "From: "
 msgstr "ከ : "
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:356
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:328
 msgid "Empty all of the items from the trash?"
 msgstr "በቆሻሻ ውስጥ ያለውን ባዶ ላድርገው? "
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:359
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:332
 msgid ""
 "If you choose to empty the trash, all items in it will be permanently lost. "
 "Please note that you can also delete them separately."
@@ -1176,7 +1176,7 @@ msgstr ""
 "እርስዎ ቆሻሻውን ባዶ ማድረግ ከ ፈለጉ: ሁሉም እቃዎች በ ቋሚነት ይጠፋሉ: እባክዎን ያስታውሱ እያንዳንዱን እቃ ለየብቻ "
 "ማጥፋት ይችላሉ"
 
-#: plugins/housekeeping/msd-ldsm-trash-empty.c:366
+#: plugins/housekeeping/msd-ldsm-trash-empty.c:339
 msgid "_Empty Trash"
 msgstr "ቆሻሻውን ባዶ ማድረጊያ"
 
@@ -1188,17 +1188,17 @@ msgstr "ቁልፍ ማጣመሪያ"
 msgid "Keybindings plugin"
 msgstr "የ ቁልፍ ማጣመሪያ ተሰኪ"
 
-#: plugins/keybindings/msd-keybindings-manager.c:109
+#: plugins/keybindings/msd-keybindings-manager.c:100
 #, c-format
 msgid "Key binding (%s) is invalid"
 msgstr "ቁልፍ ማጣመሪያው (%s) ዋጋ የለውም"
 
-#: plugins/keybindings/msd-keybindings-manager.c:145
+#: plugins/keybindings/msd-keybindings-manager.c:131
 #, c-format
 msgid "Key binding (%s) is incomplete"
 msgstr "ቁልፍ ማጣመሪያው (%s) ሙሉ አይደለም"
 
-#: plugins/keybindings/msd-keybindings-manager.c:487
+#: plugins/keybindings/msd-keybindings-manager.c:443
 #, c-format
 msgid ""
 "Error while trying to run (%s)\n"
@@ -1215,7 +1215,7 @@ msgstr "የፊደል ገበታ"
 msgid "Keyboard plugin"
 msgstr "የ ፊደል ገበታ ተሰኪ"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:120
+#: plugins/keyboard/msd-keyboard-xkb.c:104
 #, c-format
 msgid ""
 "Error activating XKB configuration.\n"
@@ -1232,15 +1232,15 @@ msgid ""
 " • The result of <b>%s</b>"
 msgstr ""
 
-#: plugins/keyboard/msd-keyboard-xkb.c:286
+#: plugins/keyboard/msd-keyboard-xkb.c:240
 msgid "_Layouts"
 msgstr "_እቅዶች"
 
-#: plugins/keyboard/msd-keyboard-xkb.c:293
+#: plugins/keyboard/msd-keyboard-xkb.c:245
 msgid "Keyboard _Preferences"
 msgstr "የፊደል ገበታ _ምርጫዎች "
 
-#: plugins/keyboard/msd-keyboard-xkb.c:299
+#: plugins/keyboard/msd-keyboard-xkb.c:251
 msgid "Show _Current Layout"
 msgstr "የ _አሁኑን እቅድ ማሳያ"
 
@@ -1252,15 +1252,15 @@ msgstr "መገናኛ ቁልፎች"
 msgid "Media keys plugin"
 msgstr "የ መገናኛ ቁልፎች ተሰኪ"
 
-#: plugins/media-keys/msd-media-keys-manager.c:185
+#: plugins/media-keys/msd-media-keys-manager.c:165
 msgid ""
-"Could not get default terminal. Verify that your default terminal command is"
-" set and points to a valid application."
+"Could not get default terminal. Verify that your default terminal command is "
+"set and points to a valid application."
 msgstr ""
 "ነባር ተርሚናል ማግኘት አልተቻለም: የ እርስዎ ነባር ተርሚናል ትእዛዝ መሰናዳቱን እና ወደ ትክክለኛው መተግበሪያ "
 "እንደሚያመለክት"
 
-#: plugins/media-keys/msd-media-keys-manager.c:225
+#: plugins/media-keys/msd-media-keys-manager.c:191
 #, c-format
 msgid ""
 "Couldn't execute command: %s\n"
@@ -1269,47 +1269,47 @@ msgstr ""
 "ትእዛዝ መፈጸም አልተቻለም: %s\n"
 "ትእዛዙ ትክክለኛ መሆኑን ያረጋግጡ"
 
-#: plugins/media-keys/msd-media-keys-manager.c:638
-#: plugins/media-keys/test-media-window.c:82
+#: plugins/media-keys/msd-media-keys-manager.c:556
+#: plugins/media-keys/test-media-window.c:76
 msgid "Touchpad enabled"
 msgstr "ተችፓድ አስችለዋል"
 
-#: plugins/media-keys/msd-media-keys-manager.c:638
-#: plugins/media-keys/test-media-window.c:75
+#: plugins/media-keys/msd-media-keys-manager.c:556
+#: plugins/media-keys/test-media-window.c:69
 msgid "Touchpad disabled"
 msgstr "ተችፓድ ተሰናክሏል"
 
-#: plugins/media-keys/msd-media-keys-manager.c:956
-#: plugins/media-keys/test-media-window.c:89
+#: plugins/media-keys/msd-media-keys-manager.c:834
+#: plugins/media-keys/test-media-window.c:83
 msgid "Bluetooth disabled"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:959
-#: plugins/media-keys/test-media-window.c:96
+#: plugins/media-keys/msd-media-keys-manager.c:838
+#: plugins/media-keys/test-media-window.c:90
 msgid "Bluetooth enabled"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:963
-#: plugins/media-keys/test-media-window.c:103
+#: plugins/media-keys/msd-media-keys-manager.c:843
+#: plugins/media-keys/test-media-window.c:97
 msgid "Airplane mode enabled"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:966
-#: plugins/media-keys/test-media-window.c:110
+#: plugins/media-keys/msd-media-keys-manager.c:848
+#: plugins/media-keys/test-media-window.c:105
 msgid "Airplane mode disabled"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:997
+#: plugins/media-keys/msd-media-keys-manager.c:875
 msgid "Hardware Airplane Mode"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:1035
-#: plugins/media-keys/test-media-window.c:124
+#: plugins/media-keys/msd-media-keys-manager.c:908
+#: plugins/media-keys/test-media-window.c:119
 msgid "Changing Screen Layout"
 msgstr ""
 
-#: plugins/media-keys/msd-media-keys-manager.c:1039
-#: plugins/media-keys/test-media-window.c:117
+#: plugins/media-keys/msd-media-keys-manager.c:912
+#: plugins/media-keys/test-media-window.c:112
 msgid "No External Display"
 msgstr ""
 
@@ -1321,16 +1321,16 @@ msgstr "አይጥ "
 msgid "Mouse plugin"
 msgstr "የ አይጥ ተሰኪ"
 
-#: plugins/mouse/msd-mouse-manager.c:1651
+#: plugins/mouse/msd-mouse-manager.c:1518
 msgid "Could not enable mouse accessibility features"
 msgstr "የ አይጥ ቁልፍ መደረሻ ገጽታዎችን ማስቻል አልተቻለም"
 
-#: plugins/mouse/msd-mouse-manager.c:1653
+#: plugins/mouse/msd-mouse-manager.c:1520
 msgid ""
 "Mouse accessibility requires Mousetweaks to be installed on your system."
 msgstr "የ አይጥ መድረሻ የ አይጥ ማስተካከያ በ ቅድሚያ በ ስርአቱ ውስጥ መገጠም አለበት"
 
-#: plugins/mouse/msd-mouse-manager.c:1656
+#: plugins/mouse/msd-mouse-manager.c:1523
 msgid "Mouse Preferences"
 msgstr "የ አይጥ ምርጫዎች "
 
@@ -1352,65 +1352,65 @@ msgstr ""
 msgid "Rfkill plugin"
 msgstr ""
 
-#: plugins/smartcard/msd-smartcard-manager.c:165
+#: plugins/smartcard/msd-smartcard-manager.c:153
 msgid "Module Path"
 msgstr "የ ክፍል ዘዴ"
 
-#: plugins/smartcard/msd-smartcard-manager.c:166
+#: plugins/smartcard/msd-smartcard-manager.c:154
 msgid "path to smartcard PKCS #11 driver"
 msgstr "መንገድ ወደ smartcard PKCS #11 driver"
 
-#: plugins/smartcard/msd-smartcard-manager.c:492
+#: plugins/smartcard/msd-smartcard-manager.c:431
 msgid "received error or hang up from event source"
 msgstr "ስህተት ተቀብሏል ወይንም መዝጊያ ከ ሁኔታው ምንጭ"
 
-#: plugins/smartcard/msd-smartcard-manager.c:581
+#: plugins/smartcard/msd-smartcard-manager.c:511
 msgid "NSS security system could not be initialized"
 msgstr "የ NSS ደህንነት ስርአት ማስጀመር አልተቻለም"
 
-#: plugins/smartcard/msd-smartcard-manager.c:650
+#: plugins/smartcard/msd-smartcard-manager.c:570
 msgid "no suitable smartcard driver could be found"
 msgstr "ተስማሚ የ smartcard አካል ማግኘት አልተቻለም"
 
-#: plugins/smartcard/msd-smartcard-manager.c:670
+#: plugins/smartcard/msd-smartcard-manager.c:587
 #, c-format
 msgid "smartcard driver '%s' could not be loaded"
 msgstr "የ smartcard አካል '%s' መጫን አልተቻለም"
 
-#: plugins/smartcard/msd-smartcard-manager.c:754
+#: plugins/smartcard/msd-smartcard-manager.c:665
 #, c-format
 msgid "could not watch for incoming card events - %s"
 msgstr "ወደ ውስጥ የሚመጣውን የ ካርድ ሁኔታ መመልከት አልተቻለም - %s"
 
-#: plugins/smartcard/msd-smartcard-manager.c:1101
+#: plugins/smartcard/msd-smartcard-manager.c:971
 msgid "encountered unexpected error while waiting for smartcard events"
 msgstr "ያልታሰበ ችግር ገጥሞታል smartcard ሁኔታዎች በ መጠበቅ ላይ እንዳለ"
 
-#: plugins/smartcard/msd-smartcard.c:149
+#: plugins/smartcard/msd-smartcard.c:125
 msgid "Slot ID"
 msgstr "Slot ID"
 
-#: plugins/smartcard/msd-smartcard.c:150
+#: plugins/smartcard/msd-smartcard.c:125
 msgid "The slot the card is in"
 msgstr "ካርዱ ያለበት ማስገቢያ"
 
-#: plugins/smartcard/msd-smartcard.c:156
+#: plugins/smartcard/msd-smartcard.c:130
 msgid "Slot Series"
 msgstr "የ ማስገቢያ ተከታታይ"
 
-#: plugins/smartcard/msd-smartcard.c:157
+#: plugins/smartcard/msd-smartcard.c:131
 msgid "per-slot card identifier"
 msgstr "በ-ማስገቢያ ካርድ መለያ"
 
-#: plugins/smartcard/msd-smartcard.c:163 plugins/smartcard/msd-smartcard.c:164
+#: plugins/smartcard/msd-smartcard.c:136
 msgid "name"
 msgstr "ስም "
 
-#: plugins/smartcard/msd-smartcard.c:168
+#: plugins/smartcard/msd-smartcard.c:141
 msgid "Module"
 msgstr "ክፍል"
 
-#: plugins/smartcard/msd-smartcard.c:169
+#: plugins/smartcard/msd-smartcard.c:141
 msgid "smartcard driver"
 msgstr "የ smartcard አካል"
 
@@ -1438,19 +1438,19 @@ msgstr "የ መጻፊያ እረፍት"
 msgid "Typing break plugin"
 msgstr "የ መጻፊያ እረፍት ተሰኪ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:370
+#: plugins/xrandr/msd-xrandr-manager.c:343
 msgid "Could not switch the monitor configuration"
 msgstr "የ መመልከቻ ማሰናጃ መቀየር አይቻልም"
 
-#: plugins/xrandr/msd-xrandr-manager.c:394
+#: plugins/xrandr/msd-xrandr-manager.c:369
 msgid "Could not restore the display's configuration"
 msgstr "የ መመልከቻ ማሰናጃ ማሳያ እነደ ነበር መመለስ አይቻልም"
 
-#: plugins/xrandr/msd-xrandr-manager.c:419
+#: plugins/xrandr/msd-xrandr-manager.c:394
 msgid "Could not restore the display's configuration from a backup"
 msgstr "ማሳያውን እንደ ነበር መመለስ አይቻልም ከ ተተኪ ውስጥ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:440
+#: plugins/xrandr/msd-xrandr-manager.c:413
 #, c-format
 msgid "The display will be reset to its previous configuration in %d second"
 msgid_plural ""
@@ -1458,97 +1458,97 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:491
+#: plugins/xrandr/msd-xrandr-manager.c:458
 msgid "Does the display look OK?"
 msgstr "መመልከቻው ጥሩ ነው?"
 
-#: plugins/xrandr/msd-xrandr-manager.c:498
+#: plugins/xrandr/msd-xrandr-manager.c:467
 msgid "_Restore Previous Configuration"
 msgstr "ያለፈውን ማሰናጃ _እንደ ነበር መመለሻ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:499
+#: plugins/xrandr/msd-xrandr-manager.c:470
 msgid "_Keep This Configuration"
 msgstr "ይህን ማሰናጃ _ማስቀመጫ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:580
+#: plugins/xrandr/msd-xrandr-manager.c:555
 msgid "The selected configuration for displays could not be applied"
 msgstr "የ ተመረጠውን የ ማሳያ ማሰናጃ መፈጸም አይቻልም"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1177
+#: plugins/xrandr/msd-xrandr-manager.c:1125
 #, c-format
 msgid "Could not refresh the screen information: %s"
 msgstr "የ መመልከቻውን መረጃ ማነቃቃት አይቻልም: %s"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1181
+#: plugins/xrandr/msd-xrandr-manager.c:1131
 msgid "Trying to switch the monitor configuration anyway."
 msgstr "ለማንኛውም የ መመልከቻ ማሰናጃውን ለ መቀየር ልሞክር"
 
-#: plugins/xrandr/msd-xrandr-manager.c:1938
+#: plugins/xrandr/msd-xrandr-manager.c:1901
 msgid "Rotation not supported"
 msgstr "ማዞሪያ የ ተደገፈ አይደለም"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2003
-#: plugins/xrandr/msd-xrandr-manager.c:2035
+#: plugins/xrandr/msd-xrandr-manager.c:1961
+#: plugins/xrandr/msd-xrandr-manager.c:1992
 msgid "Could not save monitor configuration"
 msgstr "የ መመልከቻ ማሰናጃ ማስቀመጥ አልተቻለም"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2056
+#: plugins/xrandr/msd-xrandr-manager.c:2012
 msgid "Mirroring outputs not supported"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2087
+#: plugins/xrandr/msd-xrandr-manager.c:2042
 msgid "Normal"
 msgstr "መደበኛ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2088
+#: plugins/xrandr/msd-xrandr-manager.c:2043
 msgid "Left"
 msgstr "በ ግራ "
 
-#: plugins/xrandr/msd-xrandr-manager.c:2089
+#: plugins/xrandr/msd-xrandr-manager.c:2044
 msgid "Right"
 msgstr "በ ቀኝ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2090
+#: plugins/xrandr/msd-xrandr-manager.c:2045
 msgid "Upside Down"
 msgstr "የ ተገለበጠ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2179
+#: plugins/xrandr/msd-xrandr-manager.c:2135
 msgid "ON"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2180
+#: plugins/xrandr/msd-xrandr-manager.c:2136
 msgid "Turn this monitor off"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2183
+#: plugins/xrandr/msd-xrandr-manager.c:2138
 msgid "OFF"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2184
+#: plugins/xrandr/msd-xrandr-manager.c:2139
 msgid "Turn this monitor on"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2244
-msgid "Same output all monitors"
+#: plugins/xrandr/msd-xrandr-manager.c:2193
+msgid "Same output on all monitors"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2245
+#: plugins/xrandr/msd-xrandr-manager.c:2195
 msgid "Mirror same output to all monitors and turn them on"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2292
+#: plugins/xrandr/msd-xrandr-manager.c:2241
 msgid "_Configure Display Settings…"
 msgstr "የ መመልከቻ _ማስተካከያ ማሰናጃ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2302
+#: plugins/xrandr/msd-xrandr-manager.c:2252
 msgid "Open the display configuration dialog (all settings)"
 msgstr ""
 
-#: plugins/xrandr/msd-xrandr-manager.c:2359
+#: plugins/xrandr/msd-xrandr-manager.c:2306
 msgid "Configure display settings"
 msgstr "የ መመልከቻ ማሰናጃ"
 
-#: plugins/xrandr/msd-xrandr-manager.c:2419
+#: plugins/xrandr/msd-xrandr-manager.c:2362
 msgid "Could not apply the stored configuration for monitors"
 msgstr "የ ተቀመጠውን ማሰናጃ ማስተካከያ መፈጸም አልተቻለም"
 
@@ -1560,7 +1560,7 @@ msgstr "XRandR"
 msgid "Set up screen size and rotation settings"
 msgstr "የ መመልከቻ መጠን እና ማዞሪያ ማሰናጃ"
 
-#: plugins/xrdb/msd-xrdb-manager.c:249 plugins/xrdb/msd-xrdb-manager.c:318
+#: plugins/xrdb/msd-xrdb-manager.c:211 plugins/xrdb/msd-xrdb-manager.c:273
 msgid "Cannot determine user's home directory"
 msgstr "የ ተጠቃሚውን የ ቤት ዳይሬክቶሪ መወሰን አልተቻለም"
 

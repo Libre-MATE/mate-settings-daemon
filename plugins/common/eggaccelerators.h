@@ -31,18 +31,17 @@ extern "C" {
 /* Where a value is also in GdkModifierType we coincide,
  * otherwise we don't overlap.
  */
-typedef enum
-{
-  EGG_VIRTUAL_SHIFT_MASK    = 1 << 0,
-  EGG_VIRTUAL_LOCK_MASK	    = 1 << 1,
-  EGG_VIRTUAL_CONTROL_MASK  = 1 << 2,
+typedef enum {
+  EGG_VIRTUAL_SHIFT_MASK = 1 << 0,
+  EGG_VIRTUAL_LOCK_MASK = 1 << 1,
+  EGG_VIRTUAL_CONTROL_MASK = 1 << 2,
 
-  EGG_VIRTUAL_ALT_MASK      = 1 << 3, /* fixed as Mod1 */
+  EGG_VIRTUAL_ALT_MASK = 1 << 3, /* fixed as Mod1 */
 
-  EGG_VIRTUAL_MOD2_MASK	    = 1 << 4,
-  EGG_VIRTUAL_MOD3_MASK	    = 1 << 5,
-  EGG_VIRTUAL_MOD4_MASK	    = 1 << 6,
-  EGG_VIRTUAL_MOD5_MASK	    = 1 << 7,
+  EGG_VIRTUAL_MOD2_MASK = 1 << 4,
+  EGG_VIRTUAL_MOD3_MASK = 1 << 5,
+  EGG_VIRTUAL_MOD4_MASK = 1 << 6,
+  EGG_VIRTUAL_MOD5_MASK = 1 << 7,
 
 #if 0
   GDK_BUTTON1_MASK  = 1 << 8,
@@ -63,7 +62,7 @@ typedef enum
   EGG_VIRTUAL_META_MASK = 1 << 28,
 
   /* Also in GdkModifierType */
-  EGG_VIRTUAL_RELEASE_MASK  = 1 << 30,
+  EGG_VIRTUAL_RELEASE_MASK = 1 << 30,
 
   /*     28-31 24-27 20-23 16-19 12-15 8-11 4-7 0-3
    *       5     f     8     0     0    0    f   f
@@ -72,24 +71,21 @@ typedef enum
 
 } EggVirtualModifierType;
 
-gboolean egg_accelerator_parse_virtual        (const gchar            *accelerator,
-                                               guint                  *accelerator_key,
-					       guint                 **accelerator_codes,
-                                               EggVirtualModifierType *accelerator_mods);
-void     egg_keymap_resolve_virtual_modifiers (GdkKeymap              *keymap,
-                                               EggVirtualModifierType  virtual_mods,
-                                               GdkModifierType        *concrete_mods);
-void     egg_keymap_virtualize_modifiers      (GdkKeymap              *keymap,
-                                               GdkModifierType         concrete_mods,
-                                               EggVirtualModifierType *virtual_mods);
+gboolean egg_accelerator_parse_virtual(
+    const gchar *accelerator, guint *accelerator_key, guint **accelerator_codes,
+    EggVirtualModifierType *accelerator_mods);
+void egg_keymap_resolve_virtual_modifiers(GdkKeymap *keymap,
+                                          EggVirtualModifierType virtual_mods,
+                                          GdkModifierType *concrete_mods);
+void egg_keymap_virtualize_modifiers(GdkKeymap *keymap,
+                                     GdkModifierType concrete_mods,
+                                     EggVirtualModifierType *virtual_mods);
 
-gchar* egg_virtual_accelerator_name (guint                  accelerator_key,
-				     guint		    keycode,
+gchar *egg_virtual_accelerator_name(guint accelerator_key, guint keycode,
+                                    EggVirtualModifierType accelerator_mods);
+
+gchar *egg_virtual_accelerator_label(guint accelerator_key, guint keycode,
                                      EggVirtualModifierType accelerator_mods);
-
-gchar* egg_virtual_accelerator_label (guint                  accelerator_key,
-				      guint		     keycode,
-				      EggVirtualModifierType accelerator_mods);
 
 #ifdef __cplusplus
 }

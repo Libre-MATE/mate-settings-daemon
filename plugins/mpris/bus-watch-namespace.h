@@ -23,13 +23,11 @@
 
 #include <gio/gio.h>
 
-guint       bus_watch_namespace         (GBusType                  bus_type,
-                                         const gchar              *name_space,
-                                         GBusNameAppearedCallback  appeared_handler,
-                                         GBusNameVanishedCallback  vanished_handler,
-                                         gpointer                  user_data,
-                                         GDestroyNotify            user_data_destroy);
+guint bus_watch_namespace(GBusType bus_type, const gchar *name_space,
+                          GBusNameAppearedCallback appeared_handler,
+                          GBusNameVanishedCallback vanished_handler,
+                          gpointer user_data, GDestroyNotify user_data_destroy);
 
-void        bus_unwatch_namespace       (guint id);
+void bus_unwatch_namespace(guint id);
 
 #endif

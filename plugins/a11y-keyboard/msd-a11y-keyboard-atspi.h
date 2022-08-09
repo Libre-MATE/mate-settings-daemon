@@ -25,13 +25,13 @@
 
 G_BEGIN_DECLS
 
-#define MSD_TYPE_A11Y_KEYBOARD_ATSPI (msd_a11y_keyboard_atspi_get_type ())
-G_DECLARE_FINAL_TYPE (MsdA11yKeyboardAtspi, msd_a11y_keyboard_atspi,
-                      MSD, A11Y_KEYBOARD_ATSPI, GObject)
+#define MSD_TYPE_A11Y_KEYBOARD_ATSPI (msd_a11y_keyboard_atspi_get_type())
+G_DECLARE_FINAL_TYPE(MsdA11yKeyboardAtspi, msd_a11y_keyboard_atspi, MSD,
+                     A11Y_KEYBOARD_ATSPI, GObject)
 
-MsdA11yKeyboardAtspi   *msd_a11y_keyboard_atspi_new             (void);
-void                    msd_a11y_keyboard_atspi_start           (MsdA11yKeyboardAtspi *self);
-void                    msd_a11y_keyboard_atspi_stop            (MsdA11yKeyboardAtspi *self);
+MsdA11yKeyboardAtspi *msd_a11y_keyboard_atspi_new(void);
+void msd_a11y_keyboard_atspi_start(MsdA11yKeyboardAtspi *self);
+void msd_a11y_keyboard_atspi_stop(MsdA11yKeyboardAtspi *self);
 
 G_END_DECLS
 

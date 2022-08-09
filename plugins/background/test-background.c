@@ -18,43 +18,37 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#include "config.h"
-
-#include <stdlib.h>
+#include <config.h>
+#include <glib/gi18n.h>
+#include <gtk/gtk.h>
 #include <libintl.h>
 #include <locale.h>
+#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 
-#include <glib/gi18n.h>
-#include <gtk/gtk.h>
-
 #include "msd-background-manager.h"
 
-static gboolean
-idle (MsdBackgroundManager* manager)
-{
-	msd_background_manager_start(manager, NULL);
-	return FALSE;
+static gboolean idle(MsdBackgroundManager* manager) {
+  msd_background_manager_start(manager, NULL);
+  return FALSE;
 }
 
-int
-main (int argc, char* argv[])
-{
-	MsdBackgroundManager* manager;
+int main(int argc, char* argv[]) {
+  MsdBackgroundManager* manager;
 
-	bindtextdomain(GETTEXT_PACKAGE, MATE_SETTINGS_LOCALEDIR);
-	bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
-	textdomain(GETTEXT_PACKAGE);
+  bindtextdomain(GETTEXT_PACKAGE, MATE_SETTINGS_LOCALEDIR);
+  bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
+  textdomain(GETTEXT_PACKAGE);
 
-	setlocale(LC_ALL, "");
+  setlocale(LC_ALL, "");
 
-	gtk_init(&argc, &argv);
+  gtk_init(&argc, &argv);
 
-	manager = msd_background_manager_new();
-	g_idle_add((GSourceFunc) idle, manager);
+  manager = msd_background_manager_new();
+  g_idle_add((GSourceFunc)idle, manager);
 
-	gtk_main();
+  gtk_main();
 
-	return 0;
+  return 0;
 }

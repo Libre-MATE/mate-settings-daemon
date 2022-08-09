@@ -22,9 +22,9 @@
  * Author:  Matthias Clasen, Red Hat, Inc.
  */
 
-#include <stdlib.h>
-
 #include "xutils.h"
+
+#include <stdlib.h>
 
 Atom XA_ATOM_PAIR;
 Atom XA_CLIPBOARD_MANAGER;
@@ -42,48 +42,39 @@ Atom XA_TIMESTAMP;
 
 unsigned long SELECTION_MAX_SIZE = 0;
 
-void
-init_atoms (Display *display)
-{
+void init_atoms(Display *display) {
   unsigned long max_request_size;
 
-  if (SELECTION_MAX_SIZE > 0)
-    return;
+  if (SELECTION_MAX_SIZE > 0) return;
 
-  XA_ATOM_PAIR = XInternAtom (display, "ATOM_PAIR", False);
-  XA_CLIPBOARD_MANAGER = XInternAtom (display, "CLIPBOARD_MANAGER", False);
-  XA_CLIPBOARD = XInternAtom (display, "CLIPBOARD", False);
-  XA_DELETE = XInternAtom (display, "DELETE", False);
-  XA_INCR = XInternAtom (display, "INCR", False);
-  XA_INSERT_PROPERTY = XInternAtom (display, "INSERT_PROPERTY", False);
-  XA_INSERT_SELECTION = XInternAtom (display, "INSERT_SELECTION", False);
-  XA_MANAGER = XInternAtom (display, "MANAGER", False);
-  XA_MULTIPLE = XInternAtom (display, "MULTIPLE", False);
-  XA_NULL = XInternAtom (display, "NULL", False);
-  XA_SAVE_TARGETS = XInternAtom (display, "SAVE_TARGETS", False);
-  XA_TARGETS = XInternAtom (display, "TARGETS", False);
-  XA_TIMESTAMP = XInternAtom (display, "TIMESTAMP", False);
+  XA_ATOM_PAIR = XInternAtom(display, "ATOM_PAIR", False);
+  XA_CLIPBOARD_MANAGER = XInternAtom(display, "CLIPBOARD_MANAGER", False);
+  XA_CLIPBOARD = XInternAtom(display, "CLIPBOARD", False);
+  XA_DELETE = XInternAtom(display, "DELETE", False);
+  XA_INCR = XInternAtom(display, "INCR", False);
+  XA_INSERT_PROPERTY = XInternAtom(display, "INSERT_PROPERTY", False);
+  XA_INSERT_SELECTION = XInternAtom(display, "INSERT_SELECTION", False);
+  XA_MANAGER = XInternAtom(display, "MANAGER", False);
+  XA_MULTIPLE = XInternAtom(display, "MULTIPLE", False);
+  XA_NULL = XInternAtom(display, "NULL", False);
+  XA_SAVE_TARGETS = XInternAtom(display, "SAVE_TARGETS", False);
+  XA_TARGETS = XInternAtom(display, "TARGETS", False);
+  XA_TIMESTAMP = XInternAtom(display, "TIMESTAMP", False);
 
-  max_request_size = XExtendedMaxRequestSize (display);
-  if (max_request_size == 0)
-    max_request_size = XMaxRequestSize (display);
+  max_request_size = XExtendedMaxRequestSize(display);
+  if (max_request_size == 0) max_request_size = XMaxRequestSize(display);
 
   SELECTION_MAX_SIZE = max_request_size - 100;
-  if (SELECTION_MAX_SIZE > 262144)
-    SELECTION_MAX_SIZE =  262144;
+  if (SELECTION_MAX_SIZE > 262144) SELECTION_MAX_SIZE = 262144;
 }
 
-typedef struct
-{
+typedef struct {
   Window window;
   Atom timestamp_prop_atom;
 } TimeStampInfo;
 
-static Bool
-timestamp_predicate (Display *display,
-		     XEvent  *xevent,
-		     XPointer arg)
-{
+static Bool timestamp_predicate(Display *display, XEvent *xevent,
+                                XPointer arg) {
   TimeStampInfo *info = (TimeStampInfo *)arg;
 
   if (xevent->type == PropertyNotify &&
@@ -94,24 +85,18 @@ timestamp_predicate (Display *display,
   return False;
 }
 
-Time
-get_server_time (Display *display,
-		 Window   window)
-{
+Time get_server_time(Display *display, Window window) {
   unsigned char c = 'a';
   XEvent xevent;
   TimeStampInfo info;
 
-  info.timestamp_prop_atom = XInternAtom  (display, "_TIMESTAMP_PROP", False);
+  info.timestamp_prop_atom = XInternAtom(display, "_TIMESTAMP_PROP", False);
   info.window = window;
 
-  XChangeProperty (display, window,
-		   info.timestamp_prop_atom, info.timestamp_prop_atom,
-		   8, PropModeReplace, &c, 1);
+  XChangeProperty(display, window, info.timestamp_prop_atom,
+                  info.timestamp_prop_atom, 8, PropModeReplace, &c, 1);
 
-  XIfEvent (display, &xevent,
-	    timestamp_predicate, (XPointer)&info);
+  XIfEvent(display, &xevent, timestamp_predicate, (XPointer)&info);
 
   return xevent.xproperty.time;
 }
-

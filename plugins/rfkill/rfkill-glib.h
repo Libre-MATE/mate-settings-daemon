@@ -25,61 +25,59 @@
 #ifndef __CC_RFKILL_GLIB_H
 #define __CC_RFKILL_GLIB_H
 
-#include <glib-object.h>
 #include <gio/gio.h>
+#include <glib-object.h>
+
 #include "rfkill.h"
 
 G_BEGIN_DECLS
 
 #define CC_RFKILL_TYPE_GLIB (cc_rfkill_glib_get_type())
-#define CC_RFKILL_GLIB(obj) (G_TYPE_CHECK_INSTANCE_CAST((obj), \
-		CC_RFKILL_TYPE_GLIB, CcRfkillGlib))
-#define CC_RFKILL_GLIB_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST((klass), \
-		CC_RFKILL_TYPE_GLIB, CcRfkillGlibClass))
-#define RFKILL_IS_GLIB(obj) (G_TYPE_CHECK_INSTANCE_TYPE((obj), \
-		CC_RFKILL_TYPE_GLIB))
-#define RFKILL_IS_GLIB_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass), \
-		CC_RFKILL_TYPE_GLIB))
-#define RFKILL_GET_GLIB_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS((obj), \
-		CC_RFKILL_TYPE_GLIB, CcRfkillGlibClass))
+#define CC_RFKILL_GLIB(obj) \
+  (G_TYPE_CHECK_INSTANCE_CAST((obj), CC_RFKILL_TYPE_GLIB, CcRfkillGlib))
+#define CC_RFKILL_GLIB_CLASS(klass) \
+  (G_TYPE_CHECK_CLASS_CAST((klass), CC_RFKILL_TYPE_GLIB, CcRfkillGlibClass))
+#define RFKILL_IS_GLIB(obj) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((obj), CC_RFKILL_TYPE_GLIB))
+#define RFKILL_IS_GLIB_CLASS(klass) \
+  (G_TYPE_CHECK_CLASS_TYPE((klass), CC_RFKILL_TYPE_GLIB))
+#define RFKILL_GET_GLIB_CLASS(obj) \
+  (G_TYPE_INSTANCE_GET_CLASS((obj), CC_RFKILL_TYPE_GLIB, CcRfkillGlibClass))
 
 typedef struct CcRfkillGlibPrivate CcRfkillGlibPrivate;
 
 typedef struct _CcRfkillGlib {
-	GObject parent;
-	CcRfkillGlibPrivate *priv;
+  GObject parent;
+  CcRfkillGlibPrivate *priv;
 } CcRfkillGlib;
 
 typedef struct _CcRfkillGlibClass {
-	GObjectClass parent_class;
+  GObjectClass parent_class;
 
-	void (*changed) (CcRfkillGlib *rfkill, GList *events);
+  void (*changed)(CcRfkillGlib *rfkill, GList *events);
 } CcRfkillGlibClass;
 
-GType         cc_rfkill_glib_get_type          (void);
-CcRfkillGlib *cc_rfkill_glib_new               (void);
-int           cc_rfkill_glib_open              (CcRfkillGlib *rfkill);
+GType cc_rfkill_glib_get_type(void);
+CcRfkillGlib *cc_rfkill_glib_new(void);
+int cc_rfkill_glib_open(CcRfkillGlib *rfkill);
 
-void          cc_rfkill_glib_send_event        (CcRfkillGlib        *rfkill,
-						struct rfkill_event *event,
-						GCancellable        *cancellable,
-						GAsyncReadyCallback  callback,
-						gpointer             user_data);
+void cc_rfkill_glib_send_event(CcRfkillGlib *rfkill, struct rfkill_event *event,
+                               GCancellable *cancellable,
+                               GAsyncReadyCallback callback,
+                               gpointer user_data);
 
-gboolean      cc_rfkill_glib_send_event_finish (CcRfkillGlib        *rfkill,
-						GAsyncResult        *res,
-						GError             **error);
+gboolean cc_rfkill_glib_send_event_finish(CcRfkillGlib *rfkill,
+                                          GAsyncResult *res, GError **error);
 
-void          cc_rfkill_glib_send_change_all_event        (CcRfkillGlib        *rfkill,
-							   guint                rfkill_type,
-							   gboolean             enable,
-							   GCancellable        *cancellable,
-							   GAsyncReadyCallback  callback,
-							   gpointer             user_data);
+void cc_rfkill_glib_send_change_all_event(CcRfkillGlib *rfkill,
+                                          guint rfkill_type, gboolean enable,
+                                          GCancellable *cancellable,
+                                          GAsyncReadyCallback callback,
+                                          gpointer user_data);
 
-gboolean      cc_rfkill_glib_send_change_all_event_finish (CcRfkillGlib        *rfkill,
-							   GAsyncResult        *res,
-							   GError             **error);
+gboolean cc_rfkill_glib_send_change_all_event_finish(CcRfkillGlib *rfkill,
+                                                     GAsyncResult *res,
+                                                     GError **error);
 
 G_END_DECLS
 

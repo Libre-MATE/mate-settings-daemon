@@ -26,15 +26,15 @@
 
 G_BEGIN_DECLS
 
-#define MSD_TYPE_TYPING_BREAK_MANAGER (msd_typing_break_manager_get_type ())
+#define MSD_TYPE_TYPING_BREAK_MANAGER (msd_typing_break_manager_get_type())
 
-G_DECLARE_FINAL_TYPE (MsdTypingBreakManager, msd_typing_break_manager,
-                      MSD, TYPING_BREAK_MANAGER, GObject)
+G_DECLARE_FINAL_TYPE(MsdTypingBreakManager, msd_typing_break_manager, MSD,
+                     TYPING_BREAK_MANAGER, GObject)
 
-MsdTypingBreakManager * msd_typing_break_manager_new                 (void);
-gboolean                msd_typing_break_manager_start               (MsdTypingBreakManager *manager,
-                                                                      GError               **error);
-void                    msd_typing_break_manager_stop                (MsdTypingBreakManager *manager);
+MsdTypingBreakManager *msd_typing_break_manager_new(void);
+gboolean msd_typing_break_manager_start(MsdTypingBreakManager *manager,
+                                        GError **error);
+void msd_typing_break_manager_stop(MsdTypingBreakManager *manager);
 
 G_END_DECLS
 

@@ -19,90 +19,79 @@
  *
  * Authors:
  *      Stefano Karapetsas <stefano@karapetsas.com>
-*/
+ */
 
-#include "config.h"
+#include <config.h>
+
+#include "msd-mpris-plugin.h"
 
 #include <glib/gi18n-lib.h>
 #include <gmodule.h>
 
 #include "mate-settings-plugin.h"
-#include "msd-mpris-plugin.h"
 #include "msd-mpris-manager.h"
 
 struct MsdMprisPluginPrivate {
-        MsdMprisManager *manager;
+  MsdMprisManager *manager;
 };
 
-MATE_SETTINGS_PLUGIN_REGISTER_WITH_PRIVATE (MsdMprisPlugin, msd_mpris_plugin)
+MATE_SETTINGS_PLUGIN_REGISTER_WITH_PRIVATE(MsdMprisPlugin, msd_mpris_plugin)
 
-static void
-msd_mpris_plugin_init (MsdMprisPlugin *plugin)
-{
-        plugin->priv = msd_mpris_plugin_get_instance_private (plugin);
+static void msd_mpris_plugin_init(MsdMprisPlugin *plugin) {
+  plugin->priv = msd_mpris_plugin_get_instance_private(plugin);
 
-        g_debug ("MsdMprisPlugin initializing");
+  g_debug("MsdMprisPlugin initializing");
 
-        plugin->priv->manager = msd_mpris_manager_new ();
+  plugin->priv->manager = msd_mpris_manager_new();
 }
 
-static void
-msd_mpris_plugin_finalize (GObject *object)
-{
-        MsdMprisPlugin *plugin;
+static void msd_mpris_plugin_finalize(GObject *object) {
+  MsdMprisPlugin *plugin;
 
-        g_return_if_fail (object != NULL);
-        g_return_if_fail (MSD_IS_MPRIS_PLUGIN (object));
+  g_return_if_fail(object != NULL);
+  g_return_if_fail(MSD_IS_MPRIS_PLUGIN(object));
 
-        g_debug ("MsdMprisPlugin finalizing");
+  g_debug("MsdMprisPlugin finalizing");
 
-        plugin = MSD_MPRIS_PLUGIN (object);
+  plugin = MSD_MPRIS_PLUGIN(object);
 
-        g_return_if_fail (plugin->priv != NULL);
+  g_return_if_fail(plugin->priv != NULL);
 
-        if (plugin->priv->manager != NULL) {
-                g_object_unref (plugin->priv->manager);
-        }
+  if (plugin->priv->manager != NULL) {
+    g_object_unref(plugin->priv->manager);
+  }
 
-        G_OBJECT_CLASS (msd_mpris_plugin_parent_class)->finalize (object);
+  G_OBJECT_CLASS(msd_mpris_plugin_parent_class)->finalize(object);
 }
 
-static void
-impl_activate (MateSettingsPlugin *plugin)
-{
-        gboolean res;
-        GError  *error;
+static void impl_activate(MateSettingsPlugin *plugin) {
+  gboolean res;
+  GError *error;
 
-        g_debug ("Activating mpris plugin");
+  g_debug("Activating mpris plugin");
 
-        error = NULL;
-        res = msd_mpris_manager_start (MSD_MPRIS_PLUGIN (plugin)->priv->manager, &error);
-        if (! res) {
-                g_warning ("Unable to start mpris manager: %s", error->message);
-                g_error_free (error);
-        }
+  error = NULL;
+  res =
+      msd_mpris_manager_start(MSD_MPRIS_PLUGIN(plugin)->priv->manager, &error);
+  if (!res) {
+    g_warning("Unable to start mpris manager: %s", error->message);
+    g_error_free(error);
+  }
 }
 
-static void
-impl_deactivate (MateSettingsPlugin *plugin)
-{
-        g_debug ("Deactivating mpris plugin");
-        msd_mpris_manager_stop (MSD_MPRIS_PLUGIN (plugin)->priv->manager);
+static void impl_deactivate(MateSettingsPlugin *plugin) {
+  g_debug("Deactivating mpris plugin");
+  msd_mpris_manager_stop(MSD_MPRIS_PLUGIN(plugin)->priv->manager);
 }
 
-static void
-msd_mpris_plugin_class_init (MsdMprisPluginClass *klass)
-{
-        GObjectClass           *object_class = G_OBJECT_CLASS (klass);
-        MateSettingsPluginClass *plugin_class = MATE_SETTINGS_PLUGIN_CLASS (klass);
+static void msd_mpris_plugin_class_init(MsdMprisPluginClass *klass) {
+  GObjectClass *object_class = G_OBJECT_CLASS(klass);
+  MateSettingsPluginClass *plugin_class = MATE_SETTINGS_PLUGIN_CLASS(klass);
 
-        object_class->finalize = msd_mpris_plugin_finalize;
+  object_class->finalize = msd_mpris_plugin_finalize;
 
-        plugin_class->activate = impl_activate;
-        plugin_class->deactivate = impl_deactivate;
+  plugin_class->activate = impl_activate;
+  plugin_class->deactivate = impl_deactivate;
 }
 
-static void
-msd_mpris_plugin_class_finalize (MsdMprisPluginClass *klass)
-{
-}
+static void msd_mpris_plugin_class_finalize(MsdMprisPluginClass *klass) {}

@@ -28,32 +28,38 @@
 extern "C" {
 #endif
 
-#define MATE_TYPE_XSETTINGS_MANAGER         (mate_xsettings_manager_get_type ())
-#define MATE_XSETTINGS_MANAGER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), MATE_TYPE_XSETTINGS_MANAGER, MateXSettingsManager))
-#define MATE_XSETTINGS_MANAGER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), MATE_TYPE_XSETTINGS_MANAGER, MateXSettingsManagerClass))
-#define MATE_IS_XSETTINGS_MANAGER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), MATE_TYPE_XSETTINGS_MANAGER))
-#define MATE_IS_XSETTINGS_MANAGER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), MATE_TYPE_XSETTINGS_MANAGER))
-#define MATE_XSETTINGS_MANAGER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), MATE_TYPE_XSETTINGS_MANAGER, MateXSettingsManagerClass))
+#define MATE_TYPE_XSETTINGS_MANAGER (mate_xsettings_manager_get_type())
+#define MATE_XSETTINGS_MANAGER(o)                               \
+  (G_TYPE_CHECK_INSTANCE_CAST((o), MATE_TYPE_XSETTINGS_MANAGER, \
+                              MateXSettingsManager))
+#define MATE_XSETTINGS_MANAGER_CLASS(k)                      \
+  (G_TYPE_CHECK_CLASS_CAST((k), MATE_TYPE_XSETTINGS_MANAGER, \
+                           MateXSettingsManagerClass))
+#define MATE_IS_XSETTINGS_MANAGER(o) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((o), MATE_TYPE_XSETTINGS_MANAGER))
+#define MATE_IS_XSETTINGS_MANAGER_CLASS(k) \
+  (G_TYPE_CHECK_CLASS_TYPE((k), MATE_TYPE_XSETTINGS_MANAGER))
+#define MATE_XSETTINGS_MANAGER_GET_CLASS(o)                    \
+  (G_TYPE_INSTANCE_GET_CLASS((o), MATE_TYPE_XSETTINGS_MANAGER, \
+                             MateXSettingsManagerClass))
 
 typedef struct MateXSettingsManagerPrivate MateXSettingsManagerPrivate;
 
-typedef struct
-{
-        GObject                     parent;
-        MateXSettingsManagerPrivate *priv;
+typedef struct {
+  GObject parent;
+  MateXSettingsManagerPrivate *priv;
 } MateXSettingsManager;
 
-typedef struct
-{
-        GObjectClass   parent_class;
+typedef struct {
+  GObjectClass parent_class;
 } MateXSettingsManagerClass;
 
-GType                   mate_xsettings_manager_get_type            (void);
+GType mate_xsettings_manager_get_type(void);
 
-MateXSettingsManager * mate_xsettings_manager_new                 (void);
-gboolean                mate_xsettings_manager_start               (MateXSettingsManager *manager,
-                                                                     GError               **error);
-void                    mate_xsettings_manager_stop                (MateXSettingsManager *manager);
+MateXSettingsManager *mate_xsettings_manager_new(void);
+gboolean mate_xsettings_manager_start(MateXSettingsManager *manager,
+                                      GError **error);
+void mate_xsettings_manager_stop(MateXSettingsManager *manager);
 
 #ifdef __cplusplus
 }

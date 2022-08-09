@@ -22,8 +22,8 @@
 #ifndef __MSD_TYPING_BREAK_PLUGIN_H__
 #define __MSD_TYPING_BREAK_PLUGIN_H__
 
-#include <glib.h>
 #include <glib-object.h>
+#include <glib.h>
 #include <gmodule.h>
 
 #include "mate-settings-plugin.h"
@@ -32,30 +32,36 @@
 extern "C" {
 #endif
 
-#define MSD_TYPE_TYPING_BREAK_PLUGIN                (msd_typing_break_plugin_get_type ())
-#define MSD_TYPING_BREAK_PLUGIN(o)                  (G_TYPE_CHECK_INSTANCE_CAST ((o), MSD_TYPE_TYPING_BREAK_PLUGIN, MsdTypingBreakPlugin))
-#define MSD_TYPING_BREAK_PLUGIN_CLASS(k)            (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_TYPING_BREAK_PLUGIN, MsdTypingBreakPluginClass))
-#define MSD_IS_TYPING_BREAK_PLUGIN(o)               (G_TYPE_CHECK_INSTANCE_TYPE ((o), MSD_TYPE_TYPING_BREAK_PLUGIN))
-#define MSD_IS_TYPING_BREAK_PLUGIN_CLASS(k)         (G_TYPE_CHECK_CLASS_TYPE ((k), MSD_TYPE_TYPING_BREAK_PLUGIN))
-#define MSD_TYPING_BREAK_PLUGIN_GET_CLASS(o)        (G_TYPE_INSTANCE_GET_CLASS ((o), MSD_TYPE_TYPING_BREAK_PLUGIN, MsdTypingBreakPluginClass))
+#define MSD_TYPE_TYPING_BREAK_PLUGIN (msd_typing_break_plugin_get_type())
+#define MSD_TYPING_BREAK_PLUGIN(o)                               \
+  (G_TYPE_CHECK_INSTANCE_CAST((o), MSD_TYPE_TYPING_BREAK_PLUGIN, \
+                              MsdTypingBreakPlugin))
+#define MSD_TYPING_BREAK_PLUGIN_CLASS(k)                      \
+  (G_TYPE_CHECK_CLASS_CAST((k), MSD_TYPE_TYPING_BREAK_PLUGIN, \
+                           MsdTypingBreakPluginClass))
+#define MSD_IS_TYPING_BREAK_PLUGIN(o) \
+  (G_TYPE_CHECK_INSTANCE_TYPE((o), MSD_TYPE_TYPING_BREAK_PLUGIN))
+#define MSD_IS_TYPING_BREAK_PLUGIN_CLASS(k) \
+  (G_TYPE_CHECK_CLASS_TYPE((k), MSD_TYPE_TYPING_BREAK_PLUGIN))
+#define MSD_TYPING_BREAK_PLUGIN_GET_CLASS(o)                    \
+  (G_TYPE_INSTANCE_GET_CLASS((o), MSD_TYPE_TYPING_BREAK_PLUGIN, \
+                             MsdTypingBreakPluginClass))
 
 typedef struct MsdTypingBreakPluginPrivate MsdTypingBreakPluginPrivate;
 
-typedef struct
-{
-        MateSettingsPlugin    parent;
-        MsdTypingBreakPluginPrivate *priv;
+typedef struct {
+  MateSettingsPlugin parent;
+  MsdTypingBreakPluginPrivate *priv;
 } MsdTypingBreakPlugin;
 
-typedef struct
-{
-        MateSettingsPluginClass parent_class;
+typedef struct {
+  MateSettingsPluginClass parent_class;
 } MsdTypingBreakPluginClass;
 
-GType   msd_typing_break_plugin_get_type            (void) G_GNUC_CONST;
+GType msd_typing_break_plugin_get_type(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_mate_settings_plugin (GTypeModule *module);
+G_MODULE_EXPORT GType register_mate_settings_plugin(GTypeModule *module);
 
 #ifdef __cplusplus
 }

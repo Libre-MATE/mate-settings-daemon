@@ -18,18 +18,16 @@
  * 02110-1301, USA.
  */
 
+#include "delayed-dialog.h"
+
+#include <gdk/gdkx.h>
+#include <gtk/gtk.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include <gtk/gtk.h>
-#include <gdk/gdkx.h>
-
-#include "delayed-dialog.h"
-
-static gboolean        delayed_show_timeout (gpointer   data);
-static GdkFilterReturn message_filter       (GdkXEvent *xevent,
-                                             GdkEvent  *event,
-                                             gpointer   data);
+static gboolean delayed_show_timeout(gpointer data);
+static GdkFilterReturn message_filter(GdkXEvent *xevent, GdkEvent *event,
+                                      gpointer data);
 
 static GSList *dialogs = NULL;
 
@@ -41,89 +39,82 @@ static GSList *dialogs = NULL;
  * hasn't been started yet, in which case it will wait up to 5 seconds
  * for that to happen before showing the dialog.
  **/
-void
-msd_delayed_show_dialog (GtkWidget *dialog)
-{
-        GdkDisplay *display = gtk_widget_get_display (dialog);
-        Display *xdisplay = GDK_DISPLAY_XDISPLAY (display);
-        GdkScreen *screen = gtk_widget_get_screen (dialog);
-        char selection_name[10];
-        Atom selection_atom;
+void msd_delayed_show_dialog(GtkWidget *dialog) {
+  GdkDisplay *display = gtk_widget_get_display(dialog);
+  Display *xdisplay = GDK_DISPLAY_XDISPLAY(display);
+  GdkScreen *screen = gtk_widget_get_screen(dialog);
+  char selection_name[10];
+  Atom selection_atom;
 
-        /* We can't use gdk_selection_owner_get() for this, because
-         * it's an unknown out-of-process window.
-         */
-        snprintf (selection_name, sizeof (selection_name), "WM_S%d",
-                  gdk_x11_screen_get_screen_number (screen));
-        selection_atom = XInternAtom (xdisplay, selection_name, True);
-        if (selection_atom &&
-            XGetSelectionOwner (xdisplay, selection_atom) != None) {
-                gtk_widget_show (dialog);
-                return;
-        }
+  /* We can't use gdk_selection_owner_get() for this, because
+   * it's an unknown out-of-process window.
+   */
+  snprintf(selection_name, sizeof(selection_name), "WM_S%d",
+           gdk_x11_screen_get_screen_number(screen));
+  selection_atom = XInternAtom(xdisplay, selection_name, True);
+  if (selection_atom && XGetSelectionOwner(xdisplay, selection_atom) != None) {
+    gtk_widget_show(dialog);
+    return;
+  }
 
-        dialogs = g_slist_prepend (dialogs, dialog);
+  dialogs = g_slist_prepend(dialogs, dialog);
 
-        gdk_window_add_filter (NULL, message_filter, NULL);
+  gdk_window_add_filter(NULL, message_filter, NULL);
 
-        g_timeout_add (5000, delayed_show_timeout, NULL);
+  g_timeout_add(5000, delayed_show_timeout, NULL);
 }
 
-static gboolean
-delayed_show_timeout (gpointer data)
-{
-        GSList *l;
+static gboolean delayed_show_timeout(gpointer data) {
+  GSList *l;
 
-        for (l = dialogs; l; l = l->next)
-                gtk_widget_show (l->data);
-        g_slist_free (dialogs);
-        dialogs = NULL;
+  for (l = dialogs; l; l = l->next) gtk_widget_show(l->data);
+  g_slist_free(dialogs);
+  dialogs = NULL;
 
-        /* FIXME: There's no gdk_display_remove_client_message_filter */
+  /* FIXME: There's no gdk_display_remove_client_message_filter */
 
-        return FALSE;
+  return FALSE;
 }
 
-static GdkFilterReturn
-message_filter (GdkXEvent *xevent, GdkEvent *event, gpointer data)
-{
-        XClientMessageEvent *evt;
-        char *selection_name;
-        int screen;
-        GSList *l, *next;
+static GdkFilterReturn message_filter(GdkXEvent *xevent, GdkEvent *event,
+                                      gpointer data) {
+  XClientMessageEvent *evt;
+  char *selection_name;
+  int screen;
+  GSList *l, *next;
 
-        if (((XEvent *)xevent)->type != ClientMessage)
-                return GDK_FILTER_CONTINUE;
+  if (((XEvent *)xevent)->type != ClientMessage) return GDK_FILTER_CONTINUE;
 
-        evt = (XClientMessageEvent *)xevent;
+  evt = (XClientMessageEvent *)xevent;
 
-        if (evt->message_type != XInternAtom (evt->display, "MANAGER", FALSE))
-                return GDK_FILTER_CONTINUE;
+  if (evt->message_type != XInternAtom(evt->display, "MANAGER", FALSE))
+    return GDK_FILTER_CONTINUE;
 
-        selection_name = XGetAtomName (evt->display, evt->data.l[1]);
+  selection_name = XGetAtomName(evt->display, evt->data.l[1]);
 
-        if (strncmp (selection_name, "WM_S", 4) != 0) {
-                XFree (selection_name);
-                return GDK_FILTER_CONTINUE;
-        }
+  if (strncmp(selection_name, "WM_S", 4) != 0) {
+    XFree(selection_name);
+    return GDK_FILTER_CONTINUE;
+  }
 
-        screen = atoi (selection_name + 4);
+  screen = atoi(selection_name + 4);
 
-        for (l = dialogs; l; l = next) {
-                GtkWidget *dialog = l->data;
-                next = l->next;
+  for (l = dialogs; l; l = next) {
+    GtkWidget *dialog = l->data;
+    next = l->next;
 
-                if (gdk_x11_screen_get_screen_number (gtk_widget_get_screen (dialog)) == screen) {
-                        gtk_widget_show (dialog);
-                        dialogs = g_slist_remove (dialogs, dialog);
-                }
-        }
+    if (gdk_x11_screen_get_screen_number(gtk_widget_get_screen(dialog)) ==
+        screen) {
+      gtk_widget_show(dialog);
+      dialogs = g_slist_remove(dialogs, dialog);
+    }
+  }
 
-        if (!dialogs) {
-                gdk_window_remove_filter (NULL, message_filter, NULL);
-        }
+  if (!dialogs) {
+    gdk_window_remove_filter(NULL, message_filter, NULL);
+  }
 
-        XFree (selection_name);
+  XFree(selection_name);
 
-        return GDK_FILTER_CONTINUE;
+  return GDK_FILTER_CONTINUE;
 }

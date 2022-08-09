@@ -21,16 +21,15 @@
 #ifndef __MSD_INPUT_HELPER_H
 #define __MSD_INPUT_HELPER_H
 
-G_BEGIN_DECLS
-
 #include <glib.h>
-
 #include <X11/extensions/XInput.h>
 #include <X11/extensions/XIproto.h>
 
-gboolean  supports_xinput_devices (void);
-XDevice  *device_is_touchpad      (XDeviceInfo *deviceinfo);
-gboolean  touchpad_is_present     (void);
+G_BEGIN_DECLS
+
+gboolean supports_xinput_devices(void);
+XDevice *device_is_touchpad(XDeviceInfo *deviceinfo);
+gboolean touchpad_is_present(void);
 
 G_END_DECLS
 
