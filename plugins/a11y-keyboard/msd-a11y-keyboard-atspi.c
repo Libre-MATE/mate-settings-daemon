@@ -52,7 +52,7 @@ static void msd_a11y_keyboard_atspi_class_init(
   object_class->finalize = msd_a11y_keyboard_atspi_finalize;
 }
 
-static gboolean on_key_press_event(const AtspiDeviceEvent *event,
+static gboolean on_key_press_event(AtspiDeviceEvent *event,
                                    void *user_data) {
   /* don't ring on capslock itself, that's taken care of by togglekeys
    * if the user want it. */
