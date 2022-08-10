@@ -23,10 +23,9 @@
 #define __MSD_MOUSE_MANAGER_H
 
 #include <glib-object.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MSD_TYPE_MOUSE_MANAGER (msd_mouse_manager_get_type())
 #define MSD_MOUSE_MANAGER(o) \
@@ -57,8 +56,6 @@ MsdMouseManager *msd_mouse_manager_new(void);
 gboolean msd_mouse_manager_start(MsdMouseManager *manager, GError **error);
 void msd_mouse_manager_stop(MsdMouseManager *manager);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_MOUSE_MANAGER_H */

@@ -23,10 +23,9 @@
 #define __MSD_CLIPBOARD_MANAGER_H
 
 #include <glib-object.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MSD_TYPE_CLIPBOARD_MANAGER (msd_clipboard_manager_get_type())
 #define MSD_CLIPBOARD_MANAGER(o)                               \
@@ -61,8 +60,6 @@ gboolean msd_clipboard_manager_start(MsdClipboardManager *manager,
                                      GError **error);
 void msd_clipboard_manager_stop(MsdClipboardManager *manager);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_CLIPBOARD_MANAGER_H */

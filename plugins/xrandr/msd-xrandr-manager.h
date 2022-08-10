@@ -23,10 +23,9 @@
 #define __MSD_XRANDR_MANAGER_H
 
 #include <glib-object.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MSD_TYPE_XRANDR_MANAGER (msd_xrandr_manager_get_type())
 #define MSD_XRANDR_MANAGER(o) \
@@ -58,8 +57,6 @@ MsdXrandrManager *msd_xrandr_manager_new(void);
 gboolean msd_xrandr_manager_start(MsdXrandrManager *manager, GError **error);
 void msd_xrandr_manager_stop(MsdXrandrManager *manager);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_XRANDR_MANAGER_H */

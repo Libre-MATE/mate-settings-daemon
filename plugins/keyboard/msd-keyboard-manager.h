@@ -23,10 +23,9 @@
 #define __MSD_KEYBOARD_MANAGER_H
 
 #include <glib-object.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MSD_TYPE_KEYBOARD_MANAGER (msd_keyboard_manager_get_type())
 #define MSD_KEYBOARD_MANAGER(o)                               \
@@ -62,8 +61,6 @@ gboolean msd_keyboard_manager_start(MsdKeyboardManager *manager,
 void msd_keyboard_manager_stop(MsdKeyboardManager *manager);
 void msd_keyboard_manager_apply_settings(MsdKeyboardManager *manager);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_KEYBOARD_MANAGER_H */

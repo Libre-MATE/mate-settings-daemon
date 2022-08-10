@@ -25,10 +25,9 @@
 #define XSETTINGS_COMMON_H
 
 #include <stddef.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif /* __cplusplus */
+G_BEGIN_DECLS
 
 typedef struct _XSettingsBuffer XSettingsBuffer;
 typedef struct _XSettingsColor XSettingsColor;
@@ -98,8 +97,6 @@ char xsettings_byte_order(void);
 
 #define XSETTINGS_PAD(n, m) ((n + m - 1) & (~(m - 1)))
 
-#ifdef __cplusplus
-}
-#endif /* __cplusplus */
+G_END_DECLS
 
 #endif /* XSETTINGS_COMMON_H */

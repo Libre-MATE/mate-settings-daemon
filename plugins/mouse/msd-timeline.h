@@ -22,11 +22,10 @@
 #define __MSD_TIMELINE_H__
 
 #include <gdk/gdk.h>
+#include <glib.h>
 #include <glib-object.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MSD_TYPE_TIMELINE_DIRECTION (msd_timeline_direction_get_type())
 #define MSD_TYPE_TIMELINE_PROGRESS_TYPE (msd_timeline_progress_type_get_type())
@@ -116,8 +115,6 @@ void msd_timeline_set_progress_func(MsdTimeline *timeline,
 
 gdouble msd_timeline_get_progress(MsdTimeline *timeline);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_TIMELINE_H__ */

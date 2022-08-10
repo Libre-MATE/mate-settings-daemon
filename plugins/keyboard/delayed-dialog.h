@@ -22,15 +22,12 @@
 #define __DELAYED_DIALOG_H
 
 #include <gtk/gtk.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 void msd_delayed_show_dialog(GtkWidget *dialog);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
-#endif
+#endif /* __DELAYED_DIALOG_H */

@@ -28,9 +28,7 @@
 
 #include "mate-settings-plugin.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 // class MsdBackgroundPlugin
 //{
@@ -66,8 +64,6 @@ GType msd_background_plugin_get_type(void) G_GNUC_CONST;
 G_MODULE_EXPORT GType register_mate_settings_plugin(GTypeModule* module);
 //}
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_BACKGROUND_PLUGIN_H__ */

@@ -23,10 +23,9 @@
 #define __MSD_A11Y_KEYBOARD_MANAGER_H
 
 #include <glib-object.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MSD_TYPE_A11Y_KEYBOARD_MANAGER (msd_a11y_keyboard_manager_get_type())
 #define MSD_A11Y_KEYBOARD_MANAGER(o)                               \
@@ -61,8 +60,6 @@ gboolean msd_a11y_keyboard_manager_start(MsdA11yKeyboardManager *manager,
                                          GError **error);
 void msd_a11y_keyboard_manager_stop(MsdA11yKeyboardManager *manager);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_A11Y_KEYBOARD_MANAGER_H */

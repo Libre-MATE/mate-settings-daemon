@@ -22,11 +22,10 @@
 #define _MSD_LDSM_DIALOG_H_
 
 #include <glib-object.h>
+#include <glib.h>
 #include <gtk/gtk.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MSD_TYPE_LDSM_DIALOG (msd_ldsm_dialog_get_type())
 #define MSD_LDSM_DIALOG(obj) \
@@ -68,8 +67,6 @@ MsdLdsmDialog *msd_ldsm_dialog_new(gboolean other_usable_partitions,
                                    const gchar *partition_name,
                                    const gchar *mount_path);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* _MSD_LDSM_DIALOG_H_ */

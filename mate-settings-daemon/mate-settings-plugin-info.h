@@ -23,11 +23,11 @@
 #define __MATE_SETTINGS_PLUGIN_INFO_H__
 
 #include <glib-object.h>
+#include <glib.h>
 #include <gmodule.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
+
 #define MATE_TYPE_SETTINGS_PLUGIN_INFO (mate_settings_plugin_info_get_type())
 #define MATE_SETTINGS_PLUGIN_INFO(obj)                               \
   (G_TYPE_CHECK_INSTANCE_CAST((obj), MATE_TYPE_SETTINGS_PLUGIN_INFO, \
@@ -85,8 +85,7 @@ void mate_settings_plugin_info_set_priority(MateSettingsPluginInfo *info,
                                             int priority);
 void mate_settings_plugin_info_set_schema(MateSettingsPluginInfo *info,
                                           gchar *schema);
-#ifdef __cplusplus
-}
-#endif
+
+G_END_DECLS
 
 #endif /* __MATE_SETTINGS_PLUGIN_INFO_H__ */

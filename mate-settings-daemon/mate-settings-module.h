@@ -23,10 +23,9 @@
 #define MATE_SETTINGS_MODULE_H
 
 #include <glib-object.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MATE_TYPE_SETTINGS_MODULE (mate_settings_module_get_type())
 #define MATE_SETTINGS_MODULE(obj)                               \
@@ -53,8 +52,6 @@ const char *mate_settings_module_get_path(MateSettingsModule *module);
 
 GObject *mate_settings_module_new_object(MateSettingsModule *module);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif

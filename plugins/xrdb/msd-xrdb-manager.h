@@ -23,10 +23,9 @@
 #define __MSD_XRDB_MANAGER_H
 
 #include <glib-object.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MSD_TYPE_XRDB_MANAGER (msd_xrdb_manager_get_type())
 #define MSD_XRDB_MANAGER(o) \
@@ -57,8 +56,6 @@ MsdXrdbManager *msd_xrdb_manager_new(void);
 gboolean msd_xrdb_manager_start(MsdXrdbManager *manager, GError **error);
 void msd_xrdb_manager_stop(MsdXrdbManager *manager);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_XRDB_MANAGER_H */

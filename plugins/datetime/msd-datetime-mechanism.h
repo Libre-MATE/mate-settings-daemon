@@ -24,10 +24,9 @@
 
 #include <dbus/dbus-glib.h>
 #include <glib-object.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MSD_DATETIME_TYPE_MECHANISM (msd_datetime_mechanism_get_type())
 #define MSD_DATETIME_MECHANISM(o)                               \
@@ -100,8 +99,6 @@ gboolean msd_datetime_mechanism_set_hardware_clock_using_utc(
     MsdDatetimeMechanism *mechanism, gboolean using_utc,
     DBusGMethodInvocation *context);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* MSD_DATETIME_MECHANISM_H */

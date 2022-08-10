@@ -23,10 +23,9 @@
 #define __MATE_SETTINGS_MANAGER_H
 
 #include <glib-object.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MATE_TYPE_SETTINGS_MANAGER (mate_settings_manager_get_type())
 #define MATE_SETTINGS_MANAGER(o)                               \
@@ -75,8 +74,6 @@ void mate_settings_manager_stop(MateSettingsManager *manager);
 gboolean mate_settings_manager_awake(MateSettingsManager *manager,
                                      GError **error);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MATE_SETTINGS_MANAGER_H */

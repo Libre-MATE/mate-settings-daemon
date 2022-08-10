@@ -23,10 +23,9 @@
 #define __MSD_KEYBINDINGS_MANAGER_H
 
 #include <glib-object.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MSD_TYPE_KEYBINDINGS_MANAGER (msd_keybindings_manager_get_type())
 #define MSD_KEYBINDINGS_MANAGER(o)                               \
@@ -61,8 +60,6 @@ gboolean msd_keybindings_manager_start(MsdKeybindingsManager *manager,
                                        GError **error);
 void msd_keybindings_manager_stop(MsdKeybindingsManager *manager);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_KEYBINDINGS_MANAGER_H */

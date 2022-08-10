@@ -23,11 +23,10 @@
 #define __MSD_A11Y_PREFERENCES_DIALOG_H
 
 #include <glib-object.h>
+#include <glib.h>
 #include <gtk/gtk.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MSD_TYPE_A11Y_PREFERENCES_DIALOG \
   (msd_a11y_preferences_dialog_get_type())
@@ -60,8 +59,6 @@ GType msd_a11y_preferences_dialog_get_type(void);
 
 GtkWidget *msd_a11y_preferences_dialog_new(void);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_A11Y_PREFERENCES_DIALOG_H */

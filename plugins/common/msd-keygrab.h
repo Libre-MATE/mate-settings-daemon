@@ -21,12 +21,10 @@
 #ifndef __MSD_COMMON_KEYGRAB_H
 #define __MSD_COMMON_KEYGRAB_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <X11/keysym.h>
 #include <glib.h>
+
+G_BEGIN_DECLS
 
 typedef struct {
   guint keysym;
@@ -40,8 +38,6 @@ gboolean match_key(Key *key, XEvent *event);
 
 gboolean key_uses_keycode(const Key *key, guint keycode);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_COMMON_KEYGRAB_H */

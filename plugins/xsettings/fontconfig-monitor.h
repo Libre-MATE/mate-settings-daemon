@@ -24,9 +24,7 @@
 
 #include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 void fontconfig_cache_init(void);
 gboolean fontconfig_cache_update(void);
@@ -37,8 +35,6 @@ fontconfig_monitor_handle_t *fontconfig_monitor_start(GFunc notify_callback,
                                                       gpointer notify_data);
 void fontconfig_monitor_stop(fontconfig_monitor_handle_t *handle);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __FONTCONFIG_MONITOR_H */

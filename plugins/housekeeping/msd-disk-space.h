@@ -27,15 +27,11 @@
 
 #include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 void msd_ldsm_setup(gboolean check_now);
 void msd_ldsm_clean(void);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_DISK_SPACE_H */

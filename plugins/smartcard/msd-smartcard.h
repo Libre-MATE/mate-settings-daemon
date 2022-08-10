@@ -25,9 +25,8 @@
 #include <glib.h>
 #include <secmod.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
+
 #define MSD_TYPE_SMARTCARD (msd_smartcard_get_type())
 #define MSD_SMARTCARD(obj) \
   (G_TYPE_CHECK_INSTANCE_CAST((obj), MSD_TYPE_SMARTCARD, MsdSmartcard))
@@ -40,6 +39,7 @@ extern "C" {
 #define MSD_SMARTCARD_GET_CLASS(obj) \
   (G_TYPE_INSTANCE_GET_CLASS((obj), MSD_TYPE_SMARTCARD, MsdSmartcardClass))
 #define MSD_SMARTCARD_ERROR (msd_smartcard_error_quark())
+
 typedef struct _MsdSmartcardClass MsdSmartcardClass;
 typedef struct _MsdSmartcard MsdSmartcard;
 typedef struct _MsdSmartcardPrivate MsdSmartcardPrivate;
@@ -92,9 +92,9 @@ MsdSmartcard *_msd_smartcard_new_from_name(SECMODModule *module,
                                            const char *name);
 
 void _msd_smartcard_set_state(MsdSmartcard *card, MsdSmartcardState state);
-#endif
 
-#ifdef __cplusplus
-}
-#endif
+#endif /* MSD_SMARTCARD_ENABLE_INTERNAL_API */
+
+G_END_DECLS
+
 #endif /* MSD_SMARTCARD_H */

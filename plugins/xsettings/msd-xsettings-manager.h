@@ -23,10 +23,9 @@
 #define __MATE_XSETTINGS_MANAGER_H
 
 #include <glib-object.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MATE_TYPE_XSETTINGS_MANAGER (mate_xsettings_manager_get_type())
 #define MATE_XSETTINGS_MANAGER(o)                               \
@@ -61,8 +60,6 @@ gboolean mate_xsettings_manager_start(MateXSettingsManager *manager,
                                       GError **error);
 void mate_xsettings_manager_stop(MateXSettingsManager *manager);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MATE_XSETTINGS_MANAGER_H */

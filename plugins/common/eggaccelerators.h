@@ -22,11 +22,10 @@
 #ifndef __EGG_ACCELERATORS_H__
 #define __EGG_ACCELERATORS_H__
 
+#include <glib.h>
 #include <gdk/gdk.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 /* Where a value is also in GdkModifierType we coincide,
  * otherwise we don't overlap.
@@ -87,8 +86,6 @@ gchar *egg_virtual_accelerator_name(guint accelerator_key, guint keycode,
 gchar *egg_virtual_accelerator_label(guint accelerator_key, guint keycode,
                                      EggVirtualModifierType accelerator_mods);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __EGG_ACCELERATORS_H__ */

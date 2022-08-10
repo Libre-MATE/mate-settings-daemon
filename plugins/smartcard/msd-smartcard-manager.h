@@ -30,9 +30,8 @@
 
 #include "msd-smartcard.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
+
 #define MSD_TYPE_SMARTCARD_MANAGER (msd_smartcard_manager_get_type())
 #define MSD_SMARTCARD_MANAGER(obj)                               \
   (G_TYPE_CHECK_INSTANCE_CAST((obj), MSD_TYPE_SMARTCARD_MANAGER, \
@@ -91,7 +90,6 @@ char *msd_smartcard_manager_get_module_path(MsdSmartcardManager *manager);
 gboolean msd_smartcard_manager_login_card_is_inserted(
     MsdSmartcardManager *manager);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
+
 #endif /* MSD_SMARTCARD_MANAGER_H */

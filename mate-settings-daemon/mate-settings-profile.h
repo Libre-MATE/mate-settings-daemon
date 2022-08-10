@@ -26,9 +26,7 @@
 
 #include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #ifdef ENABLE_PROFILING
 #ifdef G_HAVE_ISO_VARARGS
@@ -55,8 +53,6 @@ extern "C" {
 void _mate_settings_profile_log(const char *func, const char *note,
                                 const char *format, ...) G_GNUC_PRINTF(3, 4);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MATE_SETTINGS_PROFILE_H */

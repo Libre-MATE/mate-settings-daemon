@@ -26,10 +26,9 @@
 #define __MSD_MPRIS_MANAGER_H
 
 #include <glib-object.h>
+#include <glib.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MSD_TYPE_MPRIS_MANAGER (msd_mpris_manager_get_type())
 #define MSD_MPRIS_MANAGER(o) \
@@ -60,8 +59,6 @@ MsdMprisManager *msd_mpris_manager_new(void);
 gboolean msd_mpris_manager_start(MsdMprisManager *manager, GError **error);
 void msd_mpris_manager_stop(MsdMprisManager *manager);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* __MSD_MPRIS_MANAGER_H */
