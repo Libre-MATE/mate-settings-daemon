@@ -135,8 +135,8 @@ static void update_shape(MsdLocatePointerData *data) {
   cairo_surface_destroy(mask);
 }
 
-static void timeline_frame_cb(MsdTimeline *timeline G_GNUC_UNUSED,
-                              gdouble progress, gpointer user_data) {
+static void timeline_frame_cb(MsdTimeline *timeline, gdouble progress,
+                              gpointer user_data) {
   MsdLocatePointerData *data = (MsdLocatePointerData *)user_data;
   GdkDisplay *display = gdk_window_get_display(data->window);
   GdkScreen *screen = gdk_display_get_default_screen(display);
@@ -196,8 +196,7 @@ static void composited_changed(GdkScreen *screen, MsdLocatePointerData *data) {
   }
 }
 
-static void timeline_finished_cb(MsdTimeline *timeline G_GNUC_UNUSED,
-                                 gpointer user_data) {
+static void timeline_finished_cb(MsdTimeline *timeline, gpointer user_data) {
   MsdLocatePointerData *data = (MsdLocatePointerData *)user_data;
   GdkScreen *screen = gdk_window_get_screen(data->window);
 
@@ -209,7 +208,7 @@ static void timeline_finished_cb(MsdTimeline *timeline G_GNUC_UNUSED,
   gtk_widget_hide(GTK_WIDGET(data->widget));
 }
 
-static void locate_pointer_unrealize_cb(GtkWidget *widget G_GNUC_UNUSED,
+static void locate_pointer_unrealize_cb(GtkWidget *widget,
                                         MsdLocatePointerData *data) {
   if (data->window != NULL) {
     gtk_widget_unregister_window(GTK_WIDGET(data->widget), data->window);
@@ -218,7 +217,7 @@ static void locate_pointer_unrealize_cb(GtkWidget *widget G_GNUC_UNUSED,
   data->window = NULL;
 }
 
-static void locate_pointer_realize_cb(GtkWidget *widget G_GNUC_UNUSED,
+static void locate_pointer_realize_cb(GtkWidget *widget,
                                       MsdLocatePointerData *data) {
   GdkDisplay *display;
   GdkScreen *screen;
@@ -253,8 +252,8 @@ static void locate_pointer_realize_cb(GtkWidget *widget G_GNUC_UNUSED,
   gtk_widget_register_window(GTK_WIDGET(data->widget), data->window);
 }
 
-static gboolean locate_pointer_draw_cb(GtkWidget *widget G_GNUC_UNUSED,
-                                       cairo_t *cr, gpointer user_data) {
+static gboolean locate_pointer_draw_cb(GtkWidget *widget, cairo_t *cr,
+                                       gpointer user_data) {
   MsdLocatePointerData *data = (MsdLocatePointerData *)user_data;
   GdkScreen *screen = gdk_window_get_screen(data->window);
 

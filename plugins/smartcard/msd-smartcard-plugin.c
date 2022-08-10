@@ -19,7 +19,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-smartcard-plugin.h"
 
 #include <dbus/dbus-glib.h>
@@ -137,9 +140,9 @@ static void msd_smartcard_plugin_finalize(GObject *object) {
   G_OBJECT_CLASS(msd_smartcard_plugin_parent_class)->finalize(object);
 }
 
-static void smartcard_inserted_cb(
-    MsdSmartcardManager *card_monitor G_GNUC_UNUSED, MsdSmartcard *card,
-    MsdSmartcardPlugin *plugin) {
+static void smartcard_inserted_cb(MsdSmartcardManager *card_monitor,
+                                  MsdSmartcard *card,
+                                  MsdSmartcardPlugin *plugin) {
   char *name;
 
   name = msd_smartcard_get_name(card);
@@ -199,9 +202,9 @@ static void process_smartcard_removal(MsdSmartcardPlugin *plugin) {
   }
 }
 
-static void smartcard_removed_cb(
-    MsdSmartcardManager *card_monitor G_GNUC_UNUSED, MsdSmartcard *card,
-    MsdSmartcardPlugin *plugin) {
+static void smartcard_removed_cb(MsdSmartcardManager *card_monitor,
+                                 MsdSmartcard *card,
+                                 MsdSmartcardPlugin *plugin) {
   char *name;
 
   name = msd_smartcard_get_name(card);

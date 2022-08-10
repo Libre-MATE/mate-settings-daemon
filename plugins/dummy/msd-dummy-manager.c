@@ -19,7 +19,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-dummy-manager.h"
 
 #include <errno.h>

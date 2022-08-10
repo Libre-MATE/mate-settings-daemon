@@ -19,10 +19,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
- *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include <errno.h>
 #include <gdk/gdk.h>
 #include <gdk/gdkx.h>
@@ -203,14 +205,12 @@ static void draw_background(MsdBackgroundManager *manager, gboolean may_fade) {
   mate_settings_profile_end(NULL);
 }
 
-static void on_bg_changed(MateBG *bg G_GNUC_UNUSED,
-                          MsdBackgroundManager *manager) {
+static void on_bg_changed(MateBG *bg, MsdBackgroundManager *manager) {
   g_debug("Background changed");
   draw_background(manager, TRUE);
 }
 
-static void on_bg_transitioned(MateBG *bg G_GNUC_UNUSED,
-                               MsdBackgroundManager *manager) {
+static void on_bg_transitioned(MateBG *bg, MsdBackgroundManager *manager) {
   g_debug("Background transitioned");
   draw_background(manager, FALSE);
 }
@@ -266,9 +266,8 @@ static gboolean settings_change_event_idle_cb(MsdBackgroundManager *manager) {
   return FALSE; /* remove from the list of event sources */
 }
 
-static gboolean settings_change_event_cb(GSettings *settings G_GNUC_UNUSED,
-                                         gpointer keys G_GNUC_UNUSED,
-                                         gint n_keys G_GNUC_UNUSED,
+static gboolean settings_change_event_cb(GSettings *settings, gpointer keys,
+                                         gint n_keys,
                                          MsdBackgroundManager *manager) {
   /* Complements on_bg_handling_changed() */
   manager->msd_can_draw = msd_can_draw_bg(manager);
@@ -324,8 +323,7 @@ static void remove_background(MsdBackgroundManager *manager) {
   free_fade(manager);
 }
 
-static void on_bg_handling_changed(GSettings *settings G_GNUC_UNUSED,
-                                   const char *key G_GNUC_UNUSED,
+static void on_bg_handling_changed(GSettings *settings, const char *key,
                                    MsdBackgroundManager *manager) {
   mate_settings_profile_start(NULL);
 
@@ -373,10 +371,10 @@ static void disconnect_session_manager_listener(MsdBackgroundManager *manager) {
 #endif
 }
 
-static void on_session_manager_signal(GDBusProxy *proxy G_GNUC_UNUSED,
-                                      const gchar *sender_name G_GNUC_UNUSED,
+static void on_session_manager_signal(GDBusProxy *proxy,
+                                      const gchar *sender_name,
                                       const gchar *signal_name,
-                                      GVariant *parameters G_GNUC_UNUSED,
+                                      GVariant *parameters,
                                       gpointer user_data) {
   MsdBackgroundManager *manager = MSD_BACKGROUND_MANAGER(user_data);
 

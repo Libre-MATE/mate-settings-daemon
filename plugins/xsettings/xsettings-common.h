@@ -24,8 +24,8 @@
 #ifndef XSETTINGS_COMMON_H
 #define XSETTINGS_COMMON_H
 
-#include <stddef.h>
 #include <glib.h>
+#include <stddef.h>
 
 G_BEGIN_DECLS
 

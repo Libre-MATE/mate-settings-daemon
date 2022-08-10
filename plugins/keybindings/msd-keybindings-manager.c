@@ -19,7 +19,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-keybindings-manager.h"
 
 #include <X11/keysym.h>
@@ -453,11 +456,8 @@ static GdkFilterReturn keybindings_filter(GdkXEvent *gdk_xevent,
   return GDK_FILTER_CONTINUE;
 }
 
-static void bindings_callback(DConfClient *client G_GNUC_UNUSED,
-                              gchar *prefix G_GNUC_UNUSED,
-                              GStrv changes G_GNUC_UNUSED,
-                              gchar *tag G_GNUC_UNUSED,
-                              MsdKeybindingsManager *manager) {
+static void bindings_callback(DConfClient *client, gchar *prefix, GStrv changes,
+                              gchar *tag, MsdKeybindingsManager *manager) {
   g_debug("keybindings: received 'changed' signal from dconf");
 
   binding_unregister_keys(manager);

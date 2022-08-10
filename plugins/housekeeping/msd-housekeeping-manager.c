@@ -19,7 +19,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-housekeeping-manager.h"
 
 #include <gio/gio.h>
@@ -206,8 +209,7 @@ static void do_cleanup_soon(MsdHousekeepingManager *manager) {
   }
 }
 
-static void settings_changed_callback(GSettings *settings G_GNUC_UNUSED,
-                                      const char *key G_GNUC_UNUSED,
+static void settings_changed_callback(GSettings *settings, const char *key,
                                       MsdHousekeepingManager *manager) {
   do_cleanup_soon(manager);
 }

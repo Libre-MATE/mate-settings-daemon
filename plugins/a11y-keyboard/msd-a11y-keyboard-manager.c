@@ -20,7 +20,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include <X11/XKBlib.h>
 #include <X11/extensions/XInput.h>
 #include <X11/extensions/XIproto.h>
@@ -105,7 +108,7 @@ static gboolean togglekeys_backend_enabled(MsdA11yKeyboardManager *manager,
 static GdkFilterReturn devicepresence_filter(GdkXEvent *xevent, GdkEvent *event,
                                              gpointer data) {
   XEvent *xev = (XEvent *)xevent;
-  G_GNUC_UNUSED XEventClass class_presence;
+  XEventClass class_presence;
   int xi_presence;
 
   DevicePresence(gdk_x11_get_default_xdisplay(), xi_presence, class_presence);
@@ -130,7 +133,7 @@ static void set_devicepresence_handler(MsdA11yKeyboardManager *manager) {
   Display *display;
   GdkDisplay *gdk_display;
   XEventClass class_presence;
-  G_GNUC_UNUSED int xi_presence;
+  int xi_presence;
 
   if (!supports_xinput_devices()) return;
 
@@ -448,8 +451,7 @@ static void maybe_show_status_icon(MsdA11yKeyboardManager *manager) {
 }
 
 #ifdef HAVE_LIBNOTIFY
-static void on_notification_closed(NotifyNotification *notification
-                                       G_GNUC_UNUSED,
+static void on_notification_closed(NotifyNotification *notification,
                                    MsdA11yKeyboardManager *manager) {
   g_object_unref(manager->priv->notification);
   manager->priv->notification = NULL;
@@ -935,16 +937,14 @@ static GdkFilterReturn cb_xkb_event_filter(GdkXEvent *xevent,
   return GDK_FILTER_CONTINUE;
 }
 
-static void keyboard_callback(GSettings *settings G_GNUC_UNUSED,
-                              gchar *key G_GNUC_UNUSED,
+static void keyboard_callback(GSettings *settings, gchar *key,
                               MsdA11yKeyboardManager *manager) {
   set_server_from_settings(manager);
   maybe_show_status_icon(manager);
 }
 
 #ifdef HAVE_LIBATSPI
-static void capslock_beep_callback(GSettings *settings,
-                                   gchar *key G_GNUC_UNUSED,
+static void capslock_beep_callback(GSettings *settings, gchar *key,
                                    MsdA11yKeyboardManager *manager) {
   if (g_settings_get_boolean(settings, KEY_CAPSLOCK_BEEP_ENABLED))
     msd_a11y_keyboard_atspi_start(manager->priv->capslock_beep);
@@ -1078,8 +1078,7 @@ static void msd_a11y_keyboard_manager_class_init(
   object_class->finalize = msd_a11y_keyboard_manager_finalize;
 }
 
-static void on_preferences_dialog_response(GtkDialog *dialog,
-                                           int response G_GNUC_UNUSED,
+static void on_preferences_dialog_response(GtkDialog *dialog, int response,
                                            MsdA11yKeyboardManager *manager) {
   g_signal_handlers_disconnect_by_func(dialog, on_preferences_dialog_response,
                                        manager);
@@ -1088,7 +1087,7 @@ static void on_preferences_dialog_response(GtkDialog *dialog,
   manager->priv->preferences_dialog = NULL;
 }
 
-static void on_status_icon_activate(GtkStatusIcon *status_icon G_GNUC_UNUSED,
+static void on_status_icon_activate(GtkStatusIcon *status_icon,
                                     MsdA11yKeyboardManager *manager) {
   if (manager->priv->preferences_dialog == NULL) {
     manager->priv->preferences_dialog = msd_a11y_preferences_dialog_new();

@@ -26,7 +26,9 @@
  * gio-unix-2.0 glib-2.0 gtk+-2.0 libnotify` -o msd-disk-space-test
  * msd-disk-space.c */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
 
 #include "msd-disk-space.h"
 
@@ -487,8 +489,7 @@ static gboolean ldsm_is_hash_item_not_in_mounts(gpointer key, gpointer value,
   return TRUE;
 }
 
-static void ldsm_mounts_changed(GObject *monitor G_GNUC_UNUSED,
-                                gpointer data G_GNUC_UNUSED) {
+static void ldsm_mounts_changed(GObject *monitor, gpointer data) {
   GList *mounts;
 
   /* remove the saved data for mounts that got removed */
@@ -563,9 +564,8 @@ static void msd_ldsm_get_config(void) {
   }
 }
 
-static void msd_ldsm_update_config(GSettings *gsettings G_GNUC_UNUSED,
-                                   gchar *key G_GNUC_UNUSED,
-                                   gpointer user_data G_GNUC_UNUSED) {
+static void msd_ldsm_update_config(GSettings *gsettings, gchar *key,
+                                   gpointer user_data) {
   msd_ldsm_get_config();
 }
 

@@ -19,7 +19,9 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
 
 #include "msd-mouse-manager.h"
 
@@ -508,7 +510,7 @@ static void set_left_handed_all(MsdMouseManager *manager,
 static GdkFilterReturn devicepresence_filter(GdkXEvent *xevent, GdkEvent *event,
                                              gpointer data) {
   XEvent *xev = (XEvent *)xevent;
-  G_GNUC_UNUSED XEventClass class_presence;
+  XEventClass class_presence;
   int xi_presence;
 
   DevicePresence(gdk_x11_get_default_xdisplay(), xi_presence, class_presence);
@@ -526,7 +528,7 @@ static void set_devicepresence_handler(MsdMouseManager *manager) {
   GdkDisplay *gdk_display;
   Display *display;
   XEventClass class_presence;
-  G_GNUC_UNUSED int xi_presence;
+  int xi_presence;
 
   gdk_display = gdk_display_get_default();
   display = gdk_x11_get_default_xdisplay();

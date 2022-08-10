@@ -216,9 +216,8 @@ static void system_timezone_finalize(GObject *obj) {
   systz_singleton = NULL;
 }
 
-static void system_timezone_monitor_changed(GFileMonitor *handle G_GNUC_UNUSED,
-                                            GFile *file G_GNUC_UNUSED,
-                                            GFile *other_file G_GNUC_UNUSED,
+static void system_timezone_monitor_changed(GFileMonitor *handle, GFile *file,
+                                            GFile *other_file,
                                             GFileMonitorEvent event,
                                             gpointer user_data) {
   SystemTimezonePrivate *priv =

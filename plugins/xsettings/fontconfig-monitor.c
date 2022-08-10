@@ -105,11 +105,8 @@ static gboolean update(gpointer data) {
   return FALSE;
 }
 
-static void stuff_changed(GFileMonitor *monitor G_GNUC_UNUSED,
-                          GFile *file G_GNUC_UNUSED,
-                          GFile *other_file G_GNUC_UNUSED,
-                          GFileMonitorEvent event_type G_GNUC_UNUSED,
-                          gpointer data) {
+static void stuff_changed(GFileMonitor *monitor, GFile *file, GFile *other_file,
+                          GFileMonitorEvent event_type, gpointer data) {
   fontconfig_monitor_handle_t *handle = data;
 
   /* wait for quiescence */

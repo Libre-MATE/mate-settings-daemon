@@ -20,7 +20,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include <dbus/dbus-glib.h>
 #include <errno.h>
 #include <gdk/gdk.h>
@@ -432,8 +435,8 @@ static gboolean timeout_cb(gpointer data) {
   return TRUE;
 }
 
-static void timeout_response_cb(GtkDialog *dialog G_GNUC_UNUSED,
-                                int response_id, gpointer data) {
+static void timeout_response_cb(GtkDialog *dialog, int response_id,
+                                gpointer data) {
   TimeoutDialog *timeout = data;
 
   if (response_id == GTK_RESPONSE_DELETE_EVENT) {
@@ -1339,9 +1342,9 @@ static void refresh_tray_icon_menu_if_active(MsdXrandrManager *manager,
   MsdXrandrManagerPrivate *priv = manager->priv;
 
   if (priv->popup_menu) {
-    gtk_menu_shell_cancel(
-        GTK_MENU_SHELL(priv->popup_menu)); /* status_icon_popup_menu_selection_done_cb()
-                                              will free everything */
+    gtk_menu_shell_cancel(GTK_MENU_SHELL(
+        priv->popup_menu)); /* status_icon_popup_menu_selection_done_cb()
+                               will free everything */
     status_icon_popup_menu(manager, 0, timestamp);
   }
 }
@@ -1625,13 +1628,12 @@ static void run_display_capplet(GtkWidget *widget) {
   }
 }
 
-static void popup_menu_configure_display_cb(GtkMenuItem *item,
-                                            gpointer data G_GNUC_UNUSED) {
+static void popup_menu_configure_display_cb(GtkMenuItem *item, gpointer data) {
   run_display_capplet(GTK_WIDGET(item));
 }
 
-static void status_icon_popup_menu_selection_done_cb(
-    GtkMenuShell *menu_shell G_GNUC_UNUSED, gpointer data) {
+static void status_icon_popup_menu_selection_done_cb(GtkMenuShell *menu_shell,
+                                                     gpointer data) {
   MsdXrandrManager *manager = MSD_XRANDR_MANAGER(data);
   struct MsdXrandrManagerPrivate *priv = manager->priv;
 
@@ -1651,7 +1653,7 @@ static void status_icon_popup_menu_selection_done_cb(
 
 static void title_item_size_allocate_cb(GtkWidget *widget,
                                         GtkAllocation *allocation,
-                                        gpointer data G_GNUC_UNUSED) {
+                                        gpointer data) {
   /* When GtkMenu does size_request on its items, it asks them for their "toggle
    * size", which will be non-zero when there are check/radio items.  GtkMenu
    * remembers the largest of those sizes.  During the size_allocate pass,
@@ -2276,17 +2278,15 @@ static void status_icon_popup_menu(MsdXrandrManager *manager, guint button,
                  timestamp);
 }
 
-static void status_icon_activate_cb(GtkStatusIcon *status_icon G_GNUC_UNUSED,
-                                    gpointer data) {
+static void status_icon_activate_cb(GtkStatusIcon *status_icon, gpointer data) {
   MsdXrandrManager *manager = MSD_XRANDR_MANAGER(data);
 
   /* Suck; we don't get a proper button/timestamp */
   status_icon_popup_menu(manager, 0, gtk_get_current_event_time());
 }
 
-static void status_icon_popup_menu_cb(GtkStatusIcon *status_icon G_GNUC_UNUSED,
-                                      guint button, guint32 timestamp,
-                                      gpointer data) {
+static void status_icon_popup_menu_cb(GtkStatusIcon *status_icon, guint button,
+                                      guint32 timestamp, gpointer data) {
   MsdXrandrManager *manager = MSD_XRANDR_MANAGER(data);
 
   status_icon_popup_menu(manager, button, timestamp);
@@ -2337,7 +2337,7 @@ static void start_or_stop_icon(MsdXrandrManager *manager) {
   }
 }
 
-static void on_config_changed(GSettings *settings G_GNUC_UNUSED, gchar *key,
+static void on_config_changed(GSettings *settings, gchar *key,
                               MsdXrandrManager *manager) {
   if (g_strcmp0(key, CONF_KEY_SHOW_NOTIFICATION_ICON) == 0)
     start_or_stop_icon(manager);

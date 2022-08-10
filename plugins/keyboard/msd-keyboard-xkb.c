@@ -21,7 +21,10 @@
  * 02110-1301, USA.
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-keyboard-xkb.h"
 
 #include <gdk/gdk.h>
@@ -133,9 +136,8 @@ static void apply_desktop_settings(void) {
   }
 }
 
-static void apply_desktop_settings_cb(GSettings *settings G_GNUC_UNUSED,
-                                      gchar *key G_GNUC_UNUSED,
-                                      gpointer user_data G_GNUC_UNUSED) {
+static void apply_desktop_settings_cb(GSettings *settings, gchar *key,
+                                      gpointer user_data) {
   apply_desktop_settings();
 }
 
@@ -162,7 +164,7 @@ static void popup_menu_launch_capplet(void) {
   }
 }
 
-static void show_layout_destroy(GtkWidget *dialog G_GNUC_UNUSED, gint group) {
+static void show_layout_destroy(GtkWidget *dialog, gint group) {
   g_hash_table_remove(preview_dialogs, GINT_TO_POINTER(group));
 }
 
@@ -193,8 +195,7 @@ static void popup_menu_show_layout(void) {
                       dialog);
 }
 
-static void popup_menu_set_group(GtkMenuItem *item G_GNUC_UNUSED,
-                                 gpointer param) {
+static void popup_menu_set_group(GtkMenuItem *item, gpointer param) {
   gint group_number = GPOINTER_TO_INT(param);
   XklEngine *engine = matekbd_status_get_xkl_engine();
   XklState st;
@@ -396,9 +397,8 @@ static void apply_xkb_settings(void) {
   show_hide_icon();
 }
 
-static void apply_xkb_settings_cb(GSettings *settings G_GNUC_UNUSED,
-                                  gchar *key G_GNUC_UNUSED,
-                                  gpointer user_data G_GNUC_UNUSED) {
+static void apply_xkb_settings_cb(GSettings *settings, gchar *key,
+                                  gpointer user_data) {
   apply_xkb_settings();
 }
 
@@ -425,7 +425,7 @@ static GdkFilterReturn msd_keyboard_xkb_evt_filter(GdkXEvent *xev,
 }
 
 /* When new Keyboard is plugged in - reload the settings */
-static void msd_keyboard_new_device(XklEngine *engine G_GNUC_UNUSED) {
+static void msd_keyboard_new_device(XklEngine *engine) {
   apply_desktop_settings();
   apply_xkb_settings();
 }
@@ -452,7 +452,7 @@ static void msd_keyboard_update_indicator_icons(void) {
   }
 }
 
-static void msd_keyboard_state_changed(XklEngine *engine G_GNUC_UNUSED,
+static void msd_keyboard_state_changed(XklEngine *engine,
                                        XklEngineStateChange type,
                                        gint new_group, gboolean restore) {
   xkl_debug(160, "State changed: type %d, new group: %d, restore: %d.\n", type,

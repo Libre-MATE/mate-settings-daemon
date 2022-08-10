@@ -25,7 +25,9 @@
  *      Steve Zesch <stevezesch2@gmail.com>
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
 
 #include "msd-mpris-manager.h"
 
@@ -189,9 +191,9 @@ static void grab_media_player_keys(MsdMprisManager *manager) {
                     (GAsyncReadyCallback)grab_media_player_keys_cb, manager);
 }
 
-static void key_pressed(GDBusProxy *proxy G_GNUC_UNUSED,
-                        gchar *sender_name G_GNUC_UNUSED, gchar *signal_name,
-                        GVariant *parameters, MsdMprisManager *manager) {
+static void key_pressed(GDBusProxy *proxy, gchar *sender_name,
+                        gchar *signal_name, GVariant *parameters,
+                        MsdMprisManager *manager) {
   char *app, *cmd;
 
   if (g_strcmp0(signal_name, "MediaPlayerKeyPressed") != 0) return;

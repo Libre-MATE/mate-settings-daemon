@@ -21,8 +21,8 @@
 #ifndef __DELAYED_DIALOG_H
 #define __DELAYED_DIALOG_H
 
-#include <gtk/gtk.h>
 #include <glib.h>
+#include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 

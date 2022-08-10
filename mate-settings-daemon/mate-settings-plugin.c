@@ -20,12 +20,16 @@
  * Boston, MA 02110-1301, USA.
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "mate-settings-plugin.h"
 
 G_DEFINE_TYPE(MateSettingsPlugin, mate_settings_plugin, G_TYPE_OBJECT)
 
-static void dummy(MateSettingsPlugin *plugin) { /* Empty */ }
+static void dummy(MateSettingsPlugin *plugin) { /* Empty */
+}
 
 static void mate_settings_plugin_class_init(MateSettingsPluginClass *klass) {
   klass->activate = dummy;

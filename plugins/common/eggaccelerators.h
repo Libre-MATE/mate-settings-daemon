@@ -22,8 +22,8 @@
 #ifndef __EGG_ACCELERATORS_H__
 #define __EGG_ACCELERATORS_H__
 
-#include <glib.h>
 #include <gdk/gdk.h>
+#include <glib.h>
 
 G_BEGIN_DECLS
 

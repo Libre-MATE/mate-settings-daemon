@@ -20,7 +20,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-xsettings-manager.h"
 
 #include <X11/Xatom.h>
@@ -709,7 +712,7 @@ static void update_xft_settings(MateXSettingsManager *manager) {
   mate_settings_profile_end(NULL);
 }
 
-static void recalculate_scale_callback(GdkScreen *screen G_GNUC_UNUSED,
+static void recalculate_scale_callback(GdkScreen *screen,
                                        MateXSettingsManager *manager) {
   int i;
   int new_scale = get_window_scale(manager);
@@ -723,8 +726,7 @@ static void recalculate_scale_callback(GdkScreen *screen G_GNUC_UNUSED,
   }
 }
 
-static void xft_callback(GSettings *gsettings G_GNUC_UNUSED,
-                         const gchar *key G_GNUC_UNUSED,
+static void xft_callback(GSettings *gsettings, const gchar *key,
                          MateXSettingsManager *manager) {
   int i;
 

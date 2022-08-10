@@ -28,7 +28,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-osd-window.h"
 
 #include <gdk/gdkx.h>

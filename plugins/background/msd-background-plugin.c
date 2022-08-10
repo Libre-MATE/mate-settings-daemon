@@ -19,7 +19,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-background-plugin.h"
 
 #include <glib/gi18n-lib.h>

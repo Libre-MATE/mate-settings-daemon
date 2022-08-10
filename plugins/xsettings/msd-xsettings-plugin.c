@@ -19,7 +19,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-xsettings-plugin.h"
 
 #include <glib/gi18n-lib.h>

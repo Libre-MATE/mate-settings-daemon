@@ -20,7 +20,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-xrdb-manager.h"
 
 #include <errno.h>
@@ -404,8 +407,7 @@ static void apply_settings(MsdXrdbManager *manager, GtkStyle *style) {
   return;
 }
 
-static void theme_changed(GtkSettings *settings G_GNUC_UNUSED,
-                          GParamSpec *pspec G_GNUC_UNUSED,
+static void theme_changed(GtkSettings *settings, GParamSpec *pspec,
                           MsdXrdbManager *manager) {
   apply_settings(manager, gtk_widget_get_style(manager->priv->widget));
 }

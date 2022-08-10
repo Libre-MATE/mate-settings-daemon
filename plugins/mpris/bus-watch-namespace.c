@@ -221,9 +221,9 @@ static void names_listed(GObject *object, GAsyncResult *result,
   g_variant_unref(reply);
 }
 
-static void connection_closed(GDBusConnection *connection G_GNUC_UNUSED,
-                              gboolean remote_peer_vanished G_GNUC_UNUSED,
-                              GError *error G_GNUC_UNUSED, gpointer user_data) {
+static void connection_closed(GDBusConnection *connection,
+                              gboolean remote_peer_vanished, GError *error,
+                              gpointer user_data) {
   NamespaceWatcher *watcher = user_data;
 
   namespace_watcher_stop(watcher);

@@ -21,9 +21,9 @@
 #ifndef __MSD_INPUT_HELPER_H
 #define __MSD_INPUT_HELPER_H
 
-#include <glib.h>
 #include <X11/extensions/XInput.h>
 #include <X11/extensions/XIproto.h>
+#include <glib.h>
 
 G_BEGIN_DECLS
 

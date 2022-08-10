@@ -19,7 +19,9 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
 
 #include "msd-a11y-preferences-dialog.h"
 
@@ -121,8 +123,7 @@ static void msd_a11y_preferences_dialog_class_init(
   object_class->finalize = msd_a11y_preferences_dialog_finalize;
 }
 
-static void on_response(MsdA11yPreferencesDialog *dialog G_GNUC_UNUSED,
-                        gint response_id) {
+static void on_response(MsdA11yPreferencesDialog *dialog, gint response_id) {
   switch (response_id) {
     default:
       break;
@@ -438,7 +439,7 @@ static void on_at_screen_magnifier_checkbutton_toggled(
 }
 
 static void on_large_print_checkbutton_toggled(
-    GtkToggleButton *button, MsdA11yPreferencesDialog *dialog G_GNUC_UNUSED) {
+    GtkToggleButton *button, MsdA11yPreferencesDialog *dialog) {
   config_set_large_print(gtk_toggle_button_get_active(button));
 }
 

@@ -295,8 +295,9 @@ static void trash_empty_start(void) {
   g_object_unref(cancellable);
 }
 
-static void trash_empty_confirmation_response(
-    GtkDialog *dialog, gint response_id, gpointer user_data G_GNUC_UNUSED) {
+static void trash_empty_confirmation_response(GtkDialog *dialog,
+                                              gint response_id,
+                                              gpointer user_data) {
   if (response_id == GTK_RESPONSE_YES) trash_empty_start();
 
   gtk_widget_destroy(GTK_WIDGET(dialog));

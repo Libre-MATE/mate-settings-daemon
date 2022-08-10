@@ -22,7 +22,10 @@
  * Written By: Ray Strode
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-smartcard-manager.h"
 
 #define SMARTCARD_ENABLE_INTERNAL_API

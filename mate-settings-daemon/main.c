@@ -18,7 +18,10 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include <dbus/dbus-glib-lowlevel.h>
 #include <dbus/dbus-glib.h>
 #include <errno.h>
@@ -378,8 +381,7 @@ static void parse_args(int *argc, char ***argv) {
   if (debug) g_setenv("G_MESSAGES_DEBUG", "all", FALSE);
 }
 
-static void debug_changed(GSettings *settings, gchar *key,
-                          gpointer user_data G_GNUC_UNUSED) {
+static void debug_changed(GSettings *settings, gchar *key, gpointer user_data) {
   debug = g_settings_get_boolean(settings, key);
   if (debug) {
     g_warning("Enable DEBUG");

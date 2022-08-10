@@ -19,7 +19,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-a11y-settings-manager.h"
 
 #include <errno.h>
@@ -52,8 +55,7 @@ G_DEFINE_TYPE_WITH_PRIVATE(MsdA11ySettingsManager, msd_a11y_settings_manager,
 
 static gpointer manager_object = NULL;
 
-static void apps_settings_changed(GSettings *settings G_GNUC_UNUSED,
-                                  const char *key,
+static void apps_settings_changed(GSettings *settings, const char *key,
                                   MsdA11ySettingsManager *manager) {
   gboolean screen_reader, keyboard;
 

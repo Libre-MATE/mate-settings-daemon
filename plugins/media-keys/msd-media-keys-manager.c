@@ -21,7 +21,9 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
 
 #include "msd-media-keys-manager.h"
 
@@ -745,26 +747,26 @@ static void update_default_input(MsdMediaKeysManager *manager) {
     g_debug("Default input stream unset");
 }
 
-static void on_context_state_notify(MateMixerContext *context G_GNUC_UNUSED,
-                                    GParamSpec *pspec G_GNUC_UNUSED,
+static void on_context_state_notify(MateMixerContext *context,
+                                    GParamSpec *pspec,
                                     MsdMediaKeysManager *manager) {
   update_default_output(manager);
   update_default_input(manager);
 }
 
-static void on_context_default_output_notify(
-    MateMixerContext *context G_GNUC_UNUSED, GParamSpec *pspec G_GNUC_UNUSED,
-    MsdMediaKeysManager *manager) {
+static void on_context_default_output_notify(MateMixerContext *context,
+                                             GParamSpec *pspec,
+                                             MsdMediaKeysManager *manager) {
   update_default_output(manager);
 }
 
-static void on_context_default_input_notify(
-    MateMixerContext *context G_GNUC_UNUSED, GParamSpec *pspec G_GNUC_UNUSED,
-    MsdMediaKeysManager *manager) {
+static void on_context_default_input_notify(MateMixerContext *context,
+                                            GParamSpec *pspec,
+                                            MsdMediaKeysManager *manager) {
   update_default_input(manager);
 }
 
-static void on_context_stream_removed(MateMixerContext *context G_GNUC_UNUSED,
+static void on_context_stream_removed(MateMixerContext *context,
                                       const gchar *name,
                                       MsdMediaKeysManager *manager) {
   if (manager->priv->stream != NULL) {

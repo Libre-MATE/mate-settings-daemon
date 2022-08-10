@@ -22,7 +22,10 @@
  * USA.
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include "msd-rfkill-manager.h"
 
 #include <gio/gio.h>
@@ -233,7 +236,7 @@ static void engine_properties_changed(MsdRfkillManager *manager) {
                                 "PropertiesChanged", props_changed, NULL);
 }
 
-static void rfkill_changed(CcRfkillGlib *rfkill G_GNUC_UNUSED, GList *events,
+static void rfkill_changed(CcRfkillGlib *rfkill, GList *events,
                            MsdRfkillManager *manager) {
   GList *l;
   int value;
@@ -466,9 +469,8 @@ static void sync_wwan_enabled(MsdRfkillManager *manager) {
   g_variant_unref(property);
 }
 
-static void nm_signal(GDBusProxy *proxy, char *sender_name G_GNUC_UNUSED,
-                      char *signal_name, GVariant *parameters,
-                      gpointer user_data) {
+static void nm_signal(GDBusProxy *proxy, char *sender_name, char *signal_name,
+                      GVariant *parameters, gpointer user_data) {
   MsdRfkillManager *manager = user_data;
   GVariant *changed;
   GVariant *property;
@@ -517,8 +519,8 @@ out:
 }
 
 static void sync_wwan_interesting(GDBusObjectManager *object_manager,
-                                  GDBusObject *object G_GNUC_UNUSED,
-                                  GDBusInterface *interface G_GNUC_UNUSED,
+                                  GDBusObject *object,
+                                  GDBusInterface *interface,
                                   gpointer user_data) {
   MsdRfkillManager *manager = user_data;
   GList *objects;

@@ -19,7 +19,10 @@
  *
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
+
 #include <errno.h>
 #include <gio/gio.h>
 #include <glib.h>
@@ -190,16 +193,13 @@ static void trigger_flush(MsdSoundManager *manager) {
   manager->timeout = g_timeout_add(500, (GSourceFunc)flush_cb, manager);
 }
 
-static void gsettings_notify_cb(GSettings *client G_GNUC_UNUSED,
-                                gchar *key G_GNUC_UNUSED,
+static void gsettings_notify_cb(GSettings *client, gchar *key,
                                 MsdSoundManager *manager) {
   trigger_flush(manager);
 }
 
-static void file_monitor_changed_cb(GFileMonitor *monitor G_GNUC_UNUSED,
-                                    GFile *file G_GNUC_UNUSED,
-                                    GFile *other_file G_GNUC_UNUSED,
-                                    GFileMonitorEvent event G_GNUC_UNUSED,
+static void file_monitor_changed_cb(GFileMonitor *monitor, GFile *file,
+                                    GFile *other_file, GFileMonitorEvent event,
                                     MsdSoundManager *manager) {
   g_debug("Theme dir changed");
   trigger_flush(manager);

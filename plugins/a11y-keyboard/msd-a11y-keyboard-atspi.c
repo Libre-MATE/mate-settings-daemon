@@ -18,7 +18,9 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#ifdef HAVE_CONFIG_H
 #include <config.h>
+#endif
 
 #include "msd-a11y-keyboard-atspi.h"
 
@@ -51,7 +53,7 @@ static void msd_a11y_keyboard_atspi_class_init(
 }
 
 static gboolean on_key_press_event(const AtspiDeviceEvent *event,
-                                   void *user_data G_GNUC_UNUSED) {
+                                   void *user_data) {
   /* don't ring on capslock itself, that's taken care of by togglekeys
    * if the user want it. */
   if (event->id == GDK_KEY_Caps_Lock) return FALSE;
