@@ -105,13 +105,7 @@ static GList *read_dir_for_purge(const char *path, GList *files) {
 
         td = g_new0(ThumbData, 1);
         td->path = entry_path;
-#if GLIB_CHECK_VERSION(2, 61, 2)
         td->mtime = g_file_info_get_modification_date_time(info);
-#else
-        GTimeVal mod_time_tv;
-        g_file_info_get_modification_time(info, &mod_time_tv);
-        td->mtime = g_date_time_new_from_unix_local((gint64)mod_time_tv.tv_sec);
-#endif
         td->size = g_file_info_get_size(info);
 
         files = g_list_prepend(files, td);
@@ -233,14 +227,7 @@ gboolean msd_housekeeping_manager_start(MsdHousekeepingManager *manager,
 static void msd_housekeeping_manager_finalize(GObject *object) {
   MsdHousekeepingManager *manager = MSD_HOUSEKEEPING_MANAGER(object);
   msd_housekeeping_manager_stop(manager);
-#if GLIB_CHECK_VERSION(2, 62, 0)
   g_clear_signal_handler(&manager->config_listener_id, manager->settings);
-#else
-  if (manager->config_listener_id != 0) {
-    g_signal_handler_disconnect(manager->settings, manager->config_listener_id);
-    manager->config_listener_id = 0;
-  }
-#endif
   g_object_unref(manager->settings);
   manager->settings = NULL;
 
