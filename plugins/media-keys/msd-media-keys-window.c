@@ -488,19 +488,6 @@ static void draw_action_volume(MsdMediaKeysWindow *window, cairo_t *cr) {
   volume_box_x0 = round(icon_box_x0);
   volume_box_y0 = round(window_height - icon_box_y0 / 2 - volume_box_height);
 
-#if 0
-        g_message ("icon box: w=%f h=%f _x0=%f _y0=%f",
-                   icon_box_width,
-                   icon_box_height,
-                   icon_box_x0,
-                   icon_box_y0);
-        g_message ("volume box: w=%f h=%f _x0=%f _y0=%f",
-                   volume_box_width,
-                   volume_box_height,
-                   volume_box_x0,
-                   volume_box_y0);
-#endif
-
   res = render_speaker(window, cr, icon_box_x0, icon_box_y0, icon_box_width,
                        icon_box_height);
   if (!res) {
@@ -513,14 +500,6 @@ static void draw_action_volume(MsdMediaKeysWindow *window, cairo_t *cr) {
     speaker_height = icon_box_height * 0.75;
     speaker_cx = icon_box_x0 + speaker_width / 2;
     speaker_cy = icon_box_y0 + speaker_height / 2;
-
-#if 0
-                g_message ("speaker box: w=%f h=%f cx=%f cy=%f",
-                           speaker_width,
-                           speaker_height,
-                           speaker_cx,
-                           speaker_cy);
-#endif
 
     /* draw speaker symbol */
     draw_speaker(cr, speaker_cx, speaker_cy, speaker_width, speaker_height);
@@ -608,18 +587,6 @@ static void draw_action_custom(MsdMediaKeysWindow *window, cairo_t *cr) {
   icon_box_x0 = round((window_width - icon_box_width) / 2);
   icon_box_y0 = round((window_height - icon_box_height) / 2);
   label_box_y0 = round(window_height - label_box_height / 2);
-
-#if 0
-        g_message ("icon box: w=%f h=%f _x0=%f _y0=%f",
-                   icon_box_width,
-                   icon_box_height,
-                   icon_box_x0,
-                   icon_box_y0);
-        g_message ("label box: w=%f h=%f _x0=0.0 _y0=%f",
-                   label_box_width,
-                   label_box_height,
-                   label_box_y0);
-#endif
 
   res = render_custom(window, cr, icon_box_x0, icon_box_y0, icon_box_width,
                       icon_box_height);

@@ -1476,29 +1476,6 @@ static void auto_configure_outputs(MsdXrandrManager *manager,
 
   g_list_free(just_turned_on);
   g_object_unref(config);
-
-  /* Finally, even though we did a best-effort job in sanitizing the
-   * outputs, we don't know the physical layout of the monitors.  We'll
-   * start the display capplet so that the user can tweak things to his
-   * liking.
-   */
-
-#if 0
-        /* FIXME: This is disabled for now.  The capplet is not a single-instance application.
-         * If you do this:
-         *
-         *   1. Start the display capplet
-         *
-         *   2. Plug an extra monitor
-         *
-         *   3. Hit the "Detect displays" button
-         *
-         * Then we will get a RANDR event because X re-probes the outputs.  We don't want to
-         * start up a second display capplet right there!
-         */
-
-        run_display_capplet (NULL);
-#endif
 }
 
 static void apply_color_profiles(void) {

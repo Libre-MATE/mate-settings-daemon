@@ -77,19 +77,10 @@
 #define KEY_HORIZ_TWO_FINGER_SCROLL "horizontal-two-finger-scrolling"
 #define KEY_TOUCHPAD_ENABLED "touchpad-enabled"
 
-#if 0 /* FIXME need to fork (?) mousetweaks for this to work */
-#define MATE_MOUSE_A11Y_SCHEMA "org.mate.accessibility-mouse"
-#define KEY_MOUSE_A11Y_DWELL_ENABLE "dwell-enable"
-#define KEY_MOUSE_A11Y_DELAY_ENABLE "delay-enable"
-#endif
-
 struct MsdMouseManagerPrivate {
   GSettings *settings_mouse;
   GSettings *settings_touchpad;
 
-#if 0 /* FIXME need to fork (?) mousetweaks for this to work */
-        gboolean mousetweaks_daemon_running;
-#endif
   gboolean syndaemon_spawned;
   GPid syndaemon_pid;
   gboolean locate_pointer_spawned;
@@ -1479,62 +1470,6 @@ static void set_locate_pointer(MsdMouseManager *manager, gboolean state) {
   }
 }
 
-#if 0  /* FIXME need to fork (?) mousetweaks for this to work */
-static void
-set_mousetweaks_daemon (MsdMouseManager *manager,
-                        gboolean         dwell_enable,
-                        gboolean         delay_enable)
-{
-        GError *error = NULL;
-        gchar *comm;
-        gboolean run_daemon = dwell_enable || delay_enable;
-
-        if (run_daemon || manager->priv->mousetweaks_daemon_running)
-                comm = g_strdup_printf ("mousetweaks %s",
-                                        run_daemon ? "" : "-s");
-        else
-                return;
-
-        if (run_daemon)
-                manager->priv->mousetweaks_daemon_running = TRUE;
-
-        if (! g_spawn_command_line_async (comm, &error)) {
-                if (error->code == G_SPAWN_ERROR_NOENT &&
-                    (dwell_enable || delay_enable)) {
-                        GtkWidget *dialog;
-
-                        GSettings *settings;
-                        settings = g_settings_new (MATE_MOUSE_A11Y_SCHEMA);
-                        if (dwell_enable)
-                                g_settings_set_boolean (settings,
-                                                        MATE_MOUSE_A11Y_KEY_DWELL_ENABLE,
-                                                        FALSE);
-                        else if (delay_enable)
-                                g_settings_set_boolean (settings,
-                                                        MATE_MOUSE_A11Y_KEY_DELAY_ENABLE,
-                                                        FALSE);
-                        g_object_unref (settings);
-
-                        dialog = gtk_message_dialog_new (NULL, 0,
-                                                         GTK_MESSAGE_WARNING,
-                                                         GTK_BUTTONS_OK,
-                                                         _("Could not enable mouse accessibility features"));
-                        gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
-                                                                  _("Mouse accessibility requires Mousetweaks "
-                                                                    "to be installed on your system."));
-                        gtk_window_set_title (GTK_WINDOW (dialog),
-                                              _("Mouse Preferences"));
-                        gtk_window_set_icon_name (GTK_WINDOW (dialog),
-                                                  "input-mouse");
-                        gtk_dialog_run (GTK_DIALOG (dialog));
-                        gtk_widget_destroy (dialog);
-                }
-                g_error_free (error);
-        }
-        g_free (comm);
-}
-#endif /* set_mousetweaks_daemon */
-
 static void set_mouse_settings(MsdMouseManager *manager) {
   gboolean mouse_left_handed =
       g_settings_get_boolean(manager->priv->settings_mouse, KEY_LEFT_HANDED);
@@ -1575,17 +1510,6 @@ static void mouse_callback(GSettings *settings, const gchar *key,
     set_middle_button_all(g_settings_get_boolean(settings, key));
   } else if (g_strcmp0(key, KEY_MOUSE_LOCATE_POINTER) == 0) {
     set_locate_pointer(manager, g_settings_get_boolean(settings, key));
-#if 0 /* FIXME need to fork (?) mousetweaks for this to work */
-        } else if (g_strcmp0 (key, KEY_MOUSE_A11Y_DWELL_ENABLE) == 0) {
-                set_mousetweaks_daemon (manager,
-                                        g_settings_get_boolean (settings, key),
-                                        g_settings_get_boolean (settings, KEY_MOUSE_A11Y_DELAY_ENABLE, NULL));
-                }
-        } else if (g_strcmp0 (key, KEY_MOUSE_A11Y_DELAY_ENABLE) == 0) {
-                set_mousetweaks_daemon (manager,
-                                        g_settings_get_boolean (settings, KEY_MOUSE_A11Y_DWELL_ENABLE, NULL),
-                                        g_settings_get_boolean (settings, key));
-#endif
   }
 }
 
@@ -1647,14 +1571,6 @@ static gboolean msd_mouse_manager_idle_cb(MsdMouseManager *manager) {
   set_locate_pointer(manager,
                      g_settings_get_boolean(manager->priv->settings_mouse,
                                             KEY_MOUSE_LOCATE_POINTER));
-
-#if 0 /* FIXME need to fork (?) mousetweaks for this to work */
-        set_mousetweaks_daemon (manager,
-                                g_settings_get_boolean (manager->priv->settings_mouse_a11y,
-                                                        KEY_MOUSE_A11Y_DWELL_ENABLE),
-                                g_settings_get_boolean (manager->priv->settings_mouse_a11y,
-                                                        KEY_MOUSE_A11Y_DELAY_ENABLE));
-#endif
 
   mate_settings_profile_end(NULL);
 
