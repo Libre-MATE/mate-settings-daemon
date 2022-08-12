@@ -471,6 +471,6 @@ void mate_settings_plugin_info_set_schema(MateSettingsPluginInfo *info,
   priority = g_settings_get_int(info->priv->settings, "priority");
   if (priority > 0) info->priv->priority = priority;
 
-  g_signal_connect(G_OBJECT(info->priv->settings), "changed::active",
+  g_signal_connect(info->priv->settings, "changed::active",
                    G_CALLBACK(plugin_enabled_cb), info);
 }

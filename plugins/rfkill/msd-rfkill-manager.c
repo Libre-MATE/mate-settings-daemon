@@ -573,7 +573,7 @@ gboolean msd_rfkill_manager_start(MsdRfkillManager *manager, GError **error) {
   manager->priv->bt_killswitches =
       g_hash_table_new(g_direct_hash, g_direct_equal);
   manager->priv->rfkill = cc_rfkill_glib_new();
-  g_signal_connect(G_OBJECT(manager->priv->rfkill), "changed",
+  g_signal_connect(manager->priv->rfkill, "changed",
                    G_CALLBACK(rfkill_changed), manager);
   cc_rfkill_glib_open(manager->priv->rfkill);
 

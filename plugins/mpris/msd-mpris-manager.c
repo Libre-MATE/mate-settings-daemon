@@ -221,7 +221,7 @@ static void got_proxy_cb(GObject *source_object, GAsyncResult *res,
 
   grab_media_player_keys(manager);
 
-  g_signal_connect(G_OBJECT(manager->priv->media_keys_proxy), "g-signal",
+  g_signal_connect(manager->priv->media_keys_proxy, "g-signal",
                    G_CALLBACK(key_pressed), manager);
 }
 

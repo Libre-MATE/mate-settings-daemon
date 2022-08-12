@@ -90,7 +90,7 @@ gboolean msd_a11y_settings_manager_start(MsdA11ySettingsManager *manager,
   manager->priv->a11y_apps_settings =
       g_settings_new("org.gnome.desktop.a11y.applications");
 
-  g_signal_connect(G_OBJECT(manager->priv->a11y_apps_settings), "changed",
+  g_signal_connect(manager->priv->a11y_apps_settings, "changed",
                    G_CALLBACK(apps_settings_changed), manager);
 
   /* If any of the screen reader or on-screen keyboard are enabled,

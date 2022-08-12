@@ -180,7 +180,7 @@ static GObject *system_timezone_constructor(
     g_object_unref(file);
 
     if (priv->monitors[i])
-      g_signal_connect(G_OBJECT(priv->monitors[i]), "changed",
+      g_signal_connect(priv->monitors[i], "changed",
                        G_CALLBACK(system_timezone_monitor_changed), obj);
   }
 
