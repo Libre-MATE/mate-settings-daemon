@@ -271,11 +271,11 @@ static MsdLocatePointerData *msd_locate_pointer_data_new(void) {
 
   data->widget = GTK_WINDOW(gtk_window_new(GTK_WINDOW_POPUP));
 
-  g_signal_connect(GTK_WIDGET(data->widget), "unrealize",
+  g_signal_connect(data->widget, "unrealize",
                    G_CALLBACK(locate_pointer_unrealize_cb), data);
-  g_signal_connect(GTK_WIDGET(data->widget), "realize",
+  g_signal_connect(data->widget, "realize",
                    G_CALLBACK(locate_pointer_realize_cb), data);
-  g_signal_connect(GTK_WIDGET(data->widget), "draw",
+  g_signal_connect(data->widget, "draw",
                    G_CALLBACK(locate_pointer_draw_cb), data);
 
   gtk_widget_set_app_paintable(GTK_WIDGET(data->widget), TRUE);
