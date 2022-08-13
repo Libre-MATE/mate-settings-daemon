@@ -35,7 +35,9 @@ if HAVE_POLKIT
 dbus_services_DATA = $(dbus_services_in_files:.service.in=.service)
 
 $(dbus_services_DATA): $(dbus_services_in_files)
-	$(AM_V_GEN)sed -e "s|\@LIBEXECDIR\@|$(libexecdir)|" $< > $@
+	$(AM_V_GEN)$(SED) \
+		-e "s|\@LIBEXECDIR\@|$(libexecdir)|" \
+		$< > $@
 
 dbus_conf_DATA = org.mate.SettingsDaemon.DateTimeMechanism.conf
 

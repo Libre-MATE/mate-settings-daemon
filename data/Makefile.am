@@ -44,7 +44,9 @@ service_in_files = org.mate.SettingsDaemon.service.in
 service_DATA = $(service_in_files:.service.in=.service)
 
 org.mate.SettingsDaemon.service: org.mate.SettingsDaemon.service.in Makefile
-	$(AM_V_GEN) sed -e "s|\@libexecdir\@|$(libexecdir)|" $< > $@
+	$(AM_V_GEN)$(SED) \
+		-e "s|\@libexecdir\@|$(libexecdir)|" \
+		$< > $@
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = mate-settings-daemon.pc
