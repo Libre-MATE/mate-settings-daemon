@@ -33,10 +33,8 @@ AC_CONFIG_MACRO_DIR([m4])
 MATE_DEBUG_CHECK
 MATE_COMPILE_WARNINGS
 
-AM_INIT_AUTOMAKE([1.9 no-dist-gzip dist-xz tar-ustar check-news])
+AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz tar-ustar silent-rules check-news])
 AM_MAINTAINER_MODE([enable])
-
-m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
 AC_PROG_CXX
 AM_PROG_CC_C_O
