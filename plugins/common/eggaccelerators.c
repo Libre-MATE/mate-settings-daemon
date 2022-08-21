@@ -311,7 +311,7 @@ gboolean egg_accelerator_parse_virtual(
       }
 
       accelerator += len;
-      len -= len;
+      len = 0;
     }
   }
 
