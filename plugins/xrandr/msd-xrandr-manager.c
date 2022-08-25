@@ -814,13 +814,12 @@ static MateRRConfig *make_primary_only_setup(MateRRScreen *screen) {
    * layout*/
   MateRRConfig *result = mate_rr_config_new_current(screen, NULL);
   MateRROutputInfo **outputs = mate_rr_config_get_outputs(result);
-  int i, x, width, height;
-  x = 0;
+  int i, x;
 
-  for (i = 0; outputs[i] != NULL; ++i) {
+  for (i = 0, x = 0; outputs[i] != NULL; ++i) {
     MateRROutputInfo *info = outputs[i];
-    width = mate_rr_output_info_get_preferred_width(info);
-    height = mate_rr_output_info_get_preferred_height(info);
+    int width = mate_rr_output_info_get_preferred_width(info);
+    int height = mate_rr_output_info_get_preferred_height(info);
     mate_rr_output_info_set_geometry(info, x, 0, width, height);
     mate_rr_output_info_set_active(info, TRUE);
     x = x + width;
@@ -1445,7 +1444,6 @@ static void auto_configure_outputs(MsdXrandrManager *manager,
 
   l = just_turned_on;
   while (1) {
-    MateRROutputInfo *output;
     gboolean is_bounds_error;
 
     error = NULL;
@@ -1460,6 +1458,8 @@ static void auto_configure_outputs(MsdXrandrManager *manager,
     if (!is_bounds_error) break;
 
     if (l) {
+      MateRROutputInfo *output;
+
       i = GPOINTER_TO_INT(l->data);
       l = l->next;
 

@@ -788,8 +788,8 @@ static void process_value(MateXSettingsManager *manager,
 
 static TranslationEntry *find_translation_entry(GSettings *gsettings,
                                                 const char *key) {
-  guint i;
   char *schema;
+  guint i;
 
   g_object_get(gsettings, "schema", &schema, NULL);
 
@@ -809,8 +809,8 @@ static TranslationEntry *find_translation_entry(GSettings *gsettings,
 static void xsettings_callback(GSettings *gsettings, const char *key,
                                MateXSettingsManager *manager) {
   TranslationEntry *trans;
-  int i;
   GVariant *value;
+  int i;
 
   if (g_str_equal(key, CURSOR_THEME_KEY) ||
       g_str_equal(key, SCALING_FACTOR_KEY) ||
@@ -967,11 +967,12 @@ gboolean mate_xsettings_manager_start(MateXSettingsManager *manager,
 
 void mate_xsettings_manager_stop(MateXSettingsManager *manager) {
   MateXSettingsManagerPrivate *p = manager->priv;
-  int i;
 
   g_debug("Stopping xsettings manager");
 
   if (p->managers != NULL) {
+    int i;
+
     for (i = 0; p->managers[i]; ++i) xsettings_manager_destroy(p->managers[i]);
 
     g_free(p->managers);

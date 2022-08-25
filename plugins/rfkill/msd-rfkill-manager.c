@@ -472,12 +472,10 @@ static void sync_wwan_enabled(MsdRfkillManager *manager) {
 static void nm_signal(GDBusProxy *proxy, char *sender_name, char *signal_name,
                       GVariant *parameters, gpointer user_data) {
   MsdRfkillManager *manager = user_data;
-  GVariant *changed;
-  GVariant *property;
 
   if (g_strcmp0(signal_name, "PropertiesChanged") == 0) {
-    changed = g_variant_get_child_value(parameters, 0);
-    property =
+    GVariant *changed = g_variant_get_child_value(parameters, 0);
+    GVariant *property =
         g_variant_lookup_value(changed, "WwanEnabled", G_VARIANT_TYPE("b"));
     g_dbus_proxy_set_cached_property(proxy, "WwanEnabled", property);
 

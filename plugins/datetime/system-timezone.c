@@ -687,14 +687,11 @@ static gboolean system_timezone_is_valid(const char *tz) {
 }
 
 char *system_timezone_find(void) {
-  char *tz;
   int i;
 
   for (i = 0; get_system_timezone_methods[i] != NULL; i++) {
-    tz = get_system_timezone_methods[i]();
-
+    char *tz = get_system_timezone_methods[i]();
     if (system_timezone_is_valid(tz)) return tz;
-
     g_free(tz);
   }
 

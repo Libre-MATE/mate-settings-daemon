@@ -1218,7 +1218,6 @@ static void set_natural_scroll_synaptics(XDeviceInfo *device_info,
   int format, rc;
   unsigned long nitems, bytes_after;
   unsigned char *data;
-  glong *ptr;
   Atom prop, type;
   GdkDisplay *display;
 
@@ -1242,7 +1241,7 @@ static void set_natural_scroll_synaptics(XDeviceInfo *device_info,
                           &bytes_after, &data);
 
   if (rc == Success && type == XA_INTEGER && format == 32 && nitems >= 2) {
-    ptr = (glong *)data;
+    glong *ptr = (glong *)data;
     if (natural_scroll) {
       ptr[0] = -labs(ptr[0]);
       ptr[1] = -labs(ptr[1]);

@@ -143,13 +143,14 @@ static void apply_desktop_settings_cb(GSettings *settings, gchar *key,
 
 static void popup_menu_launch_capplet(void) {
   GAppInfo *info;
-  GdkAppLaunchContext *context;
   GError *error = NULL;
 
   info = g_app_info_create_from_commandline("mate-keyboard-properties", NULL, 0,
                                             &error);
 
   if (info != NULL) {
+    GdkAppLaunchContext *context;
+
     context = gdk_display_get_app_launch_context(gdk_display_get_default());
     g_app_info_launch(info, NULL, G_APP_LAUNCH_CONTEXT(context), &error);
 

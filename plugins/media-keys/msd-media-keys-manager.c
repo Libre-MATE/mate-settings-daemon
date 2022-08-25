@@ -1171,14 +1171,12 @@ static gboolean do_action(MsdMediaKeysManager *manager, int type) {
 
 static GdkScreen *acme_get_screen_from_event(MsdMediaKeysManager *manager,
                                              XAnyEvent *xanyev) {
-  GdkWindow *window;
-  GdkScreen *screen;
   GSList *l;
 
   /* Look for which screen we're receiving events */
   for (l = manager->priv->screens; l != NULL; l = l->next) {
-    screen = (GdkScreen *)l->data;
-    window = gdk_screen_get_root_window(screen);
+    GdkScreen *screen = (GdkScreen *)l->data;
+    GdkWindow *window = gdk_screen_get_root_window(screen);
 
     if (GDK_WINDOW_XID(window) == xanyev->window) {
       return screen;

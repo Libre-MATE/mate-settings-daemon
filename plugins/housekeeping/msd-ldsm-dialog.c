@@ -114,11 +114,8 @@ static gint ignore_path_compare(gconstpointer a, gconstpointer b) {
 
 static gboolean update_ignore_paths(GSList **ignore_paths,
                                     const gchar *mount_path, gboolean ignore) {
-  GSList *found;
-  gchar *path_to_remove;
-
-  found = g_slist_find_custom(*ignore_paths, mount_path,
-                              (GCompareFunc)ignore_path_compare);
+  GSList *found = g_slist_find_custom(*ignore_paths, mount_path,
+                                     (GCompareFunc)ignore_path_compare);
 
   if (ignore && (found == NULL)) {
     *ignore_paths = g_slist_prepend(*ignore_paths, g_strdup(mount_path));
@@ -126,7 +123,7 @@ static gboolean update_ignore_paths(GSList **ignore_paths,
   }
 
   if (!ignore && (found != NULL)) {
-    path_to_remove = found->data;
+    gchar *path_to_remove = found->data;
     *ignore_paths = g_slist_remove(*ignore_paths, path_to_remove);
     g_free(path_to_remove);
     return TRUE;
@@ -394,8 +391,8 @@ MsdLdsmDialog *msd_ldsm_dialog_new(gboolean other_usable_partitions,
                                    const gchar *partition_name,
                                    const gchar *mount_path) {
   MsdLdsmDialog *dialog;
-  GtkWidget *button_empty_trash, *button_ignore, *button_analyze;
-  GtkWidget *empty_trash_image, *analyze_image, *ignore_image;
+  GtkWidget *button_ignore;
+  GtkWidget *ignore_image;
   gchar *primary_text, *primary_text_markup;
   const gchar *secondary_text, *checkbutton_text;
 
@@ -407,6 +404,9 @@ MsdLdsmDialog *msd_ldsm_dialog_new(gboolean other_usable_partitions,
 
   /* Add some buttons */
   if (dialog->priv->has_trash) {
+    GtkWidget *button_empty_trash;
+    GtkWidget *empty_trash_image;
+
     button_empty_trash =
         gtk_dialog_add_button(GTK_DIALOG(dialog), _("Empty Trash"),
                               MSD_LDSM_DIALOG_RESPONSE_EMPTY_TRASH);
@@ -416,6 +416,9 @@ MsdLdsmDialog *msd_ldsm_dialog_new(gboolean other_usable_partitions,
   }
 
   if (display_baobab) {
+    GtkWidget *button_analyze;
+    GtkWidget *analyze_image;
+
     button_analyze = gtk_dialog_add_button(GTK_DIALOG(dialog), _("Examine…"),
                                            MSD_LDSM_DIALOG_RESPONSE_ANALYZE);
     analyze_image = gtk_image_new_from_icon_name("mate-disk-usage-analyzer",

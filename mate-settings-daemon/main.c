@@ -276,7 +276,6 @@ static void watch_for_term_signal(MateSettingsManager *manager) {
 static void set_session_over_handler(DBusGConnection *bus,
                                      MateSettingsManager *manager) {
   DBusGProxy *session_proxy;
-  DBusGProxy *private_proxy;
   gchar *client_id = NULL;
   const char *startup_id;
   GError *error = NULL;
@@ -311,7 +310,7 @@ static void set_session_over_handler(DBusGConnection *bus,
       g_error_free(error);
     } else {
       /* get org.gnome.SessionManager.ClientPrivate interface */
-      private_proxy = dbus_g_proxy_new_for_name_owner(
+      DBusGProxy *private_proxy = dbus_g_proxy_new_for_name_owner(
           bus, MATE_SESSION_DBUS_NAME, client_id,
           MATE_SESSION_PRIVATE_DBUS_INTERFACE, &error);
       if (private_proxy == NULL) {

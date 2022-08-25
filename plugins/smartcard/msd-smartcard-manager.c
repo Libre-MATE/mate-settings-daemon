@@ -797,15 +797,11 @@ static void msd_smartcard_manager_worker_free(
 }
 
 static gboolean read_bytes(int fd, gpointer bytes, gsize num_bytes) {
-  size_t bytes_left;
-  size_t total_bytes_read;
-  ssize_t bytes_read;
-
-  bytes_left = (size_t)num_bytes;
-  total_bytes_read = 0;
+  size_t bytes_left = num_bytes;
+  size_t total_bytes_read = 0;
 
   do {
-    bytes_read = read(fd, (char *)bytes + total_bytes_read, bytes_left);
+    ssize_t bytes_read = read(fd, (char *)bytes + total_bytes_read, bytes_left);
     g_assert(bytes_read <= (ssize_t)bytes_left);
 
     if (bytes_read <= 0) {
@@ -828,15 +824,11 @@ static gboolean read_bytes(int fd, gpointer bytes, gsize num_bytes) {
 }
 
 static gboolean write_bytes(int fd, gconstpointer bytes, gsize num_bytes) {
-  size_t bytes_left;
-  size_t total_bytes_written;
-  ssize_t bytes_written;
-
-  bytes_left = (size_t)num_bytes;
-  total_bytes_written = 0;
+  size_t bytes_left = num_bytes;
+  size_t total_bytes_written = 0;
 
   do {
-    bytes_written = write(fd, (char *)bytes + total_bytes_written, bytes_left);
+    ssize_t bytes_written = write(fd, (char *)bytes + total_bytes_written, bytes_left);
     g_assert(bytes_written <= (ssize_t)bytes_left);
 
     if (bytes_written <= 0) {

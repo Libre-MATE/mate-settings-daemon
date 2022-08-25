@@ -158,20 +158,15 @@ static double dpi_from_pixels_and_mm(int pixels, int mm) {
 static double get_dpi_from_x_server(void) {
   GdkScreen *screen;
   double dpi;
-  int scale;
 
   screen = gdk_screen_get_default();
   if (screen != NULL) {
-    double width_dpi;
-    double height_dpi;
-
     Screen *xscreen = gdk_x11_screen_get_xscreen(screen);
-
-    scale = gdk_window_get_scale_factor(gdk_screen_get_root_window(screen));
-    width_dpi = dpi_from_pixels_and_mm(WidthOfScreen(xscreen),
-                                       WidthMMOfScreen(xscreen));
-    height_dpi = dpi_from_pixels_and_mm(HeightOfScreen(xscreen),
-                                        HeightMMOfScreen(xscreen));
+    int scale = gdk_window_get_scale_factor(gdk_screen_get_root_window(screen));
+    double width_dpi = dpi_from_pixels_and_mm(WidthOfScreen(xscreen),
+                                              WidthMMOfScreen(xscreen));
+    double height_dpi = dpi_from_pixels_and_mm(HeightOfScreen(xscreen),
+                                               HeightMMOfScreen(xscreen));
 
     if (width_dpi < DPI_LOW_REASONABLE_VALUE ||
         width_dpi > DPI_HIGH_REASONABLE_VALUE ||

@@ -419,8 +419,6 @@ static void convert_clipboard_target(IncrConversion *rdata,
                                      MsdClipboardManager *manager) {
   GdkDisplay *display;
   TargetData *tdata;
-  Atom *targets;
-  int n_targets;
   List *list;
   unsigned long items;
   XWindowAttributes atts;
@@ -428,8 +426,8 @@ static void convert_clipboard_target(IncrConversion *rdata,
   display = gdk_display_get_default();
 
   if (rdata->target == XA_TARGETS) {
-    n_targets = list_length(manager->priv->contents) + 2;
-    targets = (Atom *)malloc(n_targets * sizeof(Atom));
+    int n_targets = list_length(manager->priv->contents) + 2;
+    Atom *targets = (Atom *)malloc(n_targets * sizeof(Atom));
 
     n_targets = 0;
 

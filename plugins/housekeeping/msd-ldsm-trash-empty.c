@@ -153,8 +153,6 @@ static void trash_empty_delete_contents(GIOSchedulerJob *job,
                                         gboolean actually_delete,
                                         gsize *deleted) {
   GFileEnumerator *enumerator;
-  GFileInfo *info;
-  GFile *child;
 
   if (g_cancellable_is_cancelled(cancellable)) return;
 
@@ -163,9 +161,11 @@ static void trash_empty_delete_contents(GIOSchedulerJob *job,
       G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS, cancellable, NULL);
 
   if (enumerator) {
+    GFileInfo *info;
+
     while ((info = g_file_enumerator_next_file(enumerator, cancellable,
                                                NULL)) != NULL) {
-      child = g_file_get_child(file, g_file_info_get_name(info));
+      GFile *child = g_file_get_child(file, g_file_info_get_name(info));
 
       if (g_file_info_get_file_type(info) == G_FILE_TYPE_DIRECTORY)
         trash_empty_delete_contents(job, cancellable, child, actually_delete,
