@@ -22,15 +22,17 @@
 #include <config.h>
 #endif
 
+#include <glib/gi18n.h>
+#ifdef ENABLE_NLS
+#include <locale.h>
+#endif /* ENABLE_NLS */
+
 #include <dbus/dbus-glib-lowlevel.h>
 #include <dbus/dbus-glib.h>
 #include <errno.h>
 #include <fcntl.h>
-#include <glib/gi18n.h>
 #include <glib/gstdio.h>
 #include <gtk/gtk.h>
-#include <libintl.h>
-#include <locale.h>
 #include <signal.h>
 #include <stdlib.h>
 #include <sys/wait.h>
@@ -402,10 +404,12 @@ int main(int argc, char *argv[]) {
 
   mate_settings_profile_start(NULL);
 
+#ifdef ENABLE_NLS
+  setlocale(LC_ALL, "");
   bindtextdomain(GETTEXT_PACKAGE, MATE_SETTINGS_LOCALEDIR);
   bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
   textdomain(GETTEXT_PACKAGE);
-  setlocale(LC_ALL, "");
+#endif /* ENABLE_NLS */
 
   parse_args(&argc, &argv);
 

@@ -23,9 +23,11 @@
 #endif
 
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
-#include <libintl.h>
+#ifdef ENABLE_NLS
 #include <locale.h>
+#endif /* ENABLE_NLS */
+
+#include <gtk/gtk.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -40,11 +42,12 @@ static gboolean idle(MsdBackgroundManager* manager) {
 int main(int argc, char* argv[]) {
   MsdBackgroundManager* manager;
 
+#ifdef ENABLE_NLS
+  setlocale(LC_ALL, "");
   bindtextdomain(GETTEXT_PACKAGE, MATE_SETTINGS_LOCALEDIR);
   bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
   textdomain(GETTEXT_PACKAGE);
-
-  setlocale(LC_ALL, "");
+#endif /* ENABLE_NLS */
 
   gtk_init(&argc, &argv);
 

@@ -26,6 +26,11 @@
 #endif
 
 #include <glib/gi18n.h>
+#ifdef ENABLE_NLS
+#include <locale.h>
+#endif /* ENABLE_NLS */
+
+#include <glib.h>
 #include <gtk/gtk.h>
 #include <stdlib.h>
 
@@ -150,6 +155,7 @@ int main(int argc, char **argv) {
   GError *error = NULL;
 
 #ifdef ENABLE_NLS
+  setlocale(LC_ALL, "");
   bindtextdomain(GETTEXT_PACKAGE, MATE_SETTINGS_LOCALEDIR);
 #ifdef HAVE_BIND_TEXTDOMAIN_CODESET
   bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
